@@ -1,4 +1,25 @@
 site_name: Rocket Validator Documentation
 nav:
     - Home: index.md
-theme: material
+    - API: api.md
+theme:
+  name: material
+  language: en
+  features:
+    - instant
+  logo: img/rocket-icon-300x300.png
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/rocketvalidator
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/rocketvalidator
+    - icon: fontawesome/brands/linkedin
+      link: https://pr.linkedin.com/company/rocket-validator
+google_analytics:
+  - UA-81204018-1
+  - auto
+markdown_extensions:
+- admonition
+- codehilite:
+    guess_lang: false
