@@ -1,0 +1,5 @@
+/* Turn off hyphenation */
+
+.md-typeset {
+  hyphens: initial;
+}

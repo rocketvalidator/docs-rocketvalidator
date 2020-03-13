@@ -24,3 +24,5 @@ markdown_extensions:
 - pymdownx.superfences
 - codehilite:
     guess_lang: false
+extra_css:
+    - css/extra.css
