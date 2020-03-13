@@ -10,7 +10,7 @@ To begin validating your sites you just need to <a href="https://rocketvalidator
 
 Once you have done that, you'll be prompted to validate your first site by entering a starting URL and clicking on "Start validation".
 
-![New site report form](/img/new-site-validation-form.png)
+![New site report form](img/new-site-validation-form.png)
 
 ### Options
 
