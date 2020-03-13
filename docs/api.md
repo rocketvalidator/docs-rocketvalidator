@@ -536,5 +536,6 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
 
 ## Changelog
 
+* 2020-03-13. Moved documentation to docs.rocketvalidator.com.
 * 2020-03-02. Change API host to rocketvalidator.dev.
 * 2020-02-28. Initial version.
