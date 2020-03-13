@@ -21,5 +21,6 @@ google_analytics:
   - auto
 markdown_extensions:
 - admonition
+- pymdownx.superfences
 - codehilite:
     guess_lang: false
