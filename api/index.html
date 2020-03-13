@@ -1,0 +1,1123 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.0.0rc2">
+    
+    
+      
+        <title>API - Rocket Validator Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.97c3fac0.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-81204018-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    
+      
+      <a href="#rocket-validator-api" class="md-skip" data-md-component="skip">
+        Skip to content
+      </a>
+    
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <a href=".." title="Rocket Validator Documentation" aria-label="Rocket Validator Documentation" class="md-header-nav__button md-logo">
+      
+        <img src="../img/rocket-icon-300x300.png" alt="logo">
+      
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis md-ellipsis">
+        
+          <span class="md-header-nav__topic">
+            Rocket Validator Documentation
+          </span>
+          <span class="md-header-nav__topic">
+            
+              API
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="reset" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rocket Validator Documentation" aria-label="Rocket Validator Documentation" class="md-nav__button md-logo">
+      
+        <img src="../img/rocket-icon-300x300.png" alt="logo">
+      
+    </a>
+    Rocket Validator Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        API
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="API" class="md-nav__link md-nav__link--active">
+      API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    Pagination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    Reports
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-your-reports" class="md-nav__link">
+    List your reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-a-report" class="md-nav__link">
+    Retrieve a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    Schedules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schedule-for-a-report" class="md-nav__link">
+    Schedule for a report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-pages" class="md-nav__link">
+    Web Pages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-web-pages-on-a-report" class="md-nav__link">
+    List Web Pages on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-a-web-page" class="md-nav__link">
+    Retrieve a Web Page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-issues" class="md-nav__link">
+    HTML Issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-html-issues-on-a-web-page" class="md-nav__link">
+    List HTML issues on a web page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-issues" class="md-nav__link">
+    Accessibility Issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-accessibility-issues-on-a-web-page" class="md-nav__link">
+    List Accessibility issues on a web page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    Pagination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    Reports
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-your-reports" class="md-nav__link">
+    List your reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-a-report" class="md-nav__link">
+    Retrieve a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    Schedules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schedule-for-a-report" class="md-nav__link">
+    Schedule for a report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-pages" class="md-nav__link">
+    Web Pages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-web-pages-on-a-report" class="md-nav__link">
+    List Web Pages on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-a-web-page" class="md-nav__link">
+    Retrieve a Web Page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-issues" class="md-nav__link">
+    HTML Issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-html-issues-on-a-web-page" class="md-nav__link">
+    List HTML issues on a web page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-issues" class="md-nav__link">
+    Accessibility Issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-accessibility-issues-on-a-web-page" class="md-nav__link">
+    List Accessibility issues on a web page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="rocket-validator-api">Rocket Validator API</h1>
+<div class="admonition info">
+<p class="admonition-title">Work in progress!</p>
+<p>The Rocket Validator API is currently in alpha stage, and subject to changes.</p>
+</div>
+<p>Welcome to the Rocket Validator API documentation.</p>
+<p>The Rocket Validator API allows you to manage your reports and integrate them easily in your existing workflows using conventional HTTP requests to a standard JSON API. Refer to the <a href="https://jsonapi.org/" target="_blank">json:api specification</a> for an overview of the conventions we use.</p>
+<p>Currently the API is on an alpha stage, but you can start using it today. Keep in mind that it is still subject to changes, which will be documented on the changelog.</p>
+<h2 id="authorization">Authorization</h2>
+<p>In order to interact with the Rocket Validator API, you must authenticate using an API token.</p>
+<p>You can generate an API token for your account on the <a href="https://rocketvalidator.com/api-tokens" target="_blank">API tokens</a> section. When you do so, you can also define its scope (read-only or write permission). Using the token on an API request you'll get access to the resources on your account. If you ever need to revoke access for a token, just delete it.</p>
+<p>Keep in mind that an API token works as a complete authentication method, acting as a substitute of your username and password pair. It's important that you keep these tokens secure - on generation, the web interface will only show the token once, it's your responsibility to keep it secure.</p>
+<p>Once you have a token, you must include a bearer-type <code>Authorization</code> header.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: authenticating your requests</p>
+<div class="highlight"><pre><span></span><code>curl --request GET <span class="s1">&#39;https://rocketvalidator.dev/api/v0/reports/&#39;</span> <span class="se">\</span>
+     --header <span class="s1">&#39;Authorization: Bearer YOURAPITOKEN&#39;</span>
+</code></pre></div>
+
+</div>
+<p>All requests must be made via HTTPS.</p>
+<h2 id="pagination">Pagination</h2>
+<p>When the list of entities returned by a request is paginated, a <code>links</code> key will be included on the JSON response body with links to the <code>first</code>, <code>last</code>, <code>next</code>, <code>prev</code> and <code>self</code> pages.</p>
+<p>The default page size is 25 but this can be customized to other value (minimum 1 and maximum 100) using the <code>page[size]</code> attribute.</p>
+<h2 id="reports">Reports</h2>
+<p>A Report represents a validation report you've created in Rocket Validator. Contains a list of web pages that were found from the starting url, and the HTML and accessibility issues that were found.</p>
+<h3 id="list-your-reports">List your reports</h3>
+<p>To list all Reports in your account, send a <code>GET</code> request to <code>/api/v0/reports</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9314c&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:30&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;max-pages&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="nt">&quot;num-pages&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="nt">&quot;rate-limit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="nt">&quot;starting-url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;total-a11y-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;total-html-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">156</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">20</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:30&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9314c&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/schedule&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;web-pages&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;report&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/?page[number]=50&amp;page[size]=25&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/?page[number]=2&amp;page[size]=25&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/?page[number]=1&amp;page[size]=25&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h3 id="retrieve-a-report">Retrieve a Report</h3>
+<p>To show an individual Report, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9314c&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:30&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;max-pages&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nt">&quot;num-pages&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nt">&quot;rate-limit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="nt">&quot;starting-url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;total-a11y-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+                <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;total-html-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">156</span><span class="p">,</span>
+                <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">20</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:30&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9314c&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/schedule&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;web-pages&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;report&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="schedules">Schedules</h2>
+<p>A Schedule represents a programmed report that will be run on a given periodicity, or after a deploy webhook is received.</p>
+<h3 id="schedule-for-a-report">Schedule for a report</h3>
+<p>Reports that have been triggered via a Schedule will include a link to it.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/schedule</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;active&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;check-a11y&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;check-html&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d2e1f&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:23&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;last-fired-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:30&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;max-pages&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nt">&quot;periodicity&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;every&quot;</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;monthday&quot;</span><span class="p">:</span> <span class="mi">15</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;rate-limit&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="nt">&quot;starting-url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:30&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;d2e1f&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;schedule&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="web-pages">Web Pages</h2>
+<p>A Web Page represents an HTML web page that has been found by the scraper, and is associated to a Report.</p>
+<h3 id="list-web-pages-on-a-report">List Web Pages on a Report</h3>
+<p>To list the web pages on a Report, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/9314c/web_pages</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;a11y-check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;html-check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">472</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:32&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;linked-from&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;472&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;a11y-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/a11y_issues&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;html-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/html_issues&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;web-page&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;a11y-check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;html-check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">473</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:33&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;linked-from&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:36&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/pages/agent&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;473&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;a11y-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/473/a11y_issues&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;html-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/473/html_issues&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;web-page&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages?page[number]=1&amp;page[size]=25&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h3 id="retrieve-a-web-page">Retrieve a Web Page</h3>
+<p>To show an individual Web Page, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;a11y-check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;html-check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+                <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">2</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">472</span><span class="p">,</span>
+            <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:32&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;linked-from&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;472&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;a11y-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/a11y_issues&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;html-issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/html_issues&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;web-page&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="html-issues">HTML Issues</h2>
+<p>An HTML issue corresponds to an issue found on a given web page when being checked by the HTML validator.</p>
+<h3 id="list-html-issues-on-a-web-page">List HTML issues on a web page</h3>
+<p>To list the HTML issues found on a web page, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;first_column&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;first_line&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span> <span class="mi">109</span><span class="p">,</span>
+                    <span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;last_column&quot;</span><span class="p">:</span> <span class="mi">109</span><span class="p">,</span>
+                    <span class="nt">&quot;last_line&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;extract&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;!DOCTYPE html PUBLIC \&quot;-//W3C//DTD XHTML 1.0 Strict//EN\&quot; \&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\&quot;&gt;\n&lt;html&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">59734815</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Obsolete doctype. Expected “&lt;!DOCTYPE html&gt;”.&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nt">&quot;sub-type&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;59734815&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;web-page&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;html-issue&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;first_column&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+                    <span class="nt">&quot;first_line&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+                    <span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                    <span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="nt">&quot;last_column&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+                    <span class="nt">&quot;last_line&quot;</span><span class="p">:</span> <span class="mi">21</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;extract&quot;</span><span class="p">:</span> <span class="s2">&quot;  pading: 4px;\n    &quot;</span><span class="p">,</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">59734817</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;CSS: “pading”: Property “pading” doesn&#39;t exist.&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nt">&quot;sub-type&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;59734817&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;web-page&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;html-issue&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/html_issues?page[number]=1&amp;page[size]=25&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="accessibility-issues">Accessibility Issues</h2>
+<p>An Accessibility issue corresponds to an issue found on a given web page when being checked by the A11Y checker.</p>
+<h3 id="list-accessibility-issues-on-a-web-page">List Accessibility issues on a web page</h3>
+<p>To list the Accessibility issues found on a web page, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/a11y_issues</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;Images must have alternate text&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;help-url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/image-alt?application=rocketvalidator&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;html&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;&lt;img src=\&quot;/images/fire.png\&quot; align=\&quot;absmiddle\&quot; width=\&quot;30\&quot; hspace=\&quot;5\&quot;&gt;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;&lt;img src=\&quot;/images/nuke.gif\&quot; width=\&quot;100%\&quot; vspace=\&quot;8\&quot;&gt;&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">6843979</span><span class="p">,</span>
+                <span class="nt">&quot;impact&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;impact-order&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;cat.text-alternatives&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;wcag111&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section508&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section508.22.a&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6843979&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;web-page&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;a11y-issue&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;help-url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/list?application=rocketvalidator&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;html&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;&lt;ul class=\&quot;nav nav-list\&quot;&gt;&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">6843982</span><span class="p">,</span>
+                <span class="nt">&quot;impact&quot;</span><span class="p">:</span> <span class="s2">&quot;serious&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;impact-order&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="nt">&quot;inserted-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;cat.structure&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;wcag131&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;updated-at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6843982&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;web-page&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;a11y-issue&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/a11y_issues?page[number]=1&amp;page[size]=25&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="changelog">Changelog</h2>
+<ul>
+<li>2020-03-02. Change API host to rocketvalidator.dev.</li>
+<li>2020-02-28. Initial version.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">
+          MkDocs
+        </a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/rocketvalidator" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://twitter.com/rocketvalidator" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://pr.linkedin.com/company/rocket-validator" target="_blank" rel="noopener" title="pr.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script>var __config={}</script>
+    
+    
+      <script src="../assets/javascripts/vendor.b0b43276.min.js"></script>
+      <script src="../assets/javascripts/bundle.65293e7c.min.js"></script><script id="__lang" type="application/json">
+        {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}
+      </script>
+      <script>
+        __material = initialize(Object.assign({
+          url: {
+            base: "..",
+            worker: {
+              search: "../assets/javascripts/worker/search.784c5235.min.js"
+            }
+          },
+          features: ["instant"]
+        }, typeof __config !== "undefined" ? __config : {}))
+      </script>
+      
+    
+  </body>
+</html>
