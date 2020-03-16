@@ -24,5 +24,7 @@ markdown_extensions:
 - pymdownx.superfences
 - codehilite:
     guess_lang: false
+    css_class: "codehilite"
 extra_css:
     - css/extra.css
+    - css/codehilite/borland.css

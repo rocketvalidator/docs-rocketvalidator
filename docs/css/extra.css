@@ -3,3 +3,15 @@
 .md-typeset {
   hyphens: initial;
 }
+
+/* Code */
+
+.md-typeset code {
+  background-color: white;
+  font-size: 1.1em;
+}
+/* Footer */
+
+.md-footer-copyright {
+  color: white;
+}
