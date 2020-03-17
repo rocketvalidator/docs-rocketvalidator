@@ -5,7 +5,7 @@
 // https://dequeuniversity.com/rules/axe/3.5/scrollable-region-focusable
 // https://webaim.org/techniques/keyboard/tabindex
 
-var codeblocks = document.querySelectorAll('code');
+var codeblocks = document.querySelectorAll('pre code');
 for (var i=0; i < codeblocks.length; i++) {
     codeblocks[i].setAttribute("tabindex", "0");
 }
