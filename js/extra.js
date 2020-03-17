@@ -21,5 +21,6 @@ function isOverflown(element) {
   return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
 
-makeScrollableBlocksFocusable();
+window.addEventListener("DOMContentLoaded", makeScrollableBlocksFocusable);
+window.addEventListener("DOMContentSwitch", makeScrollableBlocksFocusable);
 window.addEventListener("resize", makeScrollableBlocksFocusable);
