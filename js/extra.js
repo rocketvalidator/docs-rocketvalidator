@@ -11,6 +11,8 @@ function makeScrollableBlocksFocusable() {
   for (var i=0; i < codeblocks.length; i++) {
     if (isOverflown(codeblocks[i])) {
       codeblocks[i].setAttribute("tabindex", "0");
+    } else {
+      codeblocks[i].removeAttribute("tabindex");
     }
   }
 }
