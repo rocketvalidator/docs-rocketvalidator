@@ -5,8 +5,6 @@ nav:
 theme:
   name: material
   language: en
-  features:
-    - instant
   logo: img/rocket-icon-300x300.png
 extra:
   social:
@@ -28,3 +26,5 @@ markdown_extensions:
 extra_css:
     - css/extra.css
     - css/codehilite/borland.css
+extra_javascript:
+    - js/extra.js
