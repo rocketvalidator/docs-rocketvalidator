@@ -9,6 +9,7 @@ nav:
     - Muting Issues: muting.md
     - Performance Tips: performance-tips.md
     - User Agents: user-agents.md
+    - Validating your local server: how-to-validate-your-local-server.md
 theme:
   name: material
   language: en
