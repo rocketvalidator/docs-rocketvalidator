@@ -1,7 +1,7 @@
 site_name: Rocket Validator Documentation
 nav:
-    - Home: index.md
-    - API: api.md
+    - Quick Start: index.md
+    - Scheduling: scheduling.md
 theme:
   name: material
   language: en
