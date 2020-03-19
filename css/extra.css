@@ -6,12 +6,31 @@
 
 /* Code */
 
-.md-typeset code {
+.md-typeset pre code {
   background-color: white;
   font-size: 1.1em;
 }
+
+.highlight .na {
+  color: #aa0000;
+}
+
 /* Footer */
 
 .md-footer-copyright {
   color: white;
+}
+
+/* Screenshots */
+
+article img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Definition lists */
+
+dt {
+  font-weight: bold
 }
