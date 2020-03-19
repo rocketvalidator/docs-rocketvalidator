@@ -18,7 +18,7 @@ When you submit an URL for validation, we send a web spider to visit the site an
   <dt>Too many requests to remote server</dt>
   <dd>The remote server is denying us access because it is rate limiting us. Contact your sys admin to relax this rate limiting, or try again later.</dd>
   <dt>Blocked</dt>
-  <dd>The remote server is blocking our requests. Consult the <a href="/articles/user-agents">User Agents</a> page to explicitly allow our requests.</dd>
+  <dd>The remote server is blocking our requests. Consult the <a href="/user-agents">User Agents</a> page to explicitly allow our requests.</dd>
 </dl>
 
 <p>If none of this explains the reason why your site is not being scraped, <a href="mailto:support@rocketvalidator.com">contact us</a> and we'll help you find the cause.</p>
@@ -29,7 +29,7 @@ No, there is no direct way of validating pages that require login. Rocket Valida
 
 Instead, we recommend other approaches to checking protected sites:
 
-* You can <a href="/articles/how-to-validate-your-local-server">validate your local development server directly</a>. This also makes it faster to fix the issues, as you don’t need to deploy them. 
+* You can <a href="/how-to-validate-your-local-server">validate your local development server directly</a>. This also makes it faster to fix the issues, as you don’t need to deploy them. 
 
 * You can have a separate server that doesn’t need authentication.
 
@@ -44,13 +44,13 @@ No, we don't use any kind of cache neither on the link scraper, nor on the valid
 
 ## How long are reports stored?
 
-We store the results of your validations for a limited time, depending on your subscription plan. See the [pricing](/pricing) table.
+We store the results of your validations for a limited time, depending on your subscription plan. See the [pricing](https://rocketvalidator.com/pricing) table.
 
 ## Can I share reports with other people?
 
 Sure, you can share your validation reports with anyone. Just click on the **Share this report** button and you'll be able to send anyone the URL of the report. They'll be able to see the validation results just like you - but they won't be able to re-check any page, only you can control this.
 
-##Can I export reports to Excel, CSV, or PDF?
+## Can I export reports to Excel, CSV, or PDF?
 
 No, reports can't be exported to these formats, because the generated file would be too heavy to handle.
 

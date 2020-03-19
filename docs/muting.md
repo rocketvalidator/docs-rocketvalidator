@@ -6,7 +6,7 @@ When validating your sites, you may find that some of the issues won't be curren
 * You may be aware of an issue, but you've evaluated it and prefer to let it exist for some reason.
 * You've decided that this will be fixed later and prefer to concentrate on other issues first.
 
-In those situations, <a href="/pricing/pro">Pro users</a> can avoid all the noise related to those selected issues by <i>muting</i> them.
+In those situations, <a href="https://rocketvalidator.com/pricing/pro">Pro users</a> can avoid all the noise related to those selected issues by <i>muting</i> them.
 
 ## How to mute issues
 
@@ -24,14 +24,6 @@ Then click on "Submit" and your new muting rule will be created and applied to y
 
 To define a muting rule you need to specify:
 
-### Matching URL
-
-The muting rule will be applied to URLs containing this string. Try to be as specific as possible to limit the scope of this rule.
-
-### Message
-
-Enter the matching message here. Try to be as specific as possible to limit the scope of this muting rule.
-
-### Comment / explanation
-
-Optional but recommended, so you can explain why you decided to mute this rule.
+* **Matching URL**. The muting rule will be applied to URLs containing this string. Try to be as specific as possible to limit the scope of this rule.
+* **Message**. Enter the matching message here. Try to be as specific as possible to limit the scope of this muting rule.
+* **Comment / explanation**. Optional but recommended, so you can explain why you decided to mute this rule.
