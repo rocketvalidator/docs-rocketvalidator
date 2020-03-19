@@ -7,6 +7,7 @@ nav:
     - Scheduling Reports: scheduling.md
     - Validation Charts: validation-charts.md
     - Muting Issues: muting.md
+    - Performance Tips: performance-tips.md
 theme:
   name: material
   language: en
