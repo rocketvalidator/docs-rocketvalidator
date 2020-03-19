@@ -1,7 +1,9 @@
 site_name: Rocket Validator Documentation
 nav:
     - Quick Start: index.md
-    - Scheduling: scheduling.md
+    - Rate Limiting: rate-limits.md
+    - Scheduling Reports: scheduling.md
+    - Validation Charts: validation-charts.md
 theme:
   name: material
   language: en

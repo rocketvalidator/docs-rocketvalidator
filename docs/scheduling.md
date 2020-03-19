@@ -1,4 +1,4 @@
-# Scheduling reports
+# Scheduling Reports
 
 [Pro users](/pricing/pro) can schedule validation reports, so that they are performed automatically when indicated (monthly, weekly or daily).
 
