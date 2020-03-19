@@ -4,6 +4,7 @@ nav:
     - Rate Limiting: rate-limits.md
     - Scheduling Reports: scheduling.md
     - Validation Charts: validation-charts.md
+    - Muting Issues: muting.md
 theme:
   name: material
   language: en
