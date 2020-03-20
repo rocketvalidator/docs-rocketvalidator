@@ -34,3 +34,41 @@ article img {
 dt {
   font-weight: bold
 }
+
+/* Banners */
+
+.widget {
+  margin-top: 15px;
+  border: 2px solid #facb06;
+  border-radius: 10px;
+  padding: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.widget p.title {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.widget ul {
+  padding-left: 25px;
+}
+
+.widget p.btn {
+  color: #fff;
+  background-color: #289528;
+  border-color: #4cae4c;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.widget .btn:hover {
+  background-color: #2daf2d;
+}

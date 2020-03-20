@@ -234,12 +234,45 @@
       Deploy Hooks
     </a>
     
-      
+      <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Table of contents -->
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+
+  <!--
+    Hack: check whether the content contains a h1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
     
   
+
+  <!-- Render item list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -300,6 +333,18 @@
       
     </ul>
   
+
+  <div class="widget">
+    <p class="title">Get Your Free Pro Trial</p>
+    <ul>
+      <li>Automatic link crawling</li>
+      <li>Accessibility checks</li>
+      <li>HTML checks</li>
+      <li>Scheduled reports</li>
+    </ul>
+    <p class="btn"><a href="https://rocketvalidator.com/try" target="_blank" class="btn">Start Your Free Trial</a></p>
+  </div>
+
 </nav>
     
   </li>
@@ -387,12 +432,45 @@
               <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
+                    <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Table of contents -->
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+
+  <!--
+    Hack: check whether the content contains a h1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
   
     
   
+
+  <!-- Render item list -->
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -453,6 +531,18 @@
       
     </ul>
   
+
+  <div class="widget">
+    <p class="title">Get Your Free Pro Trial</p>
+    <ul>
+      <li>Automatic link crawling</li>
+      <li>Accessibility checks</li>
+      <li>HTML checks</li>
+      <li>Scheduled reports</li>
+    </ul>
+    <p class="btn"><a href="https://rocketvalidator.com/try" target="_blank" class="btn">Start Your Free Trial</a></p>
+  </div>
+
 </nav>
                   </div>
                 </div>
@@ -470,7 +560,7 @@
                 <h1 id="deploy-hooks">Deploy hooks</h1>
 <p>Use deploy hooks to notify Rocket Validator that you've deployed a new version of your site and make it start automatically the specified validation.</p>
 <p>To create a deploy hook, create a schedule as explained in the <a href="/scheduling">Scheduling reports</a> section. Then, set up your hosting platform to fire this schedule after deploys.</p>
-<h3 id="curl">curl</h3>
+<h2 id="curl">curl</h2>
 <p><a href="http://curl.haxx.se/" target="_blank">curl</a> is a command-line tool, present in most systems, that you can use to make a quick check from your terminal.</p>
 <div class="admonition example">
 <p class="admonition-title">Example: curl</p>
@@ -478,16 +568,16 @@
 </code></pre></div>
 
 </div>
-<h3 id="netlify">Netlify</h3>
+<h2 id="netlify">Netlify</h2>
 <p><a href="https://www.netlify.com/" target="_blank">Netlify</a> is a hosting platform for static websites, and offers the simplest integration possible.</p>
 <p>You just need to <strong>Add Notification</strong>, choose the <strong>Outgoing webhook</strong> type and paste your deploy hook URL like this:</p>
 <p><img alt="Netlify screenshot" src="/img/schedules/netlify.png" /></p>
-<h3 id="github-pages">Github Pages</h3>
+<h2 id="github-pages">Github Pages</h2>
 <p><a href="https://pages.github.com/">Github Pages</a> let you define webhooks for different events.</p>
 <p>You just need to enter your automatic validator URL in the Payload URL field, and choose the individual event for <i>page build</i>:</p>
 <p><img alt="Github pages screenshot" src="/img/schedules/github-pages.png" /></p>
 <p>Github Pages lets you define several deploy hooks for different services.</p>
-<h3 id="heroku">Heroku</h3>
+<h2 id="heroku">Heroku</h2>
 <p>If your site is on Heroku, you can use the <a href="https://devcenter.heroku.com/deploy-hooks#http-post-hook" target="_blank">free HTTP post hook add-on</a>, like this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example: Heroku</p>
@@ -497,7 +587,7 @@
 
 </div>
 <p>Heroku only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using <a href="https://github.com/deadlyicon/deploy-hook-forker" target="_blank">deploy hook forker</a>.</p>
-<h3 id="engine-yard">Engine Yard</h3>
+<h2 id="engine-yard">Engine Yard</h2>
 <p>Engine Yard lets you define <a href="https://support.cloud.engineyard.com/entries/21016568-use-ruby-deploy-hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example: Engine Yard</p>
@@ -505,7 +595,7 @@
 </code></pre></div>
 
 </div>
-<h3 id="cloud-66">Cloud 66</h3>
+<h2 id="cloud-66">Cloud 66</h2>
 <p>If your site is on <a href="http://cloud66.com" target="_blank">Cloud 66</a>, you can use their <a href="http://help.cloud66.com/deployment/deploy-hooks" target="_blank">free deploy hooks</a> to define your hooks per environment on a file named <strong>.cloud66/deploy_hooks.yml</strong>, like this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example: Cloud 66</p>
@@ -531,7 +621,7 @@
 </code></pre></div>
 
 </div>
-<h3 id="other-platforms">Other platforms</h3>
+<h2 id="other-platforms">Other platforms</h2>
 <p>If your hosting platform is not listed here, feel free to <a href="mailto:support@rocketvalidator.com">contact us</a> and we'll help you with the integration.</p>
                 
               
