@@ -1,4 +1,5 @@
 site_name: Rocket Validator Documentation
+site_url: https://docs.rocketvalidator.com/
 nav:
     - Quick Start: index.md
     - Summary Reports: summary-reports.md
