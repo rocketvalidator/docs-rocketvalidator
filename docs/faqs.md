@@ -19,6 +19,8 @@ When you submit an URL for validation, we send a web spider to visit the site an
   <dd>The remote server is denying us access because it is rate limiting us. Contact your sys admin to relax this rate limiting, or try again later.</dd>
   <dt>Blocked</dt>
   <dd>The remote server is blocking our requests. Consult the <a href="/user-agents">User Agents</a> page to explicitly allow our requests.</dd>
+  <dt>No internal links found</dt>
+  <dd>The document returned for the starting URL contains no links, or the links are not on the same host. The spider will only follow internal links from the starting URL.</dd>
 </dl>
 
 <p>If none of this explains the reason why your site is not being scraped, <a href="mailto:support@rocketvalidator.com">contact us</a> and we'll help you find the cause.</p>
