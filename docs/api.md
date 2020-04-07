@@ -49,24 +49,24 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
             {
                 "attributes": {
                     "id": "9314c",
-                    "inserted-at": "2020-02-28T13:01:30",
-                    "max-pages": 10,
-                    "num-pages": 10,
-                    "rate-limit": 5,
-                    "starting-url": "http://validationhell.com/",
-                    "total-a11y-issues": {
+                    "inserted_at": "2020-02-28T13:01:30",
+                    "max_pages": 10,
+                    "num_pages": 10,
+                    "rate_limit": 5,
+                    "starting_url": "http://validationhell.com/",
+                    "total_a11y_issues": {
                         "errors": 60,
                         "muted_errors": 0,
                         "muted_warnings": 0,
                         "warnings": 0
                     },
-                    "total-html-issues": {
+                    "total_html_issues": {
                         "errors": 156,
                         "muted_errors": 0,
                         "muted_warnings": 0,
                         "warnings": 20
                     },
-                    "updated-at": "2020-02-28T13:01:30"
+                    "updated_at": "2020-02-28T13:01:30"
                 },
                 "id": "9314c",
                 "relationships": {
@@ -75,7 +75,7 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/schedule"
                         }
                     },
-                    "web-pages": {
+                    "web_pages": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages"
                         }
@@ -106,24 +106,24 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
         "data": {
             "attributes": {
                 "id": "9314c",
-                "inserted-at": "2020-02-28T13:01:30",
-                "max-pages": 10,
-                "num-pages": 10,
-                "rate-limit": 5,
-                "starting-url": "http://validationhell.com/",
-                "total-a11y-issues": {
+                "inserted_at": "2020-02-28T13:01:30",
+                "max_pages": 10,
+                "num_pages": 10,
+                "rate_limit": 5,
+                "starting_url": "http://validationhell.com/",
+                "total_a11y_issues": {
                     "errors": 60,
                     "muted_errors": 0,
                     "muted_warnings": 0,
                     "warnings": 0
                 },
-                "total-html-issues": {
+                "total_html_issues": {
                     "errors": 156,
                     "muted_errors": 0,
                     "muted_warnings": 0,
                     "warnings": 20
                 },
-                "updated-at": "2020-02-28T13:01:30"
+                "updated_at": "2020-02-28T13:01:30"
             },
             "id": "9314c",
             "relationships": {
@@ -132,7 +132,7 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
                         "related": "https://rocketvalidator.dev/api/v0/reports/9314c/schedule"
                     }
                 },
-                "web-pages": {
+                "web_pages": {
                     "links": {
                         "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages"
                     }
@@ -161,19 +161,19 @@ Reports that have been triggered via a Schedule will include a link to it.
         "data": {
             "attributes": {
                 "active": true,
-                "check-a11y": true,
-                "check-html": true,
+                "check_a11y": true,
+                "check_html": true,
                 "id": "d2e1f",
-                "inserted-at": "2020-02-28T13:01:23",
-                "last-fired-at": "2020-02-28T13:01:30",
-                "max-pages": 10,
+                "inserted_at": "2020-02-28T13:01:23",
+                "last_fired_at": "2020-02-28T13:01:30",
+                "max_pages": 10,
                 "periodicity": {
                     "every": "month",
                     "monthday": 15
                 },
-                "rate-limit": 5,
-                "starting-url": "http://validationhell.com/",
-                "updated-at": "2020-02-28T13:01:30"
+                "rate_limit": 5,
+                "starting_url": "http://validationhell.com/",
+                "updated_at": "2020-02-28T13:01:30"
             },
             "id": "d2e1f",
             "type": "schedule"
@@ -199,14 +199,14 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
         "data": [
             {
                 "attributes": {
-                    "a11y-check": {
+                    "a11y_check": {
                         "errors": 6,
                         "muted_errors": 0,
                         "muted_warnings": 0,
                         "status": "checked",
                         "warnings": 0
                     },
-                    "html-check": {
+                    "html_check": {
                         "errors": 19,
                         "muted_errors": 0,
                         "muted_warnings": 0,
@@ -214,19 +214,19 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                         "warnings": 2
                     },
                     "id": 472,
-                    "inserted-at": "2020-02-28T13:01:32",
-                    "linked-from": "http://validationhell.com/",
-                    "updated-at": "2020-02-28T13:01:35",
+                    "inserted_at": "2020-02-28T13:01:32",
+                    "linked_from": "http://validationhell.com/",
+                    "updated_at": "2020-02-28T13:01:35",
                     "url": "http://validationhell.com/"
                 },
                 "id": "472",
                 "relationships": {
-                    "a11y-issues": {
+                    "a11y_issues": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/a11y_issues"
                         }
                     },
-                    "html-issues": {
+                    "html_issues": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/html_issues"
                         }
@@ -237,18 +237,18 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                         }
                     }
                 },
-                "type": "web-page"
+                "type": "web_page"
             },
             {
                 "attributes": {
-                    "a11y-check": {
+                    "a11y_check": {
                         "errors": 6,
                         "muted_errors": 0,
                         "muted_warnings": 0,
                         "status": "checked",
                         "warnings": 0
                     },
-                    "html-check": {
+                    "html_check": {
                         "errors": 16,
                         "muted_errors": 0,
                         "muted_warnings": 0,
@@ -256,19 +256,19 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                         "warnings": 2
                     },
                     "id": 473,
-                    "inserted-at": "2020-02-28T13:01:33",
-                    "linked-from": "http://validationhell.com/",
-                    "updated-at": "2020-02-28T13:01:36",
+                    "inserted_at": "2020-02-28T13:01:33",
+                    "linked_from": "http://validationhell.com/",
+                    "updated_at": "2020-02-28T13:01:36",
                     "url": "http://validationhell.com/pages/agent"
                 },
                 "id": "473",
                 "relationships": {
-                    "a11y-issues": {
+                    "a11y_issues": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/473/a11y_issues"
                         }
                     },
-                    "html-issues": {
+                    "html_issues": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/473/html_issues"
                         }
@@ -279,7 +279,7 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                         }
                     }
                 },
-                "type": "web-page"
+                "type": "web_page"
             }
         ],
         "jsonapi": {
@@ -301,14 +301,14 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
     {
         "data": {
             "attributes": {
-                "a11y-check": {
+                "a11y_check": {
                     "errors": 6,
                     "muted_errors": 0,
                     "muted_warnings": 0,
                     "status": "checked",
                     "warnings": 0
                 },
-                "html-check": {
+                "html_check": {
                     "errors": 19,
                     "muted_errors": 0,
                     "muted_warnings": 0,
@@ -316,19 +316,19 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
                     "warnings": 2
                 },
                 "id": 472,
-                "inserted-at": "2020-02-28T13:01:32",
-                "linked-from": "http://validationhell.com/",
-                "updated-at": "2020-02-28T13:01:35",
+                "inserted_at": "2020-02-28T13:01:32",
+                "linked_from": "http://validationhell.com/",
+                "updated_at": "2020-02-28T13:01:35",
                 "url": "http://validationhell.com/"
             },
             "id": "472",
             "relationships": {
-                "a11y-issues": {
+                "a11y_issues": {
                     "links": {
                         "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/a11y_issues"
                     }
                 },
-                "html-issues": {
+                "html_issues": {
                     "links": {
                         "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/html_issues"
                     }
@@ -339,7 +339,7 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
                     }
                 }
             },
-            "type": "web-page"
+            "type": "web_page"
         },
         "jsonapi": {
             "version": "1.0"
@@ -372,12 +372,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                     },
                     "extract": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html",
                     "id": 59734815,
-                    "inserted-at": "2020-02-28T13:01:34",
+                    "inserted_at": "2020-02-28T13:01:34",
                     "message": "Obsolete doctype. Expected “<!DOCTYPE html>”.",
                     "muted": false,
-                    "sub-type": null,
+                    "sub_type": null,
                     "type": "error",
-                    "updated-at": "2020-02-28T13:01:34"
+                    "updated_at": "2020-02-28T13:01:34"
                 },
                 "id": "59734815",
                 "relationships": {
@@ -386,13 +386,13 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
                         }
                     },
-                    "web-page": {
+                    "web_page": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472"
                         }
                     }
                 },
-                "type": "html-issue"
+                "type": "html_issue"
             },
             {
                 "attributes": {
@@ -406,12 +406,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                     },
                     "extract": "  pading: 4px;\n    ",
                     "id": 59734817,
-                    "inserted-at": "2020-02-28T13:01:34",
+                    "inserted_at": "2020-02-28T13:01:34",
                     "message": "CSS: “pading”: Property “pading” doesn't exist.",
                     "muted": false,
-                    "sub-type": null,
+                    "sub_type": null,
                     "type": "error",
-                    "updated-at": "2020-02-28T13:01:34"
+                    "updated_at": "2020-02-28T13:01:34"
                 },
                 "id": "59734817",
                 "relationships": {
@@ -420,13 +420,13 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
                         }
                     },
-                    "web-page": {
+                    "web_page": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472"
                         }
                     }
                 },
-                "type": "html-issue"
+                "type": "html_issue"
             }
         ],
         "jsonapi": {
@@ -454,15 +454,15 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
             {
                 "attributes": {
                     "help": "Images must have alternate text",
-                    "help-url": "https://dequeuniversity.com/rules/axe/3.5/image-alt?application=rocketvalidator",
+                    "help_url": "https://dequeuniversity.com/rules/axe/3.5/image-alt?application=rocketvalidator",
                     "html": [
                         "<img src=\"/images/fire.png\" align=\"absmiddle\" width=\"30\" hspace=\"5\">",
                         "<img src=\"/images/nuke.gif\" width=\"100%\" vspace=\"8\">"
                     ],
                     "id": 6843979,
                     "impact": "critical",
-                    "impact-order": 4,
-                    "inserted-at": "2020-02-28T13:01:35",
+                    "impact_order": 4,
+                    "inserted_at": "2020-02-28T13:01:35",
                     "muted": false,
                     "tags": [
                         "cat.text-alternatives",
@@ -471,7 +471,7 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                         "section508",
                         "section508.22.a"
                     ],
-                    "updated-at": "2020-02-28T13:01:35",
+                    "updated_at": "2020-02-28T13:01:35",
                     "url": "http://validationhell.com/"
                 },
                 "id": "6843979",
@@ -481,32 +481,32 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
                         }
                     },
-                    "web-page": {
+                    "web_page": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472"
                         }
                     }
                 },
-                "type": "a11y-issue"
+                "type": "a11y_issue"
             },
             {
                 "attributes": {
                     "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
-                    "help-url": "https://dequeuniversity.com/rules/axe/3.5/list?application=rocketvalidator",
+                    "help_url": "https://dequeuniversity.com/rules/axe/3.5/list?application=rocketvalidator",
                     "html": [
                         "<ul class=\"nav nav-list\">"
                     ],
                     "id": 6843982,
                     "impact": "serious",
-                    "impact-order": 3,
-                    "inserted-at": "2020-02-28T13:01:35",
+                    "impact_order": 3,
+                    "inserted_at": "2020-02-28T13:01:35",
                     "muted": false,
                     "tags": [
                         "cat.structure",
                         "wcag2a",
                         "wcag131"
                     ],
-                    "updated-at": "2020-02-28T13:01:35",
+                    "updated_at": "2020-02-28T13:01:35",
                     "url": "http://validationhell.com/"
                 },
                 "id": "6843982",
@@ -516,13 +516,13 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
                         }
                     },
-                    "web-page": {
+                    "web_page": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472"
                         }
                     }
                 },
-                "type": "a11y-issue"
+                "type": "a11y_issue"
             }
         ],
         "jsonapi": {
@@ -536,6 +536,7 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
 
 ## Changelog
 
+* 2020-04-07. Use underscore instead of dash in keys.
 * 2020-04-06. Change API tokens URL to `api/tokens`.
 * 2020-03-13. Moved documentation to docs.rocketvalidator.com.
 * 2020-03-02. Change API host to rocketvalidator.dev.
