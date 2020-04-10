@@ -2,20 +2,34 @@ site_name: Rocket Validator Documentation
 site_url: https://docs.rocketvalidator.com/
 site_description: Documentation site for Rocket Validator - automated accessibility scanner for large sites
 nav:
-    - Quick Start: index.md
-    - Summary Reports: summary-reports.md
-    - Broken Links Checker: broken-links-checker.md
-    - Rate Limiting: rate-limits.md
-    - Scheduling Reports: scheduling.md
-    - Deploy Hooks: deploy-hooks.md
-    - Validation Charts: validation-charts.md
-    - Muting Issues: muting.md
-    - Performance Tips: performance-tips.md
-    - User Agents: user-agents.md
-    - Validating your local server: how-to-validate-your-local-server.md
-    - FAQs: faqs.md
+  - Home: index.md
+  - Quick Start: quick-start.md
+  - Summary Reports: summary-reports.md
+  - Broken Links Checker: broken-links-checker.md
+  - Rate Limiting: rate-limits.md
+  - Scheduling Reports: scheduling.md
+  - Deploy Hooks: deploy-hooks.md
+  - Validation Charts: validation-charts.md
+  - Muting Issues: muting.md
+  - Performance Tips: performance-tips.md
+  - User Agents: user-agents.md
+  - Validating your local server: how-to-validate-your-local-server.md
+  - FAQs: faqs.md
+  - API:
+    - Introduction: api/index.md
+    - Authorization: api/authorization.md
+    - Pagination: api/pagination.md
+    - Reports: api/reports.md
+    - Web Pages: api/web_pages.md
+    - Accessibility Issues: api/a11y_issues.md
+    - HTML Issues: api/html_issues.md
+    - Schedules: api/schedules.md
+    - Client Libraries: api/client-libraries.md
+    - Changelog: api/changelog.md
 theme:
   name: material
+  features:
+    - tabs
   custom_dir: overrides
   language: en
   logo: img/rocket-icon-300x300.png

@@ -29,6 +29,10 @@ article img {
   padding: 5px;
 }
 
+.noborder {
+  border: 0;
+}
+
 /* Definition lists */
 
 dt {
