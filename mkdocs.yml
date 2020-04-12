@@ -19,10 +19,13 @@ nav:
     - Introduction: api/index.md
     - Authorization: api/authorization.md
     - Pagination: api/pagination.md
+    - Resources: api/resources.md
     - Reports: api/reports.md
     - Web Pages: api/web_pages.md
     - Accessibility Issues: api/a11y_issues.md
     - HTML Issues: api/html_issues.md
+    - Common Accessibility Issues: api/common_a11y_issues.md
+    - Common HTML Issues: api/common_html_issues.md
     - Schedules: api/schedules.md
     - Client Libraries: api/client-libraries.md
     - Changelog: api/changelog.md

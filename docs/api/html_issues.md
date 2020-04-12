@@ -2,6 +2,88 @@
 
 An HTML issue corresponds to an issue found on a given web page when being checked by the HTML validator.
 
+## Attributes
+
+<dl>
+  <dt>ID</dt>
+  <dd>Unique ID for this HTML issue.</dd>
+
+  <dt>Coordinates</dt>
+  <dd>Where in the document the HTML issue was found. Indicates first and last line, first and last column, and the highlighted code as start and length.</dd>
+
+  <dt>Extract</dt>
+  <dd>Snippet showing the affected HTML code. Use the highlight coordinates to determine the exact portion affected by the issue.</dd>
+
+  <dt>Issue Type</dt>
+  <dd>Error or Warning</dd>
+
+  <dt>Issue Sub Type</dt>
+  <dd>Optional, provides additional info on the type of the issue.</dd>
+
+  <dt>Message</dt>
+  <dd>Brief description of the issue.</dd>
+
+  <dt>Muted</dt>
+  <dd>Boolean, whether or not this issue was muted.</dd>
+
+  <dt>Inserted At</dt>
+  <dd>Timestamp when the HTML Issue was created.</dd>
+
+  <dt>Updated At</dt>
+  <dd>Timestamp when the HTML Issue was last updated.</dd>  
+</dl>
+
+## Relationships
+
+<dl>
+  <dt>Report</dt>
+  <dd>The Report that this HTML Issue belongs to.</dd>
+
+  <dt>Web Page</dt>
+  <dd>The Web Page that this HTML Issue belongs to.</dd>
+</dl>
+
+## Example
+
+!!! example "Example: HTML Issue"
+
+    ```json
+    {
+    	"attributes": {
+    		"coordinates": {
+    			"first_column": 150,
+    			"first_line": 8,
+    			"hilite_length": 4,
+    			"hilite_start": 10,
+    			"last_column": 153,
+    			"last_line": 8
+    		},
+    		"extract": "none;left:none;right",
+    		"id": 64398238,
+    		"inserted_at": "2020-04-02T12:44:45",
+    		"issue_sub_type": null,
+    		"issue_type": "error",
+    		"message": "CSS: “left”: “none” is not a “left” value.",
+    		"muted": false,
+    		"updated_at": "2020-04-02T12:44:45"
+    	},
+    	"id": "64398238",
+    	"relationships": {
+    		"report": {
+    			"links": {
+    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6"
+    			}
+    		},
+    		"web_page": {
+    			"links": {
+    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6/web_pages/2884097"
+    			}
+    		}
+    	},
+    	"type": "html_issue"
+    }
+    ```
+
 ## List HTML issues on a web page
 
 To list the HTML issues found on a web page, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
