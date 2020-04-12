@@ -29,6 +29,10 @@ article img {
   padding: 5px;
 }
 
+.noborder {
+  border: 0;
+}
+
 /* Definition lists */
 
 dt {
@@ -71,4 +75,10 @@ dt {
 
 .widget .btn:hover {
   background-color: #2daf2d;
+}
+
+/* Definition lists */
+
+dl {
+  margin-left: 25px;
 }
