@@ -621,6 +621,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#retrieve-a-common-accessibility-issue" class="md-nav__link">
+    Retrieve a Common Accessibility Issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-the-web-pages-affected-by-a-common-a11y-issue" class="md-nav__link">
+    List the Web Pages affected by a Common A11Y Issue
+  </a>
+  
+</li>
+      
     </ul>
   
 
@@ -779,6 +793,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#retrieve-a-common-accessibility-issue" class="md-nav__link">
+    Retrieve a Common Accessibility Issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-the-web-pages-affected-by-a-common-a11y-issue" class="md-nav__link">
+    List the Web Pages affected by a Common A11Y Issue
+  </a>
+  
+</li>
+      
     </ul>
   
 
@@ -855,7 +883,7 @@
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
  <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
    <span class="nt">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;Form elements must have labels&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;help_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;help_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/label?application=axeAPI&quot;</span><span class="p">,</span>
    <span class="nt">&quot;how_many&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7657066</span><span class="p">,</span>
    <span class="nt">&quot;impact&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
@@ -884,6 +912,149 @@
 </div>
 <h2 id="list-common-a11y-issues-on-a-report">List Common A11Y Issues on a Report</h2>
 <p>To list the Common Accessibility issues found on a report, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/common_a11y_issues</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/common_a11y_issues</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;Form elements must have labels&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;help_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/label?application=axeAPI&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;how_many&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7718009</span><span class="p">,</span>
+            <span class="nt">&quot;impact&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;impact_order&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="nt">&quot;report_id&quot;</span><span class="p">:</span> <span class="s2">&quot;e4cc1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;cat.forms&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wcag332&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wcag131&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;section508&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;section508.22.n&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7718009&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;web_pages&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;common_a11y_issue&quot;</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/common_a11y_issues?page[number]=11&amp;page[size]=1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/common_a11y_issues?page[number]=2&amp;page[size]=1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/common_a11y_issues?page[number]=1&amp;page[size]=1&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="retrieve-a-common-accessibility-issue">Retrieve a Common Accessibility Issue</h2>
+<p>To retrieve a Common HTML Issue on a given Report, send a GET request to <code>/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;Form elements must have labels&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;help_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.1/label?application=axeAPI&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;how_many&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7718009</span><span class="p">,</span>
+            <span class="nt">&quot;impact&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;impact_order&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="nt">&quot;report_id&quot;</span><span class="p">:</span> <span class="s2">&quot;e4cc1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;cat.forms&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wcag332&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wcag131&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;section508&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;section508.22.n&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7718009&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;web_pages&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;common_a11y_issue&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="list-the-web-pages-affected-by-a-common-a11y-issue">List the Web Pages affected by a Common A11Y Issue</h2>
+<p>To list the Web Pages that are affected by a given issue, send a GET request to <code>/api/v0/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$COMMON_A11Y_ISSUE_ID</code>.</p>
+<p>This will list the Web Pages of the Report, filtering them to include only the ones affected by the issue.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$COMMON_A11Y_ISSUE_ID</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;a11y_check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;html_check&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+                <span class="nt">&quot;muted_errors&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;muted_warnings&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="mi">81</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2902447</span><span class="p">,</span>
+            <span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-04-02T12:48:54&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;linked_from&quot;</span><span class="p">:</span> <span class="s2">&quot;https://thekidshouldseethis.com/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-04-02T12:49:02&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://thekidshouldseethis.com/&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2902447&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;a11y_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages/2902447/a11y_issues&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;html_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages/2902447/html_issues&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;web_page&quot;</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&amp;page[number]=10&amp;page[size]=1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&amp;page[number]=2&amp;page[size]=1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&amp;page[number]=1&amp;page[size]=1&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
                 
               
               

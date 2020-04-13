@@ -672,7 +672,19 @@
                 
                 <h1 id="pagination">Pagination</h1>
 <p>When the list of entities returned by a request is paginated, a <code>links</code> key will be included on the JSON response body with links to the <code>first</code>, <code>last</code>, <code>next</code>, <code>prev</code> and <code>self</code> pages.</p>
-<p>The default page size is 25 but this can be customized to other value (minimum 1 and maximum 100) using the <code>page[size]</code> attribute.</p>
+<p>Pagination is controlled using the following parameters:</p>
+<dl>
+  <dt>page[number]</dt>
+  <dd>What page to retrieve.</dd>
+
+  <dt>page[size]</dt>
+  <dd>Number of entries per page. Defaults to 25, minimum is 1, maximum is 100.</dd>
+</dl>
+
+<div class="admonition example">
+<p class="admonition-title">Example: Getting the 3rd page of the reports list, with 10 reports per page</p>
+<p>curl --request GET 'https://rocketvalidator.dev/api/v0/reports/?page[number]=3&amp;page[size]=10'</p>
+</div>
                 
               
               
