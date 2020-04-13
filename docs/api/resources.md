@@ -20,13 +20,13 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
 ## Common Accessibility Issue
 
-Typically, the same kind of issue affects many Web Pages on a given Report. For example, the issue <code>"Form elements must have labels"</code> may affect many Web Pages on the same report.
+Typically, the same kind of issue affects many Web Pages on a given Report. For example, the issue `"Form elements must have labels"`</code>` may affect many Web Pages on the same report.
 
 A Common Accessibility Issue represents a given Accessibility Issue that is common to many Web Pages, thus showing its details, how many times it's found on the Report, and links to the related Web Pages.
 
 ## Common HTML Issue
 
-Typically, the same kind of issue affects many Web Pages on a given Report. For example, the issue <code>"The “center” element is obsolete. Use CSS instead."</code> may affect many Web Pages on the same report.
+Typically, the same kind of issue affects many Web Pages on a given Report. For example, the issue `"The “center” element is obsolete. Use CSS instead."` may affect many Web Pages on the same report.
 
 A Common HTML Issue represents a given HTML Issue that is common to many Web Pages, thus showing its details, how many times it's found on the Report, and links to the related Web Pages.
 

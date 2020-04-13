@@ -57,3 +57,131 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
 ## List Common HTML Issues on a Report
 
 To list the Common HTML Issues found on a report, send a `GET` request to `/api/v0/reports/$REPORT_ID/common_html_issues`.
+
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/common_html_issues"
+
+    ```json
+    {
+    	"data": [{
+    		"attributes": {
+    			"how_many": 30,
+    			"issue_sub_type": null,
+    			"issue_type": "error",
+    			"message": "Element “style” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.)",
+    			"report_id": "e4cc1"
+    		},
+    		"id": "65391912",
+    		"relationships": {
+    			"web_pages": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912"
+    				}
+    			}
+    		},
+    		"type": "common_html_issue"
+    	}],
+    	"jsonapi": {
+    		"version": "1.0"
+    	},
+    	"links": {
+    		"last": "https://rocketvalidator.dev/api/v0/reports/e4cc1/common_html_issues?page[number]=89&page[size]=1",
+    		"next": "https://rocketvalidator.dev/api/v0/reports/e4cc1/common_html_issues?page[number]=2&page[size]=1",
+    		"self": "https://rocketvalidator.dev/api/v0/reports/e4cc1/common_html_issues?page[number]=1&page[size]=1"
+    	}
+    }
+    ```
+
+## Retrieve a Common HTML Issue
+
+To retrieve a Common HTML Issue on a given Report, send a GET requet to `/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
+
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID"
+
+    ```json
+    {
+    	"data": {
+    		"attributes": {
+    			"how_many": 30,
+    			"issue_sub_type": null,
+    			"issue_type": "error",
+    			"message": "Element “style” not allowed as child of element “div” in this context. (Suppressing further errors from this subtree.)",
+    			"report_id": "e4cc1"
+    		},
+    		"id": "65391912",
+    		"relationships": {
+    			"web_pages": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912"
+    				}
+    			}
+    		},
+    		"type": "common_html_issue"
+    	},
+    	"jsonapi": {
+    		"version": "1.0"
+    	}
+    }
+    ```
+
+## List the Web Pages affected by a Common HTML Issue
+
+To list the Web Pages that are affected by a given issue, send a GET request to `/api/v0/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$COMMON_HTML_ISSUE_ID`.
+
+This will list the Web Pages of the Report, filtering them to include only the ones affected by the issue.
+
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$COMMON_HTML_ISSUE_ID"
+
+    ```json
+    {
+    	"data": [{
+    		"attributes": {
+    			"a11y_check": {
+    				"errors": 9,
+    				"muted_errors": 0,
+    				"muted_warnings": 0,
+    				"status": "checked",
+    				"warnings": 1
+    			},
+    			"html_check": {
+    				"errors": 60,
+    				"muted_errors": 0,
+    				"muted_warnings": 0,
+    				"status": "checked",
+    				"warnings": 81
+    			},
+    			"id": 2902447,
+    			"inserted_at": "2020-04-02T12:48:54",
+    			"linked_from": "https://example.com/",
+    			"updated_at": "2020-04-02T12:49:02",
+    			"url": "https://example.com/"
+    		},
+    		"id": "2902447",
+    		"relationships": {
+    			"a11y_issues": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages/2902447/a11y_issues"
+    				}
+    			},
+    			"html_issues": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages/2902447/html_issues"
+    				}
+    			},
+    			"report": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1"
+    				}
+    			}
+    		},
+    		"type": "web_page"
+    	}],
+    	"jsonapi": {
+    		"version": "1.0"
+    	},
+    	"links": {
+    		"last": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=5&page[size]=1",
+    		"next": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=2&page[size]=1",
+    		"self": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=1&page[size]=1"
+    	}
+    }
+    ```
