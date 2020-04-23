@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.0.1">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c3000690.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a676eddb.min.css">
       
       
     
@@ -834,11 +834,11 @@
   <dt>Linked From</dt>
   <dd>URL of the web page that links to this web page. That is, where the Spider found first about this Web Page.</dd>
 
-  <dt>a11y_check</dt>
-  <dd>Holds the result of the accessibility check on that web page. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
+  <dt>HTML Check</dt>
+  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
 
-  <dt>html_check</dt>
-  <dd>Holds the result of the HTML check on that web page. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
+  <dt>A11y Check</dt>
+  <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the web page was created.</dd>
@@ -852,11 +852,11 @@
   <dt>Report</dt>
   <dd>The Report that this Web Page belongs to.</dd>
 
-  <dt>A11Y issues</dt>
-  <dd>The accessibility issues found on this Web Page.</dd>
-
   <dt>HTML issues</dt>
-  <dd>The HTML issues found on this Web Page.</dd>
+  <dd>The HTML issues found on this Web Page, if the HTML check was enabled.</dd>
+
+  <dt>A11Y issues</dt>
+  <dd>The accessibility issues found on this Web Page, if the accessibility check was enabled.</dd>
 </dl>
 
 <h2 id="example">Example</h2>
@@ -1150,15 +1150,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.f45d2d8d.min.js"></script>
-      <script src="../../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+            worker: "../../assets/javascripts/worker/search.58d22e8e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
