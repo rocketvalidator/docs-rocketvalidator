@@ -14,11 +14,11 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dt>Linked From</dt>
   <dd>URL of the web page that links to this web page. That is, where the Spider found first about this Web Page.</dd>
 
-  <dt>a11y_check</dt>
-  <dd>Holds the result of the accessibility check on that web page. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
+  <dt>HTML Check</dt>
+  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
 
-  <dt>html_check</dt>
-  <dd>Holds the result of the HTML check on that web page. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
+  <dt>A11y Check</dt>
+  <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the web page was created.</dd>
@@ -33,11 +33,11 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dt>Report</dt>
   <dd>The Report that this Web Page belongs to.</dd>
 
-  <dt>A11Y issues</dt>
-  <dd>The accessibility issues found on this Web Page.</dd>
-
   <dt>HTML issues</dt>
-  <dd>The HTML issues found on this Web Page.</dd>
+  <dd>The HTML issues found on this Web Page, if the HTML check was enabled.</dd>
+
+  <dt>A11Y issues</dt>
+  <dd>The accessibility issues found on this Web Page, if the accessibility check was enabled.</dd>
 </dl>
 
 ## Example

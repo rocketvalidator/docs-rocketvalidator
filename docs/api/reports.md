@@ -20,11 +20,11 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Rate Limit</dt>
   <dd>Maximum allowed requests per second.</dd>
 
-  <dt>Total A11Y Issues</dt>
-  <dd>Counters for the number of accessibility errors, warnings, muted errors and muted warnings. This sums the number of accessibility issues on the web pages for a particular report.</dd>
-
   <dt>Total HTML Issues</dt>
-  <dd>Counters for the number of HTML errors, warnings, muted errors and muted warnings. This sums the number of HTML issues on the web pages for a particular report.</dd>
+  <dd>Counters for the number of HTML errors, warnings, muted errors and muted warnings. This sums the number of HTML issues on the web pages for a particular report. If HTML checks were not enabled for the report, this will be <code>null</code>.</dd>
+
+  <dt>Total A11Y Issues</dt>
+  <dd>Counters for the number of accessibility errors, warnings, muted errors and muted warnings. This sums the number of accessibility issues on the web pages for a particular report. If accessibility checks were not enabled for the report, this will be <code>null</code>.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the report was created.</dd>
@@ -40,10 +40,10 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dd>The list of web pages found by the Spider for that report.</dd>
 
   <dt>Common A11Y issues</dt>
-  <dd>The accessibility issues found on the web pages for that report, grouped together by their kind.</dd>
+  <dd>The accessibility issues found on the web pages for that report, if any, grouped together by their kind.</dd>
 
   <dt>Common HTML issues</dt>
-  <dd>The HTML issues found on the web pages for that report, grouped together by their kind.</dd>
+  <dd>The HTML issues found on the web pages for that report, if any, grouped together by their kind.</dd>
 
   <dt>Schedule</dt>
   <dd>The Scheduled Report that initiated this Report, if any.</dd>
