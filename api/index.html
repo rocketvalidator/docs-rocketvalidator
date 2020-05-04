@@ -174,7 +174,7 @@
   <li class="md-tabs__item">
     
       <a href=".." class="md-tabs__link">
-        Home
+        Web UI
       </a>
     
   </li>
@@ -247,8 +247,8 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
+    <a href=".." title="Web UI" class="md-nav__link">
+      Web UI
     </a>
   </li>
 
@@ -438,9 +438,283 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
       Introduction
     </a>
+    
+      <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+  <!--
+    Hack: check whether the content contains a h1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+  
+    
+  
+
+  <!-- Render item list -->
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-quick-start" class="md-nav__link">
+    API Quick Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-request" class="md-nav__link">
+    Example Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    Reports
+  </a>
+  
+    <nav class="md-nav" aria-label="Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-your-reports" class="md-nav__link">
+    List your Reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-report" class="md-nav__link">
+    Get a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-pages" class="md-nav__link">
+    Web Pages
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-the-web-pages-on-a-report" class="md-nav__link">
+    List the Web Pages on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-web-page-on-a-report" class="md-nav__link">
+    Get a Web Page on a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-issues" class="md-nav__link">
+    Accessibility Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-a11y-issues-on-a-web-page" class="md-nav__link">
+    List A11Y issues on a Web Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-a11y-issue-on-a-web-page" class="md-nav__link">
+    Get an A11Y issue on a Web Page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-issues" class="md-nav__link">
+    HTML Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-html-issues-on-a-web-page" class="md-nav__link">
+    List HTML issues on a Web Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-html-issue-on-a-web-page" class="md-nav__link">
+    Get an HTML issue on a Web Page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-accessibility-issues" class="md-nav__link">
+    Common Accessibility Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Accessibility Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-common-a11y-issues-on-a-report" class="md-nav__link">
+    List Common A11Y issues on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-common-a11y-issue-on-a-report" class="md-nav__link">
+    Get a Common A11Y issue on a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-html-issues" class="md-nav__link">
+    Common HTML Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common HTML Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-common-html-issues-on-a-report" class="md-nav__link">
+    List Common HTML issues on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-common-html-issue-on-a-report" class="md-nav__link">
+    Get a Common HTML issue on a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    Schedules
+  </a>
+  
+    <nav class="md-nav" aria-label="Schedules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-your-schedules" class="md-nav__link">
+    List your Schedules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-schedule" class="md-nav__link">
+    Get a Schedule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+
+  <div class="widget">
+    <p class="title">Join Rocket Validator</p>
+    <ul>
+      <li>Automatic link crawling</li>
+      <li>Accessibility checks</li>
+      <li>HTML checks</li>
+      <li>Scheduled reports</li>
+    </ul>
+    <p class="btn"><a href="https://rocketvalidator.com/registration/new" target="_blank" class="btn">Start Your Free Trial</a></p>
+  </div>
+
+</nav>
     
   </li>
 
@@ -644,6 +918,219 @@
 
   <!-- Render item list -->
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-quick-start" class="md-nav__link">
+    API Quick Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-request" class="md-nav__link">
+    Example Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reports" class="md-nav__link">
+    Reports
+  </a>
+  
+    <nav class="md-nav" aria-label="Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-your-reports" class="md-nav__link">
+    List your Reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-report" class="md-nav__link">
+    Get a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-pages" class="md-nav__link">
+    Web Pages
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-the-web-pages-on-a-report" class="md-nav__link">
+    List the Web Pages on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-web-page-on-a-report" class="md-nav__link">
+    Get a Web Page on a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-issues" class="md-nav__link">
+    Accessibility Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-a11y-issues-on-a-web-page" class="md-nav__link">
+    List A11Y issues on a Web Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-a11y-issue-on-a-web-page" class="md-nav__link">
+    Get an A11Y issue on a Web Page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-issues" class="md-nav__link">
+    HTML Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-html-issues-on-a-web-page" class="md-nav__link">
+    List HTML issues on a Web Page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-html-issue-on-a-web-page" class="md-nav__link">
+    Get an HTML issue on a Web Page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-accessibility-issues" class="md-nav__link">
+    Common Accessibility Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Accessibility Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-common-a11y-issues-on-a-report" class="md-nav__link">
+    List Common A11Y issues on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-common-a11y-issue-on-a-report" class="md-nav__link">
+    Get a Common A11Y issue on a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-html-issues" class="md-nav__link">
+    Common HTML Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Common HTML Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-common-html-issues-on-a-report" class="md-nav__link">
+    List Common HTML issues on a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-common-html-issue-on-a-report" class="md-nav__link">
+    Get a Common HTML issue on a Report
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    Schedules
+  </a>
+  
+    <nav class="md-nav" aria-label="Schedules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-your-schedules" class="md-nav__link">
+    List your Schedules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-a-schedule" class="md-nav__link">
+    Get a Schedule
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 
   <div class="widget">
     <p class="title">Join Rocket Validator</p>
@@ -671,13 +1158,246 @@
                 
                 
                 <h1 id="rocket-validator-api">Rocket Validator API</h1>
+<p>Welcome to the Rocket Validator API documentation.</p>
+<p>The Rocket Validator API allows you to manage your reports and integrate them easily in your existing workflows using conventional HTTP requests to a standard JSON API. Refer to the <a href="https://jsonapi.org/" target="_blank">json:api specification</a> for an overview of the conventions we use.</p>
+<p>Currently the API is on an alpha stage, but you can start using it today. Keep in mind that it is still subject to changes, which will be documented on the changelog.</p>
 <div class="admonition info">
 <p class="admonition-title">Work in progress!</p>
 <p>The Rocket Validator API is currently in alpha stage, and subject to changes.</p>
 </div>
-<p>Welcome to the Rocket Validator API documentation.</p>
-<p>The Rocket Validator API allows you to manage your reports and integrate them easily in your existing workflows using conventional HTTP requests to a standard JSON API. Refer to the <a href="https://jsonapi.org/" target="_blank">json:api specification</a> for an overview of the conventions we use.</p>
-<p>Currently the API is on an alpha stage, but you can start using it today. Keep in mind that it is still subject to changes, which will be documented on the changelog.</p>
+<h2 id="api-quick-start">API Quick Start</h2>
+<p>To start working with the Rocket Validator, all you need is to <a href="https://rocketvalidator.com/registration/new" target="rocket">sign up</a> for a new account and then generate an <a href="https://rocketvalidator.com/api/tokens" target="rocket">API token</a>. Check out the <a href="/api/authorization">Authorization</a> section to learn how to use this API token to identify your requests.</p>
+<h2 id="example-request">Example Request</h2>
+<p>To retrieve the data you need from Rocket Validator, you just need to perform a standard <code>GET</code> request to the appropiate endpoint. Here are some examples in different programming languages, and below is a cheatsheet on the most common endpoints.</p>
+<div class="admonition example">
+<p class="admonition-title">Example code</p>
+<div class="tabbed-set" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">cURL</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>curl --request GET <span class="se">\</span>
+     --url https://rocketvalidator.dev/api/v0/reports <span class="se">\</span>
+     --header <span class="s1">&#39;authorization: Bearer $API_TOKEN&#39;</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Ruby</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nb">require</span> <span class="s1">&#39;uri&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;openssl&#39;</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">)</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="n">url</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
+<span class="n">http</span><span class="o">.</span><span class="n">use_ssl</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">http</span><span class="o">.</span><span class="n">verify_mode</span> <span class="o">=</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">SSL</span><span class="o">::</span><span class="no">VERIFY_NONE</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="o">[</span><span class="s2">&quot;authorization&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;Bearer $API_TOKEN&#39;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">response</span><span class="o">.</span><span class="n">read_body</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Ruby Gem</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1"># Install the gem from https://rubygems.org/gems/rocketvalidator</span>
+
+<span class="nb">require</span> <span class="s1">&#39;rocketvalidator&#39;</span>
+
+<span class="k">def</span> <span class="nf">print_report</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="nb">puts</span> <span class="n">report</span><span class="o">.</span><span class="n">starting_url</span>
+    <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">report</span><span class="o">.</span><span class="n">num_pages</span><span class="si">}</span><span class="s2"> web pages, showing first 10:&quot;</span>
+
+    <span class="n">print_web_pages</span><span class="p">(</span><span class="n">report</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">report</span><span class="o">.</span><span class="n">total_a11y_issues</span><span class="o">[</span><span class="s2">&quot;errors&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2"> total A11Y errors&quot;</span> <span class="k">if</span> <span class="n">report</span><span class="o">.</span><span class="n">total_a11y_issues</span>
+    <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">report</span><span class="o">.</span><span class="n">total_html_issues</span><span class="o">[</span><span class="s2">&quot;errors&quot;</span><span class="o">]</span><span class="si">}</span><span class="s2"> total HTML errors&quot;</span> <span class="k">if</span> <span class="n">report</span><span class="o">.</span><span class="n">total_html_issues</span>
+    <span class="nb">puts</span> <span class="s2">&quot;&quot;</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">print_web_pages</span><span class="p">(</span><span class="n">report</span><span class="p">,</span> <span class="n">num_pages</span><span class="p">)</span>
+    <span class="n">web_pages</span> <span class="o">=</span> <span class="no">RocketValidator</span><span class="o">::</span><span class="no">V0</span><span class="o">::</span><span class="no">WebPage</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="ss">report_id</span><span class="p">:</span> <span class="n">report</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">per</span><span class="p">(</span><span class="n">num_pages</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+
+    <span class="n">web_pages</span><span class="o">.</span><span class="n">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">web_page</span><span class="p">,</span> <span class="n">index</span><span class="o">|</span>
+        <span class="nb">puts</span> <span class="s2">&quot;   </span><span class="si">#{</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">.- </span><span class="si">#{</span><span class="n">web_page</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">RocketValidator</span><span class="o">::</span><span class="no">V0</span><span class="o">::</span><span class="no">Resource</span><span class="o">.</span><span class="n">with_api_token</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&quot;ROCKET_API_TOKEN&quot;</span><span class="o">]</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">reports</span> <span class="o">=</span> <span class="no">RocketValidator</span><span class="o">::</span><span class="no">V0</span><span class="o">::</span><span class="no">Report</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">per</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+
+    <span class="k">while</span> <span class="n">reports</span> <span class="k">do</span>
+        <span class="n">page</span> <span class="o">=</span> <span class="n">page</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">puts</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Page </span><span class="si">#{</span><span class="n">page</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">reports</span><span class="o">.</span><span class="n">length</span><span class="si">}</span><span class="s2"> reports found.&quot;</span>
+
+        <span class="n">reports</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">report</span><span class="o">|</span>
+            <span class="n">print_report</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+        <span class="k">end</span>
+
+        <span class="nb">puts</span> <span class="s2">&quot;Load next page? (y/n)&quot;</span>
+
+        <span class="k">break</span> <span class="k">unless</span> <span class="o">[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;yes&quot;</span><span class="o">].</span><span class="n">include?</span><span class="p">(</span><span class="nb">gets</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">downcase</span><span class="p">)</span>
+
+        <span class="n">reports</span> <span class="o">=</span> <span class="n">reports</span><span class="o">.</span><span class="n">pages</span><span class="o">.</span><span class="n">next</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">http.client</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;rocketvalidator.dev&quot;</span><span class="p">)</span>
+
+<span class="n">payload</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;authorization&#39;</span><span class="p">:</span> <span class="s2">&quot;Bearer $API_TOKEN&quot;</span> <span class="p">}</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/api/v0/reports&quot;</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">PHP</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
+
+<span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">,</span>
+    <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nx">CURLOPT_TIMEOUT</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="nx">CURLOPT_HTTP_VERSION</span> <span class="o">=&gt;</span> <span class="nx">CURL_HTTP_VERSION_1_1</span><span class="p">,</span>
+    <span class="nx">CURLOPT_CUSTOMREQUEST</span> <span class="o">=&gt;</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="nx">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nx">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s2">&quot;authorization: Bearer </span><span class="si">$API_TOKEN</span><span class="s2">&quot;</span>
+    <span class="p">),</span>
+<span class="p">));</span>
+
+<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="nv">$err</span> <span class="o">=</span> <span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+
+<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;cURL Error #:&quot;</span> <span class="o">.</span> <span class="nv">$err</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><label for="__tabbed_1_6">Node.js</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;https&quot;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hostname&quot;</span><span class="o">:</span> <span class="s2">&quot;rocketvalidator.dev&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;port&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/v0/reports&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;headers&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;content-length&quot;</span><span class="o">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;authorization&quot;</span><span class="o">:</span> <span class="s2">&quot;Bearer $API_TOKEN&quot;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">chunks</span> <span class="o">=</span> <span class="p">[];</span>
+
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">chunks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">chunk</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">chunks</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><label for="__tabbed_1_7">Java</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">Unirest</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;authorization&quot;</span><span class="p">,</span> <span class="s">&quot;Bearer $API_TOKEN&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="na">asString</span><span class="p">();</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><label for="__tabbed_1_8">Swift</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Foundation</span>
+
+<span class="kd">let</span> <span class="nv">headers</span> <span class="p">=</span> <span class="p">[</span><span class="s">&quot;authorization&quot;</span><span class="p">:</span> <span class="s">&quot;Bearer $API_TOKEN&quot;</span><span class="p">]</span>
+
+<span class="kd">let</span> <span class="nv">postData</span> <span class="p">=</span> <span class="bp">NSData</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">.</span><span class="n">data</span><span class="p">(</span><span class="n">using</span><span class="p">:</span> <span class="nb">String</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+
+<span class="kd">let</span> <span class="nv">request</span> <span class="p">=</span> <span class="bp">NSMutableURLRequest</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="bp">NSURL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">)</span><span class="o">!</span> <span class="k">as</span> <span class="n">URL</span><span class="p">,</span>
+                                        <span class="n">cachePolicy</span><span class="p">:</span> <span class="p">.</span><span class="n">useProtocolCachePolicy</span><span class="p">,</span>
+                                    <span class="n">timeoutInterval</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="n">httpMethod</span> <span class="p">=</span> <span class="s">&quot;GET&quot;</span>
+<span class="n">request</span><span class="p">.</span><span class="n">allHTTPHeaderFields</span> <span class="p">=</span> <span class="n">headers</span>
+<span class="n">request</span><span class="p">.</span><span class="n">httpBody</span> <span class="p">=</span> <span class="n">postData</span> <span class="k">as</span> <span class="n">Data</span>
+
+<span class="kd">let</span> <span class="nv">session</span> <span class="p">=</span> <span class="n">URLSession</span><span class="p">.</span><span class="n">shared</span>
+<span class="kd">let</span> <span class="nv">dataTask</span> <span class="p">=</span> <span class="n">session</span><span class="p">.</span><span class="n">dataTask</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">request</span> <span class="k">as</span> <span class="n">URLRequest</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="k">in</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">httpResponse</span> <span class="p">=</span> <span class="n">response</span> <span class="k">as</span><span class="p">?</span> <span class="n">HTTPURLResponse</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">httpResponse</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">})</span>
+
+<span class="n">dataTask</span><span class="p">.</span><span class="n">resume</span><span class="p">()</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<h2 id="reports">Reports</h2>
+<h3 id="list-your-reports">List your Reports</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports</code>.</p>
+<h3 id="get-a-report">Get a Report</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID</code>.</p>
+<h2 id="web-pages">Web Pages</h2>
+<h3 id="list-the-web-pages-on-a-report">List the Web Pages on a Report</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages</code>.</p>
+<h3 id="get-a-web-page-on-a-report">Get a Web Page on a Report</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID</code>.</p>
+<h2 id="accessibility-issues">Accessibility Issues</h2>
+<h3 id="list-a11y-issues-on-a-web-page">List A11Y issues on a Web Page</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues</code>.</p>
+<h3 id="get-an-a11y-issue-on-a-web-page">Get an A11Y issue on a Web Page</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID</code>.</p>
+<h2 id="html-issues">HTML Issues</h2>
+<h3 id="list-html-issues-on-a-web-page">List HTML issues on a Web Page</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues</code>.</p>
+<h3 id="get-an-html-issue-on-a-web-page">Get an HTML issue on a Web Page</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID</code>.</p>
+<h2 id="common-accessibility-issues">Common Accessibility Issues</h2>
+<h3 id="list-common-a11y-issues-on-a-report">List Common A11Y issues on a Report</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/common_a11y_issues</code>.</p>
+<h3 id="get-a-common-a11y-issue-on-a-report">Get a Common A11Y issue on a Report</h3>
+<p>Send a GET request to <code>/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID</code>.</p>
+<h2 id="common-html-issues">Common HTML Issues</h2>
+<h3 id="list-common-html-issues-on-a-report">List Common HTML issues on a Report</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/common_html_issues</code>.</p>
+<h3 id="get-a-common-html-issue-on-a-report">Get a Common HTML issue on a Report</h3>
+<p>Send a GET requet to <code>/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID</code>.</p>
+<h2 id="schedules">Schedules</h2>
+<h3 id="list-your-schedules">List your Schedules</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/schedules</code>.</p>
+<h3 id="get-a-schedule">Get a Schedule</h3>
+<p>Send a <code>GET</code> request to <code>/api/v0/schedules/$SCHEDULE_ID</code>.</p>
                 
               
               
