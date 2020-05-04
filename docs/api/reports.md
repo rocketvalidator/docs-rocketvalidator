@@ -90,7 +90,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     		},
     		"schedule": {
     			"links": {
-    				"related": null
+    				"related": "https://rocketvalidator.dev/api/v0/schedules/5de34"
     			}
     		},
     		"web_pages": {
@@ -103,7 +103,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     }
     ```
 
-## List your reports
+## List your Reports
 
 To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
 
@@ -138,7 +138,7 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                 "relationships": {
                     "schedule": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/9314c/schedule"
+                            "related": "https://rocketvalidator.dev/api/v0/schedules/5de34"
                         }
                     },
                     "web_pages": {
@@ -195,7 +195,7 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
             "relationships": {
                 "schedule": {
                     "links": {
-                        "related": "https://rocketvalidator.dev/api/v0/reports/9314c/schedule"
+                        "related": "https://rocketvalidator.dev/api/v0/schedules/5de34"
                     }
                 },
                 "web_pages": {

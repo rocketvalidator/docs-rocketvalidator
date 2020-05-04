@@ -67,6 +67,13 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
                 "updated_at": "2020-02-28T13:01:30"
             },
             "id": "d2e1f",
+            "relationships": {
+                "reports": {
+                    "links": {
+                    "related": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=d2e1f"
+                    }
+                }
+                },
             "type": "schedule"
         },
         "jsonapi": {
@@ -75,36 +82,161 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
     }
     ```
 
-## Schedule for a report
+## List your Schedules
 
-Reports that have been triggered via a Schedule will include a link to it.
+To list all Schedules in your account, send a `GET` request to `/api/v0/schedules`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/schedule"
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/schedules"
+
+    ```json
+    {
+        "data": [
+            {
+            "attributes": {
+                "active": true,
+                "check_a11y": true,
+                "check_html": true,
+                "id": "9c55",
+                "inserted_at": "2019-02-05T13:13:29",
+                "last_fired_at": "2020-04-28T12:02:57",
+                "max_pages": 10,
+                "periodicity": {
+                "every": "month",
+                "monthday": 23
+                },
+                "rate_limit": 3,
+                "starting_url": "http://validationhell.com",
+                "updated_at": "2020-04-28T12:02:57"
+            },
+            "id": "9c55",
+            "relationships": {
+                "reports": {
+                "links": {
+                    "related": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c55"
+                }
+                }
+            },
+            "type": "schedule"
+            }
+        ],
+        "jsonapi": {
+            "version": "1.0"
+        },
+        "links": {
+            "last": "https://rocketvalidator.dev/api/v0/schedules?page[number]=7&page[size]=25",
+            "next": "https://rocketvalidator.dev/api/v0/schedules?page[number]=2&page[size]=25",
+            "self": "https://rocketvalidator.dev/api/v0/schedules?page[number]=1&page[size]=25"
+        }
+    }
+    ```
+
+
+## Retrieve a Schedule
+
+To retrieve an individual Schedule in your account, send a `GET` request to `/api/v0/schedules/$SCHEDULE_ID`.
+
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/schedules/$SCHEDULE_ID"
 
     ```json
     {
         "data": {
             "attributes": {
-                "active": true,
-                "check_a11y": true,
-                "check_html": true,
-                "id": "d2e1f",
-                "inserted_at": "2020-02-28T13:01:23",
-                "last_fired_at": "2020-02-28T13:01:30",
-                "max_pages": 10,
-                "periodicity": {
-                    "every": "month",
-                    "monthday": 15
-                },
-                "rate_limit": 5,
-                "starting_url": "http://validationhell.com/",
-                "updated_at": "2020-02-28T13:01:30"
+            "active": true,
+            "check_a11y": true,
+            "check_html": true,
+            "id": "9c55",
+            "inserted_at": "2019-02-05T13:13:29",
+            "last_fired_at": "2020-04-28T12:02:57",
+            "max_pages": 10,
+            "periodicity": {
+                "every": "month",
+                "monthday": 23
             },
-            "id": "d2e1f",
+            "rate_limit": 3,
+            "starting_url": "http://validationhell.com",
+            "updated_at": "2020-04-28T12:02:57"
+            },
+            "id": "9c55",
+            "relationships": {
+            "reports": {
+                "links": {
+                "related": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c55"
+                }
+            }
+            },
             "type": "schedule"
         },
         "jsonapi": {
             "version": "1.0"
+        }
+    }
+    ```
+
+
+## Filter Reports by Schedule
+
+To list all the Reports in your account that have been run via a given Schedule, send a `GET` request `/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID`.
+
+This will list your Reports, filtered by that schedule id.
+
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID"
+
+    ```json
+    {
+        "data": [
+            {
+                "attributes": {
+                    "id": "ce472",
+                    "inserted_at": "2020-04-28T12:02:57",
+                    "max_pages": 10,
+                    "num_pages": 10,
+                    "rate_limit": 3,
+                    "starting_url": "http://validationhell.com/",
+                    "total_a11y_issues": {
+                        "errors": 38,
+                        "muted_errors": 0,
+                        "muted_warnings": 0,
+                        "warnings": 3
+                    },
+                    "total_html_issues": {
+                        "errors": 649,
+                        "muted_errors": 0,
+                        "muted_warnings": 0,
+                        "warnings": 434
+                    },
+                    "updated_at": "2020-04-28T12:02:57"
+                },
+                "id": "ce472",
+                "relationships": {
+                    "common_a11y_issues": {
+                        "links": {
+                            "related": "https://rocketvalidator.dev/api/v0/reports/ce472/common_a11y_issues"
+                        }
+                    },
+                    "common_html_issues": {
+                        "links": {
+                            "related": "https://rocketvalidator.dev/api/v0/reports/ce472/common_html_issues"
+                        }
+                    },
+                    "schedule": {
+                        "links": {
+                            "related": "https://rocketvalidator.dev/api/v0/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83"
+                        }
+                    },
+                    "web_pages": {
+                        "links": {
+                            "related": "https://rocketvalidator.dev/api/v0/reports/ce472/web_pages"
+                        }
+                    }
+                },
+                "type": "report"
+            }
+        ],
+        "jsonapi": {
+            "version": "1.0"
+        },
+        "links": {
+            "self": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&page[number]=1&page[size]=25"
         }
     }
     ```
