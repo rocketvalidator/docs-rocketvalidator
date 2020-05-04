@@ -2,7 +2,7 @@ site_name: Rocket Validator Documentation
 site_url: https://docs.rocketvalidator.com/
 site_description: Documentation site for Rocket Validator - automated accessibility scanner for large sites
 nav:
-  - Home: index.md
+  - Web UI: index.md
   - Quick Start: quick-start.md
   - Summary Reports: summary-reports.md
   - Broken Links Checker: broken-links-checker.md

@@ -9,7 +9,7 @@ Currently the API is on an alpha stage, but you can start using it today. Keep i
 !!! info "Work in progress!"
     The Rocket Validator API is currently in alpha stage, and subject to changes.
 
-## Quick Start
+## API Quick Start
 
 To start working with the Rocket Validator, all you need is to <a href="https://rocketvalidator.com/registration/new" target="rocket">sign up</a> for a new account and then generate an <a href="https://rocketvalidator.com/api/tokens" target="rocket">API token</a>. Check out the <a href="/api/authorization">Authorization</a> section to learn how to use this API token to identify your requests.
 
