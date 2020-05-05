@@ -51,26 +51,6 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         require 'rocketvalidator'
 
-        def print_report(report)
-            puts "*" * 100
-            puts report.starting_url
-            puts "#{report.num_pages} web pages, showing first 10:"
-
-            print_web_pages(report, 10)
-
-            puts "#{report.total_a11y_issues["errors"]} total A11Y errors" if report.total_a11y_issues
-            puts "#{report.total_html_issues["errors"]} total HTML errors" if report.total_html_issues
-            puts ""
-        end
-
-        def print_web_pages(report, num_pages)
-            web_pages = RocketValidator::V0::WebPage.where(report_id: report.id).page(1).per(num_pages).to_a
-
-            web_pages.each_with_index do |web_page, index|
-                puts "   #{index + 1}.- #{web_page.url}"
-            end
-        end
-
         RocketValidator::V0::Resource.with_api_token(ENV["ROCKET_API_TOKEN"]) do
             page = 0
             reports = RocketValidator::V0::Report.page(1).per(10).to_a
@@ -80,17 +60,12 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
                 puts "\nPage #{page}: #{reports.length} reports found."
 
                 reports.each do |report|
-                    print_report(report)
+                    puts(report.starting_url)
                 end
-
-                puts "Load next page? (y/n)"
-
-                break unless ["y", "yes"].include?(gets.strip.chomp.downcase)
 
                 reports = reports.pages.next
             end
         end
-
         ```
 
     === "Python"
