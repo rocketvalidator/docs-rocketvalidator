@@ -47,6 +47,9 @@ An Accessibility issue corresponds to an issue found on a given web page when be
 
   <dt>Web Page</dt>
   <dd>The Web Page that this Accessibility Issue belongs to.</dd>
+
+  <dt>Muting</dt>
+  <dd>The Muting applied, if any.</dd>
 </dl>
 
 ## Example
@@ -66,7 +69,7 @@ An Accessibility issue corresponds to an issue found on a given web page when be
             "impact": "critical",
             "impact_order": 4,
             "inserted_at": "2020-04-02T12:44:50",
-            "muted": false,
+            "muted": true,
             "tags": [
                 "cat.forms",
                 "wcag2a",
@@ -80,6 +83,11 @@ An Accessibility issue corresponds to an issue found on a given web page when be
         },
         "id": "7657099",
         "relationships": {
+            "muting": {
+              "links": {
+                "related": "https://rocketvalidator.dev/api/v0/mutings/941"
+              }
+            },
             "report": {
                 "links": {
                     "related": "https://rocketvalidator.dev/api/v0/reports/56b6"
@@ -129,6 +137,11 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                 },
                 "id": "6843979",
                 "relationships": {
+                    "muting": {
+                      "links": {
+                        "related": null
+                      }
+                    },
                     "report": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
@@ -164,6 +177,11 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                 },
                 "id": "6843982",
                 "relationships": {
+                    "muting": {
+                      "links": {
+                        "related": null
+                      }
+                    },
                     "report": {
                         "links": {
                             "related": "https://rocketvalidator.dev/api/v0/reports/9314c"

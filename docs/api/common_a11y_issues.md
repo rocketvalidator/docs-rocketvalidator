@@ -28,9 +28,6 @@ A Common Accessibility Issue represents a given Accessibility Issue that is comm
   <dt>Tags</dt>
   <dd>List of Accessibility guidelines that relate to this issue.</dd>
 
-  <dt>Muted</dt>
-  <dd>Boolean, whether or not this issue was muted.</dd>
-
   <dt>Inserted At</dt>
   <dd>Timestamp when the Accessibility Issue was created.</dd>
 
