@@ -245,6 +245,16 @@ Send a `GET` request to `/api/v0/reports/$REPORT_ID/common_html_issues`.
 
 Send a GET requet to `/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
 
+## Mutings
+
+### List your Mutings
+
+Send a `GET` request to `/api/v0/mutings`.
+
+### Get a Muting
+
+Send a `GET` request to `/api/v0/mutings/$MUTING_ID`.
+
 ## Schedules
 
 ### List your Schedules
