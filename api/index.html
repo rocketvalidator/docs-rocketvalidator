@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.5">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.df84b5fe.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b9ffd7b.min.css">
       
       
     
@@ -518,6 +518,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#create-a-report" class="md-nav__link">
+    Create a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#list-your-reports" class="md-nav__link">
     List your Reports
   </a>
@@ -527,6 +534,13 @@
           <li class="md-nav__item">
   <a href="#get-a-report" class="md-nav__link">
     Get a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-report" class="md-nav__link">
+    Delete a Report
   </a>
   
 </li>
@@ -986,6 +1000,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#create-a-report" class="md-nav__link">
+    Create a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#list-your-reports" class="md-nav__link">
     List your Reports
   </a>
@@ -995,6 +1016,13 @@
           <li class="md-nav__item">
   <a href="#get-a-report" class="md-nav__link">
     Get a Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-report" class="md-nav__link">
+    Delete a Report
   </a>
   
 </li>
@@ -1404,10 +1432,37 @@
 </div>
 </div>
 <h2 id="reports">Reports</h2>
+<h3 id="create-a-report">Create a Report</h3>
+<p>Send a <code>POST</code> request to <code>/api/v0/reports</code> with a JSON payload including the parameters:</p>
+<ul>
+<li><code>starting_url</code>. The initial URL where the Spider will start on.</li>
+<li><code>max_pages</code>. The Spider will recursively follow internal links found until this limit is reached.</li>
+<li><code>rate_limit</code>. Limit on the number of requests per second.</li>
+<li><code>perform_html_checks</code>. Boolean to enable checks using the W3C Validator software on the Web Pages found.</li>
+<li><code>perform_a1yy_checks</code>. Boolean to enable checks using Deque Axe Core software on the Web Pages found.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: POST https://rocketvalidator.dev/api/v0/reports</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;max_pages&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;perform_html_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
 <h3 id="list-your-reports">List your Reports</h3>
 <p>Send a <code>GET</code> request to <code>/api/v0/reports</code>.</p>
 <h3 id="get-a-report">Get a Report</h3>
 <p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID</code>.</p>
+<h3 id="delete-a-report">Delete a Report</h3>
+<p>Send a <code>DELETE</code> request to <code>/api/v0/reports/$REPORT_ID</code>.</p>
 <h2 id="web-pages">Web Pages</h2>
 <h3 id="list-the-web-pages-on-a-report">List the Web Pages on a Report</h3>
 <p>Send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages</code>.</p>
@@ -1540,8 +1595,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.83fe6e3c.min.js"></script>
-      <script src="../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
