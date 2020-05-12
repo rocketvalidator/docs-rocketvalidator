@@ -20,11 +20,38 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Rate Limit</dt>
   <dd>Maximum allowed requests per second.</dd>
 
-  <dt>Total HTML Issues</dt>
-  <dd>Counters for the number of HTML errors, warnings, muted errors and muted warnings. This sums the number of HTML issues on the web pages for a particular report. If HTML checks were not enabled for the report, this will be <code>null</code>.</dd>
+  <dt>Perform HTML Checks</dt>
+  <dd>Boolean to indicate whether or not HTML checks will be included.</dd>
 
-  <dt>Total A11Y Issues</dt>
-  <dd>Counters for the number of accessibility errors, warnings, muted errors and muted warnings. This sums the number of accessibility issues on the web pages for a particular report. If accessibility checks were not enabled for the report, this will be <code>null</code>.</dd>
+  <dt>Perform A11Y Checks</dt>
+  <dd>Boolean to indicate whether or not accessibility checks will be included.</dd>
+
+  <dt>Checks</dt>
+  <dd>
+    Details for the checks enabled for this report.
+    <dl>
+        <dt>HTML</dt>
+        <dd>
+            Details for the HTML checks, if enabled (<code>null</code> otherwise).
+            <dl>
+              <dt>Status</dt>
+              <dd>HTML checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
+              <dt>Issues</dt>
+              <dd>Counters for the number of HTML errors, warnings, muted errors and muted warnings. This sums the number of HTML issues on the web pages for a particular report.</dd>
+            </dl>
+        </dd>
+        <dt>A11Y</dt>
+        <dd>
+            Details for the Accessibility checks, if enabled (<code>null</code> otherwise).
+            <dl>
+              <dt>Status</dt>
+              <dd>Accessibility checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
+              <dt>Issues</dt>
+              <dd>Counters for the number of Accessibility errors, warnings, muted errors and muted warnings. This sums the number of Accessibility issues on the web pages for a particular report.</dd>
+            </dl>
+        </dd>
+    </dl>
+  </dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the report was created.</dd>
@@ -55,51 +82,202 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
     ```json
     {
-    	"attributes": {
-    		"id": "56b6",
-    		"inserted_at": "2020-04-02T12:44:40",
-    		"max_pages": 50,
-    		"num_pages": 50,
-    		"rate_limit": 25,
-    		"starting_url": "https://example.com/",
-    		"total_a11y_issues": {
-    			"errors": 430,
-    			"muted_errors": 0,
-    			"muted_warnings": 0,
-    			"warnings": 46
+    	"data": {
+    		"attributes": {
+    			"checks": {
+    				"a11y": {
+    					"issues": {
+    						"errors": 60,
+    						"muted_errors": 0,
+    						"muted_warnings": 0,
+    						"warnings": 0
+    					},
+    					"status": {
+    						"checked": 10,
+    						"failed": 0,
+    						"pending": 0
+    					}
+    				},
+    				"html": {
+    					"issues": {
+    						"errors": 157,
+    						"muted_errors": 0,
+    						"muted_warnings": 0,
+    						"warnings": 20
+    					},
+    					"status": {
+    						"checked": 10,
+    						"failed": 0,
+    						"pending": 0
+    					}
+    				}
+    			},
+    			"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
+    			"inserted_at": "2020-05-12T17:09:43",
+    			"max_pages": 10,
+    			"num_pages": 10,
+    			"perform_a11y_checks": true,
+    			"perform_html_checks": true,
+    			"rate_limit": 3,
+    			"starting_url": "http://validationhell.com/",
+    			"updated_at": "2020-05-12T17:09:43"
     		},
-    		"total_html_issues": {
-    			"errors": 2455,
-    			"muted_errors": 0,
-    			"muted_warnings": 0,
-    			"warnings": 3324
+    		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
+    		"relationships": {
+    			"common_a11y_issues": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+    				}
+    			},
+    			"common_html_issues": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+    				}
+    			},
+    			"schedule": {
+    				"links": {
+    					"related": null
+    				}
+    			},
+    			"web_pages": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+    				}
+    			}
     		},
-    		"updated_at": "2020-04-02T12:44:40"
+    		"type": "report"
     	},
-    	"id": "56b6",
-    	"relationships": {
-    		"common_a11y_issues": {
-    			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6/common_a11y_issues"
+    	"jsonapi": {
+    		"version": "1.0"
+    	}
+    }
+    ```
+
+## Create a Report
+
+To create a Report, send a `POST` request to `/api/v0/reports`, with a JSON payload in the body including the attributes:
+
+* `starting_url`. The initial URL where the Spider will start on.
+* `max_pages`. The Spider will recursively follow internal links found until this limit is reached.
+* `rate_limit`. Limit on the number of requests per second.
+* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found.
+* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found.
+
+The next example shows how to form the body payload with the Report attributes.
+
+!!! example "Example: POST https://rocketvalidator.dev/api/v0/reports"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "starting_url": "http://validationhell.com",
+                "max_pages": 100,
+                "rate_limit": 3,
+                "perform_html_checks": true,
+                "perform_a11y_checks": true
+            }
+        }
+    }
+    ```
+
+Rocket Validator will return the created Report with a status of a `201 Created`, and will start scanning the Web Pages found. You can then refresh the Report by its ID (see [Retrieve a Report](#retrieve-a-report)) to check the progress of the Report, including the checks status, pending count and issues found.
+
+If the Report can't be created, a `422 Unprocessable Entity` status will be returned, containing details about the the errors found.
+
+!!! example "Example: POST https://rocketvalidator.dev/api/v0/reports"
+
+    ```json
+    {
+        "errors": [{
+            "detail": "Starting url has invalid format",
+            "source": {
+                "pointer": "/data/attributes/starting_url"
+            },
+            "title": "has invalid format"
+        }],
+        "jsonapi": {
+            "version": "1.0"
+        }
+    }
+    ```
+
+## Retrieve a Report
+
+To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_ID`.
+
+!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID"
+
+    ```json
+    {
+    	"data": {
+    		"attributes": {
+    			"checks": {
+    				"a11y": {
+    					"issues": {
+    						"errors": 60,
+    						"muted_errors": 0,
+    						"muted_warnings": 0,
+    						"warnings": 0
+    					},
+    					"status": {
+    						"checked": 10,
+    						"failed": 0,
+    						"pending": 0
+    					}
+    				},
+    				"html": {
+    					"issues": {
+    						"errors": 157,
+    						"muted_errors": 0,
+    						"muted_warnings": 0,
+    						"warnings": 20
+    					},
+    					"status": {
+    						"checked": 10,
+    						"failed": 0,
+    						"pending": 0
+    					}
+    				}
+    			},
+    			"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
+    			"inserted_at": "2020-05-12T17:09:43",
+    			"max_pages": 10,
+    			"num_pages": 10,
+    			"perform_a11y_checks": true,
+    			"perform_html_checks": true,
+    			"rate_limit": 3,
+    			"starting_url": "http://validationhell.com/",
+    			"updated_at": "2020-05-12T17:09:43"
+    		},
+    		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
+    		"relationships": {
+    			"common_a11y_issues": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+    				}
+    			},
+    			"common_html_issues": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+    				}
+    			},
+    			"schedule": {
+    				"links": {
+    					"related": null
+    				}
+    			},
+    			"web_pages": {
+    				"links": {
+    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+    				}
     			}
     		},
-    		"common_html_issues": {
-    			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6/common_html_issues"
-    			}
-    		},
-    		"schedule": {
-    			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/schedules/5de34"
-    			}
-    		},
-    		"web_pages": {
-    			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6/web_pages"
-    			}
-    		}
+    		"type": "report"
     	},
-    	"type": "report"
+    	"jsonapi": {
+    		"version": "1.0"
+    	}
     }
     ```
 
@@ -112,38 +290,66 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
     ```json
     {
         "data": [
-            {
+                {
                 "attributes": {
-                    "id": "9314c",
-                    "inserted_at": "2020-02-28T13:01:30",
+                    "checks": {
+                        "a11y": {
+                            "issues": {
+                                "errors": 60,
+                                "muted_errors": 0,
+                                "muted_warnings": 0,
+                                "warnings": 0
+                            },
+                            "status": {
+                                "checked": 10,
+                                "failed": 0,
+                                "pending": 0
+                            }
+                        },
+                        "html": {
+                            "issues": {
+                                "errors": 157,
+                                "muted_errors": 0,
+                                "muted_warnings": 0,
+                                "warnings": 20
+                            },
+                            "status": {
+                                "checked": 10,
+                                "failed": 0,
+                                "pending": 0
+                            }
+                        }
+                    },
+                    "id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
+                    "inserted_at": "2020-05-12T17:09:43",
                     "max_pages": 10,
                     "num_pages": 10,
-                    "rate_limit": 5,
+                    "perform_a11y_checks": true,
+                    "perform_html_checks": true,
+                    "rate_limit": 3,
                     "starting_url": "http://validationhell.com/",
-                    "total_a11y_issues": {
-                        "errors": 60,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
-                        "warnings": 0
-                    },
-                    "total_html_issues": {
-                        "errors": 156,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
-                        "warnings": 20
-                    },
-                    "updated_at": "2020-02-28T13:01:30"
+                    "updated_at": "2020-05-12T17:09:43"
                 },
-                "id": "9314c",
+                "id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
                 "relationships": {
+                    "common_a11y_issues": {
+                        "links": {
+                            "related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+                        }
+                    },
+                    "common_html_issues": {
+                        "links": {
+                            "related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+                        }
+                    },
                     "schedule": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/schedules/5de34"
+                            "related": null
                         }
                     },
                     "web_pages": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages"
+                            "related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
                         }
                     }
                 },
@@ -161,53 +367,12 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
     }
     ```
 
-## Retrieve a Report
+## Delete a Report
 
-To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_ID`.
+To delete an individual Report from your account, send a `DELETE` request to `/api/v0/reports/$REPORT_ID`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID"
+!!! example "Example: DELETE https://rocketvalidator.dev/api/v0/reports/$REPORT_ID"
 
-    ```json
-    {
-        "data": {
-            "attributes": {
-                "id": "9314c",
-                "inserted_at": "2020-02-28T13:01:30",
-                "max_pages": 10,
-                "num_pages": 10,
-                "rate_limit": 5,
-                "starting_url": "http://validationhell.com/",
-                "total_a11y_issues": {
-                    "errors": 60,
-                    "muted_errors": 0,
-                    "muted_warnings": 0,
-                    "warnings": 0
-                },
-                "total_html_issues": {
-                    "errors": 156,
-                    "muted_errors": 0,
-                    "muted_warnings": 0,
-                    "warnings": 20
-                },
-                "updated_at": "2020-02-28T13:01:30"
-            },
-            "id": "9314c",
-            "relationships": {
-                "schedule": {
-                    "links": {
-                        "related": "https://rocketvalidator.dev/api/v0/schedules/5de34"
-                    }
-                },
-                "web_pages": {
-                    "links": {
-                        "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages"
-                    }
-                }
-            },
-            "type": "report"
-        },
-        "jsonapi": {
-            "version": "1.0"
-        }
-    }
+    ```
+    204 No Content
     ```

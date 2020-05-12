@@ -13,10 +13,10 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dt>Starting URL</dt>
   <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>  
 
-  <dt>Check A11Y</dt>
+  <dt>Perform A11Y Checks</dt>
   <dd>Boolean to indicate whether or not accessibility checks will be included.</dd>
 
-  <dt>Check HTML</dt>
+  <dt>Perform HTML Checks</dt>
   <dd>Boolean to indicate whether or not HTML checks will be included.</dd>
 
   <dt>Max Pages</dt>
@@ -52,8 +52,8 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
         "data": {
             "attributes": {
                 "active": true,
-                "check_a11y": true,
-                "check_html": true,
+                "perform_a11y_checks": true,
+                "perform_html_checks": true,
                 "id": "d2e1f",
                 "inserted_at": "2020-02-28T13:01:23",
                 "last_fired_at": "2020-02-28T13:01:30",
@@ -94,8 +94,8 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
             {
             "attributes": {
                 "active": true,
-                "check_a11y": true,
-                "check_html": true,
+                "perform_a11y_checks": true,
+                "perform_html_checks": true,
                 "id": "9c55",
                 "inserted_at": "2019-02-05T13:13:29",
                 "last_fired_at": "2020-04-28T12:02:57",
@@ -142,8 +142,8 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
         "data": {
             "attributes": {
             "active": true,
-            "check_a11y": true,
-            "check_html": true,
+            "perform_a11y_checks": true,
+            "perform_html_checks": true,
             "id": "9c55",
             "inserted_at": "2019-02-05T13:13:29",
             "last_fired_at": "2020-04-28T12:02:57",
