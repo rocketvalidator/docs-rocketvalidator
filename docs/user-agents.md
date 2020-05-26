@@ -16,7 +16,7 @@ As our IPs are dynamic, the proper way to do this is by identifying our requests
 
 !!! note "Link Spider User Agent"
     ```
-    Rocket Validator (+https://rocketvalidator.com)
+    RocketValidator/Spider (+https://rocketvalidator.com)
     ```
 
 ## HTML Checker
@@ -30,5 +30,5 @@ As our IPs are dynamic, the proper way to do this is by identifying our requests
 
 !!! note "Accessibility Checker User Agent"
     ```
-    Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/68.0.3419.0 Safari/537.36
+    RocketValidator/AccessibilityChecker (+https://rocketvalidator.com) Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/68.0.3419.0 Safari/537.36
     ```
