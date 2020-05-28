@@ -59,3 +59,7 @@ No, reports can't be exported to these formats, because the generated file would
 Think of a large site with 3,000 validated web pages, where each page has 100 issues. The result would be a file containing 300,000 rows - this is not something you'll easily handle in Excel or that you'd be wanting to read as a PDF.
 
 Instead, our web interface lets you easily browse all the web pages and its issues, re-check each page as needed, and share the reports with your colleagues or clients.
+
+## How can I exclude Rocket Validator from Google Analytics traffic?
+
+You can detect the <a href="/user-agents">User Agent</a> string, and <a href="/google-analytics">exclude it from Google Analytics</a>.
