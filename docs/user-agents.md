@@ -23,7 +23,7 @@ As our IPs are dynamic, the proper way to do this is by identifying our requests
 
 !!! note "HTML Checker User Agent"
     ```
-    Validator.nu/LV http://validator.w3.org/services
+    RocketValidator/HTMLChecker (+https://rocketvalidator.com) Validator.nu/LV
     ```
 
 ## Accessibility Checker
