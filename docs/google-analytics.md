@@ -12,7 +12,7 @@ There are 2 options to do that, let's explore them.
 
 This option may be the simpler method, if your web site can detect the User Agent string from the request. It may not be an option in certain cases like static sites.
 
-If you can do that, then it's simple: in case the User Agent string contains "RocketValidator", don't include the script that triggers Google Analytics.
+If you can do that, then it's simple: in case the User Agent string contains `RocketValidator`, don't include the script that triggers Google Analytics.
 
 However, we don't recommend this option as it's preferable to not customize your content based on User Agents, so the bots can have "the real thing". Let's say a script introduces an accessibility issue, you're not going to detect it if you hide it from the bots.
 
@@ -38,7 +38,7 @@ Write down the "Index" value for the created Custom Dimension as we'll need it l
 
 ### Create a variable in Google Tag Manager
 
-Now, go to your Google Tag Manager account and click on "Variables" on the left-hand side menu. Click on "New" under "User-Defined Variables". Set the name as "User Agent", the Variable Type as "JavaScript Variable" and the Global Variable Name as "navigator.userAgent". Click on "Save". This will set up a JavaScript variable that will store the User Agent string, so it can be passed to Google Analytics.
+Now, go to your Google Tag Manager account and click on "Variables" on the left-hand side menu. Click on "New" under "User-Defined Variables". Set the name as "User Agent", the Variable Type as "JavaScript Variable" and the Global Variable Name as `navigator.userAgent`. Click on "Save". This will set up a JavaScript variable that will store the User Agent string, so it can be passed to Google Analytics.
 
 ![JavaScript Variable form screenshot](/img/google-analytics/03.png)
 
@@ -48,7 +48,7 @@ Still on the Google Tag Manager Variables section, click on the Google Analytics
 
 ![User-Defined Variables screenshot](/img/google-analytics/04.png)
 
-Edit the tag settings, open "Custom Dimensions" and click on "Add Custom Dimension". Set the index to the index matching the custom dimension in your Google Analytics account. Set the Dimension Value to {{User Agent}}.
+Edit the tag settings, open "Custom Dimensions" and click on "Add Custom Dimension". Set the index to the index matching the custom dimension in your Google Analytics account. Set the Dimension Value to `{{User Agent}}`.
 
 ![Add Custom Dimension form screenshot](/img/google-analytics/05.png)
 
@@ -56,8 +56,8 @@ This will pass the User Agent to Google Analytics. Remember to Publish your chan
 
 ### Create a filter in Google Analytics
 
-The last step is going back to your Google Analytics account, Admin section. Click on "Filters" on the "View" column. Click on "Add Filter". Set the Filter Name as "User-Agent RocketValidator". Choose "Custom" in Filter Type. In the Exclude option, select the field "User-Agent" on the Custom Dimensions. And, in Filter Pattern, use this regular expression: ".*RocketValidator.*".
+The last step is going back to your Google Analytics account, Admin section. Click on "Filters" on the "View" column. Click on "Add Filter". Set the Filter Name as "User-Agent RocketValidator". Choose "Custom" in Filter Type. In the Exclude option, select the field "User-Agent" on the Custom Dimensions. And, in Filter Pattern, use this regular expression: `.*RocketValidator.*`.
 
 ![Google Analytics Filter screenshot](/img/google-analytics/06.png)
 
-And that's it! It may take some hours for the filter to take effect (but in most cases it's just a matter of minutes). This method does not remove traffic retroactively - it can only filter out traffic happening after the creation of the filter.
+And that's it! It may take some time for the filter to take effect (but in most cases it's just a matter of minutes). This method does not remove traffic retroactively - it can only filter out traffic happening after the creation of the filter.
