@@ -6,4 +6,4 @@ Basically, Rocket Validator is an automated accessibility scanner: just by submi
 
 By <a href="https://rocketvalidator.com/registration/new" target="_blank">creating an account</a> at Rocket Validator, you can manage your site validation reports via the <a href="/quick-start">Web UI</a> or using our <a href="/api">JSON API</a>.
 
-<a href="https://rocketvalidator.com" target="_blank"><img src="/img/rocket-front.gif" alt="Rocket Validator Screenshot" class="noborder" style="margin-top: 15px;"></a>
+<a href="https://rocketvalidator.com" target="_blank"><img src="/img/rocket-front.jpg" alt="Rocket Validator Screenshot" class="noborder" style="margin-top: 15px;"></a>

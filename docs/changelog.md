@@ -2,6 +2,12 @@
 
 Rocket Validator is continually evolving, this document describes the latest changes on the user interface and features.
 
+## 2020, July 6th
+
+Summary reports has been upgraded to include the 3 main HTML and accessibility issues found.
+
+![Summary report](img/summary_report.png)
+
 ## 2020, June 21st
 
 The user interface for reports has been redesigned to make it simpler, more accessible and easier to understand.

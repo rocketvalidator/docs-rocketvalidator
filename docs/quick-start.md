@@ -13,7 +13,7 @@ To validate a site, you can define the following options.
 * **Starting URL**. Our validation spider will visit this URL and recursively follow the internal links, validating each internal web page found. Typically, you can enter the main URL of the site to validate, but it can be any URL from your site, or an XML sitemap.
 * **How many pages to validate**. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.
 * **Validation speed (requests/second)**. Can be set from 1 to 5 (Basic users) or 1 to 15 (Pro users).
-* **Validate HTML and Accessibility or only HTML**. Pro users can choose to include A11Y checks on top of HTML checks.
+* **Validate HTML and/or Accessibility**. Pro users can choose to include A11Y checks on top of HTML checks.
 
 ## Re-checking your pages
 

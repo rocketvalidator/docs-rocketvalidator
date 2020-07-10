@@ -4,7 +4,7 @@
 
 To schedule a validation, go to the [new schedule](https://rocketvalidator.com/schedule/new) form and enter the starting URL, the maximum number of pages to validate, how often you want us to run this validation, click "Submit" and you're ready to go:
 
-![New scheduled validation form](/img/schedule-form.jpg)
+![New scheduled validation form](/img/schedule-form.png)
 
 ## Schedule options
 
