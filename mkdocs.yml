@@ -2,7 +2,7 @@ site_name: Rocket Validator Documentation
 site_url: https://docs.rocketvalidator.com/
 site_description: Documentation site for Rocket Validator - automated accessibility scanner for large sites
 nav:
-  - Web UI: index.md
+  - Welcome: index.md
   - Quick Start: quick-start.md
   - Summary Reports: summary-reports.md
   - Broken Links Checker: broken-links-checker.md
@@ -35,7 +35,7 @@ nav:
 theme:
   name: material
   features:
-    - tabs
+    - navigation.instant
   custom_dir: overrides
   language: en
   logo: img/rocket-icon-300x300.png
