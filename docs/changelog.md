@@ -6,7 +6,7 @@ Rocket Validator is continually evolving, this document describes the latest cha
 
 Summary reports has been upgraded to include the 3 main HTML and accessibility issues found.
 
-![Summary report](img/summary_report.png)
+![Summary report](img/summary_report_2020_07.png)
 
 ## 2020, June 21st
 
