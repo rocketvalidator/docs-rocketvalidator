@@ -2,6 +2,14 @@
 
 Rocket Validator is continually evolving, this document describes the latest changes on the user interface and features.
 
+## 2021, February 1st
+
+The reports interface has had a major redesign, offering a lighter and faster UI, powered by Tailwind and Phoenix Live View.
+
+All listings (web pages, html and accessibility issues) are now sortable by the different columns, and all can be filtered (per URL or issue message).
+
+![Filtering issues](img/changelog/2021-02/filtering_issues.png)
+
 ## 2020, July 6th
 
 Summary reports has been upgraded to include the 3 main HTML and accessibility issues found.

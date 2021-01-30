@@ -14,7 +14,7 @@ Also, for the HTML and accessibility checks, a **progress gauge** shows the perc
 
 The Summary screen gives you the main 3 issues for each kind of check. If you want to get the full list of issues, you can use the Common HTML issues or the Common accessibility issues tabs.
 
-![HTML issues tab](/img/common_html_issues.png)
+![Accessibility issues tab](/img/common_a11y_issues.png)
 
 On the common issues reports you'll see all the issues found in all the web pages, grouped together and ordered by their frequency. For each issue, you can see how many web pages are affected by it.
 
