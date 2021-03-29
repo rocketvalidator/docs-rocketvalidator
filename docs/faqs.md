@@ -50,7 +50,7 @@ We store the results of your validations for a limited time, depending on your s
 
 ## Can I share reports with other people?
 
-Sure, you can share your validation reports with anyone. Just click on the **Share this report** button and you'll be able to send anyone the URL of the report. They'll be able to see the validation results just like you - but they won't be able to re-check any page, only you can control this.
+Sure, you can share your validation reports with anyone. Just use one of the buttons at the bottom of the summary and you'll be able to send anyone the URL of the report. They'll be able to see the validation results just like you - but they won't be able to re-check any page or modify anything, only you can control this.
 
 ## Can I export reports to Excel, CSV, or PDF?
 
