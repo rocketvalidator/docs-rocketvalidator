@@ -23,11 +23,19 @@ You can [read about the XML sitemaps protocol here](http://www.sitemaps.org/prot
 </urlset>
 ```
 
-You can generate this XML sitemap manually or by using a tool [like this one](https://www.xml-sitemaps.com/).
+You can generate this XML sitemap manually or by using a tool [like this one](https://www.xml-sitemaps.com/). Remember to serve the XML sitemap with a content-type of `text/xml`.
+
+See for example our XML sitemap at [https://rocketvalidator.com/sitemap.xml](https://rocketvalidator.com/sitemap.xml).
 
 Once you have your sitemap ready and within your site, you can just submit it to Rocket Validator as the starting URL. For example, instead of submitting <code>http://validationhell.com</code> you'd submit <code>http://validationhell.com/sitemap.xml</code>.
 
 Using XML sitemaps leads to much faster site crawlings, and also lets you be more organized when validating large sites. For example, you can use different XML sitemaps for the different sections in a large site.
+
+## Using a plain text sitemap
+
+If your site doesn't have an XML sitemap, a simpler alternative is building a plain text sitemap. This is just a text file with all the URLs to include, one per line. Remember to serve your plain text sitemap with a content-type of `text/plain`.
+
+See for example our plain text sitemap [https://rocketvalidator.com/sitemap.txt](https://rocketvalidator.com/sitemap.txt).
 
 ## Validating a smaller set of pages
 
