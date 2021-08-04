@@ -25,6 +25,9 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
 
   <dt>Updated At</dt>
   <dd>Timestamp when the web page was last updated.</dd>
+    
+  <dt>Last Checked At</dt>
+  <dd>Timestamp when the web page was last checked.</dd>
 </dl>
 
 ## Relationships
@@ -63,8 +66,9 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
           },
           "id": 2884097,
           "inserted_at": "2020-04-02T12:44:43",
-          "linked_from": "https://example.com/",
           "updated_at": "2020-04-02T12:44:50",
+          "last_checked_at": "2020-04-02T12:44:50",
+          "linked_from": "https://example.com/",
           "url": "https://example.com/about"
       },
       "id": "2884097",
@@ -116,8 +120,9 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                     },
                     "id": 472,
                     "inserted_at": "2020-02-28T13:01:32",
-                    "linked_from": "http://validationhell.com/",
                     "updated_at": "2020-02-28T13:01:35",
+                    "last_checked_at": "2020-02-28T13:01:35",
+                    "linked_from": "http://validationhell.com/",
                     "url": "http://validationhell.com/"
                 },
                 "id": "472",
@@ -218,8 +223,9 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
                 },
                 "id": 472,
                 "inserted_at": "2020-02-28T13:01:32",
-                "linked_from": "http://validationhell.com/",
                 "updated_at": "2020-02-28T13:01:35",
+                "last_checked_at": "2020-02-28T13:01:35",
+                "linked_from": "http://validationhell.com/",
                 "url": "http://validationhell.com/"
             },
             "id": "472",

@@ -58,6 +58,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Updated At</dt>
   <dd>Timestamp when the report was last updated.</dd>
+
+  <dt>Last Checked At</dt>
+  <dd>Timestamp when the report was last checked.</dd>
 </dl>
 
 ## Relationships
@@ -114,13 +117,14 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     			},
     			"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
     			"inserted_at": "2020-05-12T17:09:43",
+                "updated_at": "2020-05-12T17:09:43",
+    			"last_checked_at": "2020-05-12T17:09:43",
     			"max_pages": 10,
     			"num_pages": 10,
     			"perform_a11y_checks": true,
     			"perform_html_checks": true,
     			"rate_limit": 3,
-    			"starting_url": "http://validationhell.com/",
-    			"updated_at": "2020-05-12T17:09:43"
+    			"starting_url": "http://validationhell.com/"
     		},
     		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
     		"relationships": {
@@ -242,13 +246,14 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     			},
     			"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
     			"inserted_at": "2020-05-12T17:09:43",
+                "updated_at": "2020-05-12T17:09:43",
+                "last_checked_at": "2020-05-12T17:09:43",
     			"max_pages": 10,
     			"num_pages": 10,
     			"perform_a11y_checks": true,
     			"perform_html_checks": true,
     			"rate_limit": 3,
-    			"starting_url": "http://validationhell.com/",
-    			"updated_at": "2020-05-12T17:09:43"
+    			"starting_url": "http://validationhell.com/"
     		},
     		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
     		"relationships": {
@@ -322,13 +327,14 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                     },
                     "id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
                     "inserted_at": "2020-05-12T17:09:43",
+                    "updated_at": "2020-05-12T17:09:43",
+                    "last_checked_at": "2020-05-12T17:09:43",
                     "max_pages": 10,
                     "num_pages": 10,
                     "perform_a11y_checks": true,
                     "perform_html_checks": true,
                     "rate_limit": 3,
-                    "starting_url": "http://validationhell.com/",
-                    "updated_at": "2020-05-12T17:09:43"
+                    "starting_url": "http://validationhell.com/"
                 },
                 "id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
                 "relationships": {

@@ -2,6 +2,10 @@
 
 Rocket Validator is continually evolving, this document describes the latest changes on the user interface and features.
 
+## 2021, August 4th
+
+Added `:last_checked_at` timestamp to Reports and Web Pages to indicate the last time they were checked.
+
 ## 2021, February 1st
 
 The reports interface has had a major redesign, offering a lighter and faster UI, powered by Tailwind and Phoenix Live View.
