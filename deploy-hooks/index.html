@@ -892,12 +892,12 @@
                 
                 <h1 id="deploy-hooks">Deploy hooks</h1>
 <p>Use deploy hooks to notify Rocket Validator that you've deployed a new version of your site and make it start automatically the specified validation.</p>
-<p>To create a deploy hook, create a schedule as explained in the <a href="/scheduling">Scheduling reports</a> section. Then, set up your hosting platform to fire this schedule after deploys.</p>
+<p>To create a deploy hook, create a schedule as explained in the <a href="/scheduling">Scheduling reports</a> section. Then, copy the supplied schedule URL (which looks like <code>https://rocketvalidator.com/schedule/abcd/1234/fire</code>) and set up your hosting platform to fire this schedule after deploys.</p>
 <h2 id="curl">curl</h2>
 <p><a href="http://curl.haxx.se/" target="_blank">curl</a> is a command-line tool, present in most systems, that you can use to make a quick check from your terminal.</p>
 <div class="admonition example">
 <p class="admonition-title">Example: curl</p>
-<div class="highlight"><pre><span></span><code>$ curl -X POST https://rocketvalidator.com/schedule/<span class="nv">$SCHEDULE_ID</span>/fire
+<div class="highlight"><pre><span></span><code>$ curl -X POST <span class="nv">$SCHEDULE_URL</span>
 </code></pre></div>
 </div>
 <h2 id="netlify">Netlify</h2>
@@ -914,7 +914,7 @@
 <div class="admonition example">
 <p class="admonition-title">Example: Heroku</p>
 <div class="highlight"><pre><span></span><code>$ heroku addons:create deployhooks:http <span class="se">\</span>
-  --url https://rocketvalidator.com/schedule/<span class="nv">$SCHEDULE_ID</span>/fire
+  --url <span class="nv">$SCHEDULE_URL</span>
 </code></pre></div>
 </div>
 <p>Heroku only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using <a href="https://github.com/deadlyicon/deploy-hook-forker" target="_blank">deploy hook forker</a>.</p>
@@ -922,7 +922,7 @@
 <p>Engine Yard lets you define <a href="https://support.cloud.engineyard.com/entries/21016568-use-ruby-deploy-hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example: Engine Yard</p>
-<div class="highlight"><pre><span></span><code>run <span class="s2">&quot;curl -X POST -d &#39;&#39; https://rocketvalidator.com/schedule/</span><span class="nv">$SCHEDULE_ID</span><span class="s2">/fire&quot;</span>
+<div class="highlight"><pre><span></span><code>run <span class="s2">&quot;curl -X POST -d &#39;&#39; </span><span class="nv">$SCHEDULE_URL</span><span class="s2">&quot;</span>
 </code></pre></div>
 </div>
 <h2 id="cloud-66">Cloud 66</h2>
@@ -931,7 +931,7 @@
 <p class="admonition-title">Example: Cloud 66</p>
 <div class="highlight"><pre><span></span><code>staging:
   last_thing:
-    - command: curl -X POST -d <span class="s1">&#39;&#39;</span> https://rocketvalidator.com/schedule/<span class="nv">$SCHEDULE_ID</span>/fire
+    - command: curl -X POST -d <span class="s1">&#39;&#39;</span> <span class="nv">$SCHEDULE_URL</span>
       target: rails
       run_on: single_server
 </code></pre></div>
