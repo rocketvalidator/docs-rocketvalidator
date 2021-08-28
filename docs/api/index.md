@@ -22,7 +22,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
     === "cURL"
         ``` bash
         curl --request GET \
-             --url https://rocketvalidator.dev/api/v0/reports \
+             --url https://rocketvalidator.com/api/v0/reports \
              --header 'authorization: Bearer $API_TOKEN'
         ```
 
@@ -32,7 +32,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         require 'net/http'
         require 'openssl'
 
-        url = URI("https://rocketvalidator.dev/api/v0/reports")
+        url = URI("https://rocketvalidator.com/api/v0/reports")
 
         http = Net::HTTP.new(url.host, url.port)
         http.use_ssl = true
@@ -72,7 +72,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         ``` python
         import http.client
 
-        conn = http.client.HTTPSConnection("rocketvalidator.dev")
+        conn = http.client.HTTPSConnection("rocketvalidator.com")
 
         payload = ""
 
@@ -93,7 +93,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://rocketvalidator.dev/api/v0/reports",
+            CURLOPT_URL => "https://rocketvalidator.com/api/v0/reports",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -125,7 +125,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         var options = {
             "method": "GET",
-            "hostname": "rocketvalidator.dev",
+            "hostname": "rocketvalidator.com",
             "port": null,
             "path": "/api/v0/reports",
             "headers": {
@@ -152,7 +152,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
     === "Java"
         ``` java
-        HttpResponse<String> response = Unirest.get("https://rocketvalidator.dev/api/v0/reports")
+        HttpResponse<String> response = Unirest.get("https://rocketvalidator.com/api/v0/reports")
         .header("authorization", "Bearer $API_TOKEN")
         .asString();
         ```
@@ -165,7 +165,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         let postData = NSData(data: "".data(using: String.Encoding.utf8)!)
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://rocketvalidator.dev/api/v0/reports")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://rocketvalidator.com/api/v0/reports")! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -197,7 +197,7 @@ Send a `POST` request to `/api/v0/reports` with a JSON payload including the par
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found.
 * `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found.
 
-!!! example "Example: POST https://rocketvalidator.dev/api/v0/reports"
+!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
 
     ```json
     {

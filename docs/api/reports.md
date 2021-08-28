@@ -130,12 +130,12 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     		"relationships": {
     			"common_a11y_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
     				}
     			},
     			"common_html_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
     				}
     			},
     			"schedule": {
@@ -145,7 +145,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     			},
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
     				}
     			}
     		},
@@ -169,7 +169,7 @@ To create a Report, send a `POST` request to `/api/v0/reports`, with a JSON payl
 
 The next example shows how to form the body payload with the Report attributes.
 
-!!! example "Example: POST https://rocketvalidator.dev/api/v0/reports"
+!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
 
     ```json
     {
@@ -189,7 +189,7 @@ Rocket Validator will return the created Report with a status of a `201 Created`
 
 If the Report can't be created, a `422 Unprocessable Entity` status will be returned, containing details about the the errors found.
 
-!!! example "Example: POST https://rocketvalidator.dev/api/v0/reports"
+!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
 
     ```json
     {
@@ -210,7 +210,7 @@ If the Report can't be created, a `422 Unprocessable Entity` status will be retu
 
 To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_ID`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID"
 
     ```json
     {
@@ -259,12 +259,12 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     		"relationships": {
     			"common_a11y_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
     				}
     			},
     			"common_html_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
     				}
     			},
     			"schedule": {
@@ -274,7 +274,7 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     			},
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
     				}
     			}
     		},
@@ -290,7 +290,7 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
 
 To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/"
 
     ```json
     {
@@ -340,12 +340,12 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                 "relationships": {
                     "common_a11y_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+                            "related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
                         }
                     },
                     "common_html_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+                            "related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
                         }
                     },
                     "schedule": {
@@ -355,7 +355,7 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                     },
                     "web_pages": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+                            "related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
                         }
                     }
                 },
@@ -366,9 +366,9 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
             "version": "1.0"
         },
         "links": {
-            "last": "https://rocketvalidator.dev/api/v0/reports/?page[number]=50&page[size]=25",
-            "next": "https://rocketvalidator.dev/api/v0/reports/?page[number]=2&page[size]=25",
-            "self": "https://rocketvalidator.dev/api/v0/reports/?page[number]=1&page[size]=25"
+            "last": "https://rocketvalidator.com/api/v0/reports/?page[number]=50&page[size]=25",
+            "next": "https://rocketvalidator.com/api/v0/reports/?page[number]=2&page[size]=25",
+            "self": "https://rocketvalidator.com/api/v0/reports/?page[number]=1&page[size]=25"
         }
     }
     ```
@@ -377,7 +377,7 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
 
 To delete an individual Report from your account, send a `DELETE` request to `/api/v0/reports/$REPORT_ID`.
 
-!!! example "Example: DELETE https://rocketvalidator.dev/api/v0/reports/$REPORT_ID"
+!!! example "Example: DELETE https://rocketvalidator.com/api/v0/reports/$REPORT_ID"
 
     ```
     204 No Content

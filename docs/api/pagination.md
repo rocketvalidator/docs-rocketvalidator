@@ -14,4 +14,4 @@ Pagination is controlled using the following parameters:
 
 !!! example "Example: Getting the 3rd page of the reports list, with 10 reports per page"
 
-    curl --request GET 'https://rocketvalidator.dev/api/v0/reports/?page[number]=3&page[size]=10'
+    curl --request GET 'https://rocketvalidator.com/api/v0/reports/?page[number]=3&page[size]=10'

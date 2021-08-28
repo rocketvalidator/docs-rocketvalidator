@@ -68,7 +68,7 @@ A Common Accessibility Issue represents a given Accessibility Issue that is comm
      "relationships": {
        "web_pages": {
          "links": {
-           "related": "https://rocketvalidator.dev/api/v0/reports/56b6/web_pages?filter[common_a11y_issue_id]=7657066"
+           "related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages?filter[common_a11y_issue_id]=7657066"
          }
        }
      },
@@ -80,7 +80,7 @@ A Common Accessibility Issue represents a given Accessibility Issue that is comm
 
 To list the Common Accessibility issues found on a report, send a `GET` request to `/api/v0/reports/$REPORT_ID/common_a11y_issues`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/common_a11y_issues"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/common_a11y_issues"
 
     ```json
     {
@@ -106,7 +106,7 @@ To list the Common Accessibility issues found on a report, send a `GET` request 
     		"relationships": {
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009"
+    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009"
     				}
     			}
     		},
@@ -116,9 +116,9 @@ To list the Common Accessibility issues found on a report, send a `GET` request 
     		"version": "1.0"
     	},
     	"links": {
-    		"last": "https://rocketvalidator.dev/api/v0/reports/e4cc1/common_a11y_issues?page[number]=11&page[size]=1",
-    		"next": "https://rocketvalidator.dev/api/v0/reports/e4cc1/common_a11y_issues?page[number]=2&page[size]=1",
-    		"self": "https://rocketvalidator.dev/api/v0/reports/e4cc1/common_a11y_issues?page[number]=1&page[size]=1"
+    		"last": "https://rocketvalidator.com/api/v0/reports/e4cc1/common_a11y_issues?page[number]=11&page[size]=1",
+    		"next": "https://rocketvalidator.com/api/v0/reports/e4cc1/common_a11y_issues?page[number]=2&page[size]=1",
+    		"self": "https://rocketvalidator.com/api/v0/reports/e4cc1/common_a11y_issues?page[number]=1&page[size]=1"
     	}
     }
     ```
@@ -127,7 +127,7 @@ To list the Common Accessibility issues found on a report, send a `GET` request 
 
 To retrieve a Common HTML Issue on a given Report, send a GET request to `/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID"
 
     ```json
     {
@@ -153,7 +153,7 @@ To retrieve a Common HTML Issue on a given Report, send a GET request to `/api/v
     		"relationships": {
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009"
+    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009"
     				}
     			}
     		},
@@ -171,7 +171,7 @@ To list the Web Pages that are affected by a given issue, send a GET request to 
 
 This will list the Web Pages of the Report, filtering them to include only the ones affected by the issue.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$COMMON_A11Y_ISSUE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$COMMON_A11Y_ISSUE_ID"
 
     ```json
     {
@@ -201,17 +201,17 @@ This will list the Web Pages of the Report, filtering them to include only the o
     		"relationships": {
     			"a11y_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages/2902447/a11y_issues"
+    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages/2902447/a11y_issues"
     				}
     			},
     			"html_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages/2902447/html_issues"
+    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages/2902447/html_issues"
     				}
     			},
     			"report": {
     				"links": {
-    					"related": "https://rocketvalidator.dev/api/v0/reports/e4cc1"
+    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1"
     				}
     			}
     		},
@@ -221,9 +221,9 @@ This will list the Web Pages of the Report, filtering them to include only the o
     		"version": "1.0"
     	},
     	"links": {
-    		"last": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&page[number]=10&page[size]=1",
-    		"next": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&page[number]=2&page[size]=1",
-    		"self": "https://rocketvalidator.dev/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&page[number]=1&page[size]=1"
+    		"last": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&page[number]=10&page[size]=1",
+    		"next": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&page[number]=2&page[size]=1",
+    		"self": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_a11y_issue_id]=7718009&page[number]=1&page[size]=1"
     	}
     }
     ```

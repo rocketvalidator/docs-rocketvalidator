@@ -70,7 +70,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
             "relationships": {
                 "reports": {
                     "links": {
-                    "related": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=d2e1f"
+                    "related": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=d2e1f"
                     }
                 }
                 },
@@ -86,7 +86,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
 
 To list all Schedules in your account, send a `GET` request to `/api/v0/schedules`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/schedules"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/schedules"
 
     ```json
     {
@@ -112,7 +112,7 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
             "relationships": {
                 "reports": {
                 "links": {
-                    "related": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c55"
+                    "related": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c55"
                 }
                 }
             },
@@ -123,9 +123,9 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
             "version": "1.0"
         },
         "links": {
-            "last": "https://rocketvalidator.dev/api/v0/schedules?page[number]=7&page[size]=25",
-            "next": "https://rocketvalidator.dev/api/v0/schedules?page[number]=2&page[size]=25",
-            "self": "https://rocketvalidator.dev/api/v0/schedules?page[number]=1&page[size]=25"
+            "last": "https://rocketvalidator.com/api/v0/schedules?page[number]=7&page[size]=25",
+            "next": "https://rocketvalidator.com/api/v0/schedules?page[number]=2&page[size]=25",
+            "self": "https://rocketvalidator.com/api/v0/schedules?page[number]=1&page[size]=25"
         }
     }
     ```
@@ -135,7 +135,7 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
 
 To retrieve an individual Schedule in your account, send a `GET` request to `/api/v0/schedules/$SCHEDULE_ID`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/schedules/$SCHEDULE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
 
     ```json
     {
@@ -160,7 +160,7 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
             "relationships": {
             "reports": {
                 "links": {
-                "related": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c55"
+                "related": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c55"
                 }
             }
             },
@@ -179,7 +179,7 @@ To list all the Reports in your account that have been run via a given Schedule,
 
 This will list your Reports, filtered by that schedule id.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID"
 
     ```json
     {
@@ -210,22 +210,22 @@ This will list your Reports, filtered by that schedule id.
                 "relationships": {
                     "common_a11y_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/ce472/common_a11y_issues"
+                            "related": "https://rocketvalidator.com/api/v0/reports/ce472/common_a11y_issues"
                         }
                     },
                     "common_html_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/ce472/common_html_issues"
+                            "related": "https://rocketvalidator.com/api/v0/reports/ce472/common_html_issues"
                         }
                     },
                     "schedule": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83"
+                            "related": "https://rocketvalidator.com/api/v0/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83"
                         }
                     },
                     "web_pages": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/ce472/web_pages"
+                            "related": "https://rocketvalidator.com/api/v0/reports/ce472/web_pages"
                         }
                     }
                 },
@@ -236,7 +236,7 @@ This will list your Reports, filtered by that schedule id.
             "version": "1.0"
         },
         "links": {
-            "self": "https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&page[number]=1&page[size]=25"
+            "self": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&page[number]=1&page[size]=25"
         }
     }
     ```

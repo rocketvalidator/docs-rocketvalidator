@@ -74,17 +74,17 @@ An HTML issue corresponds to an issue found on a given web page when being check
     	"relationships": {
     		"muting": {
     			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/mutings/941"
+    				"related": "https://rocketvalidator.com/api/v0/mutings/941"
     			}
     		},
     		"report": {
     			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6"
+    				"related": "https://rocketvalidator.com/api/v0/reports/56b6"
     			}
     		},
     		"web_page": {
     			"links": {
-    				"related": "https://rocketvalidator.dev/api/v0/reports/56b6/web_pages/2884097"
+    				"related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097"
     			}
     		}
     	},
@@ -96,7 +96,7 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
 To list the HTML issues found on a web page, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
 
-!!! example "Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues"
+!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues"
 
     ```json
     {
@@ -129,12 +129,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                     },
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
                         }
                     },
                     "web_page": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472"
+                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
                         }
                     }
                 },
@@ -168,12 +168,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                     },
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
                         }
                     },
                     "web_page": {
                         "links": {
-                            "related": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472"
+                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
                         }
                     }
                 },
@@ -184,7 +184,7 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
             "version": "1.0"
         },
         "links": {
-            "self": "https://rocketvalidator.dev/api/v0/reports/9314c/web_pages/472/html_issues?page[number]=1&page[size]=25"
+            "self": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues?page[number]=1&page[size]=25"
         }
     }
     ```

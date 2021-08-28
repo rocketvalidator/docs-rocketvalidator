@@ -1,6 +1,6 @@
 # Changelog
 
-
+* 2021-08-28. Changed API host to rocketvalidator.com.
 * 2020-05-12. Updates [Reports](/api/reports) section, explaining how to create and delete Reports, and the new `checks` detail. Updates [Schedules](/api/schedules) section with rename of boolean attributes `perform_html_checks` and `perform_a11y_checks`.
 * 2020-05-05. Added [Mutings](/api/mutings) section.
 * 2020-05-04. Upgraded [Schedules](/api/schedules) section, to include Schedule listing, retrieving, and filtering of Reports by Schedule. Add Quick Start section with code examples.
