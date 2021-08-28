@@ -1018,12 +1018,12 @@
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;common_a11y_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues&quot;</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues&quot;</span>
                 <span class="p">}</span>
             <span class="p">},</span>
             <span class="nt">&quot;common_html_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues&quot;</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues&quot;</span>
                 <span class="p">}</span>
             <span class="p">},</span>
             <span class="nt">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1033,7 +1033,7 @@
             <span class="p">},</span>
             <span class="nt">&quot;web_pages&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages&quot;</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages&quot;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">},</span>
@@ -1056,7 +1056,7 @@
 </ul>
 <p>The next example shows how to form the body payload with the Report attributes.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: POST https://rocketvalidator.dev/api/v0/reports</p>
+<p class="admonition-title">Example: POST https://rocketvalidator.com/api/v0/reports</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1073,7 +1073,7 @@
 <p>Rocket Validator will return the created Report with a status of a <code>201 Created</code>, and will start scanning the Web Pages found. You can then refresh the Report by its ID (see <a href="#retrieve-a-report">Retrieve a Report</a>) to check the progress of the Report, including the checks status, pending count and issues found.</p>
 <p>If the Report can't be created, a <code>422 Unprocessable Entity</code> status will be returned, containing details about the the errors found.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: POST https://rocketvalidator.dev/api/v0/reports</p>
+<p class="admonition-title">Example: POST https://rocketvalidator.com/api/v0/reports</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;Starting url has invalid format&quot;</span><span class="p">,</span>
@@ -1091,7 +1091,7 @@
 <h2 id="retrieve-a-report">Retrieve a Report</h2>
 <p>To show an individual Report, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID</code>.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/$REPORT_ID</p>
+<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1138,12 +1138,12 @@
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;common_a11y_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues&quot;</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues&quot;</span>
                 <span class="p">}</span>
             <span class="p">},</span>
             <span class="nt">&quot;common_html_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues&quot;</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues&quot;</span>
                 <span class="p">}</span>
             <span class="p">},</span>
             <span class="nt">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1153,7 +1153,7 @@
             <span class="p">},</span>
             <span class="nt">&quot;web_pages&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages&quot;</span>
+                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages&quot;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">},</span>
@@ -1168,7 +1168,7 @@
 <h2 id="list-your-reports">List your Reports</h2>
 <p>To list all Reports in your account, send a <code>GET</code> request to <code>/api/v0/reports</code>.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports/</p>
+<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports/</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
@@ -1216,12 +1216,12 @@
             <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;common_a11y_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues&quot;</span>
                     <span class="p">}</span>
                 <span class="p">},</span>
                 <span class="nt">&quot;common_html_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues&quot;</span>
                     <span class="p">}</span>
                 <span class="p">},</span>
                 <span class="nt">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1231,7 +1231,7 @@
                 <span class="p">},</span>
                 <span class="nt">&quot;web_pages&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages&quot;</span>
                     <span class="p">}</span>
                 <span class="p">}</span>
             <span class="p">},</span>
@@ -1242,9 +1242,9 @@
         <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/?page[number]=50&amp;page[size]=25&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/?page[number]=2&amp;page[size]=25&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/?page[number]=1&amp;page[size]=25&quot;</span>
+        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/?page[number]=50&amp;page[size]=25&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/?page[number]=2&amp;page[size]=25&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/?page[number]=1&amp;page[size]=25&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1252,7 +1252,7 @@
 <h2 id="delete-a-report">Delete a Report</h2>
 <p>To delete an individual Report from your account, send a <code>DELETE</code> request to <code>/api/v0/reports/$REPORT_ID</code>.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: DELETE https://rocketvalidator.dev/api/v0/reports/$REPORT_ID</p>
+<p class="admonition-title">Example: DELETE https://rocketvalidator.com/api/v0/reports/$REPORT_ID</p>
 <div class="highlight"><pre><span></span><code>204 No Content
 </code></pre></div>
 </div>

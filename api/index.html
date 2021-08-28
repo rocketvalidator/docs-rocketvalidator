@@ -1298,7 +1298,7 @@
 <p class="admonition-title">Example code</p>
 <div class="tabbed-set" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">cURL</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>curl --request GET <span class="se">\</span>
-     --url https://rocketvalidator.dev/api/v0/reports <span class="se">\</span>
+     --url https://rocketvalidator.com/api/v0/reports <span class="se">\</span>
      --header <span class="s1">&#39;authorization: Bearer $API_TOKEN&#39;</span>
 </code></pre></div>
 </div>
@@ -1307,7 +1307,7 @@
 <span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;openssl&#39;</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports&quot;</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="n">url</span><span class="o">.</span><span class="n">port</span><span class="p">)</span>
 <span class="n">http</span><span class="o">.</span><span class="n">use_ssl</span> <span class="o">=</span> <span class="kp">true</span>
@@ -1345,7 +1345,7 @@
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">http.client</span>
 
-<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;rocketvalidator.dev&quot;</span><span class="p">)</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s2">&quot;rocketvalidator.com&quot;</span><span class="p">)</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
@@ -1365,7 +1365,7 @@
 <span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
 
 <span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-    <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">,</span>
+    <span class="nx">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports&quot;</span><span class="p">,</span>
     <span class="nx">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
     <span class="nx">CURLOPT_ENCODING</span> <span class="o">=&gt;</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nx">CURLOPT_MAXREDIRS</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
@@ -1396,7 +1396,7 @@
 
 <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;hostname&quot;</span><span class="o">:</span> <span class="s2">&quot;rocketvalidator.dev&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hostname&quot;</span><span class="o">:</span> <span class="s2">&quot;rocketvalidator.com&quot;</span><span class="p">,</span>
     <span class="s2">&quot;port&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;/api/v0/reports&quot;</span><span class="p">,</span>
     <span class="s2">&quot;headers&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -1422,7 +1422,7 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><label for="__tabbed_1_7">Java</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">Unirest</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">HttpResponse</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">Unirest</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;https://rocketvalidator.com/api/v0/reports&quot;</span><span class="p">)</span>
 <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;authorization&quot;</span><span class="p">,</span> <span class="s">&quot;Bearer $API_TOKEN&quot;</span><span class="p">)</span>
 <span class="p">.</span><span class="na">asString</span><span class="p">();</span>
 </code></pre></div>
@@ -1434,7 +1434,7 @@
 
 <span class="kd">let</span> <span class="nv">postData</span> <span class="p">=</span> <span class="bp">NSData</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">.</span><span class="n">data</span><span class="p">(</span><span class="n">using</span><span class="p">:</span> <span class="nb">String</span><span class="p">.</span><span class="n">Encoding</span><span class="p">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
 
-<span class="kd">let</span> <span class="nv">request</span> <span class="p">=</span> <span class="bp">NSMutableURLRequest</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="bp">NSURL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;https://rocketvalidator.dev/api/v0/reports&quot;</span><span class="p">)</span><span class="o">!</span> <span class="k">as</span> <span class="n">URL</span><span class="p">,</span>
+<span class="kd">let</span> <span class="nv">request</span> <span class="p">=</span> <span class="bp">NSMutableURLRequest</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="bp">NSURL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;https://rocketvalidator.com/api/v0/reports&quot;</span><span class="p">)</span><span class="o">!</span> <span class="k">as</span> <span class="n">URL</span><span class="p">,</span>
                                         <span class="n">cachePolicy</span><span class="p">:</span> <span class="p">.</span><span class="n">useProtocolCachePolicy</span><span class="p">,</span>
                                     <span class="n">timeoutInterval</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">)</span>
 <span class="n">request</span><span class="p">.</span><span class="n">httpMethod</span> <span class="p">=</span> <span class="s">&quot;GET&quot;</span>
@@ -1467,7 +1467,7 @@
 <li><code>perform_a1yy_checks</code>. Boolean to enable checks using Deque Axe Core software on the Web Pages found.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Example: POST https://rocketvalidator.dev/api/v0/reports</p>
+<p class="admonition-title">Example: POST https://rocketvalidator.com/api/v0/reports</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>

@@ -930,7 +930,7 @@
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;reports&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=d2e1f&quot;</span>
+                <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=d2e1f&quot;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
             <span class="p">},</span>
@@ -945,7 +945,7 @@
 <h2 id="list-your-schedules">List your Schedules</h2>
 <p>To list all Schedules in your account, send a <code>GET</code> request to <code>/api/v0/schedules</code>.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/schedules</p>
+<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/schedules</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -969,7 +969,7 @@
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;reports&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c55&quot;</span>
+                <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c55&quot;</span>
             <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">},</span>
@@ -980,9 +980,9 @@
         <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/schedules?page[number]=7&amp;page[size]=25&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/schedules?page[number]=2&amp;page[size]=25&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/schedules?page[number]=1&amp;page[size]=25&quot;</span>
+        <span class="nt">&quot;last&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/schedules?page[number]=7&amp;page[size]=25&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/schedules?page[number]=2&amp;page[size]=25&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/schedules?page[number]=1&amp;page[size]=25&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -990,7 +990,7 @@
 <h2 id="retrieve-a-schedule">Retrieve a Schedule</h2>
 <p>To retrieve an individual Schedule in your account, send a <code>GET</code> request to <code>/api/v0/schedules/$SCHEDULE_ID</code>.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/schedules/$SCHEDULE_ID</p>
+<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1013,7 +1013,7 @@
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;reports&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c55&quot;</span>
+            <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c55&quot;</span>
             <span class="p">}</span>
         <span class="p">}</span>
         <span class="p">},</span>
@@ -1029,7 +1029,7 @@
 <p>To list all the Reports in your account that have been run via a given Schedule, send a <code>GET</code> request <code>/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID</code>.</p>
 <p>This will list your Reports, filtered by that schedule id.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID</p>
+<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -1058,22 +1058,22 @@
             <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;common_a11y_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/ce472/common_a11y_issues&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/ce472/common_a11y_issues&quot;</span>
                     <span class="p">}</span>
                 <span class="p">},</span>
                 <span class="nt">&quot;common_html_issues&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/ce472/common_html_issues&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/ce472/common_html_issues&quot;</span>
                     <span class="p">}</span>
                 <span class="p">},</span>
                 <span class="nt">&quot;schedule&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83&quot;</span>
                     <span class="p">}</span>
                 <span class="p">},</span>
                 <span class="nt">&quot;web_pages&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports/ce472/web_pages&quot;</span>
+                        <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/ce472/web_pages&quot;</span>
                     <span class="p">}</span>
                 <span class="p">}</span>
             <span class="p">},</span>
@@ -1084,7 +1084,7 @@
         <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.dev/api/v0/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&amp;page[number]=1&amp;page[size]=25&quot;</span>
+        <span class="nt">&quot;self&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&amp;page[number]=1&amp;page[size]=25&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
