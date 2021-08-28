@@ -2,7 +2,9 @@
 
 Use deploy hooks to notify Rocket Validator that you've deployed a new version of your site and make it start automatically the specified validation.
 
-To create a deploy hook, create a schedule as explained in the [Scheduling reports](/scheduling) section. Then, set up your hosting platform to fire this schedule after deploys.
+To create a deploy hook, create a schedule as explained in the [Scheduling reports](/scheduling) section. 
+
+Then, copy the supplied schedule URL (which will be something like <code>https://rocketvalidator.com/schedule/abcd/1234/fire</code>) and set up your hosting platform to fire this schedule after deploys. We will refer to this URL as $SCHEDULE_URL in the examples below.
 
 ## curl
 
@@ -10,7 +12,7 @@ To create a deploy hook, create a schedule as explained in the [Scheduling repor
 
 !!! example "Example: curl"
     ```bash
-    $ curl -X POST https://rocketvalidator.com/schedule/$SCHEDULE_ID/fire
+    $ curl -X POST $SCHEDULE_URL
     ```
 
 ## Netlify
@@ -37,8 +39,7 @@ If your site is on Heroku, you can use the <a href="https://devcenter.heroku.com
 
 !!! example "Example: Heroku"
     ```bash
-    $ heroku addons:create deployhooks:http \
-      --url https://rocketvalidator.com/schedule/$SCHEDULE_ID/fire
+    $ heroku addons:create deployhooks:http --url $SCHEDULE_URL
     ```
 
 Heroku only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using <a href="https://github.com/deadlyicon/deploy-hook-forker" target="_blank">deploy hook forker</a>.
@@ -49,7 +50,7 @@ Engine Yard lets you define <a href="https://support.cloud.engineyard.com/entrie
 
 !!! example "Example: Engine Yard"
     ```bash
-    run "curl -X POST -d '' https://rocketvalidator.com/schedule/$SCHEDULE_ID/fire"
+    run "curl -X POST -d '' $SCHEDULE_URL"
     ```
 
 ## Cloud 66
@@ -60,7 +61,7 @@ If your site is on <a href="http://cloud66.com" target="_blank">Cloud 66</a>, yo
     ```bash
     staging:
       last_thing:
-        - command: curl -X POST -d '' https://rocketvalidator.com/schedule/$SCHEDULE_ID/fire
+        - command: curl -X POST -d '' $SCHEDULE_URL
           target: rails
           run_on: single_server
     ```
