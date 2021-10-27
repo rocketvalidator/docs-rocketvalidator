@@ -9,6 +9,7 @@ nav:
   - Rate Limiting: rate-limits.md
   - Scheduling Reports: scheduling.md
   - Deploy Hooks: deploy-hooks.md
+  - Domain Stats: domain-stats.md
   - Validation Charts: validation-charts.md
   - Muting Issues: muting.md
   - Performance Tips: performance-tips.md
@@ -47,9 +48,6 @@ extra:
       link: https://twitter.com/rocketvalidator
     - icon: fontawesome/brands/linkedin
       link: https://pr.linkedin.com/company/rocket-validator
-google_analytics:
-  - UA-81204018-1
-  - auto
 markdown_extensions:
 - admonition
 - pymdownx.superfences
