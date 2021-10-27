@@ -10,7 +10,6 @@ nav:
   - Scheduling Reports: scheduling.md
   - Deploy Hooks: deploy-hooks.md
   - Domain Stats: domain-stats.md
-  - Validation Charts: validation-charts.md
   - Muting Issues: muting.md
   - Performance Tips: performance-tips.md
   - User Agents: user-agents.md
