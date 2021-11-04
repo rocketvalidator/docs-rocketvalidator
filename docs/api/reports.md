@@ -11,6 +11,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Starting URL</dt>
   <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
 
+  <dt>Domain</dt>
+  <dd>Domain from the starting URL.</dd>
+
   <dt>Max Pages</dt>
   <dd>Maximum number of web pages to include. Places a limit on the Spider.</dd>
 
@@ -19,6 +22,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Rate Limit</dt>
   <dd>Maximum allowed requests per second.</dd>
+
+  <dt>Deep Crawl</dt>
+  <dd>Boolean to indicate whether deep crawling was enabled or not.</dd>
 
   <dt>Perform HTML Checks</dt>
   <dd>Boolean to indicate whether or not HTML checks will be included.</dd>
@@ -124,7 +130,8 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     			"perform_a11y_checks": true,
     			"perform_html_checks": true,
     			"rate_limit": 3,
-    			"starting_url": "http://validationhell.com/"
+    			"starting_url": "http://validationhell.com/",
+                "domain": "validationhell.com"
     		},
     		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
     		"relationships": {
@@ -161,11 +168,12 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
 To create a Report, send a `POST` request to `/api/v0/reports`, with a JSON payload in the body including the attributes:
 
-* `starting_url`. The initial URL where the Spider will start on.
-* `max_pages`. The Spider will recursively follow internal links found until this limit is reached.
-* `rate_limit`. Limit on the number of requests per second.
-* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found.
+* `starting_url`. The initial URL where the Spider will start on. Required.
+* `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
+* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
+* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
+* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
+* `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
 
 The next example shows how to form the body payload with the Report attributes.
 
@@ -179,7 +187,8 @@ The next example shows how to form the body payload with the Report attributes.
                 "max_pages": 100,
                 "rate_limit": 3,
                 "perform_html_checks": true,
-                "perform_a11y_checks": true
+                "perform_a11y_checks": true,
+                "deep_crawl": true
             }
         }
     }
@@ -253,7 +262,8 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     			"perform_a11y_checks": true,
     			"perform_html_checks": true,
     			"rate_limit": 3,
-    			"starting_url": "http://validationhell.com/"
+    			"starting_url": "http://validationhell.com/",
+                "domain": "validationhell.com"
     		},
     		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
     		"relationships": {
@@ -334,7 +344,8 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                     "perform_a11y_checks": true,
                     "perform_html_checks": true,
                     "rate_limit": 3,
-                    "starting_url": "http://validationhell.com/"
+                    "starting_url": "http://validationhell.com/",
+                    "domain": "validationhell.com"
                 },
                 "id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
                 "relationships": {

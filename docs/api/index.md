@@ -191,11 +191,12 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
 Send a `POST` request to `/api/v0/reports` with a JSON payload including the parameters:
 
-* `starting_url`. The initial URL where the Spider will start on.
-* `max_pages`. The Spider will recursively follow internal links found until this limit is reached.
-* `rate_limit`. Limit on the number of requests per second.
-* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found.
+* `starting_url`. The initial URL where the Spider will start on. Required.
+* `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
+* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
+* `deep_crawl`. Boolean to enable deep link crawling. Optional, defaults to true.
+* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
+* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 
 !!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
 
@@ -206,6 +207,7 @@ Send a `POST` request to `/api/v0/reports` with a JSON payload including the par
                 "starting_url": "http://validationhell.com",
                 "max_pages": 100,
                 "rate_limit": 3,
+                "deep_crawl": true,
                 "perform_html_checks": true,
                 "perform_a11y_checks": true
             }
