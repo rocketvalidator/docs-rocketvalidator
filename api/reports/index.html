@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://docs.rocketvalidator.com/api/reports/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -928,6 +928,9 @@
   <dt>Starting URL</dt>
   <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
 
+  <dt>Domain</dt>
+  <dd>Domain from the starting URL.</dd>
+
   <dt>Max Pages</dt>
   <dd>Maximum number of web pages to include. Places a limit on the Spider.</dd>
 
@@ -936,6 +939,9 @@
 
   <dt>Rate Limit</dt>
   <dd>Maximum allowed requests per second.</dd>
+
+  <dt>Deep Crawl</dt>
+  <dd>Boolean to indicate whether deep crawling was enabled or not.</dd>
 
   <dt>Perform HTML Checks</dt>
   <dd>Boolean to indicate whether or not HTML checks will be included.</dd>
@@ -1038,7 +1044,8 @@
             <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="nt">&quot;perform_html_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+            <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;validationhell.com&quot;</span>
         <span class="p">},</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;850e9a7c-66d6-4178-ae15-9abb49fc0b38&quot;</span><span class="p">,</span>
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1074,11 +1081,12 @@
 <h2 id="create-a-report">Create a Report</h2>
 <p>To create a Report, send a <code>POST</code> request to <code>/api/v0/reports</code>, with a JSON payload in the body including the attributes:</p>
 <ul>
-<li><code>starting_url</code>. The initial URL where the Spider will start on.</li>
-<li><code>max_pages</code>. The Spider will recursively follow internal links found until this limit is reached.</li>
-<li><code>rate_limit</code>. Limit on the number of requests per second.</li>
-<li><code>perform_html_checks</code>. Boolean to enable checks using the W3C Validator software on the Web Pages found.</li>
-<li><code>perform_a1yy_checks</code>. Boolean to enable checks using Deque Axe Core software on the Web Pages found.</li>
+<li><code>starting_url</code>. The initial URL where the Spider will start on. Required.</li>
+<li><code>max_pages</code>. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.</li>
+<li><code>rate_limit</code>. Limit on the number of requests per second. Optional, defaults to 1.</li>
+<li><code>perform_html_checks</code>. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.</li>
+<li><code>perform_a1yy_checks</code>. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.</li>
+<li><code>deep_crawl</code>. Boolean to enable deep crawling. Optional, defaults to true.</li>
 </ul>
 <p>The next example shows how to form the body payload with the Report attributes.</p>
 <div class="admonition example">
@@ -1090,7 +1098,8 @@
             <span class="nt">&quot;max_pages&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
             <span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
             <span class="nt">&quot;perform_html_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span>
+            <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;deep_crawl&quot;</span><span class="p">:</span> <span class="kc">true</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1158,7 +1167,8 @@
             <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="nt">&quot;perform_html_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+            <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;validationhell.com&quot;</span>
         <span class="p">},</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;850e9a7c-66d6-4178-ae15-9abb49fc0b38&quot;</span><span class="p">,</span>
         <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1236,7 +1246,8 @@
                 <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="nt">&quot;perform_html_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
                 <span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span>
+                <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;validationhell.com&quot;</span>
             <span class="p">},</span>
             <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;850e9a7c-66d6-4178-ae15-9abb49fc0b38&quot;</span><span class="p">,</span>
             <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1385,10 +1396,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       
