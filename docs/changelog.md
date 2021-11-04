@@ -2,6 +2,14 @@
 
 Rocket Validator is continually evolving, this document describes the latest changes on the user interface and features.
 
+## 2021, October 27th
+
+[Released a new section for Domain Stats, that replaces the previous charts feature in reports](https://rocketvalidator.com/blog/domain-stats).
+
+## 2021, October 25th
+
+[Web pages can now be deleted from reports](https://rocketvalidator.com/blog/delete-web-pages).
+
 ## 2021, August 4th
 
 Added `:last_checked_at` timestamp to Reports and Web Pages to indicate the last time they were checked.
