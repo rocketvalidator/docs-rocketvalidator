@@ -1,6 +1,6 @@
 # Mutings
 
-A Muting represents a rule you've defined to automatically mute certain issues on your reports. <a href="/mutings">Read more about Muting Rules</a>.
+A Muting represents a rule you've defined to automatically mute certain issues on your reports. <a href="/muting">Read more about Muting Rules</a>.
 
 Think of a Muting as a rule that defines a matching URL and issue message - when Rocket Validator finds issues on your web pages, they'll be automatically muted if there's a match.
 
