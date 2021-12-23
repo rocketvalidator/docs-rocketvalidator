@@ -18,7 +18,7 @@ When you do that, you'll be taken to the new muting rule form:
 
 ![Muting rule form](/img/muting/muting-form.png)
 
-Then click on "Submit" and your new muting rule will be created and applied to your reports.
+Then click on "Submit" and your new muting rule will be created and applied to the current and next reports.
 
 ## Muting options
 
