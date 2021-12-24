@@ -43,7 +43,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
               <dt>Status</dt>
               <dd>HTML checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
               <dt>Issues</dt>
-              <dd>Counters for the number of HTML errors, warnings, muted errors and muted warnings. This sums the number of HTML issues on the web pages for a particular report.</dd>
+              <dd>Counters for the number of HTML errors and warnings. This sums the number of HTML issues on the web pages for a particular report.</dd>
             </dl>
         </dd>
         <dt>A11Y</dt>
@@ -53,7 +53,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
               <dt>Status</dt>
               <dd>Accessibility checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
               <dt>Issues</dt>
-              <dd>Counters for the number of Accessibility errors, warnings, muted errors and muted warnings. This sums the number of Accessibility issues on the web pages for a particular report.</dd>
+              <dd>Counters for the number of Accessibility errors and warnings. This sums the number of Accessibility issues on the web pages for a particular report.</dd>
             </dl>
         </dd>
     </dl>
@@ -97,8 +97,6 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     				"a11y": {
     					"issues": {
     						"errors": 60,
-    						"muted_errors": 0,
-    						"muted_warnings": 0,
     						"warnings": 0
     					},
     					"status": {
@@ -110,8 +108,6 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     				"html": {
     					"issues": {
     						"errors": 157,
-    						"muted_errors": 0,
-    						"muted_warnings": 0,
     						"warnings": 20
     					},
     					"status": {
@@ -229,8 +225,6 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     				"a11y": {
     					"issues": {
     						"errors": 60,
-    						"muted_errors": 0,
-    						"muted_warnings": 0,
     						"warnings": 0
     					},
     					"status": {
@@ -242,8 +236,6 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     				"html": {
     					"issues": {
     						"errors": 157,
-    						"muted_errors": 0,
-    						"muted_warnings": 0,
     						"warnings": 20
     					},
     					"status": {
@@ -311,8 +303,6 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                         "a11y": {
                             "issues": {
                                 "errors": 60,
-                                "muted_errors": 0,
-                                "muted_warnings": 0,
                                 "warnings": 0
                             },
                             "status": {
@@ -324,8 +314,6 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                         "html": {
                             "issues": {
                                 "errors": 157,
-                                "muted_errors": 0,
-                                "muted_warnings": 0,
                                 "warnings": 20
                             },
                             "status": {

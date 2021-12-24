@@ -194,14 +194,10 @@ This will list your Reports, filtered by that schedule id.
                     "starting_url": "http://validationhell.com/",
                     "total_a11y_issues": {
                         "errors": 38,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
                         "warnings": 3
                     },
                     "total_html_issues": {
                         "errors": 649,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
                         "warnings": 434
                     },
                     "updated_at": "2020-04-28T12:02:57"

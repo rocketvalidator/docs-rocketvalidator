@@ -15,10 +15,10 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dd>URL of the web page that links to this web page. That is, where the Spider found first about this Web Page.</dd>
 
   <dt>HTML Check</dt>
-  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
+  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
 
   <dt>A11y Check</dt>
-  <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors, warnings, muted errors and muted warnings, and the status of the check.</dd>
+  <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the web page was created.</dd>
@@ -52,15 +52,11 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
       "attributes": {
           "a11y_check": {
               "errors": 9,
-              "muted_errors": 0,
-              "muted_warnings": 0,
               "status": "checked",
               "warnings": 1
           },
           "html_check": {
               "errors": 78,
-              "muted_errors": 0,
-              "muted_warnings": 0,
               "status": "checked",
               "warnings": 86
           },
@@ -106,15 +102,11 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                 "attributes": {
                     "a11y_check": {
                         "errors": 6,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
                         "status": "checked",
                         "warnings": 0
                     },
                     "html_check": {
                         "errors": 19,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
                         "status": "checked",
                         "warnings": 2
                     },
@@ -149,15 +141,11 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                 "attributes": {
                     "a11y_check": {
                         "errors": 6,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
                         "status": "checked",
                         "warnings": 0
                     },
                     "html_check": {
                         "errors": 16,
-                        "muted_errors": 0,
-                        "muted_warnings": 0,
                         "status": "checked",
                         "warnings": 2
                     },
@@ -209,15 +197,11 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
             "attributes": {
                 "a11y_check": {
                     "errors": 6,
-                    "muted_errors": 0,
-                    "muted_warnings": 0,
                     "status": "checked",
                     "warnings": 0
                 },
                 "html_check": {
                     "errors": 19,
-                    "muted_errors": 0,
-                    "muted_warnings": 0,
                     "status": "checked",
                     "warnings": 2
                 },

@@ -75,8 +75,6 @@ The Reports tab shows the current reports for a domain and lets you create a new
 
 The Muting Rules tab shows the muting rules that are currently applied to the reports on that domain.
 
-A button lets you toggle the visibility of muted issues on the domain reports.
-
 ![Muting rules](/img/domain-stats/muting.png)
 
 ## Sharing domain stats

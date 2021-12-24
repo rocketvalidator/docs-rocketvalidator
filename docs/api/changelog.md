@@ -1,5 +1,6 @@
 # Changelog
 
+* 2021-12-24. Updates mutings, now muted issues are no longer stored, so there's no reference to it.
 * 2021-11-04. Updates [Reports](/api/reports) section, explaining what attributes are required, which ones are optional and their defaults, and adding the `domain` attribute.
 * 2021-08-28. Changed API host to rocketvalidator.com.
 * 2020-05-12. Updates [Reports](/api/reports) section, explaining how to create and delete Reports, and the new `checks` detail. Updates [Schedules](/api/schedules) section with rename of boolean attributes `perform_html_checks` and `perform_a11y_checks`.

@@ -23,9 +23,6 @@ An HTML issue corresponds to an issue found on a given web page when being check
   <dt>Message</dt>
   <dd>Brief description of the issue.</dd>
 
-  <dt>Muted</dt>
-  <dd>Boolean, whether or not this issue was muted.</dd>
-
   <dt>Inserted At</dt>
   <dd>Timestamp when the HTML Issue was created.</dd>
 
@@ -41,9 +38,6 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
   <dt>Web Page</dt>
   <dd>The Web Page that this HTML Issue belongs to.</dd>
-
-  <dt>Muting</dt>
-  <dd>The Muting applied, if any.</dd>
 </dl>
 
 ## Example
@@ -67,16 +61,10 @@ An HTML issue corresponds to an issue found on a given web page when being check
     		"issue_sub_type": null,
     		"issue_type": "error",
     		"message": "CSS: “left”: “none” is not a “left” value.",
-    		"muted": true,
     		"updated_at": "2020-04-02T12:44:45"
     	},
     	"id": "64398238",
     	"relationships": {
-    		"muting": {
-    			"links": {
-    				"related": "https://rocketvalidator.com/api/v0/mutings/941"
-    			}
-    		},
     		"report": {
     			"links": {
     				"related": "https://rocketvalidator.com/api/v0/reports/56b6"
@@ -115,18 +103,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                     "id": 59734815,
                     "inserted_at": "2020-02-28T13:01:34",
                     "message": "Obsolete doctype. Expected “<!DOCTYPE html>”.",
-                    "muted": false,
                     "sub_type": null,
                     "type": "error",
                     "updated_at": "2020-02-28T13:01:34"
                 },
                 "id": "59734815",
                 "relationships": {
-                    "muting": {
-                      "links": {
-                        "related": null
-                      }
-                    },
                     "report": {
                         "links": {
                             "related": "https://rocketvalidator.com/api/v0/reports/9314c"
@@ -154,18 +136,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                     "id": 59734817,
                     "inserted_at": "2020-02-28T13:01:34",
                     "message": "CSS: “pading”: Property “pading” doesn't exist.",
-                    "muted": false,
                     "sub_type": null,
                     "type": "error",
                     "updated_at": "2020-02-28T13:01:34"
                 },
                 "id": "59734817",
                 "relationships": {
-                    "muting": {
-                      "links": {
-                        "related": null
-                      }
-                    },
                     "report": {
                         "links": {
                             "related": "https://rocketvalidator.com/api/v0/reports/9314c"

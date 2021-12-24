@@ -179,15 +179,11 @@ This will list the Web Pages of the Report, filtering them to include only the o
     		"attributes": {
     			"a11y_check": {
     				"errors": 9,
-    				"muted_errors": 0,
-    				"muted_warnings": 0,
     				"status": "checked",
     				"warnings": 1
     			},
     			"html_check": {
     				"errors": 60,
-    				"muted_errors": 0,
-    				"muted_warnings": 0,
     				"status": "checked",
     				"warnings": 81
     			},
