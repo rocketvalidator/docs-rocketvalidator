@@ -898,9 +898,6 @@
   <dt>Message</dt>
   <dd>Brief description of the issue.</dd>
 
-  <dt>Muted</dt>
-  <dd>Boolean, whether or not this issue was muted.</dd>
-
   <dt>Inserted At</dt>
   <dd>Timestamp when the HTML Issue was created.</dd>
 
@@ -915,9 +912,6 @@
 
   <dt>Web Page</dt>
   <dd>The Web Page that this HTML Issue belongs to.</dd>
-
-  <dt>Muting</dt>
-  <dd>The Muting applied, if any.</dd>
 </dl>
 
 <h2 id="example">Example</h2>
@@ -939,16 +933,10 @@
         <span class="nt">&quot;issue_sub_type&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;issue_type&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
         <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;CSS: “left”: “none” is not a “left” value.&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-04-02T12:44:45&quot;</span>
     <span class="p">},</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;64398238&quot;</span><span class="p">,</span>
     <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;muting&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/mutings/941&quot;</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
         <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6&quot;</span>
@@ -984,18 +972,12 @@
                 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">59734815</span><span class="p">,</span>
                 <span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Obsolete doctype. Expected “&lt;!DOCTYPE html&gt;”.&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="nt">&quot;sub_type&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span>
             <span class="p">},</span>
             <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;59734815&quot;</span><span class="p">,</span>
             <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;muting&quot;</span><span class="p">:</span> <span class="p">{</span>
-                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="kc">null</span>
-                  <span class="p">}</span>
-                <span class="p">},</span>
                 <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
                         <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
@@ -1023,18 +1005,12 @@
                 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">59734817</span><span class="p">,</span>
                 <span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;CSS: “pading”: Property “pading” doesn&#39;t exist.&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;muted&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
                 <span class="nt">&quot;sub_type&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
                 <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-02-28T13:01:34&quot;</span>
             <span class="p">},</span>
             <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;59734817&quot;</span><span class="p">,</span>
             <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;muting&quot;</span><span class="p">:</span> <span class="p">{</span>
-                  <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="kc">null</span>
-                  <span class="p">}</span>
-                <span class="p">},</span>
                 <span class="nt">&quot;report&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">{</span>
                         <span class="nt">&quot;related&quot;</span><span class="p">:</span> <span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
