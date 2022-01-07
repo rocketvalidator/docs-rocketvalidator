@@ -682,6 +682,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-schedule" class="md-nav__link">
+    Create a Schedule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-your-schedules" class="md-nav__link">
     List your Schedules
   </a>
@@ -845,6 +852,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-schedule" class="md-nav__link">
+    Create a Schedule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-your-schedules" class="md-nav__link">
     List your Schedules
   </a>
@@ -964,6 +978,40 @@
     <span class="p">},</span>
     <span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="create-a-schedule">Create a Schedule</h2>
+<p>To create a Schedule, send a <code>POST</code> request to <code>/api/v0/schedules</code>, with a JSON payload in the body including the attributes:</p>
+<ul>
+<li><code>starting_url</code>. The initial URL where the Spider will start on. Required.</li>
+<li><code>max_pages</code>. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.</li>
+<li><code>rate_limit</code>. Limit on the number of requests per second. Optional, defaults to 1.</li>
+<li><code>perform_html_checks</code>. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.</li>
+<li><code>perform_a1yy_checks</code>. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.</li>
+<li><code>deep_crawl</code>. Boolean to enable deep crawling. Optional, defaults to true.</li>
+<li><code>active</code>. Boolean to enable the schedule. Optional, defaults to true.</li>
+<li><code>periodicity</code>. Map with the options for the periodicity. Requires an <code>every</code> key which can be <code>deploy</code>, <code>month</code>, <code>week</code> or <code>day</code>. If <code>month</code> is used, an additional key <code>monthday</code> is required, which has to be an integer from 1 to 28. If instead <code>week</code> is used, then an additional <code>weekday</code> key is required, as a string from <code>monday</code>, <code>tuesday</code>, <code>wednesday</code>, <code>thursday</code>, <code>friday</code>, <code>saturday</code> or <code>sunday</code>.</li>
+</ul>
+<p>The next example shows how to form the body payload with the Schedule attributes.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: POST https://rocketvalidator.com/api/v0/schedules</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;starting_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://validationhell.com&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;max_pages&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="nt">&quot;perform_html_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;perform_a11y_checks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;deep_crawl&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;active&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;periodicity&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;every&quot;</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;monthday&quot;</span><span class="p">:</span> <span class="mi">15</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
