@@ -1,5 +1,6 @@
 # Changelog
 
+* 2022-01-07. Updates [Schedules](/api/schedules) section, after adding CREATE to the schedules endpoint.
 * 2021-12-24. Updates mutings, now muted issues are no longer stored, so there's no reference to it.
 * 2021-11-04. Updates [Reports](/api/reports) section, explaining what attributes are required, which ones are optional and their defaults, and adding the `domain` attribute.
 * 2021-08-28. Changed API host to rocketvalidator.com.

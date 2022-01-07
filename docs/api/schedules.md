@@ -82,6 +82,43 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
     }
     ```
 
+## Create a Schedule
+
+To create a Schedule, send a `POST` request to `/api/v0/schedules`, with a JSON payload in the body including the attributes:
+
+* `starting_url`. The initial URL where the Spider will start on. Required.
+* `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
+* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
+* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
+* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
+* `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
+* `active`. Boolean to enable the schedule. Optional, defaults to true.
+* `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is required, which has to be an integer from 1 to 28. If instead `week` is used, then an additional `weekday` key is required, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday`.
+
+The next example shows how to form the body payload with the Schedule attributes.
+
+!!! example "Example: POST https://rocketvalidator.com/api/v0/schedules"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "starting_url": "http://validationhell.com",
+                "max_pages": 100,
+                "rate_limit": 3,
+                "perform_html_checks": true,
+                "perform_a11y_checks": true,
+                "deep_crawl": true,
+                "active": true,
+                "periodicity": {
+                    "every": "month",
+                    "monthday": 15
+                }
+            }
+        }
+    }
+    ```
+
 ## List your Schedules
 
 To list all Schedules in your account, send a `GET` request to `/api/v0/schedules`.
