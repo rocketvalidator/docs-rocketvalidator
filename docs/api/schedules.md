@@ -82,43 +82,6 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
     }
     ```
 
-## Create a Schedule
-
-To create a Schedule, send a `POST` request to `/api/v0/schedules`, with a JSON payload in the body including the attributes:
-
-* `starting_url`. The initial URL where the Spider will start on. Required.
-* `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
-* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
-* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
-* `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
-* `active`. Boolean to enable the schedule. Optional, defaults to true.
-* `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is required, which has to be an integer from 1 to 28. If instead `week` is used, then an additional `weekday` key is required, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday`.
-
-The next example shows how to form the body payload with the Schedule attributes.
-
-!!! example "Example: POST https://rocketvalidator.com/api/v0/schedules"
-
-    ```json
-    {
-        "data": {
-            "attributes": {
-                "starting_url": "http://validationhell.com",
-                "max_pages": 100,
-                "rate_limit": 3,
-                "perform_html_checks": true,
-                "perform_a11y_checks": true,
-                "deep_crawl": true,
-                "active": true,
-                "periodicity": {
-                    "every": "month",
-                    "monthday": 15
-                }
-            }
-        }
-    }
-    ```
-
 ## List your Schedules
 
 To list all Schedules in your account, send a `GET` request to `/api/v0/schedules`.
@@ -209,6 +172,103 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
     }
     ```
 
+## Create a Schedule
+
+To create a Schedule, send a `POST` request to `/api/v0/schedules`, with a JSON payload in the body including the attributes:
+
+* `starting_url`. The initial URL where the Spider will start on. Required.
+* `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
+* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
+* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
+* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
+* `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
+* `active`. Boolean to enable the schedule. Optional, defaults to true.
+* `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is optional, which has to be an integer from 1 to 28 and defaults to 1. If instead `week` is used, then an additional `weekday` key is optional, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday` that defaults to `monday`.
+
+The next example shows how to form the body payload with the Schedule attributes.
+
+!!! example "Example: POST https://rocketvalidator.com/api/v0/schedules"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "starting_url": "http://validationhell.com",
+                "max_pages": 100,
+                "rate_limit": 3,
+                "perform_html_checks": true,
+                "perform_a11y_checks": true,
+                "deep_crawl": true,
+                "active": true,
+                "periodicity": {
+                    "every": "month",
+                    "monthday": 15
+                }
+            }
+        }
+    }
+    ```
+
+## Update a Schedule
+
+To update an existing Schedule, send a `PATCH` request to `/api/v0/schedules/$schedule_id`, with a JSON payload in the body including the attributes you want to change from:
+
+* `starting_url`. The initial URL where the Spider will start on. Required.
+* `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
+* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
+* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
+* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
+* `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
+* `active`. Boolean to enable the schedule. Optional, defaults to true.
+* `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is optional, which has to be an integer from 1 to 28 and defaults to 1. If instead `week` is used, then an additional `weekday` key is optional, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday` that defaults to `monday`.
+
+The next example shows how to form the body payload with the Schedule attributes.
+
+!!! example "Example: PATCH https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "starting_url": "http://validationhell.com",
+                "max_pages": 100,
+                "rate_limit": 3,
+                "perform_html_checks": true,
+                "perform_a11y_checks": true,
+                "deep_crawl": true,
+                "active": true,
+                "periodicity": {
+                    "every": "month",
+                    "monthday": 15
+                }
+            }
+        }
+    }
+    ```
+
+You only need to include the attributes you want to update. The next example shows the payload used to disable a schedule:
+
+!!! example "Example: PATCH https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "active": false
+            }
+        }
+    }
+    ```
+
+## Delete a Schedule
+
+To delete an individual Schedule from your account, send a `DELETE` request to `/api/v0/schedules/$SCHEDULE_ID`.
+
+!!! example "Example: DELETE https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+
+    ```
+    204 No Content
+    ```    
 
 ## Filter Reports by Schedule
 
