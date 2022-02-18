@@ -1,6 +1,6 @@
 # Domain Stats
 
-The Domain Stats section, available for Basic and Pro users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
+The Domain Stats section, available for Basic, Pro and Enterprise users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
 
 ## Domain list
 

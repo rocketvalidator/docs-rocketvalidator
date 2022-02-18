@@ -1,5 +1,6 @@
 # Changelog
 
+* 2022-02-17. The Reports endpoint can now list [Guest Reports](/api/reports/#list-your-guest-reports).
 * 2022-01-08. Updates [Schedules](/api/schedules) section, after adding UPDATE and DELETE to the schedules endpoint.
 * 2022-01-07. Updates [Schedules](/api/schedules) section, after adding CREATE to the schedules endpoint.
 * 2021-12-24. Updates mutings, now muted issues are no longer stored, so there's no reference to it.

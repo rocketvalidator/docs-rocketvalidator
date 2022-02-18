@@ -372,6 +372,34 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
     }
     ```
 
+## List your Guest Reports
+
+If you have [Guest Accounts](/guest-accounts), you can filter the report list so that it also contains the reports created by your guests.
+
+By default, the Reports API shows only the reports created by the main account:
+
+> `GET /api/v0/reports`
+
+This is equivalent to passing `created_by=me` like this:
+
+> `GET /api/v0/reports?created_by=me`
+
+To get the list of all reports (created by main account or by guests), pass `created_by=all` like this:
+
+> `GET /api/v0/reports?created_by=all`
+
+To get only the list of reports created by guests, pass `created_by=guests` like this:
+
+> `GET /api/v0/reports?created_by=guests`
+
+To get only the list of reports created by an individual guest, pass the token like this:
+
+> `GET /api/v0/reports?created_by=guests&guest_token=1234`
+
+Each report will include the `guest_token` used as an attribute.
+
+You can find the token for each guest account in the [Guests](https://rocketvalidator.com/guests) section, both in the guest card, and also in the CSV export.
+
 ## Delete a Report
 
 To delete an individual Report from your account, send a `DELETE` request to `/api/v0/reports/$REPORT_ID`.
