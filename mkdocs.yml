@@ -5,13 +5,14 @@ nav:
   - Welcome: index.md
   - Quick Start: quick-start.md
   - Summary Reports: summary-reports.md
-  - Broken Links Checker: broken-links-checker.md
+  - Device Viewport Emulation: device-viewport-emulation.md
   - Rate Limiting: rate-limits.md
   - Scheduling Reports: scheduling.md
   - Deploy Hooks: deploy-hooks.md
   - Domain Stats: domain-stats.md
   - Muting Issues: muting.md
   - Performance Tips: performance-tips.md
+  - Broken Links Checker: broken-links-checker.md
   - User Agents: user-agents.md
   - Google Analytics: google-analytics.md
   - Validating your local server: how-to-validate-your-local-server.md

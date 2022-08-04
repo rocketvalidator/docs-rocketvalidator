@@ -14,7 +14,9 @@ To schedule a site validation, you can define:
 * **Starting URL**. Our validation spider will visit this URL and its direct internal links, and validate those pages. Typically, you can enter the main URL of the site to validate, but it can be any URL from your site, or an XML sitemap.
 * **How many pages to validate**. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.
 * **Validation speed (requests/second)**. By default is 3 reqs/second, can be set higher depending on your subscription plan. <a href="/rate-limits">Read more</a>.
+* **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
 * **Validate HTML and Accessibility or only HTML**. Choose if you want to include A11Y checks on top of HTML checks.
+* **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used.
 * **Active**. Disable this to temporarily pause the scheduled validation.
 
 When the scheduled validation is run, you'll be notified via email with a link to the report.
