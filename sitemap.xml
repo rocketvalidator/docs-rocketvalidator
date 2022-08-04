@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.rocketvalidator.com/device-viewport-emulation/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.rocketvalidator.com/domain-stats/</loc>
          <lastmod>2022-08-04</lastmod>
          <changefreq>daily</changefreq>
