@@ -21,7 +21,7 @@ To validate a site, you can define the following options.
 
 Once your site has been processed, you'll see the HTML and accessibility issues for each page found. As you go fixing them, you can re-check the pages quickly with:
 
-* **Re-check** button on each page. This will submit an individual page to the validator.
-* **Re-check all pages with issues** button. This will submit all pages with errors or warnings to the validator.
+* **Re-check this page** button on each page. This will submit an individual page to the validator.
 * **Re-check all pages** button. This will submit all pages on the site to the validator.
+* **Re-check all pages affected by an issue** menu. This will submit all pages with errors or warnings to the validator.
 * **Re-scrape site** button. This will start the scraper again, to discover the internal pages of the site and validate each of them. Use only if the structure of your site has changed or if you want to change any parameter (like max pages).
