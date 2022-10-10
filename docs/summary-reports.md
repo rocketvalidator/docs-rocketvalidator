@@ -8,7 +8,7 @@ That's why the first screen you'll see when creating a new report is the **Summa
 
 Also, for the HTML and accessibility checks, a **progress gauge** shows the percentage of pages that passed all the checks. Your goal is to reach a 100% of web pages passing all checks.
 
-![Summary Report](/img/summary_report.png)
+![Summary Report](/img/summary_report_2022_10_10.jpg)
 
 ## Common HTML / accessibility issues tabs
 
@@ -23,6 +23,8 @@ The grouped issues are ordered by their severity and the number of web pages tha
 ## Seeing web pages affected
 
 Click on an issue, and you'll see the pages that have this exact issue, and how many times it appears on each different page.
+
+![Issue and pages](/img/issue_menu_web_pages_affected.png)
 
 ![Issue and pages](/img/web_pages_affected_per_issue.png)
 
