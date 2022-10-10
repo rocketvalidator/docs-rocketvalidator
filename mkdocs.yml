@@ -34,7 +34,7 @@ nav:
     - Client Libraries: api/client-libraries.md
     - Changelog: api/changelog.md
 theme:
-  name: material
+  name: readthedocs
   features:
     - navigation.instant
   custom_dir: overrides
