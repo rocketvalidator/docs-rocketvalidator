@@ -34,7 +34,7 @@ nav:
     - Client Libraries: api/client-libraries.md
     - Changelog: api/changelog.md
 theme:
-  name: readthedocs
+  name: material
   features:
     - navigation.instant
   custom_dir: overrides
@@ -49,12 +49,13 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://pr.linkedin.com/company/rocket-validator
 markdown_extensions:
-- admonition
-- pymdownx.superfences
-- pymdownx.tabbed
-- codehilite:
-    guess_lang: false
-    css_class: "codehilite"
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - codehilite:
+      guess_lang: false
+      css_class: "codehilite"
 extra_css:
     - css/codehilite/borland.css
     - css/extra.css
