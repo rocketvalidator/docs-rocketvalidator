@@ -62,4 +62,4 @@ Instead, our web interface lets you easily browse all the web pages and its issu
 
 ## How can I exclude Rocket Validator from Google Analytics traffic?
 
-You can detect the <a href="/user-agents">User Agent</a> string, and <a href="/google-analytics">exclude it from Google Analytics</a>.
+You can detect the <a href="/user-agents">User Agent</a> string, and <a href="/google">exclude it from Google Analytics</a>.
