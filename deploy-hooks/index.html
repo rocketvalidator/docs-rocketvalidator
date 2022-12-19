@@ -965,7 +965,7 @@
 </div>
 <p>Heroku only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using <a href="https://github.com/deadlyicon/deploy-hook-forker" target="_blank">deploy hook forker</a>.</p>
 <h2 id="engine-yard">Engine Yard</h2>
-<p>Engine Yard lets you define <a href="https://support.cloud.engineyard.com/entries/21016568-use-ruby-deploy-hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:</p>
+<p>Engine Yard lets you define <a href="https://support.cloud.engineyard.com/hc/en-us/articles/205407008-Use-Ruby-Deploy-Hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:</p>
 <div class="admonition example">
 <p class="admonition-title">Example: Engine Yard</p>
 <div class="highlight"><pre><span></span><code>run <span class="s2">&quot;curl -X POST -d &#39;&#39; </span><span class="nv">$SCHEDULE_URL</span><span class="s2">&quot;</span>
