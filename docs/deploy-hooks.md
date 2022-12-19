@@ -46,7 +46,7 @@ Heroku only allows one HTTP deploy hook per app, so if you need to trigger sever
 
 ## Engine Yard
 
-Engine Yard lets you define <a href="https://support.cloud.engineyard.com/entries/21016568-use-ruby-deploy-hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:
+Engine Yard lets you define <a href="https://support.cloud.engineyard.com/hc/en-us/articles/205407008-Use-Ruby-Deploy-Hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:
 
 !!! example "Example: Engine Yard"
     ```bash

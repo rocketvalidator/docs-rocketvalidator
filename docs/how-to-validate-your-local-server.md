@@ -11,7 +11,7 @@ There's an easy way to do that, thanks to tools like [ngrok](https://ngrok.com/)
 
 ## Serve
 
-In case you aren't using a web server locally, say, you're working directly on static files, you can easily launch a web server in your local directory thanks to tools like [Serve](http://get-serve.com/):
+In case you aren't using a web server locally, say, you're working directly on static files, you can easily launch a web server in your local directory thanks to tools like [Serve](https://github.com/jlong/serve):
 
 <iframe src="https://www.youtube.com/embed/GOUNTa8ME2o" allowfullscreen class="video" title="Intro to Serve" width="640" height="320"></iframe>
 
