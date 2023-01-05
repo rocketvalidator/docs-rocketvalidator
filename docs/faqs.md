@@ -46,7 +46,7 @@ No, we don't use any kind of cache neither on the link scraper, nor on the valid
 
 ## How long are reports stored?
 
-We store the results of your validations for a limited time, depending on your subscription plan. See the [pricing](https://rocketvalidator.com/pricing) table.
+Reports are stored for actively subscribed users for a limited time, depending on your subscription plan. See the [pricing](https://rocketvalidator.com/pricing) table. Once your subscription expires, reports are automatically deleted - you need an active subscription to keep your reports stored.
 
 ## Can I share reports with other people?
 
@@ -54,11 +54,7 @@ Sure, you can share your validation reports with anyone. Just use one of the but
 
 ## Can I export reports to Excel, CSV, or PDF?
 
-No, reports can't be exported to these formats, because the generated file would be too heavy to handle.
-
-Think of a large site with 3,000 validated web pages, where each page has 100 issues. The result would be a file containing 300,000 rows - this is not something you'll easily handle in Excel or that you'd be wanting to read as a PDF.
-
-Instead, our web interface lets you easily browse all the web pages and its issues, re-check each page as needed, and share the reports with your colleagues or clients.
+You can download your reports data in Excel format. See [this blog post](https://rocketvalidator.com/blog/how-to-export-report-data-as-excel-files) for more information on exporting report data.
 
 ## How can I exclude Rocket Validator from Google Analytics traffic?
 
