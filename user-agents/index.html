@@ -383,100 +383,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          User Agents
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         User Agents
       </a>
-      
-        <!--
-  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-
-
-<!-- Table of contents -->
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-
-  <!--
-    Hack: check whether the content contains a h1 headline. If it does, the
-    top-level anchor must be skipped, since it would be redundant to the link
-    to the current page that is located just above the anchor. Therefore we
-    directly continue with the children of the anchor.
-  -->
-  
-    
-  
-
-  <!-- Render item list -->
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#link-spider" class="md-nav__link">
-    Link Spider
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-checker" class="md-nav__link">
-    HTML Checker
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility-checker" class="md-nav__link">
-    Accessibility Checker
-  </a>
-  
-</li>
-      
-    </ul>
-  
-
-  <div class="widget">
-    <p class="title">Join Rocket Validator</p>
-    <ul>
-      <li>Automatic link crawling</li>
-      <li>Accessibility checks</li>
-      <li>HTML checks</li>
-      <li>Scheduled reports</li>
-      <li>Device emulation</li>
-    </ul>
-    <p class="btn"><a href="https://rocketvalidator.com/registration/new" target="_blank" class="btn">Start Your Free Trial</a></p>
-  </div>
-
-</nav>
       
     </li>
   
@@ -823,37 +732,6 @@
 
   <!-- Render item list -->
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#link-spider" class="md-nav__link">
-    Link Spider
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-checker" class="md-nav__link">
-    HTML Checker
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility-checker" class="md-nav__link">
-    Accessibility Checker
-  </a>
-  
-</li>
-      
-    </ul>
-  
 
   <div class="widget">
     <p class="title">Join Rocket Validator</p>
@@ -886,28 +764,12 @@
 <li><strong>Link Spider</strong>. It will start at the initial URL to discover the internal links, and visit all of them until it finds all the pages to validate.</li>
 <li><strong>HTML Checker</strong>. It will validate HTML / CSS markup on each of your pages.</li>
 <li><strong>Accessibility Checker</strong>. It will validate Accessibility on each of your pages (optional, Pro feature).</li>
+<li><strong>Screenshot System</strong>. Provides preview screenshots of the validated sites for the chosen emulated device.</li>
 </ul>
-<p>This means that, for each page on your site, your server is going to at least 2 visits (scraper and HTML checker), maybe 3 if you're also checking Accessibility.</p>
+<p>This means that, for each page on your site, your server is going to at least 2 visits (scraper and HTML checker), maybe 3 if you're also checking Accessibility, plus some visit from the screenshot system when you're on the new report form.</p>
 <p>In case your server is protected by a rate limiter or a firewall, this can result in Rocket Validator being blocked. The way to ensure Rocket Validator doesn't get blocked on your server in this case is by explicitly allowing it to visit your site.</p>
-<p>As our IPs are dynamic, the proper way to do this is by identifying our requests by the User Agent header we include in our requests, which currently are the following:</p>
-<h2 id="link-spider">Link Spider</h2>
-<div class="admonition note">
-<p class="admonition-title">Link Spider User Agent</p>
-<div class="highlight"><pre><span></span><code>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36 (compatible; RocketValidator/Spider +https://rocketvalidator.com)
-</code></pre></div>
-</div>
-<h2 id="html-checker">HTML Checker</h2>
-<div class="admonition note">
-<p class="admonition-title">HTML Checker User Agent</p>
-<div class="highlight"><pre><span></span><code>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36 (compatible; RocketValidator/HTMLChecker +https://rocketvalidator.com)
-</code></pre></div>
-</div>
-<h2 id="accessibility-checker">Accessibility Checker</h2>
-<div class="admonition note">
-<p class="admonition-title">Accessibility Checker User Agent</p>
-<div class="highlight"><pre><span></span><code>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36 (compatible; RocketValidator/AccessibilityChecker +https://rocketvalidator.com)
-</code></pre></div>
-</div>
+<p>As our <a href="https://rocketvalidator.com/ips">server IPs</a> are dynamic, the proper way to do this is by identifying our requests by the User Agent header we include in our requests, which currently are the following.</p>
+<p>Check the <a href="https://rocketvalidator.com/user-agents">Rocket Validator User Agents</a> list for a comprehensive list of user agents for each emulated device. As a general rule, all of them will include the <code>RocketValidator</code> substring.</p>
 
 
 
