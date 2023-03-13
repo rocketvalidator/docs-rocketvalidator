@@ -14,6 +14,7 @@ To validate a site, you can define the following options.
 * **How many pages to validate**. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.
 * **Validation speed (requests/second)**. Can be set from 1 to 5 (Basic users) or 1 to 15 (Pro users).
 * **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
+* **Exclusions**. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.
 * **Validate HTML and/or Accessibility**. Pro users can choose to include A11Y checks on top of HTML checks.
 * **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used.
 
