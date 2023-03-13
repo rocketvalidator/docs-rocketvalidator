@@ -478,22 +478,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ngrok" class="md-nav__link">
-    ngrok
+  <a href="#using-your-local-server-port" class="md-nav__link">
+    Using your local server port
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#serve" class="md-nav__link">
-    Serve
+  <a href="#launching-a-local-server" class="md-nav__link">
+    Launching a local server
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#localtunnel" class="md-nav__link">
+    localtunnel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-tunnel-providers" class="md-nav__link">
+    Other tunnel providers
   </a>
   
 </li>
@@ -840,22 +847,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ngrok" class="md-nav__link">
-    ngrok
+  <a href="#using-your-local-server-port" class="md-nav__link">
+    Using your local server port
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#serve" class="md-nav__link">
-    Serve
+  <a href="#launching-a-local-server" class="md-nav__link">
+    Launching a local server
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#localtunnel" class="md-nav__link">
+    localtunnel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-tunnel-providers" class="md-nav__link">
+    Other tunnel providers
   </a>
   
 </li>
@@ -889,29 +903,50 @@
 
 
 <h1 id="validating-your-local-server">Validating your local server</h1>
-<p>You don't need to put your site live in order to validate it. Let's say you are working on a new site that hasn't yet been published, how could we validate it?</p>
-<h2 id="ngrok">ngrok</h2>
-<p>There's an easy way to do that, thanks to tools like <a href="https://ngrok.com/">ngrok</a>. This free tool lets you securely expose a local web server on a temporary public URL, that you can use to validate a site.</p>
-<p><img alt="ngrok overview" src="/img/local-server/ngrok-overview.png" /></p>
-<h2 id="serve">Serve</h2>
-<p>In case you aren't using a web server locally, say, you're working directly on static files, you can easily launch a web server in your local directory thanks to tools like <a href="https://github.com/jlong/serve">Serve</a>:</p>
-<iframe src="https://www.youtube.com/embed/GOUNTa8ME2o" allowfullscreen class="video" title="Intro to Serve" width="640" height="320"></iframe>
-
-<h2 id="example">Example</h2>
-<p>Tools like ngrok and Serve are really easy to install and use. For example, let's say we have a site at a local folder "mysite". We could run a server like this:</p>
-<div class="admonition example">
-<p class="admonition-title">Example: serving local files</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mysite
-$<span class="w"> </span>serve
+<p>Rocket Validator can validate your local development server, which provides the fastest development experience as you can skip the deployment phase. All you need is to set up a local tunnel to your local server, so you have a public URL that Rocket Validator can access.</p>
+<h2 id="using-your-local-server-port">Using your local server port</h2>
+<p>If you're already working with a local server, you just need to find out what the local port is. For example, in case of Rails applications, the default port is <code>3000</code>. For Phoenix applications, the default is <code>4000</code>. This may be customized, in the end it's the numeric part in the url after the <code>:</code>, for example in <code>http://localhost:3000</code> the port is <code>3000</code>.</p>
+<h2 id="launching-a-local-server">Launching a local server</h2>
+<p><img alt="Serve" src="/img/local-server/serve.png" /></p>
+<p>If you're not working with a local server, for example when you just have a directory with static files, you can quickly launch a server using <a href="https://www.npmjs.com/package/serve">serve</a>. You can install it with one line:</p>
+<div class="highlight"><pre><span></span><code>npm install --global serve
 </code></pre></div>
-</div>
-<p>And this will launch a local web server at http://localhost:4000. Then, we can make it publicly accessible like this:</p>
-<div class="admonition example">
-<p class="admonition-title">Example: using ngrok to allow access to your local server from the internet</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ngrok<span class="w"> </span>http<span class="w"> </span><span class="m">4000</span>
+<p>Once installed, you can run this command inside your project's directory with:</p>
+<div class="highlight"><pre><span></span><code>serve
 </code></pre></div>
-</div>
-<p>And ngrok will create a temporary public URL, like http://abcde1234.ngrok.com -- this is the URL of our local server on the Internet, so this is the URL to pass to Rocket Validator to validate your local server.</p>
+<p>And this will run a server in the port <code>3000</code>. Run <code>serve --help</code> for a list of other options.</p>
+<p>Once you have a running development server and you know your port number, you just need to set a up a tunnel to get a public URL.</p>
+<h2 id="localtunnel">localtunnel</h2>
+<p><a href="https://localtunnel.github.io/www/">localtunnel</a> is a free and open source service that lets you expose your local development server with a public URL.</p>
+<p><img alt="localtunnel" src="/img/local-server/localtunnel.png" /></p>
+<p>Install it with:</p>
+<div class="highlight"><pre><span></span><code>npm install -g localtunnel
+</code></pre></div>
+<p>And launch your local tunnel with the <code>lt</code> command, indicating the port where your server is running:</p>
+<div class="highlight"><pre><span></span><code>lt --port 3000 
+</code></pre></div>
+<p>This will create a random URL for you - we recommend using the <code>--subdomain</code> option to set a custom subdomain for your site, like this:</p>
+<div class="highlight"><pre><span></span><code>lt --port 3000 --subdomain example
+</code></pre></div>
+<p>That's all you need!</p>
+<p>You can now use your public URL (in the above example, it would be <code>https://example.loca.lt</code>) to validate your development server with Rocket Validator.</p>
+<h2 id="other-tunnel-providers">Other tunnel providers</h2>
+<p>We love localtunnel because it's open source, doesn't require sign up, and lets you use subdomains for free, but there are many other tunneling services that you can use:</p>
+<ul>
+<li><a href="https://ngrok.com/">ngrok</a></li>
+<li><a href="https://boringproxy.io/">boringproxy</a></li>
+<li><a href="https://telebit.cloud/">Telebit</a></li>
+<li><a href="https://tunnel.pyjam.as/">tunnel.pyjam.as</a></li>
+<li><a href="https://expose.dev">Expose</a></li>
+<li><a href="https://tunnelto.dev">TunnelTo.dev</a></li>
+<li><a href="https://pagekite.net/">PageKite</a></li>
+<li><a href="https://zrok.io/">Zrok</a></li>
+<li><a href="https://github.com/fasmide/remotemoe">Remotemoe</a></li>
+<li><a href="https://loophole.cloud/">Loophole</a></li>
+<li><a href="https://localhost.run/">Localhost.run</a></li>
+<li><a href="https://kubesail.com/homepage">KubeSail</a></li>
+<li><a href="https://localtonet.com/">LocaltoNet</a></li>
+</ul>
 
 
 
