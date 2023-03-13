@@ -1,35 +1,73 @@
 # Validating your local server
 
-You don't need to put your site live in order to validate it. Let's say you are working on a new site that hasn't yet been published, how could we validate it?
+Rocket Validator can validate your local development server, which provides the fastest development experience as you can skip the deployment phase. All you need is to set up a local tunnel to your local server, so you have a public URL that Rocket Validator can access.
 
-## ngrok
+## Using your local server port
 
-There's an easy way to do that, thanks to tools like [ngrok](https://ngrok.com/). This free tool lets you securely expose a local web server on a temporary public URL, that you can use to validate a site.
+If you're already working with a local server, you just need to find out what the local port is. For example, in case of Rails applications, the default port is `3000`. For Phoenix applications, the default is `4000`. This may be customized, in the end it's the numeric part in the url after the `:`, for example in `http://localhost:3000` the port is `3000`.
 
-![ngrok overview](/img/local-server/ngrok-overview.png)
+## Launching a local server
 
+![Serve](/img/local-server/serve.png)
 
-## Serve
+If you're not working with a local server, for example when you just have a directory with static files, you can quickly launch a server using [serve](https://www.npmjs.com/package/serve). You can install it with one line:
 
-In case you aren't using a web server locally, say, you're working directly on static files, you can easily launch a web server in your local directory thanks to tools like [Serve](https://github.com/jlong/serve):
+```
+npm install --global serve
+```
 
-<iframe src="https://www.youtube.com/embed/GOUNTa8ME2o" allowfullscreen class="video" title="Intro to Serve" width="640" height="320"></iframe>
+Once installed, you can run this command inside your project's directory with:
 
-## Example
+```
+serve
+```
 
-Tools like ngrok and Serve are really easy to install and use. For example, let's say we have a site at a local folder "mysite". We could run a server like this:
+And this will run a server in the port `3000`. Run `serve --help` for a list of other options.
 
-!!! example "Example: serving local files"
-    ```bash
-    $ cd mysite
-    $ serve
-    ```
+Once you have a running development server and you know your port number, you just need to set a up a tunnel to get a public URL.
 
-And this will launch a local web server at http://localhost:4000. Then, we can make it publicly accessible like this:
+## localtunnel
 
-!!! example "Example: using ngrok to allow access to your local server from the internet"
-    ```bash
-    $ ngrok http 4000
-    ```
+[localtunnel](https://localtunnel.github.io/www/) is a free and open source service that lets you expose your local development server with a public URL.
 
-And ngrok will create a temporary public URL, like http://abcde1234.ngrok.com -- this is the URL of our local server on the Internet, so this is the URL to pass to Rocket Validator to validate your local server.
+![localtunnel](/img/local-server/localtunnel.png)
+
+Install it with:
+
+```
+npm install -g localtunnel
+```
+
+And launch your local tunnel with the `lt` command, indicating the port where your server is running:
+
+```
+lt --port 3000 
+```
+
+This will create a random URL for you - we recommend using the `--subdomain` option to set a custom subdomain for your site, like this:
+
+```
+lt --port 3000 --subdomain example
+```
+
+That's all you need!
+
+You can now use your public URL (in the above example, it would be `https://example.loca.lt`) to validate your development server with Rocket Validator.
+
+## Other tunnel providers
+
+We love localtunnel because it's open source, doesn't require sign up, and lets you use subdomains for free, but there are many other tunneling services that you can use:
+
+* [ngrok](https://ngrok.com/)
+* [boringproxy](https://boringproxy.io/)
+* [Telebit](https://telebit.cloud/)
+* [tunnel.pyjam.as](https://tunnel.pyjam.as/)
+* [Expose](https://expose.dev)
+* [TunnelTo.dev](https://tunnelto.dev)
+* [PageKite](https://pagekite.net/)
+* [Zrok](https://zrok.io/)
+* [Remotemoe](https://github.com/fasmide/remotemoe)
+* [Loophole](https://loophole.cloud/)
+* [Localhost.run](https://localhost.run/)
+* [KubeSail](https://kubesail.com/homepage)
+* [LocaltoNet](https://localtonet.com/)
