@@ -8,20 +8,16 @@ This means that your site can receive three types of requests:
 * **HTML check**. The Nu Validator will launch this request to validate your page.
 * **A11Y check**. The axe-core accessibility engine will perform this request to check your page.
 
-This means that, for example, a site with 1,000 web pages can receive 3,000 requests during the site validation.
+This means that, for example, a site with 1,000 web pages can receive up to 3,000 requests during the site validation process.
 
 ## Avoiding server overload
 
 To avoid overloading your server, we carefully rate limit the requests to ensure they don't happen all at once, but a buffered rate. The following limits are applied:
 
-* **Account limit**.
-    - Enterprise users have a limit of 25 requests per second.
-    - Pro users have a limit of 15 requests per second.
-    - Basic users have a limit is 10 requests per second.
-* **Report limit**.
-    - Enterprise users can set the limit between 1 and 25 reqs/sec.
-    - Pro users can set the limit between 1 and 15 reqs/sec.
-    - Basic users can set the limit between 1 and 5 reqs/sec.
+- Enterprise users have a limit of 25 requests per second.
+- Pro users have a limit of 15 requests per second.
+- Basic users have a limit of 5 requests per second.
+- Micro users have a limit of 3 requests per second.
 
 On top of that we impose a rate limit on each host, to ensure that even if you're running simultaneously several site validations on the same host, a global limit is applied.
 

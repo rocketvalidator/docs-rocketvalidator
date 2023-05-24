@@ -4,7 +4,7 @@ The Domain Stats section, available for Basic, Pro and Enterprise users, shows s
 
 ## Domain list
 
-The [Domain Stats](https://rocketvalidator.com/domains) section shows the list of domains / subdomains based on the reports you've run. A search bar on top lets you filter the domains shown by their URL.
+The [Domain Stats](https://rocketvalidator.com/domains) section shows the list of domains / subdomains based on the reports you've run. A search bar on top lets you filter the domains shown by their URL and related tags.
 
 ![Domain list](/img/domain-stats/list.png)
 

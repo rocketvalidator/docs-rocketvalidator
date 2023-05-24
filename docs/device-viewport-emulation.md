@@ -10,10 +10,6 @@ To emulate a device viewport, just enable the **Device Viewport Emulation** when
 
 ![Deview selection](/img/device-selection.png)
 
-The pre-launch checklist section will show a preview of the site rendered from the selected emulated device. This is a visual handy reference of how the site you're going to validate looks like at that resolution.
-
-![Deview preview](/img/device-preview.png)
-
 ## Currently supported devices
 
 - Galaxy Note 3 (360x640, DPR 3)
