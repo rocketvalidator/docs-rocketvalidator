@@ -305,6 +305,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    Advanced options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#re-checking-your-pages" class="md-nav__link">
     Re-checking your pages
   </a>
@@ -460,21 +467,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../broken-links-checker/" class="md-nav__link">
-        Broken Links Checker
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../user-agents/" class="md-nav__link">
         User Agents
       </a>
@@ -555,17 +547,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
       
       
       
-        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
           API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_17">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           API
         </label>
@@ -840,6 +832,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    Advanced options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#re-checking-your-pages" class="md-nav__link">
     Re-checking your pages
   </a>
@@ -883,11 +882,17 @@
 <ul>
 <li><strong>Starting URL</strong>. Our validation spider will visit this URL and recursively follow the internal links, validating each internal web page found. Typically, you can enter the main URL of the site to validate, but it can be any URL from your site, or an XML sitemap.</li>
 <li><strong>How many pages to validate</strong>. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.</li>
-<li><strong>Validation speed (requests/second)</strong>. Can be set from 1 to 5 (Basic users) or 1 to 15 (Pro users).</li>
+<li><strong>Check HTML and/or Accessibility</strong>. Pro users can choose to include A11Y checks on top of HTML checks.</li>
+</ul>
+<h2 id="advanced-options">Advanced options</h2>
+<p>By clicking on "Show advanced options for crawling, device viewport and tags", you'll have access to the advanced options that add additional features to your report.</p>
+<p><img alt="New site report form" src="../img/new-site-validation-form-advanced-options.png" /></p>
+<ul>
+<li><strong>Validation speed (requests/second)</strong>. Can be set from 1 to 3 (Micro users), 1 to 5 (Basic users) or 1 to 15 (Pro users).</li>
 <li><strong>Deep Crawling</strong>. When enabled, our crawler will recursively look for more internal web pages following the links found.</li>
 <li><strong>Exclusions</strong>. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.</li>
-<li><strong>Validate HTML and/or Accessibility</strong>. Pro users can choose to include A11Y checks on top of HTML checks.</li>
 <li><strong>Device Viewport Emulation</strong>. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used.</li>
+<li><strong>Tags</strong>. A comma-separated list of tags to apply to the generated report.</li>
 </ul>
 <h2 id="re-checking-your-pages">Re-checking your pages</h2>
 <p>Once your site has been processed, you'll see the HTML and accessibility issues for each page found. As you go fixing them, you can re-check the pages quickly with:</p>

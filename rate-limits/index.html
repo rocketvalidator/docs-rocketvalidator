@@ -460,21 +460,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../broken-links-checker/" class="md-nav__link">
-        Broken Links Checker
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../user-agents/" class="md-nav__link">
         User Agents
       </a>
@@ -555,17 +540,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
       
       
       
-        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
           API
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_17">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           API
         </label>
@@ -882,22 +867,14 @@
 <li><strong>HTML check</strong>. The Nu Validator will launch this request to validate your page.</li>
 <li><strong>A11Y check</strong>. The axe-core accessibility engine will perform this request to check your page.</li>
 </ul>
-<p>This means that, for example, a site with 1,000 web pages can receive 3,000 requests during the site validation.</p>
+<p>This means that, for example, a site with 1,000 web pages can receive up to 3,000 requests during the site validation process.</p>
 <h2 id="avoiding-server-overload">Avoiding server overload</h2>
 <p>To avoid overloading your server, we carefully rate limit the requests to ensure they don't happen all at once, but a buffered rate. The following limits are applied:</p>
 <ul>
-<li><strong>Account limit</strong>.<ul>
 <li>Enterprise users have a limit of 25 requests per second.</li>
 <li>Pro users have a limit of 15 requests per second.</li>
-<li>Basic users have a limit is 10 requests per second.</li>
-</ul>
-</li>
-<li><strong>Report limit</strong>.<ul>
-<li>Enterprise users can set the limit between 1 and 25 reqs/sec.</li>
-<li>Pro users can set the limit between 1 and 15 reqs/sec.</li>
-<li>Basic users can set the limit between 1 and 5 reqs/sec.</li>
-</ul>
-</li>
+<li>Basic users have a limit of 5 requests per second.</li>
+<li>Micro users have a limit of 3 requests per second.</li>
 </ul>
 <p>On top of that we impose a rate limit on each host, to ensure that even if you're running simultaneously several site validations on the same host, a global limit is applied.</p>
 <h2 id="how-to-reduce-the-number-of-requests">How to reduce the number of requests</h2>
