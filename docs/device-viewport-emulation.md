@@ -8,7 +8,7 @@ When running an accessibility report, you can choose from a list of popular devi
 
 To emulate a device viewport, just enable the **Device Viewport Emulation** when creating a report, choose a device from the list, and optionally check the **rotated** option:
 
-![Deview selection](/img/device-selection.png)
+![Deview selection](/img/device-selection.jpg)
 
 ## Currently supported devices
 
