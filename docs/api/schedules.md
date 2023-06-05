@@ -39,7 +39,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dt>Updated At</dt>
   <dd>Timestamp when the schedule was last updated.</dd>
 
-  <dt>Last Fired At</dt>
+  <dt>Last Run At</dt>
   <dd>Timestamp when the schedule was last run.</dd>
 </dl>
 
@@ -56,7 +56,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
                 "perform_html_checks": true,
                 "id": "d2e1f",
                 "inserted_at": "2020-02-28T13:01:23",
-                "last_fired_at": "2020-02-28T13:01:30",
+                "last_run_at": "2020-02-28T13:01:30",
                 "max_pages": 10,
                 "periodicity": {
                     "every": "month",
@@ -98,7 +98,7 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
                 "perform_html_checks": true,
                 "id": "9c55",
                 "inserted_at": "2019-02-05T13:13:29",
-                "last_fired_at": "2020-04-28T12:02:57",
+                "last_run_at": "2020-04-28T12:02:57",
                 "max_pages": 10,
                 "periodicity": {
                 "every": "month",
@@ -146,7 +146,7 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
             "perform_html_checks": true,
             "id": "9c55",
             "inserted_at": "2019-02-05T13:13:29",
-            "last_fired_at": "2020-04-28T12:02:57",
+            "last_run_at": "2020-04-28T12:02:57",
             "max_pages": 10,
             "periodicity": {
                 "every": "month",
