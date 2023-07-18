@@ -22,6 +22,7 @@ By clicking on "Show advanced options for crawling, device viewport and tags", y
 
 * **Validation speed (requests/second)**. Can be set from 1 to 3 (Micro users), 1 to 5 (Basic users) or 1 to 15 (Pro users).
 * **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
+* **Initial URLs**. When enabled, it allows you to define a list of URLs to be included as the starting web pages of the report.
 * **Exclusions**. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.
 * **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used.
 * **Tags**. A comma-separated list of tags to apply to the generated report.
