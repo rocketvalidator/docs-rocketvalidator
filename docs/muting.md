@@ -12,11 +12,11 @@ In those situations, <a href="https://rocketvalidator.com/pricing/pro">Pro users
 
 The simplest way to mute an issue is directly on an issue list. Just click the `MUTE` button.
 
-![Muting button next to an issue](/img/muting/muting-from-issue.png)
+![Muting button next to an issue](img/muting/muting-from-issue.png)
 
 When you do that, you'll be taken to the new muting rule form:
 
-![Muting rule form](/img/muting/muting-form.png)
+![Muting rule form](img/muting/muting-form.png)
 
 Then click on "Submit" and your new muting rule will be created and applied to the current and next reports.
 

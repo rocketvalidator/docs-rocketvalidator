@@ -30,27 +30,27 @@ Follow this guide: <a href="https://support.google.com/tagmanager/answer/6107124
 
 Next, go to your Google Analytics admin panel. Click on "Custom Definitions" in the "Property" column, and select "Custom Dimensions". Create a new Custom Dimension with the name "User Agent".
 
-![Add Custom Dimension form screenshot](/img/google-analytics/01.png)
+![Add Custom Dimension form screenshot](img/google-analytics/01.png)
 
 Write down the "Index" value for the created Custom Dimension as we'll need it later.
 
-![Custom Dimension index screenshot](/img/google-analytics/02.png)
+![Custom Dimension index screenshot](img/google-analytics/02.png)
 
 ### Create a variable in Google Tag Manager
 
 Now, go to your Google Tag Manager account and click on "Variables" on the left-hand side menu. Click on "New" under "User-Defined Variables". Set the name as "User Agent", the Variable Type as "JavaScript Variable" and the Global Variable Name as `navigator.userAgent`. Click on "Save". This will set up a JavaScript variable that will store the User Agent string, so it can be passed to Google Analytics.
 
-![JavaScript Variable form screenshot](/img/google-analytics/03.png)
+![JavaScript Variable form screenshot](img/google-analytics/03.png)
 
 ### Define a custom dimension in Google Analytics Settings
 
 Still on the Google Tag Manager Variables section, click on the Google Analytics Settings variable:
 
-![User-Defined Variables screenshot](/img/google-analytics/04.png)
+![User-Defined Variables screenshot](img/google-analytics/04.png)
 
 Edit the tag settings, open "Custom Dimensions" and click on "Add Custom Dimension". Set the index to the index matching the custom dimension in your Google Analytics account. Set the Dimension Value to `{{User Agent}}`.
 
-![Add Custom Dimension form screenshot](/img/google-analytics/05.png)
+![Add Custom Dimension form screenshot](img/google-analytics/05.png)
 
 This will pass the User Agent to Google Analytics. Remember to Publish your changes in Google Tag Manager so they're enabled.
 
@@ -58,6 +58,6 @@ This will pass the User Agent to Google Analytics. Remember to Publish your chan
 
 The last step is going back to your Google Analytics account, Admin section. Click on "Filters" on the "View" column. Click on "Add Filter". Set the Filter Name as "User-Agent RocketValidator". Choose "Custom" in Filter Type. In the Exclude option, select the field "User-Agent" on the Custom Dimensions. And, in Filter Pattern, use this regular expression: `.*RocketValidator.*`.
 
-![Google Analytics Filter screenshot](/img/google-analytics/06.png)
+![Google Analytics Filter screenshot](img/google-analytics/06.png)
 
 And that's it! It may take some time for the filter to take effect (but in most cases it's just a matter of minutes). This method does not remove traffic retroactively - it can only filter out traffic happening after the creation of the filter.

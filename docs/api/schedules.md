@@ -2,7 +2,7 @@
 
 A Schedule represents a programmed report that will be run on a given periodicity, or after a deploy webhook is received.
 
-Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can be set to run automatically on a defined schedule or via <a href="/deploy-hooks">deploy hooks</a>.
+Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can be set to run automatically on a defined schedule or via <a href="deploy-hooks.md">deploy hooks</a>.
 
 ## Attributes
 

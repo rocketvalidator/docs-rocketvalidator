@@ -12,7 +12,7 @@ The Guest Accounts feature is only available for users with a **Pro** or **Enter
 
 The first step for having your guest accounts set up is creating the invitation tokens. To do that, go to the [Guests](https://rocketvalidator.com/guests) section and click on the **Invite Guests** button:
 
-![invite button](/img/guests/guests-invite-button.png)
+![invite button](img/guests/guests-invite-button.png)
 
 Then, fill in the form to specify how many invitations to create, and how many allowed credits per month will be allowed for each invitation. In the next screenshot you can see how we create 5 invitations, with 5,000 allowed monthly credits each:
 
@@ -22,11 +22,11 @@ Then, fill in the form to specify how many invitations to create, and how many a
 
 Once you have created the invitations, you'll see the list of available invitations. Each invitation has a unique token - think of it like a coupon code, a voucher or a gift card, that you can share with anyone so that they can create an account for free.
 
-![invitation list](/img/guests/guests-list.png)
+![invitation list](img/guests/guests-list.png)
 
 Click on any of the invitations and you'll see a preview of the invitation, as your guests will see it. At the bottom you'll find the instructions to share the invitation (basically you just need to pass them the URL).
 
-![invitation preview](/img/guests/guests-invitation-preview.png)
+![invitation preview](img/guests/guests-invitation-preview.png)
 
 You can also download the invitation list as a CSV file by clicking on the **Download Guest List** button. This can be useful to keep track of who has been assigned to each invitation.
 
@@ -34,7 +34,7 @@ You can also download the invitation list as a CSV file by clicking on the **Dow
 
 You'll be notified by email once your guests accept the invitation. At that point, they'll be able to run their own reports, and you can see their activity by clicking on their name in the Guests section:
 
-![guest activity](/img/guests/guests-user-activity.png)
+![guest activity](img/guests/guests-user-activity.png)
 
 On this screen you'll find:
 
@@ -50,13 +50,13 @@ On this screen you'll find:
 
 Your guest reports are also integrated into your main [Reports](https://rocketvalidator.com/s) list. When a report has been created by a guest, you'll see the guest user's name in the Checked column.
 
-![guest reports](/img/guests/guests-reports.png)
+![guest reports](img/guests/guests-reports.png)
 
-Similarly, your [Domain Stats](/domain-stats/) automatically merge the data from your guest reports. Domain Stats always take the freshest results for web pages; if you have a report for a site but a guest has a more recent report for some of the pages in that domain, their version will take precedence. This ensures domain stats get the most up-to-date data.
+Similarly, your [Domain Stats](domain-stats.md) automatically merge the data from your guest reports. Domain Stats always take the freshest results for web pages; if you have a report for a site but a guest has a more recent report for some of the pages in that domain, their version will take precedence. This ensures domain stats get the most up-to-date data.
 
 ## Guest Accounts via the Reports API
 
-Check out the [Guest Reports API guide](/api/reports/#list-your-guest-reports) to learn how to get your guest accounts' reports using the API. This will let you retrieve the reports created by all your guests, or filter by a single guest using the guest token.
+Check out the [Guest Reports API guide](api/reports.md#list-your-guest-reports) to learn how to get your guest accounts' reports using the API. This will let you retrieve the reports created by all your guests, or filter by a single guest using the guest token.
 
 
 

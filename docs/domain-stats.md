@@ -6,7 +6,7 @@ The Domain Stats section, available for Basic, Pro and Enterprise users, shows s
 
 The [Domain Stats](https://rocketvalidator.com/domains) section shows the list of domains / subdomains based on the reports you've run. A search bar on top lets you filter the domains shown by their URL and related tags.
 
-![Domain list](/img/domain-stats/list.png)
+![Domain list](img/domain-stats/list.png)
 
 For each domain shown in this list, the following info is included **for the last date with activity** on that domain when available:
 
@@ -19,7 +19,7 @@ For each domain shown in this list, the following info is included **for the las
 
 When you click on a domain from the Domain Stats list, you're taken to the Activity tab for that domain:
 
-![Domain Activity](/img/domain-stats/activity.png)
+![Domain Activity](img/domain-stats/activity.png)
 
 A date selector lets you pick a date from the dates with activity on that domain. By default, it shows the latest date with activity.
 
@@ -31,7 +31,7 @@ For the selected date, the following information is shown when available:
 * **HTML Status** as a pie chart, showing the proportion of web pages by their HTML check status: no issues (green), with warnings (yellow), with errors (red), or failed (black).
 * **Accessibility Status** as a pie chart, showing the proportion of web pages by their Accessibility check status: no issues (green), with warnings (yellow), with errors (red), or failed (black).
 
-![Web Page Coverage](/img/domain-stats/coverage.png)
+![Web Page Coverage](img/domain-stats/coverage.png)
 
 The Web Page Coverage bar chart shows the evolution of coverage over time. In the horizontal axis we represent the days; a bar will appear when there was activity on that date, so you can know when you've been working on that domain.
 
@@ -41,13 +41,13 @@ Each bar shown includes two sections: checked web pages (blue) and stale web pag
 
 If a domain has reports with HTML checks, an HTML Status tab is shown that includes a bar chart with the evolution of the HTML status for the checked pages:
 
-![HTML status evolution](/img/domain-stats/html-status.png)
+![HTML status evolution](img/domain-stats/html-status.png)
 
 Time is represented in the horizontal axis, and a bar is shown on the dates where there was activity for that domain. Each bar shows the proportion of web pages with errors (red), with only warnings (yellow), without issues (green) or failed (black).
 
 Bar height represents the total number of web pages known at that time for that domain.
 
-![HTML density evolution](/img/domain-stats/html-density.png)
+![HTML density evolution](img/domain-stats/html-density.png)
 
 The HTML issue density line chart shows the evolution over time of the errors and warnings issue density in number of issues per page.
 
@@ -55,13 +55,13 @@ The HTML issue density line chart shows the evolution over time of the errors an
 
 If a domain has reports with Accessibility checks, an Accessibility Status tab is shown that includes a bar chart with the evolution of the Accessibility status for the checked pages:
 
-![Accessibility status evolution](/img/domain-stats/a11y-status.png)
+![Accessibility status evolution](img/domain-stats/a11y-status.png)
 
 Time is represented in the horizontal axis, and a bar is shown on the dates where there was activity for that domain. Each bar shows the proportion of web pages with errors (red), with only warnings (yellow), without issues (green) or failed (black).
 
 Bar height represents the total number of web pages known at that time for that domain.
 
-![Accessibility density evolution](/img/domain-stats/a11y-density.png)
+![Accessibility density evolution](img/domain-stats/a11y-density.png)
 
 The Accessibility issue density line chart shows the evolution over time of the errors and warnings issue density in number of issues per page.
 
@@ -69,13 +69,13 @@ The Accessibility issue density line chart shows the evolution over time of the 
 
 The Reports tab shows the current reports for a domain and lets you create a new report for it:
 
-![Domain reports](/img/domain-stats/reports.png)
+![Domain reports](img/domain-stats/reports.png)
 
 ## Muting rules
 
 The Muting Rules tab shows the muting rules that are currently applied to the reports on that domain.
 
-![Muting rules](/img/domain-stats/muting.png)
+![Muting rules](img/domain-stats/muting.png)
 
 ## Sharing domain stats
 
@@ -83,5 +83,5 @@ Sharing domain stats lets you easily give access to your colleagues to the lates
 
 In order to share domain stats, you just need to create a shared link and send them its URL. There’s no need to set up an account in order to access the shared link, and all the info is read-only.
 
-![Domain share](/img/domain-stats/share.png)
+![Domain share](img/domain-stats/share.png)
 

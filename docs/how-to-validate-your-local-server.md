@@ -8,7 +8,7 @@ If you're already working with a local server, you just need to find out what th
 
 ## Launching a local server
 
-![Serve](/img/local-server/serve.png)
+![Serve](img/local-server/serve.png)
 
 If you're not working with a local server, for example when you just have a directory with static files, you can quickly launch a server using [serve](https://www.npmjs.com/package/serve). You can install it with one line:
 
@@ -30,7 +30,7 @@ Once you have a running development server and you know your port number, you ju
 
 [localtunnel](https://localtunnel.github.io/www/) is a free and open source service that lets you expose your local development server with a public URL.
 
-![localtunnel](/img/local-server/localtunnel.png)
+![localtunnel](img/local-server/localtunnel.png)
 
 Install it with:
 

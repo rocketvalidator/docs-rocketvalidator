@@ -2,7 +2,7 @@
 
 Use deploy hooks to notify Rocket Validator that you've deployed a new version of your site and make it start automatically the specified validation.
 
-To create a deploy hook, create a schedule as explained in the [Scheduling reports](/scheduling) section. 
+To create a deploy hook, create a schedule as explained in the [Scheduling reports](scheduling.md) section. 
 
 Then, copy the supplied schedule URL (which will be something like <code>https://rocketvalidator.com/schedule/abcd/1234/fire</code>) and set up your hosting platform to fire this schedule after deploys. We will refer to this URL as $SCHEDULE_URL in the examples below.
 
@@ -21,7 +21,7 @@ Then, copy the supplied schedule URL (which will be something like <code>https:/
 
 You just need to <strong>Add Notification</strong>, choose the <strong>Outgoing webhook</strong> type and paste your deploy hook URL like this:
 
-![Netlify screenshot](/img/schedules/netlify.png)
+![Netlify screenshot](img/schedules/netlify.png)
 
 ## Github Pages
 
@@ -29,7 +29,7 @@ You just need to <strong>Add Notification</strong>, choose the <strong>Outgoing 
 
 You just need to enter your automatic validator URL in the Payload URL field, and choose the individual event for <i>page build</i>:
 
-![Github pages screenshot](/img/schedules/github-pages.png)
+![Github pages screenshot](img/schedules/github-pages.png)
 
 Github Pages lets you define several deploy hooks for different services.
 

@@ -374,7 +374,7 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
 
 ## List your Guest Reports
 
-If you have [Guest Accounts](/guest-accounts), you can filter the report list so that it also contains the reports created by your guests.
+If you have [Guest Accounts](../guest-accounts.md), you can filter the report list so that it also contains the reports created by your guests.
 
 By default, the Reports API shows only the reports created by the main account:
 

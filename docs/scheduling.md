@@ -4,7 +4,7 @@
 
 To schedule a validation, go to the [new schedule](https://rocketvalidator.com/schedule/new) form and enter the starting URL, the maximum number of pages to validate, how often you want us to run this validation, click "Submit" and you're ready to go:
 
-![New scheduled validation form](/img/schedule-form.png)
+![New scheduled validation form](img/schedule-form.png)
 
 ## Schedule options
 
@@ -27,4 +27,4 @@ When the scheduled validation is run, you'll be notified via email with a link t
 
 A schedule defines a validation to be run automatically. It can be set up to run monthly, weekly or daily, but it can also be fired via a deploy hook.
 
-To learn more about deploy hooks, go to the [Deploy Hooks](/deploy-hooks) section.
+To learn more about deploy hooks, go to the [Deploy Hooks](deploy-hooks.md) section.

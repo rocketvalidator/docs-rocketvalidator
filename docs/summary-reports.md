@@ -8,13 +8,13 @@ That's why the first screen you'll see when creating a new report is the **Summa
 
 Also, for the HTML and accessibility checks, a **progress bar** shows the percentage of pages that passed all the checks. Your goal is to reach a 100% of web pages passing all checks.
 
-![Summary Report](/img/summary_report_2022_10_10.jpg)
+![Summary Report](img/summary_report_2022_10_10.jpg)
 
 ## Common HTML / accessibility issues tabs
 
 The Summary screen gives you the main issues for each kind of check. If you want to get the full list of issues, you can use the **Common HTML issues** or the **Common accessibility issues** tabs.
 
-![Accessibility issues tab](/img/common_a11y_issues.png)
+![Accessibility issues tab](img/common_a11y_issues.png)
 
 On the common issues reports you'll see all the issues found in all the web pages, grouped together and ordered by their frequency. For each issue, you can see how many web pages are affected by it.
 
@@ -24,11 +24,11 @@ The grouped issues are ordered by their severity and the number of web pages tha
 
 Each issue shows a contextual menu with the number of times it has been found on the site. Click on that menu and select **Pages affected**.
 
-![Issue and pages](/img/issue_menu_web_pages_affected.png)
+![Issue and pages](img/issue_menu_web_pages_affected.png)
 
 When you do that you'll see a list of the pages that have this exact issue. You can also filter per URL on that list.
 
-![Issue and pages](/img/web_pages_affected_per_issue.png)
+![Issue and pages](img/web_pages_affected_per_issue.png)
 
 Once you've found and fixed this issue on your site, you can unfold the issue menu and click on "Re-check" to re-check all the web pages affected by this particular issue.
 
@@ -40,4 +40,4 @@ For HTML checks, you get the exact line in the source code where this issue has 
 
 For A11Y checks, you'll get the DOM element affected by the issue.
 
-![Filter issue on page](/img/issue_on_web_page.png)
+![Filter issue on page](img/issue_on_web_page.png)
