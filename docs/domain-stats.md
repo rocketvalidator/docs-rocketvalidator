@@ -1,4 +1,6 @@
-# Domain Stats
+# Domain Stats (deprecated)
+
+**This section is deprecated and will be replaced by the new [Stats](stats.md).**
 
 The Domain Stats section, available for Basic, Pro and Enterprise users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
 
