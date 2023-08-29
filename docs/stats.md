@@ -66,4 +66,4 @@ These bar charts show the evolution over time of the number of total issues, bot
 
 Each bar represents a date, and shows the proportion of errors (red) and warnings (yellow).
 
-![Check Status Evolution](img/stats/stats-total-issues.png)
+![Total Issues Evolution](img/stats/stats-total-issues.png)
