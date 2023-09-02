@@ -9,7 +9,6 @@ nav:
   - Rate Limiting: rate-limits.md
   - Scheduling Reports: scheduling.md
   - Deploy Hooks: deploy-hooks.md
-  - Domain Stats: domain-stats.md
   - Stats: stats.md
   - Muting Issues: muting.md
   - Performance Tips: performance-tips.md
