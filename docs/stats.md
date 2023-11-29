@@ -1,6 +1,6 @@
 # Stats
 
-The new Stats section, available for Basic, Pro and Enterprise users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
+The new Stats section, available for Micro, Basic, Pro and Enterprise users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
 
 ![Stats section](img/stats/stats.png)
 
