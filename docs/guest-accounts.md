@@ -6,7 +6,7 @@ Your guests will be able to sign up for free, no credit card required, but still
 
 As a host, you can supervise your guests' activity. You can see the reports your guests generate, and have your stats up to date with the data from your guests' reports. You control how many credits they can use per month, and can cancel or adjust at any time.
 
-The Guest Accounts feature is only available for users with a **Pro** or **Enterprise** subscription. With each Pro subscription, you get 5 guest accounts, which are designed for small and medium-sized organizations. For larger organizations, you can subscribe to the [Enterprise plan](https://rocketvalidator.com/contact?enterprise=true), which gives you 100 guest accounts per subscription. If you need more than that you can just subscribe to additional packages.
+The Guest Accounts feature is only available for users with a **Pro** or **Enterprise** subscription. With each Pro subscription, you get 5 guest accounts, which are designed for small and medium-sized organizations. For larger organizations, you can subscribe to the [Enterprise plan](https://rocketvalidator.com/contact?enterprise=true), which gives you 50 guest accounts per subscription. If you need more than that you can just subscribe to additional packages.
 
 ## Creating your Guest Accounts invitations
 
