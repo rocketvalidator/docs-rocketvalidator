@@ -1,5 +1,6 @@
 # Changelog
 
+* 2024-04-16. HTML issues include code snippets as collection of extracts and coordinates.
 * 2023-06-05. Rename the field `last_fired_at` as `last_run_at` for [Schedules](schedules.md).
 * 2022-02-17. The Reports endpoint can now list [Guest Reports](reports.md#list-your-guest-reports).
 * 2022-01-08. Updates [Schedules](schedules.md) section, after adding UPDATE and DELETE to the schedules endpoint.

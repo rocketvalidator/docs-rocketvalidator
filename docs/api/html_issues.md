@@ -8,12 +8,6 @@ An HTML issue corresponds to an issue found on a given web page when being check
   <dt>ID</dt>
   <dd>Unique ID for this HTML issue.</dd>
 
-  <dt>Coordinates</dt>
-  <dd>Where in the document the HTML issue was found. Indicates first and last line, first and last column, and the highlighted code as start and length.</dd>
-
-  <dt>Extract</dt>
-  <dd>Snippet showing the affected HTML code. Use the highlight coordinates to determine the exact portion affected by the issue.</dd>
-
   <dt>Issue Type</dt>
   <dd>Error or Warning</dd>
 
@@ -22,6 +16,9 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
   <dt>Message</dt>
   <dd>Brief description of the issue.</dd>
+
+  <dt>HTML</dt>
+  <dd>Code snippets showing the affected elements, each one including an extract and its coordinates.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the HTML Issue was created.</dd>
@@ -47,20 +44,24 @@ An HTML issue corresponds to an issue found on a given web page when being check
     ```json
     {
     	"attributes": {
-    		"coordinates": {
-    			"first_column": 150,
-    			"first_line": 8,
-    			"hilite_length": 4,
-    			"hilite_start": 10,
-    			"last_column": 153,
-    			"last_line": 8
-    		},
-    		"extract": "none;left:none;right",
     		"id": 64398238,
     		"inserted_at": "2020-04-02T12:44:45",
     		"issue_sub_type": null,
     		"issue_type": "error",
     		"message": "CSS: “left”: “none” is not a “left” value.",
+            "html": [
+                {
+                    "coordinates": {
+                    "first_column": null,
+                    "first_line": 210,
+                    "hilite_length": 1,
+                    "hilite_start": 15,
+                    "last_column": 22,
+                    "last_line": 210
+                    },
+                    "extract": "=\"game-news\" id=\"game-news\" >G"
+                }
+            ],
     		"updated_at": "2020-04-02T12:44:45"
     	},
     	"id": "64398238",
@@ -91,20 +92,24 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
         "data": [
             {
                 "attributes": {
-                    "coordinates": {
-                        "first_column": 1,
-                        "first_line": 1,
-                        "hilite_length": 109,
-                        "hilite_start": 0,
-                        "last_column": 109,
-                        "last_line": 1
-                    },
-                    "extract": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html",
                     "id": 59734815,
                     "inserted_at": "2020-02-28T13:01:34",
                     "message": "Obsolete doctype. Expected “<!DOCTYPE html>”.",
                     "sub_type": null,
                     "type": "error",
+                    "html": [
+                        {
+                            "coordinates": {
+                            "first_column": null,
+                            "first_line": 210,
+                            "hilite_length": 1,
+                            "hilite_start": 15,
+                            "last_column": 22,
+                            "last_line": 210
+                            },
+                            "extract": "=\"game-news\" id=\"game-news\" >G"
+                        }
+                    ],
                     "updated_at": "2020-02-28T13:01:34"
                 },
                 "id": "59734815",
