@@ -46,7 +46,7 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
     	"relationships": {
     		"web_pages": {
     			"links": {
-    				"related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages?filter[common_html_issue_id]=64397631"
+    				"related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages?filter[common_html_issue_id]=64397631"
     			}
     		}
     	},
@@ -56,9 +56,9 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
 
 ## List Common HTML Issues on a Report
 
-To list the Common HTML Issues found on a report, send a `GET` request to `/api/v0/reports/$REPORT_ID/common_html_issues`.
+To list the Common HTML Issues found on a report, send a `GET` request to `/api/v1/reports/$REPORT_ID/common_html_issues`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/common_html_issues"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/common_html_issues"
 
     ```json
     {
@@ -74,7 +74,7 @@ To list the Common HTML Issues found on a report, send a `GET` request to `/api/
     		"relationships": {
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912"
+    					"related": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912"
     				}
     			}
     		},
@@ -84,18 +84,18 @@ To list the Common HTML Issues found on a report, send a `GET` request to `/api/
     		"version": "1.0"
     	},
     	"links": {
-    		"last": "https://rocketvalidator.com/api/v0/reports/e4cc1/common_html_issues?page[number]=89&page[size]=1",
-    		"next": "https://rocketvalidator.com/api/v0/reports/e4cc1/common_html_issues?page[number]=2&page[size]=1",
-    		"self": "https://rocketvalidator.com/api/v0/reports/e4cc1/common_html_issues?page[number]=1&page[size]=1"
+    		"last": "https://rocketvalidator.com/api/v1/reports/e4cc1/common_html_issues?page[number]=89&page[size]=1",
+    		"next": "https://rocketvalidator.com/api/v1/reports/e4cc1/common_html_issues?page[number]=2&page[size]=1",
+    		"self": "https://rocketvalidator.com/api/v1/reports/e4cc1/common_html_issues?page[number]=1&page[size]=1"
     	}
     }
     ```
 
 ## Retrieve a Common HTML Issue
 
-To retrieve a Common HTML Issue on a given Report, send a GET requet to `/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
+To retrieve a Common HTML Issue on a given Report, send a GET requet to `/api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID"
 
     ```json
     {
@@ -111,7 +111,7 @@ To retrieve a Common HTML Issue on a given Report, send a GET requet to `/api/v0
     		"relationships": {
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912"
+    					"related": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912"
     				}
     			}
     		},
@@ -125,11 +125,11 @@ To retrieve a Common HTML Issue on a given Report, send a GET requet to `/api/v0
 
 ## List the Web Pages affected by a Common HTML Issue
 
-To list the Web Pages that are affected by a given issue, send a GET request to `/api/v0/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$COMMON_HTML_ISSUE_ID`.
+To list the Web Pages that are affected by a given issue, send a GET request to `/api/v1/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$COMMON_HTML_ISSUE_ID`.
 
 This will list the Web Pages of the Report, filtering them to include only the ones affected by the issue.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$COMMON_HTML_ISSUE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$COMMON_HTML_ISSUE_ID"
 
     ```json
     {
@@ -155,17 +155,17 @@ This will list the Web Pages of the Report, filtering them to include only the o
     		"relationships": {
     			"a11y_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages/2902447/a11y_issues"
+    					"related": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages/2902447/a11y_issues"
     				}
     			},
     			"html_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages/2902447/html_issues"
+    					"related": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages/2902447/html_issues"
     				}
     			},
     			"report": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/e4cc1"
+    					"related": "https://rocketvalidator.com/api/v1/reports/e4cc1"
     				}
     			}
     		},
@@ -175,9 +175,9 @@ This will list the Web Pages of the Report, filtering them to include only the o
     		"version": "1.0"
     	},
     	"links": {
-    		"last": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=5&page[size]=1",
-    		"next": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=2&page[size]=1",
-    		"self": "https://rocketvalidator.com/api/v0/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=1&page[size]=1"
+    		"last": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=5&page[size]=1",
+    		"next": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=2&page[size]=1",
+    		"self": "https://rocketvalidator.com/api/v1/reports/e4cc1/web_pages?filter[common_html_issue_id]=65391912&page[number]=1&page[size]=1"
     	}
     }
     ```

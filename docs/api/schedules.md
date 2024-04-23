@@ -70,7 +70,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
             "relationships": {
                 "reports": {
                     "links": {
-                    "related": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=d2e1f"
+                    "related": "https://rocketvalidator.com/api/v1/reports?filter[schedule_id]=d2e1f"
                     }
                 }
                 },
@@ -84,9 +84,9 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
 
 ## List your Schedules
 
-To list all Schedules in your account, send a `GET` request to `/api/v0/schedules`.
+To list all Schedules in your account, send a `GET` request to `/api/v1/schedules`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/schedules"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/schedules"
 
     ```json
     {
@@ -112,7 +112,7 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
             "relationships": {
                 "reports": {
                 "links": {
-                    "related": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c55"
+                    "related": "https://rocketvalidator.com/api/v1/reports?filter[schedule_id]=9c55"
                 }
                 }
             },
@@ -123,9 +123,9 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
             "version": "1.0"
         },
         "links": {
-            "last": "https://rocketvalidator.com/api/v0/schedules?page[number]=7&page[size]=25",
-            "next": "https://rocketvalidator.com/api/v0/schedules?page[number]=2&page[size]=25",
-            "self": "https://rocketvalidator.com/api/v0/schedules?page[number]=1&page[size]=25"
+            "last": "https://rocketvalidator.com/api/v1/schedules?page[number]=7&page[size]=25",
+            "next": "https://rocketvalidator.com/api/v1/schedules?page[number]=2&page[size]=25",
+            "self": "https://rocketvalidator.com/api/v1/schedules?page[number]=1&page[size]=25"
         }
     }
     ```
@@ -133,9 +133,9 @@ To list all Schedules in your account, send a `GET` request to `/api/v0/schedule
 
 ## Retrieve a Schedule
 
-To retrieve an individual Schedule in your account, send a `GET` request to `/api/v0/schedules/$SCHEDULE_ID`.
+To retrieve an individual Schedule in your account, send a `GET` request to `/api/v1/schedules/$SCHEDULE_ID`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/schedules/$SCHEDULE_ID"
 
     ```json
     {
@@ -160,7 +160,7 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
             "relationships": {
             "reports": {
                 "links": {
-                "related": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c55"
+                "related": "https://rocketvalidator.com/api/v1/reports?filter[schedule_id]=9c55"
                 }
             }
             },
@@ -174,7 +174,7 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
 
 ## Create a Schedule
 
-To create a Schedule, send a `POST` request to `/api/v0/schedules`, with a JSON payload in the body including the attributes:
+To create a Schedule, send a `POST` request to `/api/v1/schedules`, with a JSON payload in the body including the attributes:
 
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
@@ -187,7 +187,7 @@ To create a Schedule, send a `POST` request to `/api/v0/schedules`, with a JSON 
 
 The next example shows how to form the body payload with the Schedule attributes.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v0/schedules"
+!!! example "Example: POST https://rocketvalidator.com/api/v1/schedules"
 
     ```json
     {
@@ -211,7 +211,7 @@ The next example shows how to form the body payload with the Schedule attributes
 
 ## Update a Schedule
 
-To update an existing Schedule, send a `PATCH` request to `/api/v0/schedules/$schedule_id`, with a JSON payload in the body including the attributes you want to change from:
+To update an existing Schedule, send a `PATCH` request to `/api/v1/schedules/$schedule_id`, with a JSON payload in the body including the attributes you want to change from:
 
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
@@ -224,7 +224,7 @@ To update an existing Schedule, send a `PATCH` request to `/api/v0/schedules/$sc
 
 The next example shows how to form the body payload with the Schedule attributes.
 
-!!! example "Example: PATCH https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+!!! example "Example: PATCH https://rocketvalidator.com/api/v1/schedules/$SCHEDULE_ID"
 
     ```json
     {
@@ -248,7 +248,7 @@ The next example shows how to form the body payload with the Schedule attributes
 
 You only need to include the attributes you want to update. The next example shows the payload used to disable a schedule:
 
-!!! example "Example: PATCH https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+!!! example "Example: PATCH https://rocketvalidator.com/api/v1/schedules/$SCHEDULE_ID"
 
     ```json
     {
@@ -262,9 +262,9 @@ You only need to include the attributes you want to update. The next example sho
 
 ## Delete a Schedule
 
-To delete an individual Schedule from your account, send a `DELETE` request to `/api/v0/schedules/$SCHEDULE_ID`.
+To delete an individual Schedule from your account, send a `DELETE` request to `/api/v1/schedules/$SCHEDULE_ID`.
 
-!!! example "Example: DELETE https://rocketvalidator.com/api/v0/schedules/$SCHEDULE_ID"
+!!! example "Example: DELETE https://rocketvalidator.com/api/v1/schedules/$SCHEDULE_ID"
 
     ```
     204 No Content
@@ -272,11 +272,11 @@ To delete an individual Schedule from your account, send a `DELETE` request to `
 
 ## Filter Reports by Schedule
 
-To list all the Reports in your account that have been run via a given Schedule, send a `GET` request `/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID`.
+To list all the Reports in your account that have been run via a given Schedule, send a `GET` request `/api/v1/reports?filter[schedule_id]=$SCHEDULE_ID`.
 
 This will list your Reports, filtered by that schedule id.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=$SCHEDULE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports?filter[schedule_id]=$SCHEDULE_ID"
 
     ```json
     {
@@ -303,22 +303,22 @@ This will list your Reports, filtered by that schedule id.
                 "relationships": {
                     "common_a11y_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/ce472/common_a11y_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/ce472/common_a11y_issues"
                         }
                     },
                     "common_html_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/ce472/common_html_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/ce472/common_html_issues"
                         }
                     },
                     "schedule": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83"
+                            "related": "https://rocketvalidator.com/api/v1/schedules/9c552164-1ea6-4664-96c4-7b8f48476d83"
                         }
                     },
                     "web_pages": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/ce472/web_pages"
+                            "related": "https://rocketvalidator.com/api/v1/reports/ce472/web_pages"
                         }
                     }
                 },
@@ -329,7 +329,7 @@ This will list your Reports, filtered by that schedule id.
             "version": "1.0"
         },
         "links": {
-            "self": "https://rocketvalidator.com/api/v0/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&page[number]=1&page[size]=25"
+            "self": "https://rocketvalidator.com/api/v1/reports?filter[schedule_id]=9c552164-1ea6-4664-96c4-7b8f48476d83&page[number]=1&page[size]=25"
         }
     }
     ```

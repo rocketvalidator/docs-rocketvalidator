@@ -71,17 +71,17 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
       "relationships": {
           "a11y_issues": {
               "links": {
-                  "related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097/a11y_issues"
+                  "related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097/a11y_issues"
               }
           },
           "html_issues": {
               "links": {
-                  "related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097/html_issues"
+                  "related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097/html_issues"
               }
           },
           "report": {
               "links": {
-                  "related": "https://rocketvalidator.com/api/v0/reports/56b6"
+                  "related": "https://rocketvalidator.com/api/v1/reports/56b6"
               }
           }
       },
@@ -91,9 +91,9 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
 
 ## List Web Pages on a Report
 
-To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages`.
+To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/9314c/web_pages"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/9314c/web_pages"
 
     ```json
     {
@@ -121,17 +121,17 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                 "relationships": {
                     "a11y_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/a11y_issues"
                         }
                     },
                     "html_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/html_issues"
                         }
                     },
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                         }
                     }
                 },
@@ -159,17 +159,17 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
                 "relationships": {
                     "a11y_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/473/a11y_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/473/a11y_issues"
                         }
                     },
                     "html_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/473/html_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/473/html_issues"
                         }
                     },
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                         }
                     }
                 },
@@ -180,16 +180,16 @@ To list the web pages on a Report, send a `GET` request to `/api/v0/reports/$REP
             "version": "1.0"
         },
         "links": {
-            "self": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages?page[number]=1&page[size]=25"
+            "self": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages?page[number]=1&page[size]=25"
         }
     }
     ```
 
 ## Retrieve a Web Page
 
-To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
+To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
 
     ```json
     {
@@ -216,17 +216,17 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
             "relationships": {
                 "a11y_issues": {
                     "links": {
-                        "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues"
+                        "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/a11y_issues"
                     }
                 },
                 "html_issues": {
                     "links": {
-                        "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues"
+                        "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/html_issues"
                     }
                 },
                 "report": {
                     "links": {
-                        "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                        "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                     }
                 }
             },
@@ -236,4 +236,13 @@ To show an individual Web Page, send a `GET` request to `/api/v0/reports/$REPORT
             "version": "1.0"
         }
     }
+    ```
+## Delete a Web Page
+
+To delete an individual Web Page from a report, send a `DELETE` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
+
+!!! example "Example: DELETE https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
+
+    ```
+    204 No Content
     ```

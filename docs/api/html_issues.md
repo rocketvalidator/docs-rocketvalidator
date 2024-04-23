@@ -68,12 +68,12 @@ An HTML issue corresponds to an issue found on a given web page when being check
     	"relationships": {
     		"report": {
     			"links": {
-    				"related": "https://rocketvalidator.com/api/v0/reports/56b6"
+    				"related": "https://rocketvalidator.com/api/v1/reports/56b6"
     			}
     		},
     		"web_page": {
     			"links": {
-    				"related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097"
+    				"related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097"
     			}
     		}
     	},
@@ -83,9 +83,9 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
 ## List HTML issues on a web page
 
-To list the HTML issues found on a web page, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
+To list the HTML issues found on a web page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues"
 
     ```json
     {
@@ -116,12 +116,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                 "relationships": {
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                         }
                     },
                     "web_page": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472"
                         }
                     }
                 },
@@ -149,12 +149,12 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
                 "relationships": {
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                         }
                     },
                     "web_page": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472"
                         }
                     }
                 },
@@ -165,7 +165,7 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v0/re
             "version": "1.0"
         },
         "links": {
-            "self": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues?page[number]=1&page[size]=25"
+            "self": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/html_issues?page[number]=1&page[size]=25"
         }
     }
     ```

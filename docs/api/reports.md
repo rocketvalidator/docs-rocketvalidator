@@ -133,12 +133,12 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     		"relationships": {
     			"common_a11y_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+    					"related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
     				}
     			},
     			"common_html_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+    					"related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
     				}
     			},
     			"schedule": {
@@ -148,7 +148,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     			},
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+    					"related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
     				}
     			}
     		},
@@ -162,7 +162,7 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
 ## Create a Report
 
-To create a Report, send a `POST` request to `/api/v0/reports`, with a JSON payload in the body including the attributes:
+To create a Report, send a `POST` request to `/api/v1/reports`, with a JSON payload in the body including the attributes:
 
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
@@ -173,7 +173,7 @@ To create a Report, send a `POST` request to `/api/v0/reports`, with a JSON payl
 
 The next example shows how to form the body payload with the Report attributes.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
+!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
 
     ```json
     {
@@ -194,7 +194,7 @@ Rocket Validator will return the created Report with a status of a `201 Created`
 
 If the Report can't be created, a `422 Unprocessable Entity` status will be returned, containing details about the the errors found.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
+!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
 
     ```json
     {
@@ -213,9 +213,9 @@ If the Report can't be created, a `422 Unprocessable Entity` status will be retu
 
 ## Retrieve a Report
 
-To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_ID`.
+To show an individual Report, send a `GET` request to `/api/v1/reports/$REPORT_ID`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID"
 
     ```json
     {
@@ -261,12 +261,12 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     		"relationships": {
     			"common_a11y_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+    					"related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
     				}
     			},
     			"common_html_issues": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+    					"related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
     				}
     			},
     			"schedule": {
@@ -276,7 +276,7 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
     			},
     			"web_pages": {
     				"links": {
-    					"related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+    					"related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
     				}
     			}
     		},
@@ -290,9 +290,9 @@ To show an individual Report, send a `GET` request to `/api/v0/reports/$REPORT_I
 
 ## List your Reports
 
-To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
+To list all Reports in your account, send a `GET` request to `/api/v1/reports`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/"
 
     ```json
     {
@@ -339,12 +339,12 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                 "relationships": {
                     "common_a11y_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_a11y_issues"
                         }
                     },
                     "common_html_issues": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
+                            "related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/common_html_issues"
                         }
                     },
                     "schedule": {
@@ -354,7 +354,7 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
                     },
                     "web_pages": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
+                            "related": "https://rocketvalidator.com/api/v1/reports/850e9a7c-66d6-4178-ae15-9abb49fc0b38/web_pages"
                         }
                     }
                 },
@@ -365,9 +365,9 @@ To list all Reports in your account, send a `GET` request to `/api/v0/reports`.
             "version": "1.0"
         },
         "links": {
-            "last": "https://rocketvalidator.com/api/v0/reports/?page[number]=50&page[size]=25",
-            "next": "https://rocketvalidator.com/api/v0/reports/?page[number]=2&page[size]=25",
-            "self": "https://rocketvalidator.com/api/v0/reports/?page[number]=1&page[size]=25"
+            "last": "https://rocketvalidator.com/api/v1/reports/?page[number]=50&page[size]=25",
+            "next": "https://rocketvalidator.com/api/v1/reports/?page[number]=2&page[size]=25",
+            "self": "https://rocketvalidator.com/api/v1/reports/?page[number]=1&page[size]=25"
         }
     }
     ```
@@ -378,23 +378,23 @@ If you have [Guest Accounts](../guest-accounts.md), you can filter the report li
 
 By default, the Reports API shows only the reports created by the main account:
 
-> `GET /api/v0/reports`
+> `GET /api/v1/reports`
 
 This is equivalent to passing `created_by=me` like this:
 
-> `GET /api/v0/reports?created_by=me`
+> `GET /api/v1/reports?created_by=me`
 
 To get the list of all reports (created by main account or by guests), pass `created_by=all` like this:
 
-> `GET /api/v0/reports?created_by=all`
+> `GET /api/v1/reports?created_by=all`
 
 To get only the list of reports created by guests, pass `created_by=guests` like this:
 
-> `GET /api/v0/reports?created_by=guests`
+> `GET /api/v1/reports?created_by=guests`
 
 To get only the list of reports created by an individual guest, pass the token like this:
 
-> `GET /api/v0/reports?created_by=guests&guest_token=1234`
+> `GET /api/v1/reports?created_by=guests&guest_token=1234`
 
 Each report will include the `guest_token` used as an attribute.
 
@@ -402,9 +402,9 @@ You can find the token for each guest account in the [Guests](https://rocketvali
 
 ## Delete a Report
 
-To delete an individual Report from your account, send a `DELETE` request to `/api/v0/reports/$REPORT_ID`.
+To delete an individual Report from your account, send a `DELETE` request to `/api/v1/reports/$REPORT_ID`.
 
-!!! example "Example: DELETE https://rocketvalidator.com/api/v0/reports/$REPORT_ID"
+!!! example "Example: DELETE https://rocketvalidator.com/api/v1/reports/$REPORT_ID"
 
     ```
     204 No Content

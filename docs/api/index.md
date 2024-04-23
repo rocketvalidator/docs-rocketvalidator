@@ -22,7 +22,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
     === "cURL"
         ``` bash
         curl --request GET \
-             --url https://rocketvalidator.com/api/v0/reports \
+             --url https://rocketvalidator.com/api/v1/reports \
              --header 'authorization: Bearer $API_TOKEN'
         ```
 
@@ -32,7 +32,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         require 'net/http'
         require 'openssl'
 
-        url = URI("https://rocketvalidator.com/api/v0/reports")
+        url = URI("https://rocketvalidator.com/api/v1/reports")
 
         http = Net::HTTP.new(url.host, url.port)
         http.use_ssl = true
@@ -78,7 +78,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         headers = { 'authorization': "Bearer $API_TOKEN" }
 
-        conn.request("GET", "/api/v0/reports", payload, headers)
+        conn.request("GET", "/api/v1/reports", payload, headers)
 
         res = conn.getresponse()
         data = res.read()
@@ -93,7 +93,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://rocketvalidator.com/api/v0/reports",
+            CURLOPT_URL => "https://rocketvalidator.com/api/v1/reports",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -127,7 +127,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
             "method": "GET",
             "hostname": "rocketvalidator.com",
             "port": null,
-            "path": "/api/v0/reports",
+            "path": "/api/v1/reports",
             "headers": {
                 "content-length": "0",
                 "authorization": "Bearer $API_TOKEN"
@@ -152,7 +152,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
     === "Java"
         ``` java
-        HttpResponse<String> response = Unirest.get("https://rocketvalidator.com/api/v0/reports")
+        HttpResponse<String> response = Unirest.get("https://rocketvalidator.com/api/v1/reports")
         .header("authorization", "Bearer $API_TOKEN")
         .asString();
         ```
@@ -165,7 +165,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         let postData = NSData(data: "".data(using: String.Encoding.utf8)!)
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://rocketvalidator.com/api/v0/reports")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://rocketvalidator.com/api/v1/reports")! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -189,7 +189,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
 ### Create a Report
 
-Send a `POST` request to `/api/v0/reports` with a JSON payload including the parameters:
+Send a `POST` request to `/api/v1/reports` with a JSON payload including the parameters:
 
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
@@ -198,7 +198,7 @@ Send a `POST` request to `/api/v0/reports` with a JSON payload including the par
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
 * `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
+!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
 
     ```json
     {
@@ -217,82 +217,82 @@ Send a `POST` request to `/api/v0/reports` with a JSON payload including the par
 
 ### List your Reports
 
-Send a `GET` request to `/api/v0/reports`.
+Send a `GET` request to `/api/v1/reports`.
 
 ### Get a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID`.
 
 ### Delete a Report
 
-Send a `DELETE` request to `/api/v0/reports/$REPORT_ID`.
+Send a `DELETE` request to `/api/v1/reports/$REPORT_ID`.
 
 ## Web Pages
 
 ### List the Web Pages on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
 
 ### Get a Web Page on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`.
 
 ## Accessibility Issues
 
 ### List A11Y issues on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
 
 ### Get an A11Y issue on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID`.
 
 ## HTML Issues
 
 ### List HTML issues on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
 
 ### Get an HTML issue on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
 
 ## Common Accessibility Issues
 
 ### List Common A11Y issues on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/common_a11y_issues`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/common_a11y_issues`.
 
 ### Get a Common A11Y issue on a Report
 
-Send a GET request to `/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
+Send a GET request to `/api/v1/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
 
 ## Common HTML Issues
 
 ### List Common HTML issues on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/common_html_issues`.
+Send a `GET` request to `/api/v1/reports/$REPORT_ID/common_html_issues`.
 
 ### Get a Common HTML issue on a Report
 
-Send a GET requet to `/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
+Send a GET requet to `/api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
 
 ## Mutings
 
 ### List your Mutings
 
-Send a `GET` request to `/api/v0/mutings`.
+Send a `GET` request to `/api/v1/mutings`.
 
 ### Get a Muting
 
-Send a `GET` request to `/api/v0/mutings/$MUTING_ID`.
+Send a `GET` request to `/api/v1/mutings/$MUTING_ID`.
 
 ## Schedules
 
 ### List your Schedules
 
-Send a `GET` request to `/api/v0/schedules`.
+Send a `GET` request to `/api/v1/schedules`.
 
 ### Get a Schedule
 
-Send a `GET` request to `/api/v0/schedules/$SCHEDULE_ID`.
+Send a `GET` request to `/api/v1/schedules/$SCHEDULE_ID`.

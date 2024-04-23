@@ -78,12 +78,12 @@ An Accessibility issue corresponds to an issue found on a given web page when be
         "relationships": {
             "report": {
                 "links": {
-                    "related": "https://rocketvalidator.com/api/v0/reports/56b6"
+                    "related": "https://rocketvalidator.com/api/v1/reports/56b6"
                 }
             },
             "web_page": {
                 "links": {
-                    "related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097"
+                    "related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097"
                 }
             }
         },
@@ -93,9 +93,9 @@ An Accessibility issue corresponds to an issue found on a given web page when be
 
 ## List Accessibility issues on a web page
 
-To list the Accessibility issues found on a web page, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
+To list the Accessibility issues found on a web page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/a11y_issues"
 
     ```json
     {
@@ -126,12 +126,12 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                 "relationships": {
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                         }
                     },
                     "web_page": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472"
                         }
                     }
                 },
@@ -160,12 +160,12 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                 "relationships": {
                     "report": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
                         }
                     },
                     "web_page": {
                         "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
+                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472"
                         }
                     }
                 },
@@ -176,7 +176,7 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
             "version": "1.0"
         },
         "links": {
-            "self": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues?page[number]=1&page[size]=25"
+            "self": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/a11y_issues?page[number]=1&page[size]=25"
         }
     }
     ```

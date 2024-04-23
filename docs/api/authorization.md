@@ -10,7 +10,7 @@ Once you have a token, you must include a bearer-type `Authorization` header.
 
 !!! example "Example: authenticating your requests"
     ```bash
-    curl --request GET 'https://rocketvalidator.com/api/v0/reports/' \
+    curl --request GET 'https://rocketvalidator.com/api/v1/reports/' \
          --header 'Authorization: Bearer YOURAPITOKEN'
     ```
 

@@ -41,9 +41,9 @@ Think of a Muting as a rule that defines a matching URL and issue message - when
 
 ## List your Mutings
 
-To list all your Mutings in your account, send a `GET` request to `/api/v0/mutings`.
+To list all your Mutings in your account, send a `GET` request to `/api/v1/mutings`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/schedules"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/schedules"
 
     ```json
     {
@@ -63,16 +63,16 @@ To list all your Mutings in your account, send a `GET` request to `/api/v0/mutin
         "version": "1.0"
       },
       "links": {
-        "self": "https://rocketvalidator.com/api/v0/mutings?page[number]=1&page[size]=25"
+        "self": "https://rocketvalidator.com/api/v1/mutings?page[number]=1&page[size]=25"
       }
     }
     ```
 
 ## Retrieve a Muting
 
-To retrieve an individual Muting in your account, send a `GET` request to `/api/v0/mutings/$MUTING_ID`.
+To retrieve an individual Muting in your account, send a `GET` request to `/api/v1/mutings/$MUTING_ID`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/mutings/$MUTING_ID"
+!!! example "Example: GET https://rocketvalidator.com/api/v1/mutings/$MUTING_ID"
 
     ```json
     {
