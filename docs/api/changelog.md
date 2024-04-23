@@ -1,5 +1,6 @@
 # Changelog
 
+* 2024-04-23. Web Page status depending on the status of the HTML and A11Y checks.
 * 2024-04-23. Web Page deletion.
 * 2024-04-16. HTML issues include code snippets as collection of extracts and coordinates.
 * 2023-06-05. Rename the field `last_fired_at` as `last_run_at` for [Schedules](schedules.md).

@@ -20,6 +20,9 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dt>A11y Check</dt>
   <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
 
+  <dt>Status</dt>
+  <dd>Checking status for the web page, depending on the status of the HTML and A11Y checks. If both are `pending`, the status will also be `pending`. If one is `pending` and the other is `checked`, it will be `checking`. If any check is failed, the status will be `failed`. If both checks are in `checked`, the status will be `checked`.</dd>
+
   <dt>Inserted At</dt>
   <dd>Timestamp when the web page was created.</dd>
 
@@ -64,6 +67,7 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
           "inserted_at": "2020-04-02T12:44:43",
           "updated_at": "2020-04-02T12:44:50",
           "last_checked_at": "2020-04-02T12:44:50",
+          "status": "checked",
           "linked_from": "https://example.com/",
           "url": "https://example.com/about"
       },
@@ -114,6 +118,7 @@ To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REP
                     "inserted_at": "2020-02-28T13:01:32",
                     "updated_at": "2020-02-28T13:01:35",
                     "last_checked_at": "2020-02-28T13:01:35",
+                    "status": "checked",
                     "linked_from": "http://validationhell.com/",
                     "url": "http://validationhell.com/"
                 },
@@ -151,6 +156,8 @@ To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REP
                     },
                     "id": 473,
                     "inserted_at": "2020-02-28T13:01:33",
+                    "last_checked_at": "2020-02-28T13:01:35",
+                    "status": "checked",
                     "linked_from": "http://validationhell.com/",
                     "updated_at": "2020-02-28T13:01:36",
                     "url": "http://validationhell.com/pages/agent"
@@ -209,6 +216,7 @@ To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT
                 "inserted_at": "2020-02-28T13:01:32",
                 "updated_at": "2020-02-28T13:01:35",
                 "last_checked_at": "2020-02-28T13:01:35",
+                "status": "checked",
                 "linked_from": "http://validationhell.com/",
                 "url": "http://validationhell.com/"
             },
