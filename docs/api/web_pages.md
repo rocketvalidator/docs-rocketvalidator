@@ -245,6 +245,22 @@ To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT
         }
     }
     ```
+## Recheck a Web Page
+
+To re-check a web page, send a `PATCH` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID` with a payload to set the `status` to `pending`. Any other payload will be rejected.
+
+!!! example "Example: PATCH https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "status": "pending"
+            }
+        }
+    }
+    ```
+
 ## Delete a Web Page
 
 To delete an individual Web Page from a report, send a `DELETE` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.

@@ -1,7 +1,8 @@
 # Changelog
 
-* 2024-04-23. Web Page status depending on the status of the HTML and A11Y checks.
-* 2024-04-23. Web Page deletion.
+* 2024-04-24. Web Pages can be rechecked by patching their status to `pending`.
+* 2024-04-23. Web Page status (`pending`, `checking`, `checked` or `failed`) depending on the status of the HTML and A11Y checks.
+* 2024-04-23. Web Pages can be deleted.
 * 2024-04-16. HTML issues include code snippets as collection of extracts and coordinates.
 * 2023-06-05. Rename the field `last_fired_at` as `last_run_at` for [Schedules](schedules.md).
 * 2022-02-17. The Reports endpoint can now list [Guest Reports](reports.md#list-your-guest-reports).
