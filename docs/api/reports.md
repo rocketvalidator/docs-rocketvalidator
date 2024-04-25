@@ -184,6 +184,8 @@ To create a Report, send a `POST` request to `/api/v1/reports`, with a JSON payl
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
 * `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 * `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
+* `initial_urls`. Newline-separated list of URLs. Optional.
+* `exclusions`. Newline-separated list of paths. Optional.
 
 The next example shows how to form the body payload with the Report attributes.
 

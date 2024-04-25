@@ -13,6 +13,12 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dt>Starting URL</dt>
   <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>  
 
+  <dt>Initial URLs</dt>
+  <dd>A list of URLs to be included on the first run of the Spider. Newline-separated.</dd>
+
+  <dt>Exclusions</dt>
+  <dd>A list of URLs or partial paths to tell the Spider to skip matching URLs. Newline-separated.</dd>
+
   <dt>Perform A11Y Checks</dt>
   <dd>Boolean to indicate whether or not accessibility checks will be included.</dd>
 
@@ -64,6 +70,14 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
                 },
                 "rate_limit": 5,
                 "starting_url": "http://validationhell.com/",
+                "initial_urls": [
+                    "https://validationhell.com/category/engineering/",
+                    "https://validationhell.com/category/open-source/"
+                ],
+                "exclusions": [
+                    "/news",
+                    "/tour"
+                ],
                 "updated_at": "2020-02-28T13:01:30"
             },
             "id": "d2e1f",
@@ -106,6 +120,14 @@ To list all Schedules in your account, send a `GET` request to `/api/v1/schedule
                 },
                 "rate_limit": 3,
                 "starting_url": "http://validationhell.com",
+                "initial_urls": [
+                    "https://validationhell.com/category/engineering/",
+                    "https://validationhell.com/category/open-source/"
+                ],
+                "exclusions": [
+                    "/news",
+                    "/tour"
+                ],
                 "updated_at": "2020-04-28T12:02:57"
             },
             "id": "9c55",
@@ -154,6 +176,14 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
             },
             "rate_limit": 3,
             "starting_url": "http://validationhell.com",
+            "initial_urls": [
+                "https://validationhell.com/category/engineering/",
+                "https://validationhell.com/category/open-source/"
+            ],
+            "exclusions": [
+                "/news",
+                "/tour"
+            ],
             "updated_at": "2020-04-28T12:02:57"
             },
             "id": "9c55",
@@ -184,6 +214,8 @@ To create a Schedule, send a `POST` request to `/api/v1/schedules`, with a JSON 
 * `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
 * `active`. Boolean to enable the schedule. Optional, defaults to true.
 * `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is optional, which has to be an integer from 1 to 28 and defaults to 1. If instead `week` is used, then an additional `weekday` key is optional, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday` that defaults to `monday`.
+* `initial_urls`. Newline-separated list of URLs. Optional.
+* `exclusions`. Newline-separated list of paths. Optional.
 
 The next example shows how to form the body payload with the Schedule attributes.
 
@@ -221,6 +253,8 @@ To update an existing Schedule, send a `PATCH` request to `/api/v1/schedules/$sc
 * `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
 * `active`. Boolean to enable the schedule. Optional, defaults to true.
 * `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is optional, which has to be an integer from 1 to 28 and defaults to 1. If instead `week` is used, then an additional `weekday` key is optional, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday` that defaults to `monday`.
+* `initial_urls`. Newline-separated list of URLs. Optional.
+* `exclusions`. Newline-separated list of paths. Optional.
 
 The next example shows how to form the body payload with the Schedule attributes.
 
@@ -231,6 +265,14 @@ The next example shows how to form the body payload with the Schedule attributes
         "data": {
             "attributes": {
                 "starting_url": "http://validationhell.com",
+                "initial_urls": [
+                    "https://validationhell.com/category/engineering/",
+                    "https://validationhell.com/category/open-source/"
+                ],
+                "exclusions": [
+                    "/news",
+                    "/tour"
+                ],
                 "max_pages": 100,
                 "rate_limit": 3,
                 "perform_html_checks": true,
@@ -289,6 +331,14 @@ This will list your Reports, filtered by that schedule id.
                     "num_pages": 10,
                     "rate_limit": 3,
                     "starting_url": "http://validationhell.com/",
+                    "initial_urls": [
+                        "https://validationhell.com/category/engineering/",
+                        "https://validationhell.com/category/open-source/"
+                    ],
+                    "exclusions": [
+                        "/news",
+                        "/tour"
+                    ],
                     "total_a11y_issues": {
                         "errors": 38,
                         "warnings": 3

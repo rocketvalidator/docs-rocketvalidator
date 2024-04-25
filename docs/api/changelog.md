@@ -1,5 +1,6 @@
 # Changelog
 
+* 2024-04-25. Document usage of `initial_urls` and `exclusions` for Reports and Schedules.
 * 2024-04-24. Web Pages can be rechecked by patching their status to `pending`.
 * 2024-04-23. Web Page status (`pending`, `checking`, `checked` or `failed`) depending on the status of the HTML and A11Y checks.
 * 2024-04-23. Web Pages can be deleted.
