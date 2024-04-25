@@ -11,6 +11,12 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Starting URL</dt>
   <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
 
+  <dt>Initial URLs</dt>
+  <dd>A list of URLs to be included on the first run of the Spider. Newline-separated.</dd>
+
+  <dt>Exclusions</dt>
+  <dd>A list of URLs or partial paths to tell the Spider to skip matching URLs. Newline-separated.</dd>
+
   <dt>Domain</dt>
   <dd>Domain from the starting URL.</dd>
 
@@ -127,6 +133,14 @@ A Report represents a validation report you've created in Rocket Validator. Cont
     			"perform_html_checks": true,
     			"rate_limit": 3,
     			"starting_url": "http://validationhell.com/",
+                "initial_urls": [
+                    "https://validationhell.com/category/engineering/",
+                    "https://validationhell.com/category/open-source/"
+                ],
+                "exclusions": [
+                    "/news",
+                    "/tour"
+                ],
                 "domain": "validationhell.com"
     		},
     		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
@@ -255,6 +269,14 @@ To show an individual Report, send a `GET` request to `/api/v1/reports/$REPORT_I
     			"perform_html_checks": true,
     			"rate_limit": 3,
     			"starting_url": "http://validationhell.com/",
+                "initial_urls": [
+                    "https://validationhell.com/category/engineering/",
+                    "https://validationhell.com/category/open-source/"
+                ],
+                "exclusions": [
+                    "/news",
+                    "/tour"
+                ],
                 "domain": "validationhell.com"
     		},
     		"id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
@@ -333,6 +355,14 @@ To list all Reports in your account, send a `GET` request to `/api/v1/reports`.
                     "perform_html_checks": true,
                     "rate_limit": 3,
                     "starting_url": "http://validationhell.com/",
+                    "initial_urls": [
+                        "https://validationhell.com/category/engineering/",
+                        "https://validationhell.com/category/open-source/"
+                    ],
+                    "exclusions": [
+                        "/news",
+                        "/tour"
+                    ],
                     "domain": "validationhell.com"
                 },
                 "id": "850e9a7c-66d6-4178-ae15-9abb49fc0b38",
