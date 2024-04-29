@@ -35,3 +35,7 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
 A Schedule represents a programmed report that will be run on a given periodicity, or after a deploy webhook is received.
 
 Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can be set to run automatically on a defined schedule or via <a href="deploy-hooks.md">deploy hooks</a>.
+
+## Device
+
+A Device represents the viewport settings for <a href="device-viewport-emulation">Device Viewport Emulation</a>, including viewport width and height, scale factor, rotation, and others.
