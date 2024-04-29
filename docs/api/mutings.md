@@ -6,7 +6,6 @@ Think of a Muting as a rule that defines a matching URL and issue message - when
 
 ## Attributes
 
-
 <dl>
   <dt>ID</dt>
   <dd>Unique Muting ID.</dd>

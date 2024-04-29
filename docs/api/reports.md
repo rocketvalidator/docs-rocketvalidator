@@ -38,6 +38,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Perform A11Y Checks</dt>
   <dd>Boolean to indicate whether or not accessibility checks will be included.</dd>
 
+  <dt>Device Rotated</dt>
+  <dd>Boolean to indicate if the emulated device viewport is rotated.</dd>
+
   <dt>Checks</dt>
   <dd>
     Details for the checks enabled for this report.
@@ -89,6 +92,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Schedule</dt>
   <dd>The Scheduled Report that initiated this Report, if any.</dd>
+
+  <dt>Device</dt>
+  <dd>The emulated device viewport used in the accessibility checks.</dd>
 </dl>
 
 ## Example

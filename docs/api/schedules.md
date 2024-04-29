@@ -25,6 +25,9 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dt>Perform HTML Checks</dt>
   <dd>Boolean to indicate whether or not HTML checks will be included.</dd>
 
+  <dt>Device Rotated</dt>
+  <dd>Boolean to indicate if the emulated device viewport is rotated.</dd>
+
   <dt>Max Pages</dt>
   <dd>Maximum number of web pages to include. Places a limit on the Spider.</dd>
 
