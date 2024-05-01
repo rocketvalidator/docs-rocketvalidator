@@ -263,6 +263,8 @@ To re-check a web page, send a `PATCH` request to `/api/v1/reports/$REPORT_ID/we
 
 ## Delete a Web Page
 
+Deleting web pages from a report is a Pro feature. It removes the web page, and updates the excluded URLs list for that report. If the report has no more web pages left, it will itself be deleted as well.
+
 To delete an individual Web Page from a report, send a `DELETE` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
 
 !!! example "Example: DELETE https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
