@@ -76,6 +76,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Last Checked At</dt>
   <dd>Timestamp when the report was last checked.</dd>
+
+  <dt>Guest Token</dt>
+  <dd>If this report was created by one of your <a href="/guest-accounts/">guest accounts</a>, its guest token will be shown here.</dd>
 </dl>
 
 ## Relationships
