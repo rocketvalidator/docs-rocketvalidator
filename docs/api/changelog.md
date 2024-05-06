@@ -1,5 +1,6 @@
 # Changelog
 
+* 2024-05-06. Guest Accounts endpoint.
 * 2024-04-29. Devices endpoint.
 * 2024-04-25. Document usage of `initial_urls` and `exclusions` for Reports and Schedules.
 * 2024-04-24. Web Pages can be rechecked by patching their status to `pending`.
