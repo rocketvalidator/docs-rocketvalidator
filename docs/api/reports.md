@@ -76,9 +76,6 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Last Checked At</dt>
   <dd>Timestamp when the report was last checked.</dd>
-
-  <dt>Guest Token</dt>
-  <dd>If this report was created by one of your <a href="/guest-accounts/">guest accounts</a>, its guest token will be shown here.</dd>
 </dl>
 
 ## Relationships
@@ -98,6 +95,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Device</dt>
   <dd>The emulated device viewport used in the accessibility checks.</dd>
+
+  <dt>Guest Token</dt>
+  <dd>If this report was created by one of your <a href="/guest-accounts/">guest accounts</a>, its guest account will be linked here.</dd>
 </dl>
 
 ## Example
