@@ -67,6 +67,34 @@ To list all your Mutings in your account, send a `GET` request to `/api/v1/mutin
     }
     ```
 
+## List Mutings applied to a report
+
+To list the mutings that have been applied to a report, send a `GET` request to `/api/v1/reports/$REPORT_ID/mutings`.
+
+!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/mutings"
+
+    ```json
+    {
+      "data": [
+        {
+          "attributes": {
+            "comment": "Depends on third party library, waiting for fix upstream",
+            "message": "All touch targets must be 24px large, or leave sufficient space",
+            "url_match": "https://example.com/"
+          },
+          "id": "7090",
+          "type": "muting"
+        }
+      ],
+      "jsonapi": {
+        "version": "1.0"
+      },
+      "links": {
+        "self": "https://rocketvalidator.com/api/v1/reports/$REPORT_ID/mutings?page[number]=1&page[size]=25"
+      }
+    }
+    ```
+
 ## Retrieve a Muting
 
 To retrieve an individual Muting in your account, send a `GET` request to `/api/v1/mutings/$MUTING_ID`.

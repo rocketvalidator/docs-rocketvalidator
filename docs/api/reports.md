@@ -98,6 +98,9 @@ A Report represents a validation report you've created in Rocket Validator. Cont
 
   <dt>Guest Token</dt>
   <dd>If this report was created by one of your <a href="/guest-accounts/">guest accounts</a>, its guest account will be linked here.</dd>
+
+  <dt>Mutings</dt>
+  <dd>Mutings applied to this report, if any.</dd>
 </dl>
 
 ## Example

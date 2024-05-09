@@ -1,5 +1,6 @@
 # Changelog
 
+* 2024-05-09. Mutings applied to report endpoint.
 * 2024-05-06. Guest Accounts endpoint.
 * 2024-04-29. Devices endpoint.
 * 2024-04-25. Document usage of `initial_urls` and `exclusions` for Reports and Schedules.
