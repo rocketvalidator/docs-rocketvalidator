@@ -1,21 +1,23 @@
 # Rocket Validator API
 
-Welcome to the Rocket Validator API documentation.
+The Rocket Validator API lets you manage your site validation reports and related data like schedules, mutings, devices and guest accounts using conventional HTTP requests to a standard <a href="https://jsonapi.org/" target="_blank">JSON API</a>.
 
-The Rocket Validator API allows you to manage your reports and integrate them easily in your existing workflows using conventional HTTP requests to a standard JSON API. Refer to the <a href="https://jsonapi.org/" target="_blank">json:api specification</a> for an overview of the conventions we use.
+!!! info "V1 Beta"
+    The Rocket Validator API is currently in public **beta** stage. The current version is `v1`.
 
-Currently the API is on an alpha stage, but you can start using it today. Keep in mind that it is still subject to changes, which will be documented on the changelog.
+    All endpoints have the prefix:
 
-!!! info "Work in progress!"
-    The Rocket Validator API is currently in alpha stage, and subject to changes.
+    ```
+    https://rocketvalidator.com/api/v1/{endpoint}
+    ```
 
 ## API Quick Start
 
-To start working with the Rocket Validator, all you need is to <a href="https://rocketvalidator.com/registration/new" target="rocket">sign up</a> for a new account and then generate an <a href="https://rocketvalidator.com/api/tokens" target="rocket">API token</a>. Check out the <a href="/api/authorization">Authorization</a> section to learn how to use this API token to identify your requests.
+To start working with the Rocket Validator API, all you need is to <a href="https://rocketvalidator.com/registration/new" target="rocket">sign up</a> for a new account and then generate an <a href="https://rocketvalidator.com/api/tokens" target="rocket">API token</a>. Check out the <a href="/api/authorization">Authorization</a> section to learn how to use this API token to identify your requests.
 
 ## Example Request
 
-To retrieve the data you need from Rocket Validator, you just need to perform a standard `GET` request to the appropiate endpoint. Here are some examples in different programming languages, and below is a cheatsheet on the most common endpoints.
+To retrieve the data you need from Rocket Validator, you just need to perform a standard `GET`, `POST`, `PATCH` or `DELETE` request to the appropiate endpoint. Here are some examples in different programming languages, and below is a cheatsheet on the most common endpoints.
 
 !!! example "Example code"
 
@@ -51,9 +53,9 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         require 'rocketvalidator'
 
-        RocketValidator::V0::Resource.with_api_token(ENV["ROCKET_API_TOKEN"]) do
+        RocketValidator::V1::Resource.with_api_token(ENV["ROCKET_API_TOKEN"]) do
             page = 0
-            reports = RocketValidator::V0::Report.page(1).per(10).to_a
+            reports = RocketValidator::V1::Report.page(1).per(10).to_a
 
             while reports do
                 page = page + 1
@@ -296,3 +298,23 @@ Send a `GET` request to `/api/v1/schedules`.
 ### Get a Schedule
 
 Send a `GET` request to `/api/v1/schedules/$SCHEDULE_ID`.
+
+## Devices
+
+### List all Devices
+
+Send a `GET` request to `/api/v1/devices`.
+
+### Get a Device
+
+Send a `GET` request to `/api/v1/devices/$DEVICE_ID`.
+
+## Guest Accounts
+
+### List all your Guest Accounts
+
+Send a `GET` request to `/api/v1/guest_accounts`.
+
+### Get a Guest Account
+
+Send a `GET` request to `/api/v1/guest_accounts/$GUEST_ACCOUNT_ID`.
