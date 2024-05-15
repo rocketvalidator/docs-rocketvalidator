@@ -187,6 +187,18 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         dataTask.resume()
         ```
 
+!!! info "GET is the default method"
+
+    In the cURL example above we're explicitly specifying the `GET` kind of request, but as it's the default, in the rest of the documentation you'll often see that we omit it.
+
+    Also, there's no need for the `--url` parameter and you can just pass the URL endpoint like this:
+
+    ``` bash
+    curl https://rocketvalidator.com/api/v1/reports \
+       --header 'authorization: Bearer $API_TOKEN'
+    ```    
+
+
 ## Reports
 
 ### Create a Report
