@@ -39,3 +39,11 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
 ## Device
 
 A Device represents the viewport settings for <a href="device-viewport-emulation">Device Viewport Emulation</a>, including viewport width and height, scale factor, rotation, and others.
+
+## Muting
+
+A Muting represents a rule you've defined to automatically mute certain issues on your reports, when those issues match the message and URL pattern.
+
+## Guest Account
+
+A Guest Accounts is an invitation to other person in your team to use Rocket Validator without needing to set up a subscription of their own.
