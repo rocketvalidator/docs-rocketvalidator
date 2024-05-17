@@ -1,6 +1,6 @@
 # Rocket Validator API
 
-The Rocket Validator API lets you manage your site validation reports and related data like schedules, mutings, devices and guest accounts using conventional HTTP requests to a standard <a href="https://jsonapi.org/" target="_blank">JSON API</a>.
+The Rocket Validator API lets you manage your site validation reports and related data like schedules, mutings, devices and guest accounts sending conventional HTTP requests to a standard <a href="https://jsonapi.org/" target="_blank">JSON API</a>.
 
 !!! info "V1 Beta"
     The Rocket Validator API is currently in public **beta** stage. The current version is `v1`.

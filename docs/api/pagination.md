@@ -6,7 +6,7 @@ Pagination is controlled using the following parameters:
 
 <dl>
   <dt>page[number]</dt>
-  <dd>What page to retrieve.</dd>
+  <dd>What page to retrieve. Defaults to 1.</dd>
 
   <dt>page[size]</dt>
   <dd>Number of entries per page. Defaults to 25, minimum is 1, maximum is 100.</dd>
