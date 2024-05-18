@@ -1,6 +1,8 @@
 # Reports
 
-A Report represents a validation report you've created in Rocket Validator. Contains a list of web pages that were found from the starting url, and the HTML and accessibility issues that were found.
+A Report represents a site validation report you've created in Rocket Validator. It contains a list of web pages that were found from the starting url, and the HTML and accessibility issues that were found.
+
+Some features are only available with a <a href="https://rocketvalidator.com/pricing">Pro subscription</a>, and are be marked with a  <sup class="badge-pro">Pro</sup> badge next to it.
 
 ## Attributes
 
@@ -9,12 +11,12 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dd>Unique report ID.</dd>
 
   <dt>Starting URL</dt>
-  <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
+  <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then (if Deep Crawl is enabled) recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
 
-  <dt>Initial URLs</dt>
+  <dt>Initial URLs <sup class="badge-pro">Pro</sup></dt>
   <dd>A list of URLs to be included on the first run of the Spider. Newline-separated.</dd>
 
-  <dt>Exclusions</dt>
+  <dt>Exclusions <sup class="badge-pro">Pro</sup></dt>
   <dd>A list of URLs or partial paths to tell the Spider to skip matching URLs. Newline-separated.</dd>
 
   <dt>Domain</dt>
@@ -29,17 +31,17 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Rate Limit</dt>
   <dd>Maximum allowed requests per second.</dd>
 
-  <dt>Deep Crawl</dt>
-  <dd>Boolean to indicate whether deep crawling was enabled or not.</dd>
+  <dt>Deep Crawl <sup class="badge-pro">Pro</sup></dt>
+  <dd>Boolean to indicate whether deep crawling was enabled or not. If it's enabled, the Spider witll recursively include more linked pages from the pages it finds, until the Max Pages limit is reached.</dd>
 
   <dt>Perform HTML Checks</dt>
-  <dd>Boolean to indicate whether or not HTML checks will be included.</dd>
+  <dd>Boolean to indicate whether or not HTML checks will be performed on the web pages found.</dd>
 
-  <dt>Perform A11Y Checks</dt>
-  <dd>Boolean to indicate whether or not accessibility checks will be included.</dd>
+  <dt>Perform A11Y Checks <sup class="badge-pro">Pro</sup></dt>
+  <dd>Boolean to indicate whether or not accessibility checks will be  performed on the web pages found.</dd>
 
-  <dt>Device Rotated</dt>
-  <dd>Boolean to indicate if the emulated device viewport is rotated.</dd>
+  <dt>Device Rotated <sup class="badge-pro">Pro</sup></dt>
+  <dd>Boolean to indicate if the emulated device viewport is rotated. The device viewport used in the report is shown via the Device relationship.</dd>
 
   <dt>Checks</dt>
   <dd>
@@ -52,17 +54,17 @@ A Report represents a validation report you've created in Rocket Validator. Cont
               <dt>Status</dt>
               <dd>HTML checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
               <dt>Issues</dt>
-              <dd>Counters for the number of HTML errors and warnings. This sums the number of HTML issues on the web pages for a particular report.</dd>
+              <dd>Counters for the number of HTML <code>errors</code> and <code>warnings</code>. This sums the number of HTML issues on the web pages for a particular report.</dd>
             </dl>
         </dd>
-        <dt>A11Y</dt>
+        <dt>A11Y <sup class="badge-pro">Pro</sup></dt>
         <dd>
             Details for the Accessibility checks, if enabled (<code>null</code> otherwise).
             <dl>
               <dt>Status</dt>
               <dd>Accessibility checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
               <dt>Issues</dt>
-              <dd>Counters for the number of Accessibility errors and warnings. This sums the number of Accessibility issues on the web pages for a particular report.</dd>
+              <dd>Counters for the number of Accessibility <code>errors</code> and <code>warnings</code>. This sums the number of Accessibility issues on the web pages for a particular report.</dd>
             </dl>
         </dd>
     </dl>
@@ -84,22 +86,22 @@ A Report represents a validation report you've created in Rocket Validator. Cont
   <dt>Web Pages</dt>
   <dd>The list of web pages found by the Spider for that report.</dd>
 
-  <dt>Common A11Y issues</dt>
-  <dd>The accessibility issues found on the web pages for that report, if any, grouped together by their kind.</dd>
-
   <dt>Common HTML issues</dt>
   <dd>The HTML issues found on the web pages for that report, if any, grouped together by their kind.</dd>
 
-  <dt>Schedule</dt>
+  <dt>Common A11Y issues <sup class="badge-pro">Pro</sup></dt>
+  <dd>The accessibility issues found on the web pages for that report, if any, grouped together by their kind.</dd>
+
+  <dt>Schedule <sup class="badge-pro">Pro</sup></dt>
   <dd>The Scheduled Report that initiated this Report, if any.</dd>
 
-  <dt>Device</dt>
+  <dt>Device <sup class="badge-pro">Pro</sup></dt>
   <dd>The emulated device viewport used in the accessibility checks.</dd>
 
-  <dt>Guest Token</dt>
+  <dt>Guest Token <sup class="badge-pro">Pro</sup></dt>
   <dd>If this report was created by one of your <a href="/guest-accounts/">guest accounts</a>, its guest account will be linked here.</dd>
 
-  <dt>Mutings</dt>
+  <dt>Mutings <sup class="badge-pro">Pro</sup></dt>
   <dd>Mutings applied to this report, if any.</dd>
 </dl>
 

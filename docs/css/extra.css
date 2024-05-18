@@ -83,3 +83,15 @@ dt {
 dl {
   margin-left: 25px;
 }
+
+/* Badges */
+sup.badge-pro {
+  color: green;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+
+  border: 1px solid;
+  padding: 2px 3px;
+  border-radius: 5px;
+}
