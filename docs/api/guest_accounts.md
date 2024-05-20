@@ -1,4 +1,4 @@
-# Guest Accounts
+# Guest Accounts <sup class="badge-pro">Pro</sup>
 
 <a href="/guest-accounts">Guest Accounts</a> is a Rocket Validator Pro feature that lets you invite other Rocket Validator users to share your subscription resources in terms of validation credits and features, without compromising your main account credentials.
 

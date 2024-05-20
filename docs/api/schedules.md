@@ -1,4 +1,4 @@
-# Schedules
+# Schedules <sup class="badge-pro">Pro</sup>
 
 A Schedule represents a programmed report that will be run on a given periodicity, or after a deploy webhook is received.
 
@@ -72,10 +72,10 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
                     "monthday": 15
                 },
                 "rate_limit": 5,
-                "starting_url": "http://validationhell.com/",
+                "starting_url": "https://dummy.rocketvalidator.com/",
                 "initial_urls": [
-                    "https://validationhell.com/category/engineering/",
-                    "https://validationhell.com/category/open-source/"
+                    "https://dummy.rocketvalidator.com/category/engineering/",
+                    "https://dummy.rocketvalidator.com/category/open-source/"
                 ],
                 "exclusions": [
                     "/news",
@@ -122,10 +122,10 @@ To list all Schedules in your account, send a `GET` request to `/api/v1/schedule
                 "monthday": 23
                 },
                 "rate_limit": 3,
-                "starting_url": "http://validationhell.com",
+                "starting_url": "https://dummy.rocketvalidator.com",
                 "initial_urls": [
-                    "https://validationhell.com/category/engineering/",
-                    "https://validationhell.com/category/open-source/"
+                    "https://dummy.rocketvalidator.com/category/engineering/",
+                    "https://dummy.rocketvalidator.com/category/open-source/"
                 ],
                 "exclusions": [
                     "/news",
@@ -178,10 +178,10 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
                 "monthday": 23
             },
             "rate_limit": 3,
-            "starting_url": "http://validationhell.com",
+            "starting_url": "https://dummy.rocketvalidator.com",
             "initial_urls": [
-                "https://validationhell.com/category/engineering/",
-                "https://validationhell.com/category/open-source/"
+                "https://dummy.rocketvalidator.com/category/engineering/",
+                "https://dummy.rocketvalidator.com/category/open-source/"
             ],
             "exclusions": [
                 "/news",
@@ -228,7 +228,7 @@ The next example shows how to form the body payload with the Schedule attributes
     {
         "data": {
             "attributes": {
-                "starting_url": "http://validationhell.com",
+                "starting_url": "https://dummy.rocketvalidator.com",
                 "max_pages": 100,
                 "rate_limit": 3,
                 "perform_html_checks": true,
@@ -267,10 +267,10 @@ The next example shows how to form the body payload with the Schedule attributes
     {
         "data": {
             "attributes": {
-                "starting_url": "http://validationhell.com",
+                "starting_url": "https://dummy.rocketvalidator.com",
                 "initial_urls": [
-                    "https://validationhell.com/category/engineering/",
-                    "https://validationhell.com/category/open-source/"
+                    "https://dummy.rocketvalidator.com/category/engineering/",
+                    "https://dummy.rocketvalidator.com/category/open-source/"
                 ],
                 "exclusions": [
                     "/news",
@@ -333,10 +333,10 @@ This will list your Reports, filtered by that schedule id.
                     "max_pages": 10,
                     "num_pages": 10,
                     "rate_limit": 3,
-                    "starting_url": "http://validationhell.com/",
+                    "starting_url": "https://dummy.rocketvalidator.com/",
                     "initial_urls": [
-                        "https://validationhell.com/category/engineering/",
-                        "https://validationhell.com/category/open-source/"
+                        "https://dummy.rocketvalidator.com/category/engineering/",
+                        "https://dummy.rocketvalidator.com/category/open-source/"
                     ],
                     "exclusions": [
                         "/news",

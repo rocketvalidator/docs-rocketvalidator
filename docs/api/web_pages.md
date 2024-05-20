@@ -17,7 +17,7 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dt>HTML Check</dt>
   <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
 
-  <dt>A11y Check</dt>
+  <dt>A11y Check <sup class="badge-pro">Pro</sup></dt>
   <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
 
   <dt>Status</dt>
@@ -42,7 +42,7 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dt>HTML issues</dt>
   <dd>The HTML issues found on this Web Page, if the HTML check was enabled.</dd>
 
-  <dt>A11Y issues</dt>
+  <dt>A11Y issues <sup class="badge-pro">Pro</sup></dt>
   <dd>The accessibility issues found on this Web Page, if the accessibility check was enabled.</dd>
 </dl>
 
@@ -119,8 +119,8 @@ To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REP
                     "updated_at": "2020-02-28T13:01:35",
                     "last_checked_at": "2020-02-28T13:01:35",
                     "status": "checked",
-                    "linked_from": "http://validationhell.com/",
-                    "url": "http://validationhell.com/"
+                    "linked_from": "https://dummy.rocketvalidator.com/",
+                    "url": "https://dummy.rocketvalidator.com/"
                 },
                 "id": "472",
                 "relationships": {
@@ -158,9 +158,9 @@ To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REP
                     "inserted_at": "2020-02-28T13:01:33",
                     "last_checked_at": "2020-02-28T13:01:35",
                     "status": "checked",
-                    "linked_from": "http://validationhell.com/",
+                    "linked_from": "https://dummy.rocketvalidator.com/",
                     "updated_at": "2020-02-28T13:01:36",
-                    "url": "http://validationhell.com/pages/agent"
+                    "url": "https://dummy.rocketvalidator.com/pages/agent"
                 },
                 "id": "473",
                 "relationships": {
@@ -217,8 +217,8 @@ To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT
                 "updated_at": "2020-02-28T13:01:35",
                 "last_checked_at": "2020-02-28T13:01:35",
                 "status": "checked",
-                "linked_from": "http://validationhell.com/",
-                "url": "http://validationhell.com/"
+                "linked_from": "https://dummy.rocketvalidator.com/",
+                "url": "https://dummy.rocketvalidator.com/"
             },
             "id": "472",
             "relationships": {
@@ -263,7 +263,7 @@ To re-check a web page, send a `PATCH` request to `/api/v1/reports/$REPORT_ID/we
 
 ## Delete a Web Page
 
-Deleting web pages from a report is a Pro feature. It removes the web page, and updates the excluded URLs list for that report. If the report has no more web pages left, it will itself be deleted as well.
+Deleting web pages from a report is a **Pro** feature. It removes the web page, and updates the excluded URLs list for that report. If the report has no more web pages left, it will itself be deleted as well.
 
 To delete an individual Web Page from a report, send a `DELETE` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
 

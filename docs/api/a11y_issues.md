@@ -1,4 +1,4 @@
-# Accessibility Issues
+# Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 An Accessibility issue corresponds to an issue found on a given web page when being checked by the A11Y checker.
 
@@ -120,7 +120,7 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                         "section508.22.a"
                     ],
                     "updated_at": "2020-02-28T13:01:35",
-                    "url": "http://validationhell.com/"
+                    "url": "https://dummy.rocketvalidator.com/"
                 },
                 "id": "6843979",
                 "relationships": {
@@ -154,7 +154,7 @@ To list the Accessibility issues found on a web page, send a `GET` request to `/
                         "wcag131"
                     ],
                     "updated_at": "2020-02-28T13:01:35",
-                    "url": "http://validationhell.com/"
+                    "url": "https://dummy.rocketvalidator.com/"
                 },
                 "id": "6843982",
                 "relationships": {

@@ -1,4 +1,4 @@
-# Mutings
+# Mutings <sup class="badge-pro">Pro</sup>
 
 A Muting represents a rule you've defined to automatically mute certain issues on your reports. <a href="/muting">Read more about Muting Rules</a>.
 
@@ -31,7 +31,7 @@ Think of a Muting as a rule that defines a matching URL and issue message - when
         "comment": "Non standard but it's a Safari extension",
         "id": 868,
         "message_match": "Attribute “autocorrect” not allowed on element “input” at this point.",
-        "url_match": "http://validationhell.com/"
+        "url_match": "https://dummy.rocketvalidator.com/"
       },
       "id": "868",
       "type": "muting"
@@ -52,7 +52,7 @@ To list all your Mutings in your account, send a `GET` request to `/api/v1/mutin
             "comment": "Non standard but needed for Safari mobile.",
             "id": 867,
             "message_match": "Attribute “autocomplete” is only allowed when the input type is",
-            "url_match": "http://validationhell.com/"
+            "url_match": "https://dummy.rocketvalidator.com/"
           },
           "id": "867",
           "type": "muting"
@@ -108,7 +108,7 @@ To retrieve an individual Muting in your account, send a `GET` request to `/api/
           "comment": "Non standard but needed for Safari mobile.",
           "id": 867,
           "message_match": "Attribute “autocomplete” is only allowed when the input type is",
-          "url_match": "http://validationhell.com/"
+          "url_match": "https://dummy.rocketvalidator.com/"
         },
         "id": "867",
         "type": "muting"

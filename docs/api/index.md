@@ -207,10 +207,6 @@ Send a `POST` request to `/api/v1/reports` with a JSON payload including the par
 
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
-* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
-* `deep_crawl`. Boolean to enable deep link crawling. Optional, defaults to true.
-* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 
 !!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
 
@@ -218,12 +214,8 @@ Send a `POST` request to `/api/v1/reports` with a JSON payload including the par
     {
         "data": {
             "attributes": {
-                "starting_url": "http://validationhell.com",
-                "max_pages": 100,
-                "rate_limit": 3,
-                "deep_crawl": true,
-                "perform_html_checks": true,
-                "perform_a11y_checks": true
+                "starting_url": "https://dummy.rocketvalidator.com",
+                "max_pages": 100
             }
         }
     }
@@ -251,7 +243,7 @@ Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
 
 Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`.
 
-## Accessibility Issues
+## Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 ### List A11Y issues on a Web Page
 
@@ -271,7 +263,7 @@ Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_i
 
 Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
 
-## Common Accessibility Issues
+## Common Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 ### List Common A11Y issues on a Report
 
@@ -291,7 +283,7 @@ Send a `GET` request to `/api/v1/reports/$REPORT_ID/common_html_issues`.
 
 Send a GET requet to `/api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
 
-## Mutings
+## Mutings <sup class="badge-pro">Pro</sup>
 
 ### List your Mutings
 
@@ -301,7 +293,7 @@ Send a `GET` request to `/api/v1/mutings`.
 
 Send a `GET` request to `/api/v1/mutings/$MUTING_ID`.
 
-## Schedules
+## Schedules <sup class="badge-pro">Pro</sup>
 
 ### List your Schedules
 
@@ -311,7 +303,7 @@ Send a `GET` request to `/api/v1/schedules`.
 
 Send a `GET` request to `/api/v1/schedules/$SCHEDULE_ID`.
 
-## Devices
+## Devices <sup class="badge-pro">Pro</sup>
 
 ### List all Devices
 
@@ -321,7 +313,7 @@ Send a `GET` request to `/api/v1/devices`.
 
 Send a `GET` request to `/api/v1/devices/$DEVICE_ID`.
 
-## Guest Accounts
+## Guest Accounts <sup class="badge-pro">Pro</sup>
 
 ### List all your Guest Accounts
 

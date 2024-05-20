@@ -1,4 +1,4 @@
-# Common Accessibility Issues
+# Common Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 Typically, the same kind of issue affects many Web Pages on a given Report. For example, the issue <code>"Form elements must have labels"</code> may affect many Web Pages on the same report.
 

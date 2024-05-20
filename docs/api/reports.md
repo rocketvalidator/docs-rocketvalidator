@@ -2,8 +2,6 @@
 
 A Report represents a site validation report you've created in Rocket Validator. It contains a list of web pages that were found from the starting url, and the HTML and accessibility issues that were found.
 
-Some features are only available with a <a href="https://rocketvalidator.com/pricing">Pro subscription</a>, and are be marked with a  <sup class="badge-pro">Pro</sup> badge next to it.
-
 ## Attributes
 
 <dl>
@@ -146,10 +144,10 @@ Some features are only available with a <a href="https://rocketvalidator.com/pri
     			"perform_a11y_checks": true,
     			"perform_html_checks": true,
     			"rate_limit": 3,
-    			"starting_url": "http://validationhell.com/",
+    			"starting_url": "https://dummy.rocketvalidator.com/",
                 "initial_urls": [
-                    "https://validationhell.com/category/engineering/",
-                    "https://validationhell.com/category/open-source/"
+                    "https://dummy.rocketvalidator.com/category/engineering/",
+                    "https://dummy.rocketvalidator.com/category/open-source/"
                 ],
                 "exclusions": [
                     "/news",
@@ -209,7 +207,7 @@ The next example shows how to form the body payload with the Report attributes.
     {
         "data": {
             "attributes": {
-                "starting_url": "http://validationhell.com",
+                "starting_url": "https://dummy.rocketvalidator.com",
                 "max_pages": 100,
                 "rate_limit": 3,
                 "perform_html_checks": true,
@@ -284,10 +282,10 @@ To show an individual Report, send a `GET` request to `/api/v1/reports/$REPORT_I
     			"perform_a11y_checks": true,
     			"perform_html_checks": true,
     			"rate_limit": 3,
-    			"starting_url": "http://validationhell.com/",
+    			"starting_url": "https://dummy.rocketvalidator.com/",
                 "initial_urls": [
-                    "https://validationhell.com/category/engineering/",
-                    "https://validationhell.com/category/open-source/"
+                    "https://dummy.rocketvalidator.com/category/engineering/",
+                    "https://dummy.rocketvalidator.com/category/open-source/"
                 ],
                 "exclusions": [
                     "/news",
@@ -370,10 +368,10 @@ To list all Reports in your account, send a `GET` request to `/api/v1/reports`.
                     "perform_a11y_checks": true,
                     "perform_html_checks": true,
                     "rate_limit": 3,
-                    "starting_url": "http://validationhell.com/",
+                    "starting_url": "https://dummy.rocketvalidator.com/",
                     "initial_urls": [
-                        "https://validationhell.com/category/engineering/",
-                        "https://validationhell.com/category/open-source/"
+                        "https://dummy.rocketvalidator.com/category/engineering/",
+                        "https://dummy.rocketvalidator.com/category/open-source/"
                     ],
                     "exclusions": [
                         "/news",

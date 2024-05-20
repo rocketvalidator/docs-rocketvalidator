@@ -95,3 +95,11 @@ sup.badge-pro {
   padding: 2px 3px;
   border-radius: 5px;
 }
+
+h1 sup.badge-pro {
+  font-size: 0.6em;
+}
+
+h2 sup.badge-pro {
+  font-size: 0.6em;
+}

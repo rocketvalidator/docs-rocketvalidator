@@ -1,4 +1,4 @@
-# Devices
+# Devices <sup class="badge-pro">Pro</sup>
 
 <a href="device-viewport-emulation">Device Viewport Emulation</a> is a Rocket Validator Pro feature that you can use so simulate a device viewport in your site validation reports.
 
