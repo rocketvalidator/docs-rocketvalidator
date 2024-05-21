@@ -95,7 +95,7 @@ To list the Common Accessibility issues found on a report, send a `GET` request 
 
 ## Retrieve a Common Accessibility Issue
 
-To retrieve a Common HTML Issue on a given Report, send a GET request to `/api/v1/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
+To retrieve a Common Accessibility Issue on a given Report, send a GET request to `/api/v1/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
 
 !!! example "Example: retrieve a Common Accessibility issue on a report"
 
