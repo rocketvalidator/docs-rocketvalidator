@@ -62,7 +62,7 @@ A Report represents a site validation report you've created in Rocket Validator.
               <dt>Status</dt>
               <dd>Accessibility checks status, showing the number of checks <code>pending</code>, <code>checked</code> and <code>failed</code>.</dd>
               <dt>Issues</dt>
-              <dd>Counters for the number of Accessibility <code>errors</code> and <code>warnings</code>. Also includes the number of issues per each <code>severity</code> level (<code>minor</code>, <code>moderate</code>, <code>serious</code> and <code>critical</code>, ). This sums the number of Accessibility issues on all the web pages for a particular report.</dd>
+              <dd>Counters for the number of Accessibility <code>errors</code> and <code>warnings</code>. Also includes the number of issues per each <code>severity</code> level (<code>minor</code>, <code>moderate</code>, <code>serious</code> and <code>critical</code>). This sums the number of Accessibility issues on all the web pages for a particular report.</dd>
             </dl>
         </dd>
     </dl>

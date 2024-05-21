@@ -15,13 +15,21 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
   <dd>URL of the web page that links to this web page. That is, where the Spider found first about this Web Page.</dd>
 
   <dt>HTML Check</dt>
-  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
+  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes the number of <code>errors</code> and <code>warnings</code>, and the <code>status</code> of the check.</dd>
 
   <dt>A11y Check <sup class="badge-pro">Pro</sup></dt>
-  <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
+  <dd>Holds the result of the accessibility check on that web page, if it was enabled.
+  Include the number of accessibility <code>errors</code> and <code>warnings</code>. Also includes the number of issues per each <code>severity</code> level (<code>minor</code>, <code>moderate</code>, <code>serious</code> and <code>critical</code>), and the <code>status</code> of the check.</dd>
 
   <dt>Status</dt>
-  <dd>Checking status for the web page, depending on the status of the HTML and A11Y checks. If both are `pending`, the status will also be `pending`. If one is `pending` and the other is `checked`, it will be `checking`. If any check is failed, the status will be `failed`. If both checks are in `checked`, the status will be `checked`.</dd>
+  <dd>Checking status for the web page, depending on the status of the HTML and A11Y checks:
+   <ul>
+     <li>If both are <code>pending</code>, the status will also be <code>pending</code>.</li>
+     <li>If one is <code>pending</code> and the other is <code>checked</code>, it will be <code>checking</code>.</li>
+     <li>If any check is <code>failed</code>, the status will be <code>failed</code>.</li>
+     <li>If both checks are <code>checked</code>, the status will be <code>checked</code>.</li>
+    </ul>
+  </dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the web page was created.</dd>
@@ -52,189 +60,51 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
 
     ```json
     {
-      "attributes": {
-          "a11y_check": {
-              "errors": 9,
-              "status": "checked",
-              "warnings": 1
-          },
-          "html_check": {
-              "errors": 78,
-              "status": "checked",
-              "warnings": 86
-          },
-          "id": 2884097,
-          "inserted_at": "2020-04-02T12:44:43",
-          "updated_at": "2020-04-02T12:44:50",
-          "last_checked_at": "2020-04-02T12:44:50",
-          "status": "checked",
-          "linked_from": "https://example.com/",
-          "url": "https://example.com/about"
-      },
-      "id": "2884097",
-      "relationships": {
-          "a11y_issues": {
-              "links": {
-                  "related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097/a11y_issues"
-              }
-          },
-          "html_issues": {
-              "links": {
-                  "related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097/html_issues"
-              }
-          },
-          "report": {
-              "links": {
-                  "related": "https://rocketvalidator.com/api/v1/reports/56b6"
-              }
-          }
-      },
-      "type": "web_page"
-    }
-    ```
-
-## List Web Pages on a Report
-
-To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
-
-!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/9314c/web_pages"
-
-    ```json
-    {
-        "data": [
-            {
-                "attributes": {
-                    "a11y_check": {
-                        "errors": 6,
-                        "status": "checked",
-                        "warnings": 0
-                    },
-                    "html_check": {
-                        "errors": 19,
-                        "status": "checked",
-                        "warnings": 2
-                    },
-                    "id": 472,
-                    "inserted_at": "2020-02-28T13:01:32",
-                    "updated_at": "2020-02-28T13:01:35",
-                    "last_checked_at": "2020-02-28T13:01:35",
-                    "status": "checked",
-                    "linked_from": "https://dummy.rocketvalidator.com/",
-                    "url": "https://dummy.rocketvalidator.com/"
-                },
-                "id": "472",
-                "relationships": {
-                    "a11y_issues": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/a11y_issues"
-                        }
-                    },
-                    "html_issues": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/html_issues"
-                        }
-                    },
-                    "report": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
-                        }
-                    }
-                },
-                "type": "web_page"
-            },
-            {
-                "attributes": {
-                    "a11y_check": {
-                        "errors": 6,
-                        "status": "checked",
-                        "warnings": 0
-                    },
-                    "html_check": {
-                        "errors": 16,
-                        "status": "checked",
-                        "warnings": 2
-                    },
-                    "id": 473,
-                    "inserted_at": "2020-02-28T13:01:33",
-                    "last_checked_at": "2020-02-28T13:01:35",
-                    "status": "checked",
-                    "linked_from": "https://dummy.rocketvalidator.com/",
-                    "updated_at": "2020-02-28T13:01:36",
-                    "url": "https://dummy.rocketvalidator.com/pages/agent"
-                },
-                "id": "473",
-                "relationships": {
-                    "a11y_issues": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/473/a11y_issues"
-                        }
-                    },
-                    "html_issues": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/473/html_issues"
-                        }
-                    },
-                    "report": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
-                        }
-                    }
-                },
-                "type": "web_page"
-            }
-        ],
-        "jsonapi": {
-            "version": "1.0"
-        },
-        "links": {
-            "self": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages?page[number]=1&page[size]=25"
-        }
-    }
-    ```
-
-## Retrieve a Web Page
-
-To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
-
-!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
-
-    ```json
-    {
         "data": {
             "attributes": {
                 "a11y_check": {
-                    "errors": 6,
+                    "errors": 5,
+                    "severity": {
+                        "critical": 0,
+                        "minor": 0,
+                        "moderate": 0,
+                        "serious": 5,
+                        "total": {
+                            "errors": 5,
+                            "total": 5,
+                            "warnings": 0
+                        }
+                    },
                     "status": "checked",
                     "warnings": 0
                 },
                 "html_check": {
-                    "errors": 19,
+                    "errors": 2,
                     "status": "checked",
-                    "warnings": 2
+                    "warnings": 14
                 },
-                "id": 472,
-                "inserted_at": "2020-02-28T13:01:32",
-                "updated_at": "2020-02-28T13:01:35",
-                "last_checked_at": "2020-02-28T13:01:35",
+                "inserted_at": "2024-05-14T13:54:31",
+                "last_checked_at": "2024-05-14T13:54:39",
+                "linked_from": "https://dummy.rocketvalidator.com",
                 "status": "checked",
-                "linked_from": "https://dummy.rocketvalidator.com/",
-                "url": "https://dummy.rocketvalidator.com/"
+                "updated_at": "2024-05-14T13:54:39",
+                "url": "https://dummy.rocketvalidator.com/about/"
             },
-            "id": "472",
+            "id": "8683545",
             "relationships": {
                 "a11y_issues": {
                     "links": {
-                        "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/a11y_issues"
+                        "related": "http://rocketapi.dev:4000/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/a11y_issues"
                     }
                 },
                 "html_issues": {
                     "links": {
-                        "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/html_issues"
+                        "related": "http://rocketapi.dev:4000/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/html_issues"
                     }
                 },
                 "report": {
                     "links": {
-                        "related": "https://rocketvalidator.com/api/v1/reports/9314c"
+                        "related": "http://rocketapi.dev:4000/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142"
                     }
                 }
             },
@@ -244,7 +114,53 @@ To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT
             "version": "1.0"
         }
     }
+  
     ```
+
+## List Web Pages on a Report
+
+To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
+
+!!! example "Example: list web pages on a Report"
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages
+    ```
+
+### Filtering by URL
+
+To include only the web pages for a given `url`, use the `filter[url]` option.
+
+!!! example "Example: filter web pages where url contains "about""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages?filter[url]=about
+    ```
+
+### Filtering by HTML issue
+
+To include only the web pages containing a given HTML issue, pass the HTML issue ID via the `filter[common_html_issue_id]` option.
+
+!!! example "Example: filter web pages with given HTML issue id"
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$HTML_ISSUE_ID
+    ```
+
+### Filtering by A11Y issue
+
+To include only the web pages containing a given accessibility issue, pass the A11Y issue ID via the `filter[common_a11y_issue_id]` option.
+
+!!! example "Example: filter web pages with given A11Y issue id"
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$A11Y_ISSUE_ID
+    ```
+
+## Retrieve a Web Page
+
+To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
+
 ## Recheck a Web Page
 
 To re-check a web page, send a `PATCH` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID` with a payload to set the `status` to `pending`. Any other payload will be rejected.
@@ -263,7 +179,7 @@ To re-check a web page, send a `PATCH` request to `/api/v1/reports/$REPORT_ID/we
 
 ## Delete a Web Page
 
-Deleting web pages from a report is a **Pro** feature. It removes the web page, and updates the excluded URLs list for that report. If the report has no more web pages left, it will itself be deleted as well.
+Deleting web pages from a report is a <sup class="badge-pro">Pro</sup> feature. It removes the web page, and updates the excluded URLs list for that report. If the report has no more web pages left, it will itself be deleted as well.
 
 To delete an individual Web Page from a report, send a `DELETE` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
 
