@@ -32,6 +32,9 @@ A Report represents a site validation report you've created in Rocket Validator.
   <dt>Deep Crawl <sup class="badge-pro">Pro</sup></dt>
   <dd>Boolean to indicate whether deep crawling was enabled or not. If it's enabled, the Spider witll recursively include more linked pages from the pages it finds, until the Max Pages limit is reached.</dd>
 
+  <dt>Dynamic Crawler <sup class="badge-pro">Pro</sup></dt>
+  <dd>Boolean to indicate whether Dynamic Crawler should be used instead of the default static crawler. The Dynamic Crawler renders each web page found using a headless browser, so it's able to find links in JavaScript-powered web pages.</dd>
+
   <dt>Perform HTML Checks</dt>
   <dd>Boolean to indicate whether or not HTML checks will be performed on the web pages found.</dd>
 
@@ -233,6 +236,7 @@ The following attributes are only available for users with a Pro or Enterprise s
 * `initial_urls`. Newline-separated list of URLs.
 * `exclusions`. Newline-separated list of paths.
 * `device_id`. Id of the device to be used for viewport emulation. Check the <a href="/api/devices#list-of-devices">device list</a> to see the available devices.
+* `device_rotated`. Boolean to indicate the emulated device should be rotated. Defaults to false.
 
 ### Examples
 
@@ -307,7 +311,7 @@ To include only the Reports for a given `starting_url`, use the `filter[url]` op
 
 For example:
 
-`GET /api/v1/reports/$REPORT_ID?filter[url]=dummy.rocketvalidator.com`
+`GET /api/v1/reports?filter[url]=dummy.rocketvalidator.com`
 
 ### Filtering by tag
 
@@ -318,7 +322,7 @@ To include only the Reports for a given `tags` combination, use the `filter[tags
 
 For example, this will return all reports tagged with any of `dev` or `dummy`
 
-`GET /api/v1/reports/$REPORT_ID?filter[tags][mode]=any&filter[tags][list]=dev,dummy`
+`GET /api/v1/reports?filter[tags][mode]=any&filter[tags][list]=dev,dummy`
 
 ### Filtering by schedule
 
@@ -326,7 +330,7 @@ To show the reports created by a <a href="/api/schedules">Schedule</a> <sup clas
 
 For example:
 
-`GET /api/v1/reports/$REPORT_ID?filter[schedule_id]=$SCHEDULE_ID`
+`GET /api/v1/reports?filter[schedule_id]=$SCHEDULE_ID`
 
 ### Filtering by Guest Accounts
 
