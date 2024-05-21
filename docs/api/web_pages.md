@@ -94,17 +94,17 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
             "relationships": {
                 "a11y_issues": {
                     "links": {
-                        "related": "http://rocketapi.dev:4000/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/a11y_issues"
+                        "related": "https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/a11y_issues"
                     }
                 },
                 "html_issues": {
                     "links": {
-                        "related": "http://rocketapi.dev:4000/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/html_issues"
+                        "related": "https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/html_issues"
                     }
                 },
                 "report": {
                     "links": {
-                        "related": "http://rocketapi.dev:4000/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142"
+                        "related": "https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142"
                     }
                 }
             },
