@@ -213,7 +213,7 @@ To create a Schedule, send a `POST` request to `/api/v1/schedules`, with a JSON 
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
 * `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
+* `perform_a11y_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 * `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
 * `active`. Boolean to enable the schedule. Optional, defaults to true.
 * `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is optional, which has to be an integer from 1 to 28 and defaults to 1. If instead `week` is used, then an additional `weekday` key is optional, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday` that defaults to `monday`.
@@ -252,7 +252,7 @@ To update an existing Schedule, send a `PATCH` request to `/api/v1/schedules/$sc
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 100.
 * `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
+* `perform_a11y_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 * `deep_crawl`. Boolean to enable deep crawling. Optional, defaults to true.
 * `active`. Boolean to enable the schedule. Optional, defaults to true.
 * `periodicity`. Map with the options for the periodicity. Requires an `every` key which can be `deploy`, `month`, `week` or `day`. If `month` is used, an additional key `monthday` is optional, which has to be an integer from 1 to 28 and defaults to 1. If instead `week` is used, then an additional `weekday` key is optional, as a string from `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday` or `sunday` that defaults to `monday`.
