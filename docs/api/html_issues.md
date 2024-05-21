@@ -43,41 +43,68 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
     ```json
     {
-    	"attributes": {
-    		"id": 64398238,
-    		"inserted_at": "2020-04-02T12:44:45",
-    		"issue_sub_type": null,
-    		"issue_type": "error",
-    		"message": "CSS: “left”: “none” is not a “left” value.",
-            "html": [
-                {
-                    "coordinates": {
-                    "first_column": null,
-                    "first_line": 210,
-                    "hilite_length": 1,
-                    "hilite_start": 15,
-                    "last_column": 22,
-                    "last_line": 210
+        "data": {
+            "attributes": {
+                "how_many": 3,
+                "html": [
+                    {
+                        "coordinates": {
+                            "first_column": null,
+                            "first_line": 210,
+                            "hilite_length": 1,
+                            "hilite_start": 15,
+                            "last_column": 22,
+                            "last_line": 210
+                        },
+                        "extract": "=\"game-news\" id=\"game-news\" >G"
                     },
-                    "extract": "=\"game-news\" id=\"game-news\" >G"
+                    {
+                        "coordinates": {
+                            "first_column": null,
+                            "first_line": 211,
+                            "hilite_length": 1,
+                            "hilite_start": 15,
+                            "last_column": 117,
+                            "last_line": 211
+                        },
+                        "extract": "f0%9f%8d%93\" id=\"madelines-bac"
+                    },
+                    {
+                        "coordinates": {
+                            "first_column": null,
+                            "first_line": 261,
+                            "hilite_length": 1,
+                            "hilite_start": 15,
+                            "last_column": 48,
+                            "last_line": 261
+                        },
+                        "extract": "f0%9f%92%a8\" id=\"driftmania-%f"
+                    }
+                ],
+                "inserted_at": "2024-03-05T12:44:34",
+                "issue_sub_type": null,
+                "issue_type": "error",
+                "message": "Duplicate attribute “id”.",
+                "updated_at": "2024-03-05T12:44:34"
+            },
+            "id": "144375908",
+            "relationships": {
+                "report": {
+                    "links": {
+                        "related": "https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576"
+                    }
+                },
+                "web_page": {
+                    "links": {
+                        "related": "https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576/web_pages/8413311"
+                    }
                 }
-            ],
-    		"updated_at": "2020-04-02T12:44:45"
-    	},
-    	"id": "64398238",
-    	"relationships": {
-    		"report": {
-    			"links": {
-    				"related": "https://rocketvalidator.com/api/v1/reports/56b6"
-    			}
-    		},
-    		"web_page": {
-    			"links": {
-    				"related": "https://rocketvalidator.com/api/v1/reports/56b6/web_pages/2884097"
-    			}
-    		}
-    	},
-    	"type": "html_issue"
+            },
+            "type": "html_issue"
+        },
+        "jsonapi": {
+            "version": "1.0"
+        }
     }
     ```
 
@@ -85,87 +112,28 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
 To list the HTML issues found on a web page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues"
+!!! example "Example: list the HTML issues found on a web page"
 
-    ```json
-    {
-        "data": [
-            {
-                "attributes": {
-                    "id": 59734815,
-                    "inserted_at": "2020-02-28T13:01:34",
-                    "message": "Obsolete doctype. Expected “<!DOCTYPE html>”.",
-                    "sub_type": null,
-                    "type": "error",
-                    "html": [
-                        {
-                            "coordinates": {
-                            "first_column": null,
-                            "first_line": 210,
-                            "hilite_length": 1,
-                            "hilite_start": 15,
-                            "last_column": 22,
-                            "last_line": 210
-                            },
-                            "extract": "=\"game-news\" id=\"game-news\" >G"
-                        }
-                    ],
-                    "updated_at": "2020-02-28T13:01:34"
-                },
-                "id": "59734815",
-                "relationships": {
-                    "report": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
-                        }
-                    },
-                    "web_page": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472"
-                        }
-                    }
-                },
-                "type": "html_issue"
-            },
-            {
-                "attributes": {
-                    "coordinates": {
-                        "first_column": 17,
-                        "first_line": 21,
-                        "hilite_length": 3,
-                        "hilite_start": 10,
-                        "last_column": 19,
-                        "last_line": 21
-                    },
-                    "extract": "  pading: 4px;\n    ",
-                    "id": 59734817,
-                    "inserted_at": "2020-02-28T13:01:34",
-                    "message": "CSS: “pading”: Property “pading” doesn't exist.",
-                    "sub_type": null,
-                    "type": "error",
-                    "updated_at": "2020-02-28T13:01:34"
-                },
-                "id": "59734817",
-                "relationships": {
-                    "report": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c"
-                        }
-                    },
-                    "web_page": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472"
-                        }
-                    }
-                },
-                "type": "html_issue"
-            }
-        ],
-        "jsonapi": {
-            "version": "1.0"
-        },
-        "links": {
-            "self": "https://rocketvalidator.com/api/v1/reports/9314c/web_pages/472/html_issues?page[number]=1&page[size]=25"
-        }
-    }
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues
+    ```
+
+### Filter by message
+
+To include only the HTML issues of a given kind, use the `filter[message]` option.
+
+!!! example "Example: filter HTML issues for a web page about "table""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues?filter[message]=table
+    ```
+
+## Retrieve an HTML issue
+
+To show an individual HTML issue on a web page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues/$HTML_ISSUE_ID`
+
+!!! example "Example: retrieve HTML issue for a web page"
+
+    ```
+    GET `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$HTML_ISSUE_ID
     ```
