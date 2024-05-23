@@ -29,7 +29,7 @@ A Common Accessibility Issue represents a given Accessibility Issue that is comm
   <dd>Numerical representation of the Impact.</dd>
 
   <dt>Tags</dt>
-  <dd>List of Accessibility guidelines that relate to this issue.</dd>
+  <dd>Comma-separated list of tags to categorize this issue.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the Accessibility Issue was created.</dd>
@@ -92,6 +92,29 @@ To list the Common Accessibility issues found on a report, send a `GET` request 
 	```
 	GET /api/v1/reports/$REPORT_ID/common_a11y_issues
 	```
+
+### Filtering by help
+
+To include only the accessibility issues of a given kind, use the `filter[help]` option.
+
+!!! example "Example: filter A11Y issues for a report about "landmark""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/common_a11y_issues?filter[help]=landmark
+    ```
+
+### Filtering by tag
+
+To include only the issues for a given `tags` combination, use the `filter[tags]` options:
+
+* `filter[tags][mode]` setting the tag combination mode, which can be `any`, `all` or `none`.
+* `filter[tags][list]` including a comma-separated list of tags.
+
+!!! example "Example: filter A11Y issues for a report tagged with "wcag2a""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/common_a11y_issues?filter[tags][mode]=any&filter[tags][list]=wcag2a
+    ```
 
 ## Retrieve a Common Accessibility Issue
 

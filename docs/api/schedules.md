@@ -213,9 +213,11 @@ To list all Schedules in your account, send a `GET` request to `/api/v1/schedule
 
 To include only the Schedules for a given `starting_url`, use the `filter[url]` option.
 
-For example:
+!!! example "Example: return all schedules with url containing "dummy.rocketvalidator.com""
 
-`GET /api/v1/schedules?filter[url]=dummy.rocketvalidator.com`
+    ```
+    GET /api/v1/schedules?filter[url]=dummy.rocketvalidator.com
+    ```
 
 ### Filtering by tag
 
@@ -224,9 +226,11 @@ To include only the Schedules for a given `tags` combination, use the `filter[ta
 * `filter[tags][mode]` setting the tag combination mode, which can be `any`, `all` or `none`.
 * `filter[tags][list]` including a comma-separated list of tags.
 
-For example, this will return all schedules tagged with any of `dev` or `dummy`
+!!! example "Example: return all schedules tagged with any of "dev" or "dummy""
 
-`GET /api/v1/schedules?filter[tags][mode]=any&filter[tags][list]=dev,dummy`
+    ```
+    GET /api/v1/schedules?filter[tags][mode]=any&filter[tags][list]=dev,dummy
+    ```
 
 ## Filter Reports by Schedule
 

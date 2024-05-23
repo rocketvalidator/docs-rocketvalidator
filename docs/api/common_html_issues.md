@@ -22,6 +22,9 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
   <dt>Message</dt>
   <dd>Brief description of the issue.</dd>
 
+  <dt>Tags</dt>
+  <dd>Comma-separated list of tags to categorize this issue.</dd>
+
   <dt>How Many</dt>
   <dd>Total times this issue has been found in the web pages for the report.</dd>
 </dl>
@@ -45,7 +48,8 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
 					"issue_sub_type": null,
 					"issue_type": "error",
 					"message": "Duplicate attribute “id”.",
-					"report_id": "72eecced-8472-41fc-b194-59b7496c7576"
+					"report_id": "72eecced-8472-41fc-b194-59b7496c7576",
+					"tags": ["duplicate attribute"],
 				},
 				"id": "144375908",
 				"relationships": {
@@ -72,6 +76,29 @@ To list the Common HTML issues found on a report, send a `GET` request to `/api/
 	```
 	GET /api/v1/reports/$REPORT_ID/common_html_issues
 	```
+
+### Filtering by message
+
+To include only the HTML issues of a given kind, use the `filter[message]` option.
+
+!!! example "Example: filter HTML issues for a report about "table""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/common_html_issues?filter[message]=table
+    ```
+
+### Filtering by tag
+
+To include only the issues for a given `tags` combination, use the `filter[tags]` options:
+
+* `filter[tags][mode]` setting the tag combination mode, which can be `any`, `all` or `none`.
+* `filter[tags][list]` including a comma-separated list of tags.
+
+!!! example "Example: filter HTML issues for a report tagged with "label""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/common_html_issues?filter[tags][mode]=any&filter[tags][list]=label
+    ```
 
 ## Retrieve a Common HTML Issue
 

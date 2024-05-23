@@ -20,6 +20,9 @@ An HTML issue corresponds to an issue found on a given web page when being check
   <dt>HTML</dt>
   <dd>Code snippets showing the affected elements, each one including an extract and its coordinates.</dd>
 
+  <dt>Tags</dt>
+  <dd>Comma-separated list of tags to categorize this issue.</dd>
+
   <dt>Inserted At</dt>
   <dd>Timestamp when the HTML Issue was created.</dd>
 
@@ -81,6 +84,7 @@ An HTML issue corresponds to an issue found on a given web page when being check
                         "extract": "f0%9f%92%a8\" id=\"driftmania-%f"
                     }
                 ],
+                "tags": ["duplicate attribute"],
                 "inserted_at": "2024-03-05T12:44:34",
                 "issue_sub_type": null,
                 "issue_type": "error",
@@ -118,7 +122,7 @@ To list the HTML issues found on a web page, send a `GET` request to `/api/v1/re
     GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues
     ```
 
-### Filter by message
+### Filtering by message
 
 To include only the HTML issues of a given kind, use the `filter[message]` option.
 
@@ -126,6 +130,19 @@ To include only the HTML issues of a given kind, use the `filter[message]` optio
 
     ```
     GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues?filter[message]=table
+    ```
+
+### Filtering by tag
+
+To include only the issues for a given `tags` combination, use the `filter[tags]` options:
+
+* `filter[tags][mode]` setting the tag combination mode, which can be `any`, `all` or `none`.
+* `filter[tags][list]` including a comma-separated list of tags.
+
+!!! example "Example: filter HTML issues for a web page tagged with "label""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues?filter[tags][mode]=any&filter[tags][list]=label
     ```
 
 ## Retrieve an HTML issue
