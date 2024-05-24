@@ -103,3 +103,8 @@ h1 sup.badge-pro {
 h2 sup.badge-pro {
   font-size: 0.6em;
 }
+
+/* Blockquote */
+blockquote {
+  border-left-color: green !important;
+}
