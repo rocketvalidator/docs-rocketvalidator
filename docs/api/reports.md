@@ -242,7 +242,7 @@ The following attributes are only available for users with a Pro or Enterprise s
 
 The next example shows how to create a report for a given starting URL. This will use the defaults of 10 web pages, checked only for HTML issues:
 
-!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
+!!! example "Example: POST /api/v1/reports"
 
     ```json
     {
@@ -256,7 +256,7 @@ The next example shows how to create a report for a given starting URL. This wil
 
 In the following example we're using the advanced options to create a 1,000 web pages report, with HTML and Accessibility checks, on a rotated iPhone 12/13 Pro device, tagged as `dev`, `dummmy`.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
+!!! example "Example: POST /api/v1/reports"
 
     ```json
     {
@@ -280,7 +280,7 @@ Rocket Validator will return the created Report with a status of a `201 Created`
 
 If the Report can't be created, a `422 Unprocessable Entity` status will be returned, containing details about the the errors found.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
+!!! example "Example: POST /api/v1/reports"
 
     ```json
     {
@@ -299,11 +299,11 @@ If the Report can't be created, a `422 Unprocessable Entity` status will be retu
 
 ## Retrieve a Report
 
-To show an individual Report, send a `GET` request to `/api/v1/reports/$REPORT_ID`.
+> `GET /api/v1/reports/$REPORT_ID`
 
 ## List your Reports
 
-To list all Reports in your account, send a `GET` request to `/api/v1/reports`.
+> `GET /api/v1/reports`
 
 ### Filtering by URL
 
@@ -311,7 +311,7 @@ To include only the Reports for a given `starting_url`, use the `filter[url]` op
 
 For example:
 
-`GET /api/v1/reports?filter[url]=dummy.rocketvalidator.com`
+> `GET /api/v1/reports?filter[url]=dummy.rocketvalidator.com`
 
 ### Filtering by tag
 
@@ -322,7 +322,7 @@ To include only the Reports for a given `tags` combination, use the `filter[tags
 
 For example, this will return all reports tagged with any of `dev` or `dummy`
 
-`GET /api/v1/reports?filter[tags][mode]=any&filter[tags][list]=dev,dummy`
+> `GET /api/v1/reports?filter[tags][mode]=any&filter[tags][list]=dev,dummy`
 
 ### Filtering by schedule
 
@@ -330,7 +330,7 @@ To show the reports created by a <a href="/api/schedules">Schedule</a> <sup clas
 
 For example:
 
-`GET /api/v1/reports?filter[schedule_id]=$SCHEDULE_ID`
+> `GET /api/v1/reports?filter[schedule_id]=$SCHEDULE_ID`
 
 ### Filtering by Guest Accounts
 
@@ -364,8 +364,4 @@ You can find the token for each guest account in the [Guests](https://rocketvali
 
 To delete an individual Report from your account, send a `DELETE` request to `/api/v1/reports/$REPORT_ID`.
 
-!!! example "Example: DELETE https://rocketvalidator.com/api/v1/reports/$REPORT_ID"
-
-    ```
-    204 No Content
-    ```
+> `DELETE /api/v1/reports/$REPORT_ID`

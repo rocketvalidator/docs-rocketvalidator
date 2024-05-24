@@ -57,13 +57,13 @@ Using the Rocket Validator API you can get the complete list of available device
 
 To list all the available Devices, send a `GET` request to `/api/v1/devices`.
 
-> `GET https://rocketvalidator.com/api/v1/devices`
+> `GET /api/v1/devices`
 
 ## Retrieve a Device
 
 To retrieve an individual Device, send a `GET` request to `/api/v1/devices/$DEVICE_ID`.
 
-> `GET https://rocketvalidator.com/api/v1/devices/$DEVICE_ID`
+> `GET /api/v1/devices/$DEVICE_ID`
 
 ## Default Device
 
@@ -71,7 +71,7 @@ When a report is run without specifying a device, the default device is used.
 
 To get the properties of the default device, send a `GET` request to `/api/v1/devices/default`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v1/devices/default"
+!!! example "Example: GET /api/v1/devices/default"
 
     ```json
     {

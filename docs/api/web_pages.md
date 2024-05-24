@@ -121,51 +121,37 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
 
 To list the web pages on a Report, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
 
-!!! example "Example: list web pages on a Report"
-
-    ```
-    GET /api/v1/reports/$REPORT_ID/web_pages
-    ```
+> `GET /api/v1/reports/$REPORT_ID/web_pages`
 
 ### Filtering by URL
 
 To include only the web pages for a given `url`, use the `filter[url]` option.
 
-!!! example "Example: filter web pages where url contains "about""
-
-    ```
-    GET /api/v1/reports/$REPORT_ID/web_pages?filter[url]=about
-    ```
+> `GET /api/v1/reports/$REPORT_ID/web_pages?filter[url]=about`
 
 ### Filtering by HTML issue
 
 To include only the web pages containing a given HTML issue, pass the HTML issue ID via the `filter[common_html_issue_id]` option.
 
-!!! example "Example: filter web pages with given HTML issue id"
-
-    ```
-    GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$HTML_ISSUE_ID
-    ```
+> `GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$HTML_ISSUE_ID`
 
 ### Filtering by A11Y issue
 
 To include only the web pages containing a given accessibility issue, pass the A11Y issue ID via the `filter[common_a11y_issue_id]` option.
 
-!!! example "Example: filter web pages with given A11Y issue id"
-
-    ```
-    GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$A11Y_ISSUE_ID
-    ```
+> `GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$A11Y_ISSUE_ID`
 
 ## Retrieve a Web Page
 
 To show an individual Web Page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
 
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`
+
 ## Recheck a Web Page
 
 To re-check a web page, send a `PATCH` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID` with a payload to set the `status` to `pending`. Any other payload will be rejected.
 
-!!! example "Example: PATCH https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
+!!! example "Example: PATCH /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
 
     ```json
     {
@@ -183,8 +169,5 @@ Deleting web pages from a report is a <sup class="badge-pro">Pro</sup> feature. 
 
 To delete an individual Web Page from a report, send a `DELETE` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`.
 
-!!! example "Example: DELETE https://rocketvalidator.com/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID"
+> `DELETE /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID`
 
-    ```
-    204 No Content
-    ```

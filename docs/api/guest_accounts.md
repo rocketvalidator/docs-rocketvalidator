@@ -64,13 +64,13 @@ Using the Rocket Validator API you can completely manage your guest accounts by 
 
 To list all your guest accounts, send a `GET` request to `/api/v1/guest_accounts`.
 
-> `GET https://rocketvalidator.com/api/v1/guest_accounts`
+> `GET /api/v1/guest_accounts`
 
 ## Retrieve a Guest Account
 
 To retrieve an individual Guest Account, send a `GET` request to `/api/v1/guest_accounts/$GUEST_ACCOUNT_ID`.
 
-> `GET https://rocketvalidator.com/api/v1/guest_accounts/$GUEST_ACCOUNT_ID`
+> `GET /api/v1/guest_accounts/$GUEST_ACCOUNT_ID`
 
 ## Create a Guest Account
 

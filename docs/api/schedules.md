@@ -161,7 +161,7 @@ To create a Schedule, send a `POST` request to `/api/v1/schedules`, with a JSON 
 
 The next example shows how to form the body payload with the Schedule attributes.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v1/schedules"
+!!! example "Example: POST /api/v1/schedules"
 
     ```json
     {
@@ -199,7 +199,7 @@ To retrieve an individual Schedule in your account, send a `GET` request to `/ap
 
 To delete an individual Schedule from your account, send a `DELETE` request to `/api/v1/schedules/$SCHEDULE_ID`.
 
-!!! example "Example: DELETE https://rocketvalidator.com/api/v1/schedules/$SCHEDULE_ID"
+!!! example "Example: DELETE /api/v1/schedules/$SCHEDULE_ID"
 
     ```
     204 No Content

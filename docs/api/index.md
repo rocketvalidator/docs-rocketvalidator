@@ -2,14 +2,22 @@
 
 The Rocket Validator API lets you manage your site validation reports and related data like schedules, mutings, devices and guest accounts sending conventional HTTP requests to a standard <a href="https://jsonapi.org/" target="_blank">JSON API</a>.
 
-!!! info "V1 Beta"
-    The Rocket Validator API is currently in public **beta** stage. The current version is `v1`.
+!!! info "Current version"
+    The Rocket Validator API is currently in version `v1`.
 
     All endpoints have the prefix:
 
     ```
     https://rocketvalidator.com/api/v1/{endpoint}
     ```
+
+    For brevity and legibility, the examples might omit the prefix, so instead of this:
+
+    > `GET https://rocketvalidator.com/api/v1/reports`
+
+    we'll use this:
+
+    > `GET /api/v1/reports`
 
 ## API Quick Start
 
@@ -208,7 +216,7 @@ Send a `POST` request to `/api/v1/reports` with a JSON payload including the par
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v1/reports"
+!!! example "Example: POST /api/v1/reports"
 
     ```json
     {
@@ -223,102 +231,102 @@ Send a `POST` request to `/api/v1/reports` with a JSON payload including the par
 
 ### List your Reports
 
-Send a `GET` request to `/api/v1/reports`.
+> `GET /api/v1/reports`
 
 ### Get a Report
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID`.
+> `GET /api/v1/reports/$REPORT_ID`
 
 ### Delete a Report
 
-Send a `DELETE` request to `/api/v1/reports/$REPORT_ID`.
+> `DELETE /api/v1/reports/$REPORT_ID`
 
 ## Web Pages
 
 ### List the Web Pages on a Report
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages`.
+>`GET /api/v1/reports/$REPORT_ID/web_pages`
 
 ### Get a Web Page on a Report
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`
 
 ## Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 ### List A11Y issues on a Web Page
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`
 
 ### Get an A11Y issue on a Web Page
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID`
 
 ## HTML Issues
 
 ### List HTML issues on a Web Page
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
 
 ### Get an HTML issue on a Web Page
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
 
 ## Common Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 ### List Common A11Y issues on a Report
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/common_a11y_issues`.
+> `GET /api/v1/reports/$REPORT_ID/common_a11y_issues`
 
 ### Get a Common A11Y issue on a Report
 
-Send a GET request to `/api/v1/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`
 
 ## Common HTML Issues
 
 ### List Common HTML issues on a Report
 
-Send a `GET` request to `/api/v1/reports/$REPORT_ID/common_html_issues`.
+> `GET /api/v1/reports/$REPORT_ID/common_html_issues`
 
 ### Get a Common HTML issue on a Report
 
-Send a GET requet to `/api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`
 
 ## Mutings <sup class="badge-pro">Pro</sup>
 
 ### List your Mutings
 
-Send a `GET` request to `/api/v1/mutings`.
+> `GET /api/v1/mutings`
 
 ### Get a Muting
 
-Send a `GET` request to `/api/v1/mutings/$MUTING_ID`.
+> `GET /api/v1/mutings/$MUTING_ID`
 
 ## Schedules <sup class="badge-pro">Pro</sup>
 
 ### List your Schedules
 
-Send a `GET` request to `/api/v1/schedules`.
+> `GET /api/v1/schedules`
 
 ### Get a Schedule
 
-Send a `GET` request to `/api/v1/schedules/$SCHEDULE_ID`.
+> `GET /api/v1/schedules/$SCHEDULE_ID`
 
 ## Devices <sup class="badge-pro">Pro</sup>
 
 ### List all Devices
 
-Send a `GET` request to `/api/v1/devices`.
+> `GET /api/v1/devices`
 
 ### Get a Device
 
-Send a `GET` request to `/api/v1/devices/$DEVICE_ID`.
+> `GET /api/v1/devices/$DEVICE_ID`
 
 ## Guest Accounts <sup class="badge-pro">Pro</sup>
 
 ### List all your Guest Accounts
 
-Send a `GET` request to `/api/v1/guest_accounts`.
+> `GET /api/v1/guest_accounts`
 
 ### Get a Guest Account
 
-Send a `GET` request to `/api/v1/guest_accounts/$GUEST_ACCOUNT_ID`.
+> `GET /api/v1/guest_accounts/$GUEST_ACCOUNT_ID`
