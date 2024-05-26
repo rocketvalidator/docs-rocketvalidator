@@ -32,8 +32,6 @@ nav:
     - Mutings: api/mutings.md
     - Devices: api/devices.md
     - Guest Accounts: api/guest_accounts.md
-    - Client Libraries: api/client-libraries.md
-    - Changelog: api/changelog.md
 theme:
   name: material
   features:
