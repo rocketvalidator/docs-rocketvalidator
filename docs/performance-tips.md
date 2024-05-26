@@ -27,7 +27,7 @@ You can generate this XML sitemap manually or by using a tool [like this one](ht
 
 See for example our XML sitemap at [https://rocketvalidator.com/sitemap.xml](https://rocketvalidator.com/sitemap.xml).
 
-Once you have your sitemap ready and within your site, you can just submit it to Rocket Validator as the starting URL. For example, instead of submitting <code>http://validationhell.com</code> you'd submit <code>http://validationhell.com/sitemap.xml</code>.
+Once you have your sitemap ready and within your site, you can just submit it to Rocket Validator as the starting URL. For example, instead of submitting <code>https://dummy.rocketvalidator.com</code> you'd submit <code>https://dummy.rocketvalidator.com/sitemap.xml</code>.
 
 Using XML sitemaps leads to much faster site crawlings, and also lets you be more organized when validating large sites. For example, you can use different XML sitemaps for the different sections in a large site.
 

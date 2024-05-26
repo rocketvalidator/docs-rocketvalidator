@@ -1,4 +1,4 @@
-# Accessibility Issues
+# Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 An Accessibility issue corresponds to an issue found on a given web page when being checked by the A11Y checker.
 
@@ -27,7 +27,7 @@ An Accessibility issue corresponds to an issue found on a given web page when be
   <dd>Numerical representation of the Impact.</dd>
 
   <dt>Tags</dt>
-  <dd>List of Accessibility guidelines that relate to this issue.</dd>
+  <dd>Comma-separated list of tags to categorize this issue.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the Accessibility Issue was created.</dd>
@@ -52,131 +52,89 @@ An Accessibility issue corresponds to an issue found on a given web page when be
 
     ```json
     {
-        "attributes": {
-            "help": "Form elements must have labels",
-            "help_url": "https://dequeuniversity.com/rules/axe/3.5/label?application=rocketvalidator",
-            "html": [
-                "<input type=\"email\" style=\"margin-top: 15px;\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL_footer\" placeholder=\"Your email\" required=\"\">",
-                "<input id=\"mce-EMAIL_footer\" class=\"email\" style=\"margin-top: 10px; margin-bottom: 10px;\" name=\"EMAIL\" required=\"\" type=\"email\" value=\"\" placeholder=\"Your email\">"
-            ],
-            "id": 7657099,
-            "impact": "critical",
-            "impact_order": 4,
-            "inserted_at": "2020-04-02T12:44:50",
-            "tags": [
-                "cat.forms",
-                "wcag2a",
-                "wcag412",
-                "wcag131",
-                "section508",
-                "section508.22.n"
-            ],
-            "updated_at": "2020-04-02T12:44:50",
-            "url": "https://example.com/about"
-        },
-        "id": "7657099",
-        "relationships": {
-            "report": {
-                "links": {
-                    "related": "https://rocketvalidator.com/api/v0/reports/56b6"
+        "data": {
+            "attributes": {
+                "help": "ARIA attributes must conform to valid names",
+                "help_url": "https://dequeuniversity.com/rules/axe/4.8/aria-valid-attr",
+                "html": [
+                    "<svg class=\"d-block mx-1\" title=\"Windows\" aria-title=\"Windows\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"currentColor\">",
+                    "<svg class=\"d-block mx-1\" title=\"Linux\" aria-title=\"Linux\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"currentColor\">",
+                    "<svg class=\"d-block mx-1\" title=\"Web\" aria-title=\"Web\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"currentColor\">",
+                    "<svg class=\"d-block mx-1\" title=\"macOS\" aria-title=\"macOS\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"currentColor\">"
+                ],
+                "impact": "critical",
+                "impact_order": 4,
+                "inserted_at": "2024-03-05T12:45:14",
+                "tags": [
+                    "cat.aria",
+                    "wcag2a",
+                    "wcag412",
+                    "EN-301-549",
+                    "EN-9.4.1.2"
+                ],
+                "updated_at": "2024-03-05T12:45:14",
+                "url": "https://github.blog/2024-02-29-game-bytes-february-2024/"
+            },
+            "id": "26218481",
+            "relationships": {
+                "report": {
+                    "links": {
+                        "related": "https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576"
+                    }
+                },
+                "web_page": {
+                    "links": {
+                        "related": "https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576/web_pages/8413311"
+                    }
                 }
             },
-            "web_page": {
-                "links": {
-                    "related": "https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097"
-                }
-            }
+            "type": "a11y_issue"
         },
-        "type": "a11y_issue"
+        "jsonapi": {
+            "version": "1.0"
+        }
     }
     ```
 
 ## List Accessibility issues on a web page
 
-To list the Accessibility issues found on a web page, send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
+To list the accessibility issues found on a web page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
 
-!!! example "Example: GET https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues"
+!!! example "Example: list A11Y issues for a web page"
 
-    ```json
-    {
-        "data": [
-            {
-                "attributes": {
-                    "help": "Images must have alternate text",
-                    "help_url": "https://dequeuniversity.com/rules/axe/3.5/image-alt?application=rocketvalidator",
-                    "html": [
-                        "<img src=\"/images/fire.png\" align=\"absmiddle\" width=\"30\" hspace=\"5\">",
-                        "<img src=\"/images/nuke.gif\" width=\"100%\" vspace=\"8\">"
-                    ],
-                    "id": 6843979,
-                    "impact": "critical",
-                    "impact_order": 4,
-                    "inserted_at": "2020-02-28T13:01:35",
-                    "tags": [
-                        "cat.text-alternatives",
-                        "wcag2a",
-                        "wcag111",
-                        "section508",
-                        "section508.22.a"
-                    ],
-                    "updated_at": "2020-02-28T13:01:35",
-                    "url": "http://validationhell.com/"
-                },
-                "id": "6843979",
-                "relationships": {
-                    "report": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
-                        }
-                    },
-                    "web_page": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
-                        }
-                    }
-                },
-                "type": "a11y_issue"
-            },
-            {
-                "attributes": {
-                    "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
-                    "help_url": "https://dequeuniversity.com/rules/axe/3.5/list?application=rocketvalidator",
-                    "html": [
-                        "<ul class=\"nav nav-list\">"
-                    ],
-                    "id": 6843982,
-                    "impact": "serious",
-                    "impact_order": 3,
-                    "inserted_at": "2020-02-28T13:01:35",
-                    "tags": [
-                        "cat.structure",
-                        "wcag2a",
-                        "wcag131"
-                    ],
-                    "updated_at": "2020-02-28T13:01:35",
-                    "url": "http://validationhell.com/"
-                },
-                "id": "6843982",
-                "relationships": {
-                    "report": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c"
-                        }
-                    },
-                    "web_page": {
-                        "links": {
-                            "related": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472"
-                        }
-                    }
-                },
-                "type": "a11y_issue"
-            }
-        ],
-        "jsonapi": {
-            "version": "1.0"
-        },
-        "links": {
-            "self": "https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues?page[number]=1&page[size]=25"
-        }
-    }
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues
+    ```
+
+### Filtering by help
+
+To include only the accessibility issues of a given kind, use the `filter[help]` option.
+
+!!! example "Example: filter A11Y issues for a web page about "landmark""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues?filter[help]=landmark
+    ```
+
+### Filtering by tag
+
+To include only the issues for a given `tags` combination, use the `filter[tags]` options:
+
+* `filter[tags][mode]` setting the tag combination mode, which can be `any`, `all` or `none`.
+* `filter[tags][list]` including a comma-separated list of tags.
+
+!!! example "Example: filter A11Y issues for a web page tagged with "wcag2a""
+
+    ```
+    GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues?filter[tags][mode]=any&filter[tags][list]=wcag2a
+    ```
+
+## Retrieve an Accessibility issue
+
+To show an individual Accessibility issue on a web page, send a `GET` request to `/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues/$A11Y_ISSUE_ID`
+
+!!! example "Example: retrieve A11Y issue for a web page"
+
+    ```
+    GET `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$A11Y_ISSUE_ID
     ```

@@ -1,28 +1,38 @@
 # Rocket Validator API
 
-Welcome to the Rocket Validator API documentation.
+The Rocket Validator API lets you manage your site validation reports and related data like schedules, mutings, devices and guest accounts sending conventional HTTP requests to a standard <a href="https://jsonapi.org/" target="_blank">JSON API</a>.
 
-The Rocket Validator API allows you to manage your reports and integrate them easily in your existing workflows using conventional HTTP requests to a standard JSON API. Refer to the <a href="https://jsonapi.org/" target="_blank">json:api specification</a> for an overview of the conventions we use.
+!!! info "Current version"
+    The Rocket Validator API is currently in version `v1`.
 
-Currently the API is on an alpha stage, but you can start using it today. Keep in mind that it is still subject to changes, which will be documented on the changelog.
+    All endpoints have the prefix:
 
-!!! info "Work in progress!"
-    The Rocket Validator API is currently in alpha stage, and subject to changes.
+    ```
+    https://rocketvalidator.com/api/v1/{endpoint}
+    ```
+
+    For brevity and legibility, the examples might omit the prefix, so instead of this:
+
+    > `GET https://rocketvalidator.com/api/v1/reports`
+
+    we'll use this:
+
+    > `GET /api/v1/reports`
 
 ## API Quick Start
 
-To start working with the Rocket Validator, all you need is to <a href="https://rocketvalidator.com/registration/new" target="rocket">sign up</a> for a new account and then generate an <a href="https://rocketvalidator.com/api/tokens" target="rocket">API token</a>. Check out the <a href="/api/authorization">Authorization</a> section to learn how to use this API token to identify your requests.
+To start working with the Rocket Validator API, all you need is to <a href="https://rocketvalidator.com/registration/new" target="rocket">sign up</a> for a new account and then generate an <a href="https://rocketvalidator.com/api/tokens" target="rocket">API token</a>. Check out the <a href="/api/authorization">Authorization</a> section to learn how to use this API token to identify your requests.
 
 ## Example Request
 
-To retrieve the data you need from Rocket Validator, you just need to perform a standard `GET` request to the appropiate endpoint. Here are some examples in different programming languages, and below is a cheatsheet on the most common endpoints.
+To retrieve the data you need from Rocket Validator, you just need to perform a standard `GET`, `POST`, `PATCH` or `DELETE` request to the appropiate endpoint. Here are some examples in different programming languages, and below is a cheatsheet on the most common endpoints.
 
 !!! example "Example code"
 
     === "cURL"
         ``` bash
         curl --request GET \
-             --url https://rocketvalidator.com/api/v0/reports \
+             --url https://rocketvalidator.com/api/v1/reports \
              --header 'authorization: Bearer $API_TOKEN'
         ```
 
@@ -32,7 +42,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         require 'net/http'
         require 'openssl'
 
-        url = URI("https://rocketvalidator.com/api/v0/reports")
+        url = URI("https://rocketvalidator.com/api/v1/reports")
 
         http = Net::HTTP.new(url.host, url.port)
         http.use_ssl = true
@@ -51,9 +61,9 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         require 'rocketvalidator'
 
-        RocketValidator::V0::Resource.with_api_token(ENV["ROCKET_API_TOKEN"]) do
+        RocketValidator::V1::Resource.with_api_token(ENV["ROCKET_API_TOKEN"]) do
             page = 0
-            reports = RocketValidator::V0::Report.page(1).per(10).to_a
+            reports = RocketValidator::V1::Report.page(1).per(10).to_a
 
             while reports do
                 page = page + 1
@@ -78,7 +88,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         headers = { 'authorization': "Bearer $API_TOKEN" }
 
-        conn.request("GET", "/api/v0/reports", payload, headers)
+        conn.request("GET", "/api/v1/reports", payload, headers)
 
         res = conn.getresponse()
         data = res.read()
@@ -93,7 +103,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://rocketvalidator.com/api/v0/reports",
+            CURLOPT_URL => "https://rocketvalidator.com/api/v1/reports",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -127,7 +137,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
             "method": "GET",
             "hostname": "rocketvalidator.com",
             "port": null,
-            "path": "/api/v0/reports",
+            "path": "/api/v1/reports",
             "headers": {
                 "content-length": "0",
                 "authorization": "Bearer $API_TOKEN"
@@ -152,7 +162,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
     === "Java"
         ``` java
-        HttpResponse<String> response = Unirest.get("https://rocketvalidator.com/api/v0/reports")
+        HttpResponse<String> response = Unirest.get("https://rocketvalidator.com/api/v1/reports")
         .header("authorization", "Bearer $API_TOKEN")
         .asString();
         ```
@@ -165,7 +175,7 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
 
         let postData = NSData(data: "".data(using: String.Encoding.utf8)!)
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://rocketvalidator.com/api/v0/reports")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://rocketvalidator.com/api/v1/reports")! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -185,31 +195,35 @@ To retrieve the data you need from Rocket Validator, you just need to perform a 
         dataTask.resume()
         ```
 
+!!! info "GET is the default method"
+
+    In the cURL example above we're explicitly specifying the `GET` kind of request, but as it's the default, in the rest of the documentation you'll often see that we omit it.
+
+    Also, there's no need for the `--url` parameter and you can just pass the URL endpoint like this:
+
+    ``` bash
+    curl https://rocketvalidator.com/api/v1/reports \
+       --header 'authorization: Bearer $API_TOKEN'
+    ```    
+
+
 ## Reports
 
 ### Create a Report
 
-Send a `POST` request to `/api/v0/reports` with a JSON payload including the parameters:
+Send a `POST` request to `/api/v1/reports` with a JSON payload including the parameters:
 
 * `starting_url`. The initial URL where the Spider will start on. Required.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Optional, defaults to 10.
-* `rate_limit`. Limit on the number of requests per second. Optional, defaults to 1.
-* `deep_crawl`. Boolean to enable deep link crawling. Optional, defaults to true.
-* `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Optional, defaults to true.
-* `perform_a1yy_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Optional, defaults to false.
 
-!!! example "Example: POST https://rocketvalidator.com/api/v0/reports"
+!!! example "Example: POST /api/v1/reports"
 
     ```json
     {
         "data": {
             "attributes": {
-                "starting_url": "http://validationhell.com",
-                "max_pages": 100,
-                "rate_limit": 3,
-                "deep_crawl": true,
-                "perform_html_checks": true,
-                "perform_a11y_checks": true
+                "starting_url": "https://dummy.rocketvalidator.com",
+                "max_pages": 100
             }
         }
     }
@@ -217,82 +231,102 @@ Send a `POST` request to `/api/v0/reports` with a JSON payload including the par
 
 ### List your Reports
 
-Send a `GET` request to `/api/v0/reports`.
+> `GET /api/v1/reports`
 
 ### Get a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID`.
+> `GET /api/v1/reports/$REPORT_ID`
 
 ### Delete a Report
 
-Send a `DELETE` request to `/api/v0/reports/$REPORT_ID`.
+> `DELETE /api/v1/reports/$REPORT_ID`
 
 ## Web Pages
 
 ### List the Web Pages on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages`.
+>`GET /api/v1/reports/$REPORT_ID/web_pages`
 
 ### Get a Web Page on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID`
 
-## Accessibility Issues
+## Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 ### List A11Y issues on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues`
 
 ### Get an A11Y issue on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$ISSUE_ID`
 
 ## HTML Issues
 
 ### List HTML issues on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues`.
 
 ### Get an HTML issue on a Web Page
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$ISSUE_ID`.
 
-## Common Accessibility Issues
+## Common Accessibility Issues <sup class="badge-pro">Pro</sup>
 
 ### List Common A11Y issues on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/common_a11y_issues`.
+> `GET /api/v1/reports/$REPORT_ID/common_a11y_issues`
 
 ### Get a Common A11Y issue on a Report
 
-Send a GET request to `/api/v0/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/common_a11y_issues/$COMMON_A11Y_ISSUE_ID`
 
 ## Common HTML Issues
 
 ### List Common HTML issues on a Report
 
-Send a `GET` request to `/api/v0/reports/$REPORT_ID/common_html_issues`.
+> `GET /api/v1/reports/$REPORT_ID/common_html_issues`
 
 ### Get a Common HTML issue on a Report
 
-Send a GET requet to `/api/v0/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`.
+> `GET /api/v1/reports/$REPORT_ID/common_html_issues/$COMMON_HTML_ISSUE_ID`
 
-## Mutings
+## Mutings <sup class="badge-pro">Pro</sup>
 
 ### List your Mutings
 
-Send a `GET` request to `/api/v0/mutings`.
+> `GET /api/v1/mutings`
 
 ### Get a Muting
 
-Send a `GET` request to `/api/v0/mutings/$MUTING_ID`.
+> `GET /api/v1/mutings/$MUTING_ID`
 
-## Schedules
+## Schedules <sup class="badge-pro">Pro</sup>
 
 ### List your Schedules
 
-Send a `GET` request to `/api/v0/schedules`.
+> `GET /api/v1/schedules`
 
 ### Get a Schedule
 
-Send a `GET` request to `/api/v0/schedules/$SCHEDULE_ID`.
+> `GET /api/v1/schedules/$SCHEDULE_ID`
+
+## Devices <sup class="badge-pro">Pro</sup>
+
+### List all Devices
+
+> `GET /api/v1/devices`
+
+### Get a Device
+
+> `GET /api/v1/devices/$DEVICE_ID`
+
+## Guest Accounts <sup class="badge-pro">Pro</sup>
+
+### List all your Guest Accounts
+
+> `GET /api/v1/guest_accounts`
+
+### Get a Guest Account
+
+> `GET /api/v1/guest_accounts/$GUEST_ACCOUNT_ID`
