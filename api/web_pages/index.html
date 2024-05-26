@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
       
 
@@ -774,12 +774,63 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="List Web Pages on a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-html-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by HTML issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-a11y-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by A11Y issue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#retrieve-a-web-page" class="md-nav__link">
     <span class="md-ellipsis">
       Retrieve a Web Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recheck-a-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recheck a Web Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete a Web Page
     </span>
   </a>
   
@@ -940,11 +991,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-libraries/" class="md-nav__link">
+      <a href="../devices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Client Libraries
+    Devices
   </span>
   
 
@@ -961,11 +1012,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../guest_accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Changelog
+    Guest Accounts
   </span>
   
 
@@ -1076,12 +1127,63 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="List Web Pages on a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-html-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by HTML issue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-a11y-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by A11Y issue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#retrieve-a-web-page" class="md-nav__link">
     <span class="md-ellipsis">
       Retrieve a Web Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recheck-a-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recheck a Web Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete a Web Page
     </span>
   </a>
   
@@ -1129,10 +1231,21 @@
   <dd>URL of the web page that links to this web page. That is, where the Spider found first about this Web Page.</dd>
 
   <dt>HTML Check</dt>
-  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
+  <dd>Holds the result of the HTML check on that web page, if it was enabled. Includes the number of <code>errors</code> and <code>warnings</code>, and the <code>status</code> of the check.</dd>
 
-  <dt>A11y Check</dt>
-  <dd>Holds the result of the accessibility check on that web page, if it was enabled. Includes keys for the number of errors and warnings, and the status of the check.</dd>
+  <dt>A11y Check <sup class="badge-pro">Pro</sup></dt>
+  <dd>Holds the result of the accessibility check on that web page, if it was enabled.
+  Include the number of accessibility <code>errors</code> and <code>warnings</code>. Also includes the number of issues per each <code>severity</code> level (<code>minor</code>, <code>moderate</code>, <code>serious</code> and <code>critical</code>), and the <code>status</code> of the check.</dd>
+
+  <dt>Status</dt>
+  <dd>Checking status for the web page, depending on the status of the HTML and A11Y checks:
+   <ul>
+     <li>If both are <code>pending</code>, the status will also be <code>pending</code>.</li>
+     <li>If one is <code>pending</code> and the other is <code>checked</code>, it will be <code>checking</code>.</li>
+     <li>If any check is <code>failed</code>, the status will be <code>failed</code>.</li>
+     <li>If both checks are <code>checked</code>, the status will be <code>checked</code>.</li>
+    </ul>
+  </dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the web page was created.</dd>
@@ -1152,7 +1265,7 @@
   <dt>HTML issues</dt>
   <dd>The HTML issues found on this Web Page, if the HTML check was enabled.</dd>
 
-  <dt>A11Y issues</dt>
+  <dt>A11Y issues <sup class="badge-pro">Pro</sup></dt>
   <dd>The accessibility issues found on this Web Page, if the accessibility check was enabled.</dd>
 </dl>
 
@@ -1160,178 +1273,51 @@
 <div class="admonition example">
 <p class="admonition-title">Example: Web Page example</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;a11y_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;html_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">86</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2884097</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:43&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:50&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;last_checked_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:50&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;linked_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com/&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com/about&quot;</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2884097&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;a11y_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097/a11y_issues&quot;</span>
-<span class="w">          </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;html_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097/html_issues&quot;</span>
-<span class="w">          </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6&quot;</span>
-<span class="w">          </span><span class="p">}</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web_page&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<h2 id="list-web-pages-on-a-report">List Web Pages on a Report</h2>
-<p>To list the web pages on a Report, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports/9314c/web_pages</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;a11y_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;html_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">472</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:32&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;last_checked_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;linked_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;472&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;a11y_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;html_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web_page&quot;</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;a11y_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;html_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">473</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:33&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;linked_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:36&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/pages/agent&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;473&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;a11y_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/473/a11y_issues&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;html_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/473/html_issues&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web_page&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;self&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages?page[number]=1&amp;page[size]=25&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<h2 id="retrieve-a-web-page">Retrieve a Web Page</h2>
-<p>To show an individual Web Page, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;a11y_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;critical&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;minor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;moderate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;serious&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">},</span>
 <span class="w">                </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;html_check&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">                </span><span class="nt">&quot;warnings&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
 <span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">472</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:32&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;last_checked_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;linked_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span>
+<span class="w">            </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-05-14T13:54:31&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;last_checked_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-05-14T13:54:39&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;linked_from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dummy.rocketvalidator.com&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;checked&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-05-14T13:54:39&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dummy.rocketvalidator.com/about/&quot;</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;472&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8683545&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;a11y_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/a11y_issues&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;html_issues&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/html_issues&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">},</span>
@@ -1343,6 +1329,50 @@
 <span class="p">}</span>
 </code></pre></div>
 </div>
+<h2 id="list-web-pages-on-a-report">List Web Pages on a Report</h2>
+<p>To list the web pages on a Report, send a <code>GET</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages</code>.</p>
+<blockquote>
+<p><code>GET /api/v1/reports/$REPORT_ID/web_pages</code></p>
+</blockquote>
+<h3 id="filtering-by-url">Filtering by URL</h3>
+<p>To include only the web pages for a given <code>url</code>, use the <code>filter[url]</code> option.</p>
+<blockquote>
+<p><code>GET /api/v1/reports/$REPORT_ID/web_pages?filter[url]=about</code></p>
+</blockquote>
+<h3 id="filtering-by-html-issue">Filtering by HTML issue</h3>
+<p>To include only the web pages containing a given HTML issue, pass the HTML issue ID via the <code>filter[common_html_issue_id]</code> option.</p>
+<blockquote>
+<p><code>GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_html_issue_id]=$HTML_ISSUE_ID</code></p>
+</blockquote>
+<h3 id="filtering-by-a11y-issue">Filtering by A11Y issue</h3>
+<p>To include only the web pages containing a given accessibility issue, pass the A11Y issue ID via the <code>filter[common_a11y_issue_id]</code> option.</p>
+<blockquote>
+<p><code>GET /api/v1/reports/$REPORT_ID/web_pages?filter[common_a11y_issue_id]=$A11Y_ISSUE_ID</code></p>
+</blockquote>
+<h2 id="retrieve-a-web-page">Retrieve a Web Page</h2>
+<p>To show an individual Web Page, send a <code>GET</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code>.</p>
+<blockquote>
+<p><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code></p>
+</blockquote>
+<h2 id="recheck-a-web-page">Recheck a Web Page</h2>
+<p>To re-check a web page, send a <code>PATCH</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code> with a payload to set the <code>status</code> to <code>pending</code>. Any other payload will be rejected.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: PATCH /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="delete-a-web-page">Delete a Web Page</h2>
+<p>Deleting web pages from a report is a <sup class="badge-pro">Pro</sup> feature. It removes the web page, and updates the excluded URLs list for that report. If the report has no more web pages left, it will itself be deleted as well.</p>
+<p>To delete an individual Web Page from a report, send a <code>DELETE</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code>.</p>
+<blockquote>
+<p><code>DELETE /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID</code></p>
+</blockquote>
 
 
 
@@ -1429,7 +1459,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
       
 
@@ -818,11 +818,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-libraries/" class="md-nav__link">
+      <a href="../devices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Client Libraries
+    Devices
   </span>
   
 
@@ -839,11 +839,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../guest_accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Changelog
+    Guest Accounts
   </span>
   
 
@@ -945,15 +945,21 @@
 <p>Pagination is controlled using the following parameters:</p>
 <dl>
   <dt>page[number]</dt>
-  <dd>What page to retrieve.</dd>
+  <dd>What page to retrieve. Defaults to 1.</dd>
 
   <dt>page[size]</dt>
   <dd>Number of entries per page. Defaults to 25, minimum is 1, maximum is 100.</dd>
 </dl>
 
+<div class="admonition info">
+<p class="admonition-title">Using Square Brackets in Parameter Names</p>
+<p>Pagination parameters use <a href="https://jsonapi.org/format/#query-parameters-families">Query Parameter Families</a>, which are sets of query parameters with a common base name. Although square brackets should be URL-encoded with <code>%5B</code> for <code>[</code> and <code>%5D</code> for <code>]</code>, our servers will accept unencoded square brackets, which leads to increased URL legibility.</p>
+<p>In the examples where we use curl, we <a href="https://curl.se/docs/manpage.html#-g">switch off the URL globbing function</a> (with a simple <code>-g</code> option) to let curl know that we're OK with using square brackets.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Example: Getting the 3rd page of the reports list, with 10 reports per page</p>
-<p>curl --request GET 'https://rocketvalidator.com/api/v0/reports/?page[number]=3&amp;page[size]=10'</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-g<span class="w"> </span>https://rocketvalidator.com/api/v1/reports?page<span class="o">[</span>number<span class="o">]=</span><span class="m">3</span><span class="p">&amp;</span>page<span class="o">[</span>size<span class="o">]=</span><span class="m">10</span><span class="w"> </span>
+</code></pre></div>
 </div>
 
 
@@ -1041,7 +1047,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       

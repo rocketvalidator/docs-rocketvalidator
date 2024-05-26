@@ -10,23 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://docs.rocketvalidator.com/api/changelog/">
+        <link rel="canonical" href="https://docs.rocketvalidator.com/api/devices/">
       
       
-        <link rel="prev" href="../client-libraries/">
+        <link rel="prev" href="../mutings/">
       
+      
+        <link rel="next" href="../guest_accounts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
-        <title>Changelog - Rocket Validator Documentation</title>
+        <title>Devices - Rocket Validator Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
       
 
@@ -57,8 +59,8 @@
     
     
 
-<meta property="og:url" content="https://docs.rocketvalidator.com/api/changelog/"> 
-<meta property="og:title" content="Changelog - Rocket Validator Documentation"> 
+<meta property="og:url" content="https://docs.rocketvalidator.com/api/devices/"> 
+<meta property="og:title" content="Devices - Rocket Validator Documentation"> 
 
 <meta property="og:description" content="Documentation site for Rocket Validator - automated accessibility scanner for large sites">
 <meta property="og:image" content="https://docs.rocketvalidator.comimg/docs-screenshot.jpg">
@@ -69,7 +71,7 @@
 
 <meta name="twitter:site" content="@rocketvalidator">
 <meta name="twitter:card" content="summary"> 
-<meta name="twitter:title" content="Changelog - Rocket Validator Documentation"> 
+<meta name="twitter:title" content="Devices - Rocket Validator Documentation"> 
 
 <meta name="twitter:description" content="Documentation site for Rocket Validator - automated accessibility scanner for large sites">
 <meta name="twitter:image" content="https://docs.rocketvalidator.comimg/docs-screenshot.jpg">
@@ -90,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#changelog" class="md-skip">
+        <a href="#devices-pro" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Changelog
+              Devices
             
           </span>
         </div>
@@ -803,27 +805,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../client-libraries/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Client Libraries
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -836,16 +817,159 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Devices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Changelog
+    Devices
   </span>
   
 
       </a>
       
+        <!--
+  Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine title -->
+
+
+
+<!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+  <!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+  
+  
+    
+  
+
+  <!-- Table of contents title and list -->
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-a-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve a Device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Device
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+
+  <div class="widget">
+    <p class="title">Join Rocket Validator</p>
+    <ul>
+      <li>Automatic link crawling</li>
+      <li>Accessibility checks</li>
+      <li>HTML checks</li>
+      <li>Scheduled reports</li>
+      <li>Device emulation</li>
+    </ul>
+    <p class="btn"><a href="https://rocketvalidator.com/registration/new" target="_blank" class="btn">Start Your Free Trial</a></p>
+  </div>
+
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest_accounts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guest Accounts
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -912,6 +1036,59 @@
 
   <!-- Table of contents title and list -->
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-a-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve a Device
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Device
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 
   <div class="widget">
     <p class="title">Join Rocket Validator</p>
@@ -938,27 +1115,91 @@
                   
 
 
-<h1 id="changelog">Changelog</h1>
-<ul>
-<li>2024-04-16. HTML issues include code snippets as collection of extracts and coordinates.</li>
-<li>2023-06-05. Rename the field <code>last_fired_at</code> as <code>last_run_at</code> for <a href="../schedules/">Schedules</a>.</li>
-<li>2022-02-17. The Reports endpoint can now list <a href="../reports/#list-your-guest-reports">Guest Reports</a>.</li>
-<li>2022-01-08. Updates <a href="../schedules/">Schedules</a> section, after adding UPDATE and DELETE to the schedules endpoint.</li>
-<li>2022-01-07. Updates [Schedules]/(schedules.md) section, after adding CREATE to the schedules endpoint.</li>
-<li>2021-12-24. Updates mutings, now muted issues are no longer stored, so there's no reference to it.</li>
-<li>2021-11-04. Updates <a href="../reports/">Reports</a> section, explaining what attributes are required, which ones are optional and their defaults, and adding the <code>domain</code> attribute.</li>
-<li>2021-08-28. Changed API host to rocketvalidator.com.</li>
-<li>2020-05-12. Updates <a href="../reports/">Reports</a> section, explaining how to create and delete Reports, and the new <code>checks</code> detail. Updates <a href="../schedules/">Schedules</a> section with rename of boolean attributes <code>perform_html_checks</code> and <code>perform_a11y_checks</code>.</li>
-<li>2020-05-05. Added <a href="../mutings/">Mutings</a> section.</li>
-<li>2020-05-04. Upgraded <a href="../schedules/">Schedules</a> section, to include Schedule listing, retrieving, and filtering of Reports by Schedule. Add Quick Start section with code examples.</li>
-<li>2020-04-12. Added <a href="../resources/">Resources</a>, <a href="../common_a11y_issues/">Common Accessibility Issues</a>, and <a href="../common_html_issues/">Common HTML Issues</a> sections. Expand each resource section with description of attributes, relationships, and example.</li>
-<li>2020-04-10. Reorganized API guides in separate sections.</li>
-<li>2020-04-07. Use underscore instead of dash in keys.</li>
-<li>2020-04-06. Changed API tokens URL to <code>api/tokens</code>.</li>
-<li>2020-03-13. Moved documentation to docs.rocketvalidator.com.</li>
-<li>2020-03-02. Changed API host to rocketvalidator.dev.</li>
-<li>2020-02-28. Initial version.</li>
-</ul>
+<h1 id="devices-pro">Devices <sup class="badge-pro">Pro</sup></h1>
+<p><a href="device-viewport-emulation">Device Viewport Emulation</a> is a Rocket Validator Pro feature that you can use to simulate a device viewport in your site validation reports.</p>
+<p>Using the Rocket Validator API you can get the complete list of available devices, and all the details for their specific attributes. You can also check this list at the <a href="https://rocketvalidator.com/devices">devices</a> section of the Rocket Validator site.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+  <dt>ID</dt>
+  <dd>Unique Device ID.</dd>
+  <dt>Name</dt>
+  <dd>Name of the device.</dd>
+  <dt>Width</dt>
+  <dd>Viewport width, in pixels.</dd>
+  <dt>Height</dt>
+  <dd>Viewport height, in pixels.</dd>
+  <dt>Device Scale Factor</dt>
+  <dd>Scale factor of the device.</dd>
+  <dt>Is Mobile</dt>
+  <dd>True if it's a mobile device.</dd>
+  <dt>Is Landscape</dt>
+  <dd>True if it's a landscape device.</dd>
+  <dt>Has Touch</dt>
+  <dd>True if it's touch enabled.</dd>
+  <dt>User Agent</dt>
+  <dd>User Agent string. Check the <a href="https://rocketvalidator.com/user-agents">User Agents</a> section to get all the UA strings for the given device.</dd>
+</dl>
+
+<h2 id="example">Example</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: Device structure</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;device_scale_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;has_touch&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;is_landscape&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;is_mobile&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Galaxy Note 3&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;user_agent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mozilla/5.0 (Linux; U; Android 4.3; en-us; SM-N900T Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">360</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;888f56c2-5e28-404b-8ac1-e71c414694bf&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;device&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="list-of-devices">List of Devices</h2>
+<p>To list all the available Devices, send a <code>GET</code> request to <code>/api/v1/devices</code>.</p>
+<blockquote>
+<p><code>GET /api/v1/devices</code></p>
+</blockquote>
+<h2 id="retrieve-a-device">Retrieve a Device</h2>
+<p>To retrieve an individual Device, send a <code>GET</code> request to <code>/api/v1/devices/$DEVICE_ID</code>.</p>
+<blockquote>
+<p><code>GET /api/v1/devices/$DEVICE_ID</code></p>
+</blockquote>
+<h2 id="default-device">Default Device</h2>
+<p>When a report is run without specifying a device, the default device is used.</p>
+<p>To get the properties of the default device, send a <code>GET</code> request to <code>/api/v1/devices/default</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: GET /api/v1/devices/default</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;device_scale_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;has_touch&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;is_landscape&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;is_mobile&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Default&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;user_agent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;device&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
 
 
 
@@ -1045,7 +1286,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
       
 
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#accessibility-issues" class="md-skip">
+        <a href="#accessibility-issues-pro" class="md-skip">
           Skip to content
         </a>
       
@@ -795,6 +795,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="List Accessibility issues on a web page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-an-accessibility-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve an Accessibility issue
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -931,11 +964,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-libraries/" class="md-nav__link">
+      <a href="../devices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Client Libraries
+    Devices
   </span>
   
 
@@ -952,11 +985,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../guest_accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Changelog
+    Guest Accounts
   </span>
   
 
@@ -1067,6 +1100,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="List Accessibility issues on a web page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-an-accessibility-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve an Accessibility issue
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1097,7 +1163,7 @@
                   
 
 
-<h1 id="accessibility-issues">Accessibility Issues</h1>
+<h1 id="accessibility-issues-pro">Accessibility Issues <sup class="badge-pro">Pro</sup></h1>
 <p>An Accessibility issue corresponds to an issue found on a given web page when being checked by the A11Y checker.</p>
 <h2 id="attributes">Attributes</h2>
 <dl>
@@ -1123,7 +1189,7 @@
   <dd>Numerical representation of the Impact.</dd>
 
   <dt>Tags</dt>
-  <dd>List of Accessibility guidelines that relate to this issue.</dd>
+  <dd>Comma-separated list of tags to categorize this issue.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the Accessibility Issue was created.</dd>
@@ -1145,130 +1211,80 @@
 <div class="admonition example">
 <p class="admonition-title">Example: Accessibility Issue</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;help&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Form elements must have labels&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;help_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/label?application=rocketvalidator&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;&lt;input type=\&quot;email\&quot; style=\&quot;margin-top: 15px;\&quot; value=\&quot;\&quot; name=\&quot;EMAIL\&quot; class=\&quot;email\&quot; id=\&quot;mce-EMAIL_footer\&quot; placeholder=\&quot;Your email\&quot; required=\&quot;\&quot;&gt;&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;&lt;input id=\&quot;mce-EMAIL_footer\&quot; class=\&quot;email\&quot; style=\&quot;margin-top: 10px; margin-bottom: 10px;\&quot; name=\&quot;EMAIL\&quot; required=\&quot;\&quot; type=\&quot;email\&quot; value=\&quot;\&quot; placeholder=\&quot;Your email\&quot;&gt;&quot;</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7657099</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;impact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;critical&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;impact_order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:50&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;cat.forms&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;wcag412&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;wcag131&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;section508&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;section508.22.n&quot;</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:50&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com/about&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;7657099&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6&quot;</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;help&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ARIA attributes must conform to valid names&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;help_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dequeuniversity.com/rules/axe/4.8/aria-valid-attr&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;&lt;svg class=\&quot;d-block mx-1\&quot; title=\&quot;Windows\&quot; aria-title=\&quot;Windows\&quot; width=\&quot;18\&quot; height=\&quot;18\&quot; viewBox=\&quot;0 0 24 24\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; fill=\&quot;currentColor\&quot;&gt;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;&lt;svg class=\&quot;d-block mx-1\&quot; title=\&quot;Linux\&quot; aria-title=\&quot;Linux\&quot; width=\&quot;18\&quot; height=\&quot;18\&quot; viewBox=\&quot;0 0 24 24\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; fill=\&quot;currentColor\&quot;&gt;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;&lt;svg class=\&quot;d-block mx-1\&quot; title=\&quot;Web\&quot; aria-title=\&quot;Web\&quot; width=\&quot;18\&quot; height=\&quot;18\&quot; viewBox=\&quot;0 0 24 24\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; fill=\&quot;currentColor\&quot;&gt;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;&lt;svg class=\&quot;d-block mx-1\&quot; title=\&quot;macOS\&quot; aria-title=\&quot;macOS\&quot; width=\&quot;18\&quot; height=\&quot;18\&quot; viewBox=\&quot;0 0 24 24\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; fill-rule=\&quot;evenodd\&quot; clip-rule=\&quot;evenodd\&quot; fill=\&quot;currentColor\&quot;&gt;&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;impact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;critical&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;impact_order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-05T12:45:14&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;cat.aria&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;wcag412&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;EN-301-549&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;EN-9.4.1.2&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-05T12:45:14&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.blog/2024-02-29-game-bytes-february-2024/&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26218481&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576/web_pages/8413311&quot;</span>
+<span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a11y_issue&quot;</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a11y_issue&quot;</span>
+<span class="w">    </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
 <h2 id="list-accessibility-issues-on-a-web-page">List Accessibility issues on a web page</h2>
-<p>To list the Accessibility issues found on a web page, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues</code>.</p>
+<p>To list the accessibility issues found on a web page, send a <code>GET</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues</code>.</p>
 <div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;help&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Images must have alternate text&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;help_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/image-alt?application=rocketvalidator&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="s2">&quot;&lt;img src=\&quot;/images/fire.png\&quot; align=\&quot;absmiddle\&quot; width=\&quot;30\&quot; hspace=\&quot;5\&quot;&gt;&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;&lt;img src=\&quot;/images/nuke.gif\&quot; width=\&quot;100%\&quot; vspace=\&quot;8\&quot;&gt;&quot;</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6843979</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;impact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;critical&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;impact_order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="s2">&quot;cat.text-alternatives&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;wcag111&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;section508&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;section508.22.a&quot;</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6843979&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a11y_issue&quot;</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;help&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;ul&gt; and &lt;ol&gt; must only directly contain &lt;li&gt;, &lt;script&gt; or &lt;template&gt; elements&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;help_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dequeuniversity.com/rules/axe/3.5/list?application=rocketvalidator&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="s2">&quot;&lt;ul class=\&quot;nav nav-list\&quot;&gt;&quot;</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6843982</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;impact&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;serious&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;impact_order&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="s2">&quot;cat.structure&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;wcag2a&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="s2">&quot;wcag131&quot;</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:35&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://validationhell.com/&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6843982&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a11y_issue&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;self&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/a11y_issues?page[number]=1&amp;page[size]=25&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<p class="admonition-title">Example: list A11Y issues for a web page</p>
+<div class="highlight"><pre><span></span><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues
+</code></pre></div>
+</div>
+<h3 id="filtering-by-help">Filtering by help</h3>
+<p>To include only the accessibility issues of a given kind, use the <code>filter[help]</code> option.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: filter A11Y issues for a web page about "landmark"</p>
+<div class="highlight"><pre><span></span><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues?filter[help]=landmark
+</code></pre></div>
+</div>
+<h3 id="filtering-by-tag">Filtering by tag</h3>
+<p>To include only the issues for a given <code>tags</code> combination, use the <code>filter[tags]</code> options:</p>
+<ul>
+<li><code>filter[tags][mode]</code> setting the tag combination mode, which can be <code>any</code>, <code>all</code> or <code>none</code>.</li>
+<li><code>filter[tags][list]</code> including a comma-separated list of tags.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: filter A11Y issues for a web page tagged with "wcag2a"</p>
+<div class="highlight"><pre><span></span><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues?filter[tags][mode]=any&amp;filter[tags][list]=wcag2a
+</code></pre></div>
+</div>
+<h2 id="retrieve-an-accessibility-issue">Retrieve an Accessibility issue</h2>
+<p>To show an individual Accessibility issue on a web page, send a <code>GET</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/a11y_issues/$A11Y_ISSUE_ID</code></p>
+<div class="admonition example">
+<p class="admonition-title">Example: retrieve A11Y issue for a web page</p>
+<div class="highlight"><pre><span></span><code>GET `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/a11y_issues/$A11Y_ISSUE_ID
 </code></pre></div>
 </div>
 
@@ -1357,7 +1373,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
       
 
@@ -816,6 +816,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="List HTML issues on a web page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-an-html-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve an HTML issue
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -931,11 +964,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../client-libraries/" class="md-nav__link">
+      <a href="../devices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Client Libraries
+    Devices
   </span>
   
 
@@ -952,11 +985,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../guest_accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Changelog
+    Guest Accounts
   </span>
   
 
@@ -1067,6 +1100,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="List HTML issues on a web page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-by-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering by tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-an-html-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve an HTML issue
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1116,6 +1182,9 @@
   <dt>HTML</dt>
   <dd>Code snippets showing the affected elements, each one including an extract and its coordinates.</dd>
 
+  <dt>Tags</dt>
+  <dd>Comma-separated list of tags to categorize this issue.</dd>
+
   <dt>Inserted At</dt>
   <dd>Timestamp when the HTML Issue was created.</dd>
 
@@ -1136,128 +1205,102 @@
 <div class="admonition example">
 <p class="admonition-title">Example: HTML Issue</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64398238</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:45&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;issue_sub_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;issue_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CSS: “left”: “none” is not a “left” value.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;first_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;first_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;last_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;last_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;=\&quot;game-news\&quot; id=\&quot;game-news\&quot; &gt;G&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-04-02T12:44:45&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;64398238&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/56b6/web_pages/2884097&quot;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;html_issue&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<h2 id="list-html-issues-on-a-web-page">List HTML issues on a web page</h2>
-<p>To list the HTML issues found on a web page, send a <code>GET</code> request to <code>/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Example: GET https://rocketvalidator.com/api/v0/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">59734815</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:34&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Obsolete doctype. Expected “&lt;!DOCTYPE html&gt;”.&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;sub_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">                    </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;how_many&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;html&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                        </span><span class="nt">&quot;first_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">                        </span><span class="nt">&quot;first_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span>
 <span class="w">                        </span><span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <span class="w">                        </span><span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
 <span class="w">                        </span><span class="nt">&quot;last_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span>
 <span class="w">                        </span><span class="nt">&quot;last_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">210</span>
-<span class="w">                        </span><span class="p">},</span>
-<span class="w">                        </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;=\&quot;game-news\&quot; id=\&quot;game-news\&quot; &gt;G&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">],</span>
-<span class="w">                </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:34&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;59734815&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;=\&quot;game-news\&quot; id=\&quot;game-news\&quot; &gt;G&quot;</span>
 <span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;first_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;first_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">211</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;last_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">117</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;last_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">211</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f0%9f%8d%93\&quot; id=\&quot;madelines-bac&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;first_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;first_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">261</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;last_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;last_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">261</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;f0%9f%92%a8\&quot; id=\&quot;driftmania-%f&quot;</span>
 <span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;html_issue&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;duplicate attribute&quot;</span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-05T12:44:34&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;issue_sub_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;issue_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Duplicate attribute “id”.&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-05T12:44:34&quot;</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;first_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;first_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;hilite_length&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;hilite_start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;last_column&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;last_line&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;  pading: 4px;\n    &quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">59734817</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;inserted_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:34&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CSS: “pading”: Property “pading” doesn&#39;t exist.&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;sub_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-02-28T13:01:34&quot;</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;59734817&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
-<span class="w">                </span><span class="p">},</span>
-<span class="w">                </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                        </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472&quot;</span>
-<span class="w">                    </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;144375908&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;report&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576&quot;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;html_issue&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;web_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v1/reports/72eecced-8472-41fc-b194-59b7496c7576/web_pages/8413311&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;html_issue&quot;</span>
+<span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;self&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/api/v0/reports/9314c/web_pages/472/html_issues?page[number]=1&amp;page[size]=25&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="list-html-issues-on-a-web-page">List HTML issues on a web page</h2>
+<p>To list the HTML issues found on a web page, send a <code>GET</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: list the HTML issues found on a web page</p>
+<div class="highlight"><pre><span></span><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues
+</code></pre></div>
+</div>
+<h3 id="filtering-by-message">Filtering by message</h3>
+<p>To include only the HTML issues of a given kind, use the <code>filter[message]</code> option.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: filter HTML issues for a web page about "table"</p>
+<div class="highlight"><pre><span></span><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues?filter[message]=table
+</code></pre></div>
+</div>
+<h3 id="filtering-by-tag">Filtering by tag</h3>
+<p>To include only the issues for a given <code>tags</code> combination, use the <code>filter[tags]</code> options:</p>
+<ul>
+<li><code>filter[tags][mode]</code> setting the tag combination mode, which can be <code>any</code>, <code>all</code> or <code>none</code>.</li>
+<li><code>filter[tags][list]</code> including a comma-separated list of tags.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: filter HTML issues for a web page tagged with "label"</p>
+<div class="highlight"><pre><span></span><code>GET /api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues?filter[tags][mode]=any&amp;filter[tags][list]=label
+</code></pre></div>
+</div>
+<h2 id="retrieve-an-html-issue">Retrieve an HTML issue</h2>
+<p>To show an individual HTML issue on a web page, send a <code>GET</code> request to <code>/api/v1/reports/$REPORT_ID/web_pages/$WEB_PAGE_ID/html_issues/$HTML_ISSUE_ID</code></p>
+<div class="admonition example">
+<p class="admonition-title">Example: retrieve HTML issue for a web page</p>
+<div class="highlight"><pre><span></span><code>GET `/api/v1/reports/$REPORT_ID/web_pages/$WEBPAGE_ID/html_issues/$HTML_ISSUE_ID
 </code></pre></div>
 </div>
 
@@ -1346,7 +1389,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       
