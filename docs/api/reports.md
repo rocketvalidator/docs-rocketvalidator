@@ -360,6 +360,68 @@ Each report will include the `guest_token` used as an attribute.
 
 You can find the token for each guest account in the [Guests](https://rocketvalidator.com/guests) section, both in the guest card, and also in the CSV export.
 
+### Sorting reports
+
+By default the list of reports is returned in descending order of the `last_checked_at` timestamp, that is, the most recent reports are shown first.
+
+If you want to change the sorting order, you can do that using the `sort` parameter to specify the attribute to sort by, combined with the direction (`asc` for ascending, `desc` for descending).
+
+The sortable attributes are:
+
+<dl>
+  <dt>url</dt>
+  <dd>Starting URL</dd>
+  
+  <dt>num_web_pages</dt>
+  <dd>Number of web pages</dd>
+
+  <dt>html_issues</dt>
+  <dd>Number of HTML issues (errors + warnings)</dd>
+
+  <dt>html_errors</dt>
+  <dd>Number of HTML errors</dd>
+
+  <dt>html_warnings</dt>
+  <dd>Number of HTML warnings</dd>
+
+  <dt>a11y_issues</dt>
+  <dd>Number of accessibility issues (errors + warnings)</dd>
+
+  <dt>a11y_errors</dt>
+  <dd>Number of accessibility errors</dd>
+
+  <dt>a11y_warnings</dt>
+  <dd>Number of accessibility warnings</dd>
+
+  <dt>last_checked_at</dt>
+  <dd>Timestamp for the last time a report was checked</dd>
+</dl>
+
+Combining one of these attributes with the `asc` or `desc` direction modifier, we get the parameter to use. For example, to sort by URL in descending order we would use `url-desc`.
+
+Here is a table showing all possible combinations for your convenience:
+
+| Sorting key            | Explanation                                                    | Example                                        |
+|------------------------|----------------------------------------------------------------|------------------------------------------------|
+| `url-asc`              | Starting URL, ascending                                        | `GET /api/v1/report?sort=url-asc`              |
+| `url-desc`             | Starting URL, descending                                       | `GET /api/v1/report?sort=url-desc`             |
+| `num_web_pages-asc`    | Number of web pages, ascending                                 | `GET /api/v1/report?sort=num_web_pages-asc`    |
+| `num_web_pages-desc`   | Number of web pages, descending                                | `GET /api/v1/report?sort=num_web_pages-desc`   |
+| `html_issues-asc`      | Number of HTML issues (errors + warnings), ascending           | `GET /api/v1/report?sort=html_issues-asc`      |
+| `html_issues-desc`     | Number of HTML issues (errors + warnings), descending          | `GET /api/v1/report?sort=html_issues-desc`     |
+| `html_errors-asc`      | Number of HTML errors, ascending                               | `GET /api/v1/report?sort=html_errors-asc`      |
+| `html_errors-desc`     | Number of HTML errors, descending                              | `GET /api/v1/report?sort=html_errors-desc`     |
+| `html_warnings-asc`    | Number of HTML warnings, ascending                             | `GET /api/v1/report?sort=html_warnings-asc`    |
+| `html_warnings-desc`   | Number of HTML warnings, descending                            | `GET /api/v1/report?sort=html_warnings-desc`   |
+| `a11y_issues-asc`      | Number of accessibility issues (errors + warnings), ascending  | `GET /api/v1/report?sort=a11y_issues-asc`      |
+| `a11y_issues-desc`     | Number of accessibility issues (errors + warnings), descending | `GET /api/v1/report?sort=a11y_issues-desc`     |
+| `a11y_errors-asc`      | Number of accessibility errors, ascending                      | `GET /api/v1/report?sort=a11y_errors-asc`      |
+| `a11y_errors-desc`     | Number of accessibility errors, descending                     | `GET /api/v1/report?sort=a11y_errors-desc`     |
+| `a11y_warnings-asc`    | Number of accessibility warnings, ascending                    | `GET /api/v1/report?sort=a11y_warnings-asc`    |
+| `a11y_warnings-desc`   | Number of accessibility warnings, descending                   | `GET /api/v1/report?sort=a11y_warnings-desc`   |
+| `last_checked_at-asc`  | Last checked at, ascending                                     | `GET /api/v1/report?sort=last_checked_at-asc`  |
+| `last-checked_at-desc` | Last checked at, descending                                    | `GET /api/v1/report?sort=last_checked_at-desc` |
+
 ## Delete a Report
 
 To delete an individual Report from your account, send a `DELETE` request to `/api/v1/reports/$REPORT_ID`.
