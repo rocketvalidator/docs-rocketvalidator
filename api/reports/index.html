@@ -843,6 +843,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sorting-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting reports
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1259,6 +1268,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sorting-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting reports
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1637,6 +1655,142 @@
 </blockquote>
 <p>Each report will include the <code>guest_token</code> used as an attribute.</p>
 <p>You can find the token for each guest account in the <a href="https://rocketvalidator.com/guests">Guests</a> section, both in the guest card, and also in the CSV export.</p>
+<h3 id="sorting-reports">Sorting reports</h3>
+<p>By default the list of reports is returned in descending order of the <code>last_checked_at</code> timestamp, that is, the most recent reports are shown first.</p>
+<p>If you want to change the sorting order, you can do that using the <code>sort</code> parameter to specify the attribute to sort by, combined with the direction (<code>asc</code> for ascending, <code>desc</code> for descending).</p>
+<p>The sortable attributes are:</p>
+<dl>
+  <dt>url</dt>
+  <dd>Starting URL</dd>
+
+  <dt>num_web_pages</dt>
+  <dd>Number of web pages</dd>
+
+  <dt>html_issues</dt>
+  <dd>Number of HTML issues (errors + warnings)</dd>
+
+  <dt>html_errors</dt>
+  <dd>Number of HTML errors</dd>
+
+  <dt>html_warnings</dt>
+  <dd>Number of HTML warnings</dd>
+
+  <dt>a11y_issues</dt>
+  <dd>Number of accessibility issues (errors + warnings)</dd>
+
+  <dt>a11y_errors</dt>
+  <dd>Number of accessibility errors</dd>
+
+  <dt>a11y_warnings</dt>
+  <dd>Number of accessibility warnings</dd>
+
+  <dt>last_checked_at</dt>
+  <dd>Timestamp for the last time a report was checked</dd>
+</dl>
+
+<p>Combining one of these attributes with the <code>asc</code> or <code>desc</code> direction modifier, we get the parameter to use. For example, to sort by URL in descending order we would use <code>url-desc</code>.</p>
+<p>Here is a table showing all possible combinations for your convenience:</p>
+<table>
+<thead>
+<tr>
+<th>Sorting key</th>
+<th>Explanation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url-asc</code></td>
+<td>Starting URL, ascending</td>
+<td><code>GET /api/v1/report?sort=url-asc</code></td>
+</tr>
+<tr>
+<td><code>url-desc</code></td>
+<td>Starting URL, descending</td>
+<td><code>GET /api/v1/report?sort=url-desc</code></td>
+</tr>
+<tr>
+<td><code>num_web_pages-asc</code></td>
+<td>Number of web pages, ascending</td>
+<td><code>GET /api/v1/report?sort=num_web_pages-asc</code></td>
+</tr>
+<tr>
+<td><code>num_web_pages-desc</code></td>
+<td>Number of web pages, descending</td>
+<td><code>GET /api/v1/report?sort=num_web_pages-desc</code></td>
+</tr>
+<tr>
+<td><code>html_issues-asc</code></td>
+<td>Number of HTML issues (errors + warnings), ascending</td>
+<td><code>GET /api/v1/report?sort=html_issues-asc</code></td>
+</tr>
+<tr>
+<td><code>html_issues-desc</code></td>
+<td>Number of HTML issues (errors + warnings), descending</td>
+<td><code>GET /api/v1/report?sort=html_issues-desc</code></td>
+</tr>
+<tr>
+<td><code>html_errors-asc</code></td>
+<td>Number of HTML errors, ascending</td>
+<td><code>GET /api/v1/report?sort=html_errors-asc</code></td>
+</tr>
+<tr>
+<td><code>html_errors-desc</code></td>
+<td>Number of HTML errors, descending</td>
+<td><code>GET /api/v1/report?sort=html_errors-desc</code></td>
+</tr>
+<tr>
+<td><code>html_warnings-asc</code></td>
+<td>Number of HTML warnings, ascending</td>
+<td><code>GET /api/v1/report?sort=html_warnings-asc</code></td>
+</tr>
+<tr>
+<td><code>html_warnings-desc</code></td>
+<td>Number of HTML warnings, descending</td>
+<td><code>GET /api/v1/report?sort=html_warnings-desc</code></td>
+</tr>
+<tr>
+<td><code>a11y_issues-asc</code></td>
+<td>Number of accessibility issues (errors + warnings), ascending</td>
+<td><code>GET /api/v1/report?sort=a11y_issues-asc</code></td>
+</tr>
+<tr>
+<td><code>a11y_issues-desc</code></td>
+<td>Number of accessibility issues (errors + warnings), descending</td>
+<td><code>GET /api/v1/report?sort=a11y_issues-desc</code></td>
+</tr>
+<tr>
+<td><code>a11y_errors-asc</code></td>
+<td>Number of accessibility errors, ascending</td>
+<td><code>GET /api/v1/report?sort=a11y_errors-asc</code></td>
+</tr>
+<tr>
+<td><code>a11y_errors-desc</code></td>
+<td>Number of accessibility errors, descending</td>
+<td><code>GET /api/v1/report?sort=a11y_errors-desc</code></td>
+</tr>
+<tr>
+<td><code>a11y_warnings-asc</code></td>
+<td>Number of accessibility warnings, ascending</td>
+<td><code>GET /api/v1/report?sort=a11y_warnings-asc</code></td>
+</tr>
+<tr>
+<td><code>a11y_warnings-desc</code></td>
+<td>Number of accessibility warnings, descending</td>
+<td><code>GET /api/v1/report?sort=a11y_warnings-desc</code></td>
+</tr>
+<tr>
+<td><code>last_checked_at-asc</code></td>
+<td>Last checked at, ascending</td>
+<td><code>GET /api/v1/report?sort=last_checked_at-asc</code></td>
+</tr>
+<tr>
+<td><code>last-checked_at-desc</code></td>
+<td>Last checked at, descending</td>
+<td><code>GET /api/v1/report?sort=last_checked_at-desc</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="delete-a-report">Delete a Report</h2>
 <p>To delete an individual Report from your account, send a <code>DELETE</code> request to <code>/api/v1/reports/$REPORT_ID</code>.</p>
 <blockquote>
