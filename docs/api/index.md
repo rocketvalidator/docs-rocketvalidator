@@ -330,3 +330,19 @@ Send a `POST` request to `/api/v1/reports` with a JSON payload including the par
 ### Get a Guest Account
 
 > `GET /api/v1/guest_accounts/$GUEST_ACCOUNT_ID`
+
+## API Costs
+
+The Rocket Validator API is available to all users at no additional cost. Usage is measured in credits, at a rate of **one credit per 1,000 API requests**. This allows users to integrate the API into their workflow while ensuring that our resource usage remains within reasonable limits.
+
+For instance, to obtain the initial data for a 1,000-page web page validation report, it requires 11 credits to make a single call to the reporting endpoint and 10 calls to retrieve the data for the 1,000 web pages (with a pagination of 100 items).
+
+In terms of reducing API costs, it is advisable to consider the following:
+
+* **Make fewer API calls**. For instance, if the integration is in the form of a script embedded in a website, rather than integrating it in the footer of the site, consider integrating it only within a page dedicated to the accessibility of the site.
+* **Consider caching** the results so that the data is retained for a period of time, rather than having to consult it constantly.
+* **Use a high page size** when paginating results, so you get more data in each API request.
+
+## API Rate Limit
+
+Currently the Rocket Validator is not rate limited, but it will be soon, to ensure reasonable limits in our resource usage.
