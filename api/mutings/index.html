@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -885,6 +885,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-muting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Muting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Muting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-a-muting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve a Muting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-your-mutings" class="md-nav__link">
     <span class="md-ellipsis">
       List your Mutings
@@ -909,9 +951,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#retrieve-a-muting" class="md-nav__link">
+  <a href="#delete-a-muting" class="md-nav__link">
     <span class="md-ellipsis">
-      Retrieve a Muting
+      Delete a Muting
     </span>
   </a>
   
@@ -1067,6 +1109,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-muting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a Muting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a Muting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieve-a-muting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieve a Muting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-your-mutings" class="md-nav__link">
     <span class="md-ellipsis">
       List your Mutings
@@ -1091,9 +1175,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#retrieve-a-muting" class="md-nav__link">
+  <a href="#delete-a-muting" class="md-nav__link">
     <span class="md-ellipsis">
-      Retrieve a Muting
+      Delete a Muting
     </span>
   </a>
   
@@ -1138,7 +1222,7 @@
   <dt>URL Match</dt>
   <dd>A string containing a match for a URL. It can be a full URL or any substring within it.</dd>  
 
-  <dt>Message Match</dt>
+  <dt>Message</dt>
   <dd>A string defining a match for a Issue. It can be a full issue message, or part of it.</dd>
 
   <dt>Comment</dt>
@@ -1153,7 +1237,7 @@
 <span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Non standard but it&#39;s a Safari extension&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">868</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;message_match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attribute “autocorrect” not allowed on element “input” at this point.&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attribute “autocorrect” not allowed on element “input” at this point.&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="nt">&quot;url_match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://dummy.rocketvalidator.com/&quot;</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2513&quot;</span><span class="p">,</span>
@@ -1165,6 +1249,36 @@
 <span class="p">}</span>
 </code></pre></div>
 </div>
+<h2 id="create-a-muting">Create a Muting</h2>
+<p>To create a Muting, send a <code>POST</code> request to <code>/api/v1/mutings</code>, with a JSON payload in the body including its attributes. There are two required attributes:</p>
+<ul>
+<li><code>url_match</code>. A string containing a match for a URL. It can be a full URL or any substring within it.</li>
+<li><code>message</code>. A string defining a match for an Issue. It can be a full issue message, or part of it.</li>
+</ul>
+<h3 id="optional-attributes">Optional attributes</h3>
+<ul>
+<li><code>comment</code>. A brief comment to publicly explain why this muting is needed.</li>
+</ul>
+<h3 id="example_1">Example</h3>
+<p>The next example shows how to create a muting that will silence all issues mentioning <code>image needs alt</code> on all web pages where the URL contains <code>example.com</code></p>
+<div class="admonition example">
+<p class="admonition-title">Example: POST /api/v1/mutings</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;url_match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;image needs alt&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a comment&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="retrieve-a-muting">Retrieve a Muting</h2>
+<p>To retrieve an individual Muting in your account, send a <code>GET</code> request to <code>/api/v1/mutings/$MUTING_ID</code>.</p>
+<blockquote>
+<p><code>GET /api/v1/mutings/$MUTING_ID</code></p>
+</blockquote>
 <h2 id="list-your-mutings">List your Mutings</h2>
 <p>To list all your Mutings in your account, send a <code>GET</code> request to <code>/api/v1/mutings</code>.</p>
 <blockquote>
@@ -1175,10 +1289,10 @@
 <blockquote>
 <p><code>GET /api/v1/reports/$REPORT_ID/mutings</code></p>
 </blockquote>
-<h2 id="retrieve-a-muting">Retrieve a Muting</h2>
-<p>To retrieve an individual Muting in your account, send a <code>GET</code> request to <code>/api/v1/mutings/$MUTING_ID</code>.</p>
+<h2 id="delete-a-muting">Delete a Muting</h2>
+<p>To delete an individual Muting from your account, send a <code>DELETE</code> request to <code>/api/v1/mutings/$MUTING_ID</code>.</p>
 <blockquote>
-<p><code>GET /api/v1/mutings/$MUTING_ID</code></p>
+<p><code>DELETE /api/v1/mutings/$MUTING_ID</code></p>
 </blockquote>
 
 
@@ -1266,7 +1380,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       
