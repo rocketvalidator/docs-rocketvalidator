@@ -13,7 +13,7 @@ Think of a Muting as a rule that defines a matching URL and issue message - when
   <dt>URL Match</dt>
   <dd>A string containing a match for a URL. It can be a full URL or any substring within it.</dd>  
 
-  <dt>Message Match</dt>
+  <dt>Message</dt>
   <dd>A string defining a match for a Issue. It can be a full issue message, or part of it.</dd>
 
   <dt>Comment</dt>
@@ -31,7 +31,7 @@ Think of a Muting as a rule that defines a matching URL and issue message - when
         "attributes": {
           "comment": "Non standard but it's a Safari extension",
           "id": 868,
-          "message_match": "Attribute “autocorrect” not allowed on element “input” at this point.",
+          "message": "Attribute “autocorrect” not allowed on element “input” at this point.",
           "url_match": "https://dummy.rocketvalidator.com/"
         },
         "id": "2513",
@@ -42,6 +42,40 @@ Think of a Muting as a rule that defines a matching URL and issue message - when
       }
     }
     ```
+## Create a Muting
+
+To create a Muting, send a `POST` request to `/api/v1/mutings`, with a JSON payload in the body including its attributes. There are two required attributes:
+
+* `url_match`. A string containing a match for a URL. It can be a full URL or any substring within it.
+* `message`. A string defining a match for an Issue. It can be a full issue message, or part of it.
+
+### Optional attributes
+
+* `comment`. A brief comment to publicly explain why this muting is needed.
+
+### Example
+
+The next example shows how to create a muting that will silence all issues mentioning `image needs alt` on all web pages where the URL contains `example.com`
+
+!!! example "Example: POST /api/v1/mutings"
+
+    ```json
+    {
+      "data": {
+        "attributes": {
+          "url_match": "example.com",
+          "message": "image needs alt",
+          "comment": "a comment"
+        }
+      }
+    }
+    ```
+
+## Retrieve a Muting
+
+To retrieve an individual Muting in your account, send a `GET` request to `/api/v1/mutings/$MUTING_ID`.
+
+> `GET /api/v1/mutings/$MUTING_ID`
 
 ## List your Mutings
 
@@ -55,8 +89,8 @@ To list all the mutings that have been applied to a given report, send a `GET` r
 
 > `GET /api/v1/reports/$REPORT_ID/mutings`
 
-## Retrieve a Muting
+## Delete a Muting
 
-To retrieve an individual Muting in your account, send a `GET` request to `/api/v1/mutings/$MUTING_ID`.
+To delete an individual Muting from your account, send a `DELETE` request to `/api/v1/mutings/$MUTING_ID`.
 
-> `GET /api/v1/mutings/$MUTING_ID`
+> `DELETE /api/v1/mutings/$MUTING_ID`
