@@ -56,7 +56,7 @@ Similarly, your [Stats](stats.md) automatically merge the data from your guest r
 
 ## Guest Accounts via the Reports API
 
-Check out the [Guest Reports API guide](api/reports.md#list-your-guest-reports) to learn how to get your guest accounts' reports using the API. This will let you retrieve the reports created by all your guests, or filter by a single guest using the guest token.
+Check out the [Guest Reports API guide](api/reports.md#filtering-by-guest-accounts) to learn how to get your guest accounts' reports using the API. This will let you retrieve the reports created by all your guests, or filter by a single guest using the guest token.
 
 
 
