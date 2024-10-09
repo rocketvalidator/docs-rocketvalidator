@@ -16,6 +16,7 @@ nav:
   - Google Analytics: google.md
   - Validating your local server: how-to-validate-your-local-server.md
   - Guest Accounts: guest-accounts.md
+  - WordPress Plugin: wordpress-plugin.md
   - FAQs: faqs.md
   - API:
     - Introduction: api/index.md
