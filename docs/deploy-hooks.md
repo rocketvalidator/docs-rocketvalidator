@@ -19,9 +19,10 @@ Then, copy the supplied schedule URL (which will be something like <code>https:/
 
 <a href="https://www.netlify.com/" target="_blank">Netlify</a> is a hosting platform for static websites, and offers the simplest integration possible.
 
-You just need to <strong>Add Notification</strong>, choose the <strong>Outgoing webhook</strong> type and paste your deploy hook URL like this:
+In the **Site configuration** page for your site at Netlify, go to the **Notifications** section. There, inside **Emails and webhooks**, click on **Add notification** and choose **HTTP POST request**, like this:
 
-![Netlify screenshot](img/schedules/netlify.png)
+![Netlify screenshot](img/schedules/netlify01.png)
+![Netlify screenshot](img/schedules/netlify02.png)
 
 ## Github Pages
 
