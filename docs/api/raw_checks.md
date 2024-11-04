@@ -30,7 +30,7 @@ store_raw_a11y_checks: true
   <dd>Unique ID for this raw check.</dd>
 
   <dt>Kind</dt>
-  <dd>Type of the raw check, either `html` or `a11y`.</dd>
+  <dd>Type of the raw check, either <code>html</code> or <code>a11y</code>.</dd>
 
   <dt>Raw</dt>
   <dd>Raw data of the check, as returned by the Axe Core checker or the W3C HTML validator.</dd>
