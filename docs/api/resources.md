@@ -30,6 +30,10 @@ Typically, the same kind of issue affects many Web Pages on a given Report. For 
 
 A Common HTML Issue represents a given HTML Issue that is common to many Web Pages, thus showing its details, how many times it's found on the Report, and links to the related Web Pages.
 
+## Raw Check <sup class="badge-pro">Pro</sup>
+
+A Raw Check contains the raw output of the check, unprocessed, as returned by the Axe Core checker or the W3C HTML validator.
+
 ## Schedule <sup class="badge-pro">Pro</sup>
 
 A Schedule represents a programmed report that will be run on a given periodicity, or after a deploy webhook is received.

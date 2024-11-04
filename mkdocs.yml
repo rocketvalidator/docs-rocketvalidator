@@ -29,6 +29,7 @@ nav:
     - HTML Issues: api/html_issues.md
     - Common Accessibility Issues: api/common_a11y_issues.md
     - Common HTML Issues: api/common_html_issues.md
+    - Raw Checks: api/raw_checks.md
     - Schedules: api/schedules.md
     - Mutings: api/mutings.md
     - Devices: api/devices.md

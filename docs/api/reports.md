@@ -232,6 +232,8 @@ The following attributes are optional:
 The following attributes are only available for users with a Pro or Enterprise subscription:
 
 * `perform_a11y_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Defaults to false.
+* `store_raw_html_checks`. Boolean to enable storage of the raw HTML checks. Defaults to false.
+* `store_raw_a11y_checks`. Boolean to enable storage of the raw accessibility checks. Defaults to false.
 * `deep_crawl`. Boolean to enable deep crawling. Defaults to true.
 * `initial_urls`. Newline-separated list of URLs.
 * `exclusions`. Newline-separated list of paths.

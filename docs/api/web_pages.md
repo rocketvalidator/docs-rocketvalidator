@@ -52,6 +52,12 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
 
   <dt>A11Y issues <sup class="badge-pro">Pro</sup></dt>
   <dd>The accessibility issues found on this Web Page, if the accessibility check was enabled.</dd>
+
+  <dt>Raw HTML Check <sup class="badge-pro">Pro</sup></dt>
+  <dd>The raw HTML check for this Web Page, if the raw HTML check optionwas enabled on the report.</dd>
+
+  <dt>Raw A11Y Check <sup class="badge-pro">Pro</sup></dt>
+  <dd>The raw accessibility check for this Web Page, if the raw accessibility check option was enabled on the report.</dd>
 </dl>
 
 ## Example
@@ -100,6 +106,16 @@ A Web Page represents an HTML web page that has been found by the scraper, and i
                 "html_issues": {
                     "links": {
                         "related": "https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/html_issues"
+                    }
+                },
+                "raw_a11y_check": {
+                    "links": {
+                        "related": "https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/raw_a11y_check"
+                    }
+                },
+                "raw_html_check": {
+                    "links": {
+                        "related": "https://rocketvalidator.com/api/v1/reports/2455a63a-7e16-4cbf-8455-6c9a88195142/web_pages/8683545/raw_html_check"
                     }
                 },
                 "report": {
