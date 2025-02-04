@@ -9,3 +9,8 @@ We use [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) to bu
 - Install with `pip3 install mkdocs-material`.
 - Run a local server with `mkdocs serve` and open http://localhost:8000/
 - Publish with `mkdocs gh-deploy`.
+
+## Upgrade Material for MkDocs
+
+- Run `pip3 uninstall mkdocs-material`
+- Run `pip3 install mkdocs-material`
