@@ -15,9 +15,11 @@ To schedule a site validation, you can define:
 * **How many pages to validate**. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.
 * **Validation speed (requests/second)**. By default is 3 reqs/second, can be set higher depending on your subscription plan. <a href="/rate-limits">Read more</a>.
 * **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
+* **Dynamic Crawler**. Use the dynamic crawler to validate pages that are loaded via JavaScript. Requires a Pro, Agency or Enterprise subscription.
 * **Exclusions**. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.
 * **Check HTML and Accessibility or only HTML**. Choose if you want to include A11Y checks on top of HTML checks.
-* **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used.
+* **Basic Authentication**. Set the [basic authentication credentials](/basic-authentication) to use when validating pages that require authentication. Requires an Agency or Enterprise subscription.
+* **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used. Requires a Pro, Agency or Enterprise subscription.
 * **Tags**. A comma-separated list of tags to apply to the generated report.
 * **Active**. Disable this to temporarily pause the scheduled validation.
 

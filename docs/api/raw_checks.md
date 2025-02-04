@@ -21,7 +21,7 @@ store_raw_a11y_checks: true
 
     For example, running a report with HTML and accessibility checks on 10 web pages will normally consume 20 credits (10 HTML checks and 10 accessibility checks). If you enable the storage of raw checks on this report, we'll charge an additional 20 credits (10 stored HTML raw checks and 10 stored accessibility raw checks).
 
-    Please consider not storing raw checks unless you need them, or only storing the kind of raw checks you need (HTML and /or accessibility).
+    Please consider not storing raw checks unless you need them, or only storing the kind of raw checks you need (HTML and / or accessibility).
 
 ## Attributes
 

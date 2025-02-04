@@ -2,7 +2,7 @@
 
 To begin validating your sites you just need to <a href="https://rocketvalidator.com/registration/new" target="_blank">create an account</a>. There's a free trial that lets you validate HTML, and a <a href="https://rocketvalidator.com/registration/new?plan=pro-weekly&coupon=7DAYS" target="_blank">Pro trial</a> that gives you access to the advanced features like accessibility checking, muting rules, scheduled reports, and more.
 
-Once you have created your account, you'll be prompted to validate your first site by entering a starting URL and clicking on "Launch validation".
+Once you have created your account, you'll be prompted to validate your first site by entering a starting URL and clicking on the "Validate" button.
 
 ![New site report form](img/new-site-validation-form.png)
 
@@ -16,15 +16,17 @@ To validate a site, you can define the following options.
 
 ## Advanced options
 
-By clicking on "Show advanced options for crawling, device viewport and tags", you'll have access to the advanced options that add additional features to your report.
+By clicking on the "Show advanced options" link, you'll have access to the advanced options that add additional features to your report.
 
 ![New site report form](img/new-site-validation-form-advanced-options.png)
 
-* **Validation speed (requests/second)**. Can be set from 1 to 3 (Micro users), 1 to 5 (Basic users) or 1 to 15 (Pro users).
+* **Validation speed (requests/second)**. Can be set from 1 to 3 (Micro users), 1 to 5 (Basic users) or 1 to 15 (Pro and Agency users).
 * **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
+* **Dynamic Crawler**. Use the dynamic crawler to validate pages that are loaded via JavaScript. Requires a Pro, Agency or Enterprise subscription.
 * **Initial URLs**. When enabled, it allows you to define a list of URLs to be included as the starting web pages of the report.
 * **Exclusions**. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.
-* **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used.
+* **Basic Authentication**. Set the [basic authentication credentials](/basic-authentication) to use when validating pages that require authentication. Requires an Agency or Enterprise subscription.
+* **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used. Requires a Pro, Agency or Enterprise subscription.
 * **Tags**. A comma-separated list of tags to apply to the generated report.
 
 ## Re-checking your pages
