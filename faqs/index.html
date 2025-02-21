@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.2">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.5">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -708,6 +708,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#if-rocket-validator-is-being-blocked-how-can-i-allow-it-to-access-my-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      If Rocket Validator is being blocked, how can I allow it to access my site?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 
@@ -1234,6 +1243,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#if-rocket-validator-is-being-blocked-how-can-i-allow-it-to-access-my-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      If Rocket Validator is being blocked, how can I allow it to access my site?
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 
@@ -1278,7 +1296,7 @@
   <dt>Too many requests to remote server</dt>
   <dd>The remote server is denying us access because it is rate limiting us. Contact your sys admin to relax this rate limiting, or try again later.</dd>
   <dt>Blocked</dt>
-  <dd>The remote server is blocking our requests. Consult the <a href="/user-agents">User Agents</a> page to explicitly allow our requests.</dd>
+  <dd>The remote server is blocking our requests. Consult the <a href="#if-rocket-validator-is-being-blocked-how-can-i-allow-it-to-access-my-site">"If Rocket Validator is being blocked, how can I allow it to access my site?"</a> section below to explicitly allow our requests.</dd>
   <dt>No internal links found</dt>
   <dd>The document returned for the starting URL contains no links, or the links are not on the same host. The spider will only follow internal links from the starting URL.</dd>
 </dl>
@@ -1313,6 +1331,19 @@
 <p>You can download your reports data in Excel format. See <a href="https://rocketvalidator.com/blog/how-to-export-report-data-as-excel-files">this blog post</a> for more information on exporting report data.</p>
 <h2 id="how-can-i-exclude-rocket-validator-from-google-analytics-traffic">How can I exclude Rocket Validator from Google Analytics traffic?</h2>
 <p>You can detect the <a href="/user-agents">User Agent</a> string, and <a href="/google">exclude it from Google Analytics</a>.</p>
+<h2 id="if-rocket-validator-is-being-blocked-how-can-i-allow-it-to-access-my-site">If Rocket Validator is being blocked, how can I allow it to access my site?</h2>
+<p>When initiating a site validation, Rocket Validator will scan the web pages in your site using its different systems. The link spider will find internal links, the HTML validator will check the HTML code, and the A11Y validator will check the accessibility of the page.</p>
+<p>These processes can generate a high volume of visits to your site, which in some cases may result in Rocket Validator being blocked by your server.</p>
+<p>To prevent this, you can add Rocket Validator to the list of allowed requests on your server in one of two ways:</p>
+<ul>
+<li>You can add the IP addresses of the Rocket Validator servers to the list of allowed requests on your server.</li>
+<li>You can add the User-Agent string to the list of allowed requests on your server.</li>
+</ul>
+<p>To proceed, please consult with your system administrators to add the following IP addresses and/or User Agents to the list of allowed requests:</p>
+<ul>
+<li><a href="https://rocketvalidator.com/ips">https://rocketvalidator.com/ips</a></li>
+<li><a href="https://rocketvalidator.com/user-agents">https://rocketvalidator.com/user-agents</a></li>
+</ul>
 
 
 
@@ -1399,7 +1430,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
