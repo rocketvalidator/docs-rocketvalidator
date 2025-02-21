@@ -18,7 +18,7 @@ When you submit an URL for validation, we send a web spider to visit the site an
   <dt>Too many requests to remote server</dt>
   <dd>The remote server is denying us access because it is rate limiting us. Contact your sys admin to relax this rate limiting, or try again later.</dd>
   <dt>Blocked</dt>
-  <dd>The remote server is blocking our requests. Consult the <a href="/user-agents">User Agents</a> page to explicitly allow our requests.</dd>
+  <dd>The remote server is blocking our requests. Consult the <a href="#if-rocket-validator-is-being-blocked-how-can-i-allow-it-to-access-my-site">"If Rocket Validator is being blocked, how can I allow it to access my site?"</a> section below to explicitly allow our requests.</dd>
   <dt>No internal links found</dt>
   <dd>The document returned for the starting URL contains no links, or the links are not on the same host. The spider will only follow internal links from the starting URL.</dd>
 </dl>
@@ -59,3 +59,19 @@ You can download your reports data in Excel format. See [this blog post](https:/
 ## How can I exclude Rocket Validator from Google Analytics traffic?
 
 You can detect the <a href="/user-agents">User Agent</a> string, and <a href="/google">exclude it from Google Analytics</a>.
+
+## If Rocket Validator is being blocked, how can I allow it to access my site?
+
+When initiating a site validation, Rocket Validator will scan the web pages in your site using its different systems. The link spider will find internal links, the HTML validator will check the HTML code, and the A11Y validator will check the accessibility of the page.
+
+These processes can generate a high volume of visits to your site, which in some cases may result in Rocket Validator being blocked by your server.
+
+To prevent this, you can add Rocket Validator to the list of allowed requests on your server in one of two ways:
+
+* You can add the IP addresses of the Rocket Validator servers to the list of allowed requests on your server.
+* You can add the User-Agent string to the list of allowed requests on your server.
+
+To proceed, please consult with your system administrators to add the following IP addresses and/or User Agents to the list of allowed requests:
+
+* [https://rocketvalidator.com/ips](https://rocketvalidator.com/ips)
+* [https://rocketvalidator.com/user-agents](https://rocketvalidator.com/user-agents)
