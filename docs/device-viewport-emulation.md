@@ -12,20 +12,31 @@ To emulate a device viewport, just enable the **Device Viewport Emulation** when
 
 ## Currently supported devices
 
-- Galaxy Note 3 (360x640, DPR 3)
-- Kindle Fire HDX (800x1280, DPR 2)
-- Laptop with HiDPI screen (1440x900, DPR 2)
-- Laptop with MDPI screen (1280x800, DPR 1)
-- Lumia 950 (360x640, DPR 4)
-- iPad Air (820x1180, DPR 2)
-- iPad Mini (768x1024, DPR 2)
-- iPad Pro 11 (834x1194, DPR 2)
-- iPad Pro 12.9 (1024x1366, DPR 2)
-- iPhone 11 (414x828, DPR 2)
-- iPhone 11 Pro Max (414x896, DPR 3)
-- iPhone 12/13 Mini (375x812, DPR 3)
-- iPhone 12/13 Pro (390x844, DPR 3)
-- iPhone 12/13 Pro Max (428x926, DPR 3)
-- iPhone SE (320x568, DPR 2)
+| Name | Width | Height | Device Scale Factor |
+|------|--------|---------|-------------------|
+| Default | 800 | 600 | 1.0 |
+| Galaxy Note 3 | 360 | 640 | 3.0 |
+| iPad Air | 820 | 1,180 | 2.0 |
+| iPad Mini | 768 | 1,024 | 2.0 |
+| iPad Pro 11 | 834 | 1,194 | 2.0 |
+| iPad Pro 12.9 | 1,024 | 1,366 | 2.0 |
+| iPhone 11 | 414 | 828 | 2.0 |
+| iPhone 11 Pro Max | 414 | 896 | 3.0 |
+| iPhone 12/13 Mini | 375 | 812 | 3.0 |
+| iPhone 12/13 Pro | 390 | 844 | 3.0 |
+| iPhone 12/13 Pro Max | 428 | 926 | 3.0 |
+| iPhone 14 | 390 | 663 | 3.0 |
+| iPhone 14 Plus | 428 | 745 | 3.0 |
+| iPhone 14 Pro | 393 | 659 | 3.0 |
+| iPhone 14 Pro Max | 430 | 739 | 3.0 |
+| iPhone 15 | 393 | 659 | 3.0 |
+| iPhone 15 Plus | 430 | 739 | 3.0 |
+| iPhone 15 Pro | 393 | 659 | 3.0 |
+| iPhone 15 Pro Max | 430 | 739 | 3.0 |
+| iPhone SE | 320 | 568 | 2.0 |
+| Kindle Fire HDX | 800 | 1,280 | 2.0 |
+| Laptop with HiDPI screen | 1,440 | 900 | 2.0 |
+| Laptop with MDPI screen | 1,280 | 800 | 1.0 |
+| Lumia 950 | 360 | 640 | 4.0 |
 
 Check the [full list of supported devices](https://rocketvalidator.com/devices) in Rocket Validator. 
