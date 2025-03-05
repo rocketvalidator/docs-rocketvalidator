@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.5">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.6.7">
     
     
       
@@ -1162,23 +1162,162 @@
 <p>To emulate a device viewport, just enable the <strong>Device Viewport Emulation</strong> when creating a report, choose a device from the list, and optionally check the <strong>rotated</strong> option:</p>
 <p><img alt="Deview selection" src="../img/device-selection.jpg" /></p>
 <h2 id="currently-supported-devices">Currently supported devices</h2>
-<ul>
-<li>Galaxy Note 3 (360x640, DPR 3)</li>
-<li>Kindle Fire HDX (800x1280, DPR 2)</li>
-<li>Laptop with HiDPI screen (1440x900, DPR 2)</li>
-<li>Laptop with MDPI screen (1280x800, DPR 1)</li>
-<li>Lumia 950 (360x640, DPR 4)</li>
-<li>iPad Air (820x1180, DPR 2)</li>
-<li>iPad Mini (768x1024, DPR 2)</li>
-<li>iPad Pro 11 (834x1194, DPR 2)</li>
-<li>iPad Pro 12.9 (1024x1366, DPR 2)</li>
-<li>iPhone 11 (414x828, DPR 2)</li>
-<li>iPhone 11 Pro Max (414x896, DPR 3)</li>
-<li>iPhone 12/13 Mini (375x812, DPR 3)</li>
-<li>iPhone 12/13 Pro (390x844, DPR 3)</li>
-<li>iPhone 12/13 Pro Max (428x926, DPR 3)</li>
-<li>iPhone SE (320x568, DPR 2)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Width</th>
+<th>Height</th>
+<th>Device Scale Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>800</td>
+<td>600</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Galaxy Note 3</td>
+<td>360</td>
+<td>640</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPad Air</td>
+<td>820</td>
+<td>1,180</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>iPad Mini</td>
+<td>768</td>
+<td>1,024</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>iPad Pro 11</td>
+<td>834</td>
+<td>1,194</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>iPad Pro 12.9</td>
+<td>1,024</td>
+<td>1,366</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>iPhone 11</td>
+<td>414</td>
+<td>828</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>iPhone 11 Pro Max</td>
+<td>414</td>
+<td>896</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 12/13 Mini</td>
+<td>375</td>
+<td>812</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 12/13 Pro</td>
+<td>390</td>
+<td>844</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 12/13 Pro Max</td>
+<td>428</td>
+<td>926</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 14</td>
+<td>390</td>
+<td>663</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 14 Plus</td>
+<td>428</td>
+<td>745</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 14 Pro</td>
+<td>393</td>
+<td>659</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 14 Pro Max</td>
+<td>430</td>
+<td>739</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 15</td>
+<td>393</td>
+<td>659</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 15 Plus</td>
+<td>430</td>
+<td>739</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 15 Pro</td>
+<td>393</td>
+<td>659</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone 15 Pro Max</td>
+<td>430</td>
+<td>739</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>iPhone SE</td>
+<td>320</td>
+<td>568</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Kindle Fire HDX</td>
+<td>800</td>
+<td>1,280</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Laptop with HiDPI screen</td>
+<td>1,440</td>
+<td>900</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Laptop with MDPI screen</td>
+<td>1,280</td>
+<td>800</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Lumia 950</td>
+<td>360</td>
+<td>640</td>
+<td>4.0</td>
+</tr>
+</tbody>
+</table>
 <p>Check the <a href="https://rocketvalidator.com/devices">full list of supported devices</a> in Rocket Validator. </p>
 
 
@@ -1266,7 +1405,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
