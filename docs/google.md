@@ -10,13 +10,32 @@ There are 2 options to do that, let's explore them.
 
 ## Not rendering the Google Analytics script
 
-This option may be the simpler method, if your web site can detect the User Agent string from the request. It may not be an option in certain cases like static sites.
+This is the simplest option - you can change the Google Analytics script in your site so that it will not be executed if the User Agent contains `RocketValidator`. This can be detected using JavaScript.
 
-If you can do that, then it's simple: in case the User Agent string contains `RocketValidator`, don't include the script that triggers Google Analytics.
+Here's an example, this goes right after the opening `<head>` tag.
 
-However, we don't recommend this option as it's preferable to not customize your content based on User Agents, so the bots can have "the real thing". Let's say a script introduces an accessibility issue, you're not going to detect it if you hide it from the bots.
+```html
+<script>
+// Set your Google Analytics ID here
+const GA_ID = 'YOUR-GA-ID-HERE';
 
-## Filtering out from Google Analytics
+if (!navigator.userAgent.includes('RocketValidator')) {
+  (function() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  })();
+}
+</script>
+```
+
+## Filtering out from Google Universal Analytics
 
 The second option requires a bit more work to set up but it's cleaner. There's nothing to set up on your server and the content stays the same. What you need to to instead is tell Google Analytics to filter out requests depending on the User Agent string.
 
