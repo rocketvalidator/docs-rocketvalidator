@@ -354,9 +354,13 @@ To get only the list of reports created by guests, pass `created_by=guests` like
 
 > `GET /api/v1/reports?created_by=guests`
 
-To get only the list of reports created by an individual guest, pass the token like this:
+To get only the list of reports created by an individual guest or guests, pass the tokens as comma-separated like this:
 
 > `GET /api/v1/reports?created_by=guests&guest_token=1234`
+
+or
+
+> `GET /api/v1/reports?created_by=guests&guest_token=1234,5678`
 
 Each report will include the `guest_token` used as an attribute.
 
