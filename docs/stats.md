@@ -1,6 +1,6 @@
 # Stats
 
-The new Stats section, available for Micro, Basic, Pro and Enterprise users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
+The Stats section, available for Micro, Basic, Pro, Agency and Enterprise users, shows stats for the evolution of the checked domains, based on daily snapshots automatically generated from the data in your reports.
 
 ![Stats section](img/stats/stats.png)
 
@@ -67,3 +67,43 @@ These bar charts show the evolution over time of the number of total issues, bot
 Each bar represents a date, and shows the proportion of errors (red) and warnings (yellow).
 
 ![Total Issues Evolution](img/stats/stats-total-issues.png)
+
+## Sharing Stat Views
+
+Stat Views let you share your validation stats through a public URL. Anyone with the link can see the same stats and related reports based on the filters you set.
+
+### Creating a Stat View
+
+First, in the Stats section, apply the filters you want to share, such as:
+
+- **Team Scope** – just you, your whole team, or specific users  
+- **Tags** – one or more tags, using modes like *any*, *all*, or *none*  
+- **Domain search**  
+- **Date range**
+
+Your charts update automatically as you change filters. When ready, click the **Share** button next to the filters:
+
+![Stats filters with Share button](/img/stats/stat-views-01.png)
+
+### Adding Details
+
+Clicking **Share** opens a modal where you can enter a name and an optional description:  
+
+![Stat View modal window with form for name and description](/img/stats/stat-views-02.png)
+
+Give it a clear name and, if needed, describe the filter criteria and the reports included (for example, how often they run or which device viewports are set).
+
+### Sharing and Editing
+
+After saving, you’ll be redirected to the new Stat View. As the owner, you’ll see:
+
+- A **Share** button to copy the public URL  
+- An **Edit** button to update the name or description  
+
+![Stat View showing name, description, and charts](/img/stats/stat-views-03.png)
+
+### Reports Included
+
+Each Stat View also shows the list of recent reports below the charts. This makes it easy to review the latest HTML and accessibility issues directly from the stats page.
+
+![Stat View showing charts and latest reports at the bottom](/img/stats/stat-views-04.png)
