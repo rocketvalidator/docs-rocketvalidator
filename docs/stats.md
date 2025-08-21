@@ -68,6 +68,12 @@ Each bar represents a date, and shows the proportion of errors (red) and warning
 
 ![Total Issues Evolution](img/stats/stats-total-issues.png)
 
+## Latest Reports
+
+Below the charts, the latest site validation reports that match the selected stats filters will be shown.  
+
+![Stat View showing charts and latest reports at the bottom](/img/stats/stats-latest-reports.png)
+
 ## Sharing Stat Views
 
 Stat Views let you share your validation stats through a public URL. Anyone with the link can see the same stats and related reports based on the filters you set.
@@ -102,7 +108,7 @@ After saving, you’ll be redirected to the new Stat View. As the owner, you’l
 
 ![Stat View showing name, description, and charts](/img/stats/stat-views-03.png)
 
-### Reports Included
+### Recent Reports
 
 Each Stat View also shows the list of recent reports below the charts. This makes it easy to review the latest HTML and accessibility issues directly from the stats page.
 
