@@ -1418,7 +1418,7 @@
   <dd>Unique schedule ID.</dd>
 
   <dt>Starting URL</dt>
-  <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then (if Deep Crawl is enabled) recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>  
+  <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then (if Deep Crawl is enabled) recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
 
   <dt>Initial URLs</dt>
   <dd>A list of URLs to be included on the first run of the Spider. Newline-separated.</dd>
@@ -1463,6 +1463,9 @@
 
   <dt>Tags</dt>
   <dd>Comma-separated list of tags to categorize this schedule.</dd>
+
+  <dt>Shared</dt>
+  <dd>Boolean, false by default. Indicates if the reports created by this schedule can be shared with other users.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the schedule was created.</dd>
@@ -1516,6 +1519,7 @@
 <span class="w">                </span><span class="s2">&quot;personal&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="s2">&quot;scheduled&quot;</span>
 <span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;shared&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-05-15T08:35:02&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2d8cc37a-1467-493b-8660-f97e33ca2c0a&quot;</span><span class="p">,</span>
@@ -1562,6 +1566,7 @@
 <li><code>exclusions</code>. Newline-separated list of paths.</li>
 <li><code>device_id</code>. Id of the device to be used for viewport emulation. Check the <a href="/api/devices#list-of-devices">device list</a> to see the available devices.</li>
 <li><code>device_rotated</code>. Boolean to indicate the emulated device should be rotated. Defaults to false.</li>
+<li><code>shared</code>. Boolean to indicate the reports created by the schedule can be shared with other users. Defaults to false.</li>
 <li><code>tags</code>. Comma-separated list of tags.</li>
 </ul>
 <p>The next example shows how to form the body payload with the Schedule attributes.</p>
@@ -1583,6 +1588,7 @@
 <span class="w">                </span><span class="nt">&quot;monthday&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dev,dummy&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;shared&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;device_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c4f0f4be-e6dd-498a-b049-205be3604505&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;device_rotated&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">        </span><span class="p">}</span>

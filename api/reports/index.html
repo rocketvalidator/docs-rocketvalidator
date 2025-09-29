@@ -903,6 +903,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change-the-visibility-of-a-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change the Visibility of a Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#retrieve-a-report" class="md-nav__link">
     <span class="md-ellipsis">
       Retrieve a Report
@@ -1369,6 +1378,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change-the-visibility-of-a-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change the Visibility of a Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#retrieve-a-report" class="md-nav__link">
     <span class="md-ellipsis">
       Retrieve a Report
@@ -1545,6 +1563,9 @@
     </dl>
   </dd>
 
+  <dt>Shared</dt>
+  <dd>Boolean, false by default. Indicates if the report can be shared with other users.</dd>
+
   <dt>Tags</dt>
   <dd>Comma-separated list of tags to categorize this report.</dd>
 
@@ -1640,6 +1661,7 @@
 <span class="w">        </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">            </span><span class="s2">&quot;dummy&quot;</span>
 <span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;shared&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">        </span><span class="nt">&quot;updated_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-05-14T13:54:49&quot;</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2455a63a-7e16-4cbf-8455-6c9a88195142&quot;</span><span class="p">,</span>
@@ -1695,6 +1717,7 @@
 <li><code>rate_limit</code>. Limit on the number of requests per second. Defaults to 1.</li>
 <li><code>perform_html_checks</code>. Boolean to enable checks using the W3C Validator software on the Web Pages found. Defaults to true.</li>
 <li><code>tags</code>. Comma-separated list of tags.</li>
+<li><code>shared</code>. Boolean to indicate if the report can be shared with other users. Defaults to false.</li>
 </ul>
 <h3 id="pro-attributes">Pro attributes</h3>
 <p>The following attributes are only available for users with a Pro or Enterprise subscription:</p>
@@ -1755,6 +1778,20 @@
 <span class="w">    </span><span class="p">}],</span>
 <span class="w">    </span><span class="nt">&quot;jsonapi&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="change-the-visibility-of-a-report">Change the Visibility of a Report</h2>
+<p>By default, reports are private and only accessible to the user who created them, and their host in case of guest users.</p>
+<p>To change the visibility of a report, send a <code>PATCH</code> request to <code>/api/v1/reports/$REPORT_ID</code> with a payload to set the <code>shared</code> field to <code>true</code> or <code>false</code>. Any other payload will be rejected.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: PATCH /api/v1/reports/$REPORT_ID</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;shared&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
