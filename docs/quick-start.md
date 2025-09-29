@@ -28,6 +28,7 @@ By clicking on the "Show advanced options" link, you'll have access to the advan
 * **Basic Authentication**. Set the [basic authentication credentials](/basic-authentication) to use when validating pages that require authentication. Requires an Agency or Enterprise subscription.
 * **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used. Requires a Pro, Agency or Enterprise subscription.
 * **Tags**. A comma-separated list of tags to apply to the generated report.
+* **Shared Report**. By default, the report is private and only accessible to you. If you want to share it with others, you can enable this option to get a shareable link.
 
 ## Re-checking your pages
 

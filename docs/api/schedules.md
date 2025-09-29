@@ -11,7 +11,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dd>Unique schedule ID.</dd>
 
   <dt>Starting URL</dt>
-  <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then (if Deep Crawl is enabled) recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>  
+  <dd>Initial URL, that the Spider will use as the initial request. The Spider will include the internal links from that starting URL, and then (if Deep Crawl is enabled) recursively include the linked web pages from those, until the Max Pages limit is reached.</dd>
 
   <dt>Initial URLs</dt>
   <dd>A list of URLs to be included on the first run of the Spider. Newline-separated.</dd>
@@ -40,7 +40,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dt>Periodicity</dt>
   <dd>
     Shows when the schedule will be run, using the keys <code>every</code>, which can be one of <code>day / week / month</code>.
-    
+
     <ul>
         <li>If <code>week</code> is used, then <code>weekday</code> will indicate the week day the schedule is run.</li>
         <li>If <code>month</code> is used, the field <code>monthday</code> will give the details for the day of the month the schedule will be run on.</li>
@@ -56,6 +56,9 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
 
   <dt>Tags</dt>
   <dd>Comma-separated list of tags to categorize this schedule.</dd>
+
+  <dt>Shared</dt>
+  <dd>Boolean, false by default. Indicates if the reports created by this schedule can be shared with other users.</dd>
 
   <dt>Inserted At</dt>
   <dd>Timestamp when the schedule was created.</dd>
@@ -112,6 +115,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
                     "personal",
                     "scheduled"
                 ],
+                "shared": false,
                 "updated_at": "2024-05-15T08:35:02"
             },
             "id": "2d8cc37a-1467-493b-8660-f97e33ca2c0a",
@@ -157,6 +161,7 @@ To create a Schedule, send a `POST` request to `/api/v1/schedules`, with a JSON 
 * `exclusions`. Newline-separated list of paths.
 * `device_id`. Id of the device to be used for viewport emulation. Check the <a href="/api/devices#list-of-devices">device list</a> to see the available devices.
 * `device_rotated`. Boolean to indicate the emulated device should be rotated. Defaults to false.
+* `shared`. Boolean to indicate the reports created by the schedule can be shared with other users. Defaults to false.
 * `tags`. Comma-separated list of tags.
 
 The next example shows how to form the body payload with the Schedule attributes.
@@ -180,6 +185,7 @@ The next example shows how to form the body payload with the Schedule attributes
                     "monthday": 15
                 },
                 "tags": "dev,dummy",
+                "shared": true,
                 "device_id": "c4f0f4be-e6dd-498a-b049-205be3604505",
                 "device_rotated": true,
             }
@@ -203,7 +209,7 @@ To delete an individual Schedule from your account, send a `DELETE` request to `
 
     ```
     204 No Content
-    ```    
+    ```
 
 ## List your Schedules
 
@@ -235,4 +241,3 @@ To include only the Schedules for a given `tags` combination, use the `filter[ta
 ## Filter Reports by Schedule
 
 To list all the Reports in your account that have been created via a given Schedule, refer to the <a href="http://localhost:8000/api/reports/#filtering-by-schedule">Reports</a> documentation.
-

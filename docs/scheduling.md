@@ -21,6 +21,7 @@ To schedule a site validation, you can define:
 * **Basic Authentication**. Set the [basic authentication credentials](/basic-authentication) to use when validating pages that require authentication. Requires an Agency or Enterprise subscription.
 * **Device Viewport Emulation**. Optionally choose a device to emulate while validating the page for accessibility issues. This will set the viewport's width, height and device scale factor to the ones in the selected device. If none selected, the default 800x600 viewport will be used. Requires a Pro, Agency or Enterprise subscription.
 * **Tags**. A comma-separated list of tags to apply to the generated report.
+* **Shared Report**. By default, reports created via a schedule are private and only accessible to you. If you want to share them with others, you can enable this option to get a shareable link.
 * **Active**. Disable this to temporarily pause the scheduled validation.
 
 When the scheduled validation is run, you'll be notified via email with a link to the report.

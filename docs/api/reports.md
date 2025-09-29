@@ -71,6 +71,9 @@ A Report represents a site validation report you've created in Rocket Validator.
     </dl>
   </dd>
 
+  <dt>Shared</dt>
+  <dd>Boolean, false by default. Indicates if the report can be shared with other users.</dd>
+
   <dt>Tags</dt>
   <dd>Comma-separated list of tags to categorize this report.</dd>
 
@@ -169,6 +172,7 @@ A Report represents a site validation report you've created in Rocket Validator.
             "tags": [
                 "dummy"
             ],
+            "shared": false,
             "updated_at": "2024-05-14T13:54:49"
             },
             "id": "2455a63a-7e16-4cbf-8455-6c9a88195142",
@@ -226,6 +230,7 @@ The following attributes are optional:
 * `rate_limit`. Limit on the number of requests per second. Defaults to 1.
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Defaults to true.
 * `tags`. Comma-separated list of tags.
+* `shared`. Boolean to indicate if the report can be shared with other users. Defaults to false.
 
 ### Pro attributes
 
@@ -298,6 +303,25 @@ If the Report can't be created, a `422 Unprocessable Entity` status will be retu
         }
     }
     ```
+
+## Change the Visibility of a Report
+
+ By default, reports are private and only accessible to the user who created them, and their host in case of guest users.
+
+ To change the visibility of a report, send a `PATCH` request to `/api/v1/reports/$REPORT_ID` with a payload to set the `shared` field to `true` or `false`. Any other payload will be rejected.
+
+!!! example "Example: PATCH /api/v1/reports/$REPORT_ID"
+
+    ```json
+    {
+        "data": {
+            "attributes": {
+                "shared": true
+            }
+        }
+    }
+    ```
+
 
 ## Retrieve a Report
 
@@ -377,7 +401,7 @@ The sortable attributes are:
 <dl>
   <dt>url</dt>
   <dd>Starting URL</dd>
-  
+
   <dt>num_web_pages</dt>
   <dd>Number of web pages</dd>
 
