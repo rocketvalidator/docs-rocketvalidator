@@ -29,7 +29,7 @@ A Report represents a site validation report you've created in Rocket Validator.
   <dt>Rate Limit</dt>
   <dd>Maximum allowed requests per second.</dd>
 
-  <dt>Deep Crawl <sup class="badge-pro">Pro</sup></dt>
+  <dt>Deep Crawl</dt>
   <dd>Boolean to indicate whether deep crawling was enabled or not. If it's enabled, the Spider witll recursively include more linked pages from the pages it finds, until the Max Pages limit is reached.</dd>
 
   <dt>Dynamic Crawler <sup class="badge-pro">Pro</sup></dt>
