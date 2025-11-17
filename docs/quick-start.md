@@ -14,6 +14,7 @@ To validate a site, you can define the following options.
 * **How many pages to validate**. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.
 * **Validation speed (requests/second)**. Can be set from 1 to 3 (Micro users), 1 to 5 (Basic users) or 1 to 15 (Pro and Agency users).
 * **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
+* **Prefer Canonical URLs**. When enabled, our crawler will use the canonical URLs for the web pages, if present. This is a useful option to avoid duplicated web pages in your reports.
 * **Tags**. A comma-separated list of tags to apply to the generated report.
 * **Shared Report**. By default, the report is private and only accessible to you. If you want to share it with others, you can enable this option to get a shareable link.
 

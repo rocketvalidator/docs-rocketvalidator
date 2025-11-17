@@ -28,6 +28,9 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
   <dt>Deep Crawl</dt>
   <dd>Boolean to indicate whether deep crawling was enabled or not. If it's enabled, the Spider witll recursively include more linked pages from the pages it finds, until the Max Pages limit is reached.</dd>
 
+  <dt>Prefer Canonical URLs</dt>
+  <dd>Boolean to indicate whether our crawler should use canonical URLs from your web pages, if present.</dd>
+
   <dt>Dynamic Crawler</dt>
   <dd>Boolean to indicate whether Dynamic Crawler should be used instead of the default static crawler. The Dynamic Crawler renders each web page found using a headless browser, so it's able to find links in JavaScript-powered web pages.</dd>
 
@@ -90,6 +93,7 @@ Think of a Scheduled Report as a regular <a href="#report">Report</a>, that can 
             "attributes": {
                 "active": true,
                 "deep_crawl": true,
+                "prefer_canonical_urls": true,
                 "device_rotated": false,
                 "dynamic_crawler": false,
                 "exclusions": [
@@ -155,6 +159,7 @@ To create a Schedule, send a `POST` request to `/api/v1/schedules`, with a JSON 
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Defaults to true.
 * `perform_a11y_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Defaults to false.
 * `deep_crawl`. Boolean to enable deep crawling. Defaults to true.
+* `prefer_canonical_urls`. Boolean to indicate canonical URLs are preferrer. Defaults to true.
 * `dynamic_crawler`. Boolean to use the Dynamic Crawler (for JS apps) instead of the default static crawler. Defaults to false.
 * `active`. Boolean to enable the schedule. Defaults to true.
 * `initial_urls`. Newline-separated list of URLs.

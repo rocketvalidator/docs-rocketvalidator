@@ -15,6 +15,7 @@ To schedule a site validation, you can define:
 * **How many pages to validate**. The maximum number of pages to validate. There's a limit on the pages included depending on your subscription plan, but you'll typically want to set a much lower limit. If you need to validate more pages than the limit on a report, consider using XML sitemaps to organize pages into sets.
 * **Validation speed (requests/second)**. By default is 3 reqs/second, can be set higher depending on your subscription plan. <a href="/rate-limits">Read more</a>.
 * **Deep Crawling**. When enabled, our crawler will recursively look for more internal web pages following the links found.
+* **Prefer Canonical URLs**. When enabled, our crawler will use the canonical URLs for the web pages, if present. This is a useful option to avoid duplicated web pages in your reports.
 * **Dynamic Crawler**. Use the dynamic crawler to validate pages that are loaded via JavaScript. Requires a Pro, Agency or Enterprise subscription.
 * **Exclusions**. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.
 * **Check HTML and Accessibility or only HTML**. Choose if you want to include A11Y checks on top of HTML checks.

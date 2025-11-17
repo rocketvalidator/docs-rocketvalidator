@@ -32,6 +32,9 @@ A Report represents a site validation report you've created in Rocket Validator.
   <dt>Deep Crawl</dt>
   <dd>Boolean to indicate whether deep crawling was enabled or not. If it's enabled, the Spider witll recursively include more linked pages from the pages it finds, until the Max Pages limit is reached.</dd>
 
+  <dt>Prefer Canonical URLs</dt>
+  <dd>Boolean to indicate whether our crawler should use canonical URLs from your web pages, if present.</dd>
+
   <dt>Dynamic Crawler <sup class="badge-pro">Pro</sup></dt>
   <dd>Boolean to indicate whether Dynamic Crawler should be used instead of the default static crawler. The Dynamic Crawler renders each web page found using a headless browser, so it's able to find links in JavaScript-powered web pages.</dd>
 
@@ -156,6 +159,7 @@ A Report represents a site validation report you've created in Rocket Validator.
                 }
             },
             "deep_crawl": true,
+            "prefer_canonical_urls": true,
             "device_rotated": false,
             "domain": "dummy.rocketvalidator.com",
             "dynamic_crawler": false,
@@ -226,6 +230,8 @@ To create a Report, send a `POST` request to `/api/v1/reports`, with a JSON payl
 
 The following attributes are optional:
 
+* `deep_crawl`. Boolean to enable deep crawling. Defaults to true.
+* `prefer_canonical_urls`. Boolean to indicate canonical URLs are preferrer. Defaults to true.
 * `max_pages`. The Spider will recursively follow internal links found until this limit is reached. Defaults to 10.
 * `rate_limit`. Limit on the number of requests per second. Defaults to 1.
 * `perform_html_checks`. Boolean to enable checks using the W3C Validator software on the Web Pages found. Defaults to true.
@@ -239,7 +245,6 @@ The following attributes are only available for users with a Pro or Enterprise s
 * `perform_a11y_checks`. Boolean to enable checks using Deque Axe Core software on the Web Pages found. Defaults to false.
 * `store_raw_html_checks`. Boolean to enable storage of the raw HTML checks. Defaults to false.
 * `store_raw_a11y_checks`. Boolean to enable storage of the raw accessibility checks. Defaults to false.
-* `deep_crawl`. Boolean to enable deep crawling. Defaults to true.
 * `initial_urls`. Newline-separated list of URLs.
 * `exclusions`. Newline-separated list of paths.
 * `device_id`. Id of the device to be used for viewport emulation. Check the <a href="/api/devices#list-of-devices">device list</a> to see the available devices.
