@@ -47,7 +47,7 @@ Heroku only allows one HTTP deploy hook per app, so if you need to trigger sever
 
 ## Engine Yard
 
-Engine Yard lets you define <a href="https://support.cloud.engineyard.com/hc/en-us/articles/205407008-Use-Ruby-Deploy-Hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:
+Engine Yard lets you define <a href="https://support.engineyard.com/en-us/article/45147-use-ruby-deploy-hooks">deploy hooks using simple ruby scripts</a>. To trigger a site validation, you can create a <i>deploy/after_restart.rb</i> file on the root folder of your app, that sends the post-deploy hook using curl like this:
 
 !!! example "Example: Engine Yard"
     ```bash
@@ -56,7 +56,7 @@ Engine Yard lets you define <a href="https://support.cloud.engineyard.com/hc/en-
 
 ## Cloud 66
 
-If your site is on <a href="http://cloud66.com" target="_blank">Cloud 66</a>, you can use their <a href="http://help.cloud66.com/deployment/deploy-hooks" target="_blank">free deploy hooks</a> to define your hooks per environment on a file named <strong>.cloud66/deploy_hooks.yml</strong>, like this:
+If your site is on <a href="http://cloud66.com" target="_blank">Cloud 66</a>, you can use their <a href="https://help.cloud66.com/deploy/deploy-hooks/deploy-hooks/" target="_blank">free deploy hooks</a> to define your hooks per environment on a file named <strong>.cloud66/deploy_hooks.yml</strong>, like this:
 
 !!! example "Example: Cloud 66"
     ```bash
