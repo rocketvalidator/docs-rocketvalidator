@@ -25,6 +25,7 @@ Depending on your subscription plan, you'll have access to the advanced options 
 ![New site report form](img/new-site-validation-form-advanced-options.png)
 
 * **Check HTML and/or Accessibility**. Pro users can choose to include A11Y checks on top of HTML checks.
+* **Store Manual Review Checks**. Choose if you want to store results for incomplete / needs review checks, or only those confirmed by the engines.
 * **Dynamic Crawler**. Use the dynamic crawler to validate pages that are loaded via JavaScript. Requires a Pro, Agency or Enterprise subscription.
 * **Initial URLs**. When enabled, it allows you to define a list of URLs to be included as the starting web pages of the report.
 * **Exclusions**. When enabled, it lets you to define a list of paths to be excluded from the web pages list by our web crawler.

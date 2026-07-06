@@ -4,7 +4,7 @@ site_description: Documentation site for Rocket Validator - automated accessibil
 nav:
   - Welcome: index.md
   - Quick Start: quick-start.md
-  - Summary Reports: summary-reports.md
+  - Site Validation Reports: site-validation-reports.md
   - Device Viewport Emulation: device-viewport-emulation.md
   - Rate Limiting: rate-limits.md
   - Scheduling Reports: scheduling.md
