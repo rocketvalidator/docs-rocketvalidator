@@ -28,7 +28,29 @@ An HTML issue corresponds to an issue found on a given web page when being check
 
   <dt>Updated At</dt>
   <dd>Timestamp when the HTML Issue was last updated.</dd>  
+
+  <dt>Description</dt>
+  <dd>Short plain-text explanation of the issue, from the Rocket Validator guide that matches it. Null when no guide matches.</dd>
+
+  <dt>Description Markdown</dt>
+  <dd>The same explanation in Markdown. Null when no guide matches.</dd>
+
+  <dt>Description HTML</dt>
+  <dd>The same explanation as rendered HTML. Null when no guide matches.</dd>
+
+  <dt>Guide URL</dt>
+  <dd>Link to the full guide for this issue. Null when no guide matches.</dd>
+
+  <dt>Guide Markdown URL</dt>
+  <dd>Link to the Markdown version of the full guide. Null when no guide matches.</dd>
 </dl>
+
+!!! note "Guide descriptions are not available for every issue"
+
+    Rocket Validator publishes a guide for the most common issues, but not for
+    every possible validator message. When no guide matches an issue, the five
+    description and guide attributes are `null`. Treat them as optional.
+
 
 ## Relationships
 
@@ -48,6 +70,11 @@ An HTML issue corresponds to an issue found on a given web page when being check
     {
         "data": {
             "attributes": {
+                "description": "Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.",
+                "description_markdown": "Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.",
+                "description_html": "<p>Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.</p>",
+                "guide_url": "https://rocketvalidator.com/html-validation/duplicate-attribute-x",
+                "guide_markdown_url": "https://rocketvalidator.com/html-validation/duplicate-attribute-x.md",
                 "how_many": 3,
                 "html": [
                     {

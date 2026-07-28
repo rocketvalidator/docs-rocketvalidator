@@ -36,7 +36,29 @@ A Common Accessibility Issue represents a given Accessibility Issue that is comm
 
   <dt>Updated At</dt>
   <dd>Timestamp when the Accessibility Issue was last updated.</dd>  
+
+  <dt>Description</dt>
+  <dd>Short plain-text explanation of the issue, from the Rocket Validator guide that matches it. Null when no guide matches. This is Rocket Validator's own explanation, and is separate from the Help attribute, which carries the text supplied by the accessibility engine.</dd>
+
+  <dt>Description Markdown</dt>
+  <dd>The same explanation in Markdown. Null when no guide matches.</dd>
+
+  <dt>Description HTML</dt>
+  <dd>The same explanation as rendered HTML. Null when no guide matches.</dd>
+
+  <dt>Guide URL</dt>
+  <dd>Link to the full guide for this issue. Null when no guide matches.</dd>
+
+  <dt>Guide Markdown URL</dt>
+  <dd>Link to the Markdown version of the full guide. Null when no guide matches.</dd>
 </dl>
+
+!!! note "Guide descriptions are not available for every issue"
+
+    Rocket Validator publishes a guide for the most common issues, but not for
+    every possible validator message. When no guide matches an issue, the five
+    description and guide attributes are `null`. Treat them as optional.
+
 
 ## Relationships
 
@@ -53,6 +75,11 @@ A Common Accessibility Issue represents a given Accessibility Issue that is comm
 		{
 			"data": {
 				"attributes": {
+					"description": "The names of ARIA attributes beginning with \"aria-\" must be correct.",
+					"description_markdown": "The names of ARIA attributes beginning with \"aria-\" must be correct.",
+					"description_html": "<p>The names of ARIA attributes beginning with &quot;aria-&quot; must be correct.</p>",
+					"guide_url": "https://rocketvalidator.com/accessibility-validation/axe/4.8/aria-valid-attr",
+					"guide_markdown_url": "https://rocketvalidator.com/accessibility-validation/axe/4.8/aria-valid-attr.md",
 					"help": "ARIA attributes must conform to valid names",
 					"help_url": "https://dequeuniversity.com/rules/axe/4.8/aria-valid-attr?application=axe-puppeteer",
 					"how_many": 1,
