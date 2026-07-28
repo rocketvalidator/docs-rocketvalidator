@@ -27,7 +27,29 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
 
   <dt>How Many</dt>
   <dd>Total times this issue has been found in the web pages for the report.</dd>
+
+  <dt>Description</dt>
+  <dd>Short plain-text explanation of the issue, from the Rocket Validator guide that matches it. Null when no guide matches.</dd>
+
+  <dt>Description Markdown</dt>
+  <dd>The same explanation in Markdown. Null when no guide matches.</dd>
+
+  <dt>Description HTML</dt>
+  <dd>The same explanation as rendered HTML. Null when no guide matches.</dd>
+
+  <dt>Guide URL</dt>
+  <dd>Link to the full guide for this issue. Null when no guide matches.</dd>
+
+  <dt>Guide Markdown URL</dt>
+  <dd>Link to the Markdown version of the full guide. Null when no guide matches.</dd>
 </dl>
+
+!!! note "Guide descriptions are not available for every issue"
+
+    Rocket Validator publishes a guide for the most common issues, but not for
+    every possible validator message. When no guide matches an issue, the five
+    description and guide attributes are `null`. Treat them as optional.
+
 
 ## Relationships
 
@@ -44,12 +66,17 @@ A Common HTML Issue represents a given HTML Issue that is common to many Web Pag
     {
 			"data": {
 				"attributes": {
+					"description": "Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.",
+					"description_markdown": "Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.",
+					"description_html": "<p>Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.</p>",
+					"guide_url": "https://rocketvalidator.com/html-validation/duplicate-attribute-x",
+					"guide_markdown_url": "https://rocketvalidator.com/html-validation/duplicate-attribute-x.md",
 					"how_many": 132,
 					"issue_sub_type": null,
 					"issue_type": "error",
 					"message": "Duplicate attribute “id”.",
 					"report_id": "72eecced-8472-41fc-b194-59b7496c7576",
-					"tags": ["duplicate attribute"],
+					"tags": ["duplicate attribute"]
 				},
 				"id": "144375908",
 				"relationships": {
