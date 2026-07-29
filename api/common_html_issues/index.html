@@ -278,14 +278,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../summary-reports/" class="md-nav__link">
+      <a href="../../site-validation-reports/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Summary Reports
+    Site Validation Reports
   
 
     
@@ -1576,8 +1576,29 @@
 
   <dt>How Many</dt>
   <dd>Total times this issue has been found in the web pages for the report.</dd>
+
+  <dt>Description</dt>
+  <dd>Short plain-text explanation of the issue, from the Rocket Validator guide that matches it. Null when no guide matches.</dd>
+
+  <dt>Description Markdown</dt>
+  <dd>The same explanation in Markdown. Null when no guide matches.</dd>
+
+  <dt>Description HTML</dt>
+  <dd>The same explanation as rendered HTML. Null when no guide matches.</dd>
+
+  <dt>Guide URL</dt>
+  <dd>Link to the full guide for this issue. Null when no guide matches.</dd>
+
+  <dt>Guide Markdown URL</dt>
+  <dd>Link to the Markdown version of the full guide. Null when no guide matches.</dd>
 </dl>
 
+<div class="admonition note">
+<p class="admonition-title">Guide descriptions are not available for every issue</p>
+<p>Rocket Validator publishes a guide for the most common issues, but not for
+every possible validator message. When no guide matches an issue, the five
+description and guide attributes are <code>null</code>. Treat them as optional.</p>
+</div>
 <h2 id="relationships">Relationships</h2>
 <dl>
   <dt>Web Pages</dt>
@@ -1590,12 +1611,17 @@
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;description_markdown&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;description_html&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Each HTML element must have unique attribute names — no attribute can appear more than once on the same element.&lt;/p&gt;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;guide_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/html-validation/duplicate-attribute-x&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;guide_markdown_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://rocketvalidator.com/html-validation/duplicate-attribute-x.md&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;how_many&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;issue_sub_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;issue_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Duplicate attribute “id”.&quot;</span><span class="p">,</span>
 <span class="w">                </span><span class="nt">&quot;report_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;72eecced-8472-41fc-b194-59b7496c7576&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;duplicate attribute&quot;</span><span class="p">],</span>
+<span class="w">                </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;duplicate attribute&quot;</span><span class="p">]</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;144375908&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
